@@ -672,7 +672,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1422, 943);
-            this.Name = "Form2";
             this.Text = "Form2";
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
