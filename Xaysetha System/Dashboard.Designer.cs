@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.sideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLeave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEntry = new Guna.UI2.WinForms.Guna2Button();
             this.infoSubMenu = new System.Windows.Forms.Panel();
             this.btnHomeManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnTenantManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnVilManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.report = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLeave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEntry = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.logo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.sideBar.SuspendLayout();
             this.infoSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // sideBar
@@ -73,6 +73,99 @@
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(425, 1024);
             this.sideBar.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::Xaysetha_System.Properties.Resources.material_symbols_logout;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLogout.Location = new System.Drawing.Point(0, 964);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(425, 60);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "ອອກຈາກລະບົບ";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button3.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Image = global::Xaysetha_System.Properties.Resources.book_svgrepo_com_1;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.ImageOffset = new System.Drawing.Point(20, 0);
+            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 671);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(425, 60);
+            this.guna2Button3.TabIndex = 8;
+            this.guna2Button3.Text = "ອອກປື້ມທະບຽນພັກເຊົາ";
+            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.TextOffset = new System.Drawing.Point(32, 0);
+            // 
+            // btnLeave
+            // 
+            this.btnLeave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLeave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLeave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLeave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLeave.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLeave.FillColor = System.Drawing.Color.Transparent;
+            this.btnLeave.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLeave.ForeColor = System.Drawing.Color.White;
+            this.btnLeave.Image = global::Xaysetha_System.Properties.Resources.unfriend_svgrepo_com_1;
+            this.btnLeave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLeave.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnLeave.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLeave.Location = new System.Drawing.Point(0, 611);
+            this.btnLeave.Name = "btnLeave";
+            this.btnLeave.Size = new System.Drawing.Size(425, 60);
+            this.btnLeave.TabIndex = 7;
+            this.btnLeave.Text = "ແຈ້ງອອກພັກເຊົາ";
+            this.btnLeave.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLeave.TextOffset = new System.Drawing.Point(32, 0);
+            // 
+            // btnEntry
+            // 
+            this.btnEntry.CustomImages.HoveredImage = global::Xaysetha_System.Properties.Resources.u_angle_down;
+            this.btnEntry.CustomImages.Image = global::Xaysetha_System.Properties.Resources.u_angle_down;
+            this.btnEntry.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnEntry.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnEntry.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntry.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEntry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEntry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEntry.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntry.FillColor = System.Drawing.Color.Transparent;
+            this.btnEntry.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntry.ForeColor = System.Drawing.Color.White;
+            this.btnEntry.Image = global::Xaysetha_System.Properties.Resources.add_friend_svgrepo_com_1;
+            this.btnEntry.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEntry.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnEntry.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnEntry.Location = new System.Drawing.Point(0, 551);
+            this.btnEntry.Name = "btnEntry";
+            this.btnEntry.Size = new System.Drawing.Size(425, 60);
+            this.btnEntry.TabIndex = 6;
+            this.btnEntry.Text = "ແຈ້ງອອກພັກເຊົາ";
+            this.btnEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEntry.TextOffset = new System.Drawing.Point(32, 0);
             // 
             // infoSubMenu
             // 
@@ -182,182 +275,6 @@
             this.btnUserManagement.TextOffset = new System.Drawing.Point(32, 0);
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
-            // report
-            // 
-            this.report.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.report.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.report.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.report.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.report.Dock = System.Windows.Forms.DockStyle.Top;
-            this.report.FillColor = System.Drawing.Color.Transparent;
-            this.report.FocusedColor = System.Drawing.Color.Transparent;
-            this.report.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.report.ForeColor = System.Drawing.Color.Transparent;
-            this.report.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.report.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.report.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.report.HoverState.ForeColor = System.Drawing.Color.Transparent;
-            this.report.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.report.ImageOffset = new System.Drawing.Point(20, 0);
-            this.report.ImageSize = new System.Drawing.Size(30, 30);
-            this.report.Location = new System.Drawing.Point(0, 111);
-            this.report.Name = "report";
-            this.report.Size = new System.Drawing.Size(425, 60);
-            this.report.TabIndex = 2;
-            this.report.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.report.TextOffset = new System.Drawing.Point(32, 0);
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(164)))));
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.logo);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(425, 111);
-            this.guna2Panel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(108, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 33);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ລະບົບເກັບກຳຜູ້ພັກເມືອງໄຊເສດຖາ";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.White;
-            this.guna2Panel2.Controls.Add(this.label3);
-            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(425, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1422, 81);
-            this.guna2Panel2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(22, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ລາຍງານ";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 4;
-            this.guna2PictureBox1.Image = global::Xaysetha_System.Properties.Resources.Ellipse_1;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1130, 6);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(65, 65);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::Xaysetha_System.Properties.Resources.material_symbols_logout;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogout.Location = new System.Drawing.Point(0, 964);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(425, 60);
-            this.btnLogout.TabIndex = 9;
-            this.btnLogout.Text = "ອອກຈາກລະບົບ";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.TextOffset = new System.Drawing.Point(32, 0);
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Image = global::Xaysetha_System.Properties.Resources.book_svgrepo_com_1;
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(20, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 671);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(425, 60);
-            this.guna2Button3.TabIndex = 8;
-            this.guna2Button3.Text = "ອອກປື້ມທະບຽນພັກເຊົາ";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.TextOffset = new System.Drawing.Point(32, 0);
-            // 
-            // btnLeave
-            // 
-            this.btnLeave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLeave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLeave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLeave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLeave.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLeave.FillColor = System.Drawing.Color.Transparent;
-            this.btnLeave.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeave.ForeColor = System.Drawing.Color.White;
-            this.btnLeave.Image = global::Xaysetha_System.Properties.Resources.unfriend_svgrepo_com_1;
-            this.btnLeave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLeave.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnLeave.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLeave.Location = new System.Drawing.Point(0, 611);
-            this.btnLeave.Name = "btnLeave";
-            this.btnLeave.Size = new System.Drawing.Size(425, 60);
-            this.btnLeave.TabIndex = 7;
-            this.btnLeave.Text = "ແຈ້ງອອກພັກເຊົາ";
-            this.btnLeave.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLeave.TextOffset = new System.Drawing.Point(32, 0);
-            // 
-            // btnEntry
-            // 
-            this.btnEntry.CustomImages.HoveredImage = global::Xaysetha_System.Properties.Resources.u_angle_down;
-            this.btnEntry.CustomImages.Image = global::Xaysetha_System.Properties.Resources.u_angle_down;
-            this.btnEntry.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnEntry.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEntry.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntry.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEntry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEntry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEntry.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEntry.FillColor = System.Drawing.Color.Transparent;
-            this.btnEntry.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntry.ForeColor = System.Drawing.Color.White;
-            this.btnEntry.Image = global::Xaysetha_System.Properties.Resources.add_friend_svgrepo_com_1;
-            this.btnEntry.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEntry.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnEntry.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEntry.Location = new System.Drawing.Point(0, 551);
-            this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(425, 60);
-            this.btnEntry.TabIndex = 6;
-            this.btnEntry.Text = "ແຈ້ງອອກພັກເຊົາ";
-            this.btnEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEntry.TextOffset = new System.Drawing.Point(32, 0);
-            // 
             // btnInfo
             // 
             this.btnInfo.CustomImages.HoveredImage = global::Xaysetha_System.Properties.Resources.u_angle_down;
@@ -407,6 +324,53 @@
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.TextOffset = new System.Drawing.Point(32, 0);
             // 
+            // report
+            // 
+            this.report.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.report.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.report.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.report.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.report.Dock = System.Windows.Forms.DockStyle.Top;
+            this.report.FillColor = System.Drawing.Color.Transparent;
+            this.report.FocusedColor = System.Drawing.Color.Transparent;
+            this.report.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.report.ForeColor = System.Drawing.Color.Transparent;
+            this.report.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.report.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.report.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.report.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.report.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.report.ImageOffset = new System.Drawing.Point(20, 0);
+            this.report.ImageSize = new System.Drawing.Size(30, 30);
+            this.report.Location = new System.Drawing.Point(0, 111);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(425, 60);
+            this.report.TabIndex = 2;
+            this.report.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.report.TextOffset = new System.Drawing.Point(32, 0);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(164)))));
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.logo);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(425, 111);
+            this.guna2Panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(142, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 27);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ລະບົບເກັບກຳຜູ້ພັກເມືອງໄຊເສດຖາ";
+            // 
             // logo
             // 
             this.logo.BackColor = System.Drawing.Color.Transparent;
@@ -420,6 +384,18 @@
             this.logo.TabIndex = 2;
             this.logo.TabStop = false;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.label3);
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(425, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1422, 81);
+            this.guna2Panel2.TabIndex = 1;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -427,9 +403,33 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label3.Location = new System.Drawing.Point(1214, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 33);
+            this.label3.Size = new System.Drawing.Size(130, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "ນ. ແສງແກ້ວ ວົງມາລາ";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.BorderRadius = 4;
+            this.guna2PictureBox1.Image = global::Xaysetha_System.Properties.Resources.Ellipse_1;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1130, 6);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(65, 65);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(22, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ລາຍງານ";
             // 
             // Dashboard
             // 
@@ -447,10 +447,10 @@
             this.infoSubMenu.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
