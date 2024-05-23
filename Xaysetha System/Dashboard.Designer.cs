@@ -38,16 +38,17 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnLeave = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntry = new Guna.UI2.WinForms.Guna2Button();
             this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.logo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.sideBar.SuspendLayout();
             this.infoSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -65,7 +66,7 @@
             this.sideBar.Controls.Add(this.btnEntry);
             this.sideBar.Controls.Add(this.infoSubMenu);
             this.sideBar.Controls.Add(this.btnInfo);
-            this.sideBar.Controls.Add(this.guna2Button1);
+            this.sideBar.Controls.Add(this.btnDashboard);
             this.sideBar.Controls.Add(this.report);
             this.sideBar.Controls.Add(this.guna2Panel1);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -221,11 +222,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(108, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 33);
+            this.label1.Size = new System.Drawing.Size(254, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "ລະບົບເກັບກຳຜູ້ພັກເມືອງໄຊເສດຖາ";
             // 
@@ -241,6 +242,17 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1422, 81);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label3.Location = new System.Drawing.Point(1214, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 33);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "ນ. ແສງແກ້ວ ວົງມາລາ";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -251,6 +263,14 @@
             this.label2.Size = new System.Drawing.Size(85, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "ລາຍງານ";
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(425, 81);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(1422, 943);
+            this.panelContainer.TabIndex = 2;
             // 
             // guna2PictureBox1
             // 
@@ -385,27 +405,28 @@
             this.btnInfo.TextOffset = new System.Drawing.Point(32, 0);
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
-            // guna2Button1
+            // btnDashboard
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::Xaysetha_System.Properties.Resources.dashboard__1_;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(20, 0);
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 171);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(425, 60);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "ລາຍງານ";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = global::Xaysetha_System.Properties.Resources.dashboard__1_;
+            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnDashboard.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 171);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(425, 60);
+            this.btnDashboard.TabIndex = 3;
+            this.btnDashboard.Text = "ລາຍງານ";
+            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // logo
             // 
@@ -420,22 +441,12 @@
             this.logo.TabIndex = 2;
             this.logo.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(1214, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 33);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ນ. ແສງແກ້ວ ວົງມາລາ";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1847, 1024);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.sideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -462,7 +473,7 @@
         private Guna.UI2.WinForms.Guna2Button report;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox logo;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnInfo;
         private Guna.UI2.WinForms.Guna2Button btnEntry;
         private System.Windows.Forms.Panel infoSubMenu;
@@ -477,5 +488,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Panel panelContainer;
     }
 }

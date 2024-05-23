@@ -29,6 +29,30 @@ namespace Xaysetha_System
             customizedDesign();
         }
 
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            // Close the current active form if there is one
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            // Set the new form as the active form
+            activeForm = childForm;
+
+            // Configure the form to be displayed within the panel
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Clear the panel and add the new form
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(childForm);
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
         private void customizedDesign() { 
             infoSubMenu.Visible = false;
         }
@@ -98,5 +122,12 @@ namespace Xaysetha_System
             login.Show();
             this.Hide();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form2());
+        }
+
+
     }
 }
