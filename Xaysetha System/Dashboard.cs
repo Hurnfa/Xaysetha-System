@@ -99,6 +99,7 @@ namespace Xaysetha_System
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnUserManagement);
+            OpenChildForm(new user_management());
         }
 
         private void btnVilManagement_Click(object sender, EventArgs e)
