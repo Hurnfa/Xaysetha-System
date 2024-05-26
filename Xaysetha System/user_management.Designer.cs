@@ -56,17 +56,19 @@
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1378, 0);
+            this.panel2.Location = new System.Drawing.Point(1396, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(26, 896);
+            this.panel2.Size = new System.Drawing.Size(26, 943);
             this.panel2.TabIndex = 9;
             // 
             // panel1
@@ -74,7 +76,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(26, 896);
+            this.panel1.Size = new System.Drawing.Size(26, 943);
             this.panel1.TabIndex = 8;
             // 
             // guna2Panel1
@@ -84,7 +86,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(26, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1352, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1370, 54);
             this.guna2Panel1.TabIndex = 10;
             // 
             // label4
@@ -101,9 +103,9 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(26, 840);
+            this.guna2Panel2.Location = new System.Drawing.Point(26, 887);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1352, 56);
+            this.guna2Panel2.Size = new System.Drawing.Size(1370, 56);
             this.guna2Panel2.TabIndex = 12;
             // 
             // label2
@@ -184,7 +186,7 @@
             this.guna2Button1.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(1093, 60);
+            this.guna2Button1.Location = new System.Drawing.Point(1111, 60);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(210, 48);
             this.guna2Button1.TabIndex = 18;
@@ -207,17 +209,17 @@
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.data);
+            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
             this.guna2CustomGradientPanel1.Controls.Add(this.position_combo);
             this.guna2CustomGradientPanel1.Controls.Add(this.label19);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Button1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(26, 54);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1352, 801);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1370, 833);
             this.guna2CustomGradientPanel1.TabIndex = 13;
             // 
             // data
@@ -255,13 +257,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data.DefaultCellStyle = dataGridViewCellStyle3;
+            this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.data.Location = new System.Drawing.Point(29, 175);
+            this.data.Location = new System.Drawing.Point(0, 0);
             this.data.Name = "data";
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1292, 563);
+            this.data.Size = new System.Drawing.Size(1302, 594);
             this.data.TabIndex = 20;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -368,11 +371,19 @@
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Delete.Width = 23;
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.data);
+            this.guna2Panel3.Location = new System.Drawing.Point(29, 162);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(1302, 594);
+            this.guna2Panel3.TabIndex = 21;
+            // 
             // user_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 896);
+            this.ClientSize = new System.Drawing.Size(1422, 943);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -380,12 +391,14 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(1422, 943);
             this.Text = "user_management";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -417,5 +430,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
     }
 }
