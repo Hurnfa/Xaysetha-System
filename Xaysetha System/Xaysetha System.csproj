@@ -142,6 +142,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resident_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resident_add.Designer.cs">
+      <DependentUpon>resident_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resident_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resident_management.Designer.cs">
+      <DependentUpon>resident_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_management.Designer.cs">
+      <DependentUpon>user_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_management_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_management_add.Designer.cs">
+      <DependentUpon>user_management_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="village_management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="village_management.Designer.cs">
+      <DependentUpon>village_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="village_management_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="village_management_add.Designer.cs">
+      <DependentUpon>village_management_add.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +200,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="resident_add.resx">
+      <DependentUpon>resident_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resident_management.resx">
+      <DependentUpon>resident_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_management.resx">
+      <DependentUpon>user_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_management_add.resx">
+      <DependentUpon>user_management_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="village_management.resx">
+      <DependentUpon>village_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="village_management_add.resx">
+      <DependentUpon>village_management_add.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,6 +285,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ellipse 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fi_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work-svgrepo-com 1.png" />
+    <None Include="Resources\globe-svgrepo-com 1.png" />
+    <None Include="Resources\hands-pray-svgrepo-com 1.png" />
+    <None Include="Resources\Upload Image.png" />
+    <None Include="Resources\house-03-svgrepo-com 1.png" />
+    <None Include="Resources\close.png" />
+    <Content Include="Resources\delete.png" />
+    <None Include="Resources\u_lock-alt.png" />
+    <None Include="Resources\u_phone.png" />
+    <None Include="Resources\u_user-plus.png" />
+    <None Include="Resources\u_user.png" />
+    <None Include="Resources\u_angle-left-b.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\delete1.png" />
+    <Content Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

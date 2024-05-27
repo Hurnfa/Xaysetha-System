@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +10,45 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    
-    public partial class Form2 : Form
+    public partial class user_management : Form
     {
-        public Form2()
+        private Form activeForm = null;
+        public user_management()
         {
             InitializeComponent();
             CustomizedGridView();
-            
+            data.Dock = DockStyle.Fill;
+            data.AllowUserToAddRows = false;
+            data.RowTemplate.Height = 30;
         }
 
-        public void CustomizedGridView() {
+        private void OpenChildForm(Form childForm)
+        {
+            // Close the current active form if there is one
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            // Set the new form as the active form
+            activeForm = childForm;
+
+            // Configure the form to be displayed within the panel
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Clear the panel and add the new form
+            Dashboard.instance.panelContainerInstance.Controls.Clear();
+            Dashboard.instance.panelContainerInstance.Controls.Add(childForm);
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        public void CustomizedGridView()
+        {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
             data.ColumnHeadersHeight = 30;
-            
+
         }
 
         private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -50,7 +74,11 @@ namespace Xaysetha_System
 
                 e.Handled = true;
             }
+        }
 
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new user_management_add());
         }
     }
 }

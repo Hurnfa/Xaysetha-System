@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +10,18 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    
-    public partial class Form2 : Form
+    public partial class village_management : Form
     {
-        public Form2()
+        public village_management()
         {
             InitializeComponent();
             CustomizedGridView();
-            
         }
-
-        public void CustomizedGridView() {
+        public void CustomizedGridView()
+        {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
             data.ColumnHeadersHeight = 30;
-            
+
         }
 
         private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -50,7 +47,12 @@ namespace Xaysetha_System
 
                 e.Handled = true;
             }
+        }
 
+        private void btnAddVillage_Click(object sender, EventArgs e)
+        {
+            village_management_add village = new village_management_add();
+            village.Show();
         }
     }
 }
