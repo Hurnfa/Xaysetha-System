@@ -111,11 +111,13 @@ namespace Xaysetha_System
         private void btnVilManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnVilManagement);
+            OpenChildForm(new village_management());
         }
 
         private void btnTenantManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnTenantManagement);
+            OpenChildForm(new resident_management());
         }
 
         private void btnHomeManagement_Click(object sender, EventArgs e)
