@@ -23,16 +23,10 @@ namespace Xaysetha_System
 
         private Guna.UI2.WinForms.Guna2Button activeButton;
 
-        public static Dashboard instance;
-
-        public Guna2Panel panelContainerInstance;
-
         public Dashboard()
         {
             InitializeComponent();
             customizedDesign();
-            instance = this;
-            panelContainerInstance = panelContainer;
         }
 
         private Form activeForm = null;

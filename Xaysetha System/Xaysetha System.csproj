@@ -148,12 +148,6 @@
     <Compile Include="user_management.Designer.cs">
       <DependentUpon>user_management.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_management_add.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="user_management_add.Designer.cs">
-      <DependentUpon>user_management_add.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +172,6 @@
     </Compile>
     <EmbeddedResource Include="user_management.resx">
       <DependentUpon>user_management.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="user_management_add.resx">
-      <DependentUpon>user_management_add.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -258,11 +249,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\delete.png" />
-    <None Include="Resources\u_lock-alt.png" />
-    <None Include="Resources\u_phone.png" />
-    <None Include="Resources\u_user-plus.png" />
-    <None Include="Resources\u_user.png" />
-    <None Include="Resources\u_angle-left-b.png" />
     <None Include="Resources\edit1.png" />
     <None Include="Resources\delete1.png" />
     <Content Include="Resources\edit.png" />

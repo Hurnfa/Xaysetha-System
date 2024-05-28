@@ -427,7 +427,6 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.AutoScroll = true;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(425, 81);
             this.panelContainer.Name = "panelContainer";
