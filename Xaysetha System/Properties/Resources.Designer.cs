@@ -83,16 +83,6 @@ namespace Xaysetha_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close {
-            get {
-                object obj = ResourceManager.GetObject("close", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dashboard {
             get {
                 object obj = ResourceManager.GetObject("dashboard", resourceCulture);
@@ -163,16 +153,6 @@ namespace Xaysetha_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap globe_svgrepo_com_1 {
-            get {
-                object obj = ResourceManager.GetObject("globe-svgrepo-com 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Group_102 {
             get {
                 object obj = ResourceManager.GetObject("Group 102", resourceCulture);
@@ -216,26 +196,6 @@ namespace Xaysetha_System.Properties {
         internal static System.Drawing.Bitmap Group_20479219 {
             get {
                 object obj = ResourceManager.GetObject("Group 20479219", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hands_pray_svgrepo_com_1 {
-            get {
-                object obj = ResourceManager.GetObject("hands-pray-svgrepo-com 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap house_03_svgrepo_com_1 {
-            get {
-                object obj = ResourceManager.GetObject("house-03-svgrepo-com 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,26 +326,6 @@ namespace Xaysetha_System.Properties {
         internal static System.Drawing.Bitmap unfriend_svgrepo_com_1 {
             get {
                 object obj = ResourceManager.GetObject("unfriend-svgrepo-com 1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Upload_Image {
-            get {
-                object obj = ResourceManager.GetObject("Upload Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap work_svgrepo_com_1 {
-            get {
-                object obj = ResourceManager.GetObject("work-svgrepo-com 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
