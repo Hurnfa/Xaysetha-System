@@ -22,6 +22,7 @@ namespace Xaysetha_System
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Dashboard());
         }
+        // Test
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
