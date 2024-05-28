@@ -10,39 +10,12 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    public partial class user_management : Form
+    public partial class village_management : Form
     {
-        private Form activeForm = null;
-        public user_management()
+        public village_management()
         {
             InitializeComponent();
             CustomizedGridView();
-            data.Dock = DockStyle.Fill;
-            data.AllowUserToAddRows = false;
-            data.RowTemplate.Height = 30;
-        }
-
-        private void OpenChildForm(Form childForm)
-        {
-            // Close the current active form if there is one
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
-
-            // Set the new form as the active form
-            activeForm = childForm;
-
-            // Configure the form to be displayed within the panel
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            // Clear the panel and add the new form
-            Dashboard.instance.panelContainerInstance.Controls.Clear();
-            Dashboard.instance.panelContainerInstance.Controls.Add(childForm);
-            childForm.BringToFront();
-            childForm.Show();
         }
         public void CustomizedGridView()
         {
@@ -76,9 +49,10 @@ namespace Xaysetha_System
             }
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
+        private void btnAddVillage_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new user_management_add());
+            village_management_add village = new village_management_add();
+            village.Show();
         }
     }
 }

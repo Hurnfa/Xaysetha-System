@@ -23,10 +23,16 @@ namespace Xaysetha_System
 
         private Guna.UI2.WinForms.Guna2Button activeButton;
 
+        public static Dashboard instance;
+
+        public Guna2Panel panelContainerInstance;
+
         public Dashboard()
         {
             InitializeComponent();
             customizedDesign();
+            instance = this;
+            panelContainerInstance = panelContainer;
         }
 
         private Form activeForm = null;
@@ -105,11 +111,13 @@ namespace Xaysetha_System
         private void btnVilManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnVilManagement);
+            OpenChildForm(new village_management());
         }
 
         private void btnTenantManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnTenantManagement);
+            OpenChildForm(new resident_management());
         }
 
         private void btnHomeManagement_Click(object sender, EventArgs e)

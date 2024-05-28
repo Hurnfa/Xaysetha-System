@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    public partial class user_management : Form
+    public partial class resident_management : Form
     {
         private Form activeForm = null;
-        public user_management()
+        public resident_management()
         {
             InitializeComponent();
             CustomizedGridView();
-            data.Dock = DockStyle.Fill;
-            data.AllowUserToAddRows = false;
-            data.RowTemplate.Height = 30;
+        }
+        public void CustomizedGridView()
+        {
+            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
+            data.ColumnHeadersHeight = 30;
+
         }
 
         private void OpenChildForm(Form childForm)
@@ -43,12 +46,6 @@ namespace Xaysetha_System
             Dashboard.instance.panelContainerInstance.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
-        }
-        public void CustomizedGridView()
-        {
-            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
-            data.ColumnHeadersHeight = 30;
-
         }
 
         private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -76,9 +73,9 @@ namespace Xaysetha_System
             }
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
+        private void btnResident_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new user_management_add());
+            OpenChildForm(new resident_add());
         }
     }
 }
