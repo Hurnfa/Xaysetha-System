@@ -123,6 +123,7 @@ namespace Xaysetha_System
         private void btnHomeManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnHomeManagement);
+            OpenChildForm(new place_management());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
