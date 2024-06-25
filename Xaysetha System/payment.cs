@@ -10,15 +10,13 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    public partial class entrance_management : Form
+    public partial class payment : Form
     {
         private Form activeForm = null;
-        public entrance_management()
+        public payment()
         {
             InitializeComponent();
-
         }
-
         private void OpenChildForm(Form childForm, TabPage tabPage)
         {
             // Close the current active form if there is one
@@ -51,10 +49,10 @@ namespace Xaysetha_System
             switch (selectedIndex)
             {
                 case 0:
-                    OpenChildForm(new entrance_info_table(), statusControl.TabPages[selectedIndex]);
+                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
                     break;
                 case 1:
-                    OpenChildForm(new entrance_info_table(), statusControl.TabPages[selectedIndex]);
+                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
                     break;
                 // Add more cases if you have more tabs
                 default:

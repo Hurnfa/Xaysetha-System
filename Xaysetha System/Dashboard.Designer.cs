@@ -341,7 +341,7 @@
             this.btnLeave.FillColor = System.Drawing.Color.Transparent;
             this.btnLeave.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLeave.ForeColor = System.Drawing.Color.White;
-            this.btnLeave.Image = global::Xaysetha_System.Properties.Resources.unfriend_svgrepo_com_1;
+            this.btnLeave.Image = global::Xaysetha_System.Properties.Resources.ph_money;
             this.btnLeave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLeave.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnLeave.ImageSize = new System.Drawing.Size(30, 30);
@@ -349,9 +349,10 @@
             this.btnLeave.Name = "btnLeave";
             this.btnLeave.Size = new System.Drawing.Size(425, 60);
             this.btnLeave.TabIndex = 7;
-            this.btnLeave.Text = "ແຈ້ງອອກພັກເຊົາ";
+            this.btnLeave.Text = "ຊຳລະຄ່າທຳນຽມ";
             this.btnLeave.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLeave.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnLeave.Click += new System.EventHandler(this.btnLeave_Click);
             // 
             // btnEntry
             // 
@@ -375,9 +376,10 @@
             this.btnEntry.Name = "btnEntry";
             this.btnEntry.Size = new System.Drawing.Size(425, 60);
             this.btnEntry.TabIndex = 6;
-            this.btnEntry.Text = "ແຈ້ງອອກພັກເຊົາ";
+            this.btnEntry.Text = "ແຈ້ງ ເຂົ້າ-ອອກ ພັກເຊົາ";
             this.btnEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEntry.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnEntry.Click += new System.EventHandler(this.btnEntry_Click);
             // 
             // btnInfo
             // 

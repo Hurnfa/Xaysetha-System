@@ -128,6 +128,12 @@
       <DependentUpon>Database_Config.cs</DependentUpon>
     </Compile>
     <Compile Include="db_connect.cs" />
+    <Compile Include="entrance_info_table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="entrance_info_table.Designer.cs">
+      <DependentUpon>entrance_info_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="entrance_management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,18 @@
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment_info.Designer.cs">
+      <DependentUpon>payment_info.cs</DependentUpon>
     </Compile>
     <Compile Include="place_add.cs">
       <SubType>Form</SubType>
@@ -202,6 +220,9 @@
     <EmbeddedResource Include="Database_Config.resx">
       <DependentUpon>Database_Config.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="entrance_info_table.resx">
+      <DependentUpon>entrance_info_table.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="entrance_management.resx">
       <DependentUpon>entrance_management.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment_info.resx">
+      <DependentUpon>payment_info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="place_add.resx">
       <DependentUpon>place_add.cs</DependentUpon>
@@ -320,6 +347,7 @@
     <None Include="Resources\fi_plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ph_money.png" />
     <None Include="Resources\ph_city-light.png" />
     <None Include="Resources\ph_house.png" />
     <None Include="Resources\mdi_location.png" />

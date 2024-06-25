@@ -1,6 +1,6 @@
 ﻿namespace Xaysetha_System
 {
-    partial class entrance_management
+    partial class payment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -56,14 +56,6 @@
             this.statusControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(26, 887);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1370, 56);
-            this.guna2Panel2.TabIndex = 17;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
@@ -72,7 +64,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(26, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1370, 54);
-            this.guna2Panel1.TabIndex = 16;
+            this.guna2Panel1.TabIndex = 19;
             // 
             // label4
             // 
@@ -81,9 +73,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label4.Location = new System.Drawing.Point(24, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 28);
+            this.label4.Size = new System.Drawing.Size(143, 28);
             this.label4.TabIndex = 6;
-            this.label4.Text = "ຈັດການຂໍ້ມູນຜູ້ພັກເຊົາ";
+            this.label4.Text = "ຈັດການຂໍ້ມູນຊຳລະເງິນ";
             // 
             // panel2
             // 
@@ -91,7 +83,7 @@
             this.panel2.Location = new System.Drawing.Point(1396, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(26, 943);
-            this.panel2.TabIndex = 15;
+            this.panel2.TabIndex = 18;
             // 
             // panel1
             // 
@@ -99,7 +91,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(26, 943);
-            this.panel1.TabIndex = 14;
+            this.panel1.TabIndex = 17;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(26, 887);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1370, 56);
+            this.guna2Panel2.TabIndex = 20;
             // 
             // guna2CustomGradientPanel1
             // 
@@ -117,7 +117,7 @@
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(26, 54);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1370, 833);
-            this.guna2CustomGradientPanel1.TabIndex = 18;
+            this.guna2CustomGradientPanel1.TabIndex = 21;
             // 
             // guna2Panel4
             // 
@@ -311,7 +311,7 @@
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຜູ້ພັກເຊົ່າ...";
+            this.guna2TextBox1.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງ...";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
             this.guna2TextBox1.TabIndex = 5;
@@ -336,7 +336,7 @@
             this.btnAddUser.Text = "ເພີ່ມບັນຊີ";
             this.btnAddUser.TextOffset = new System.Drawing.Point(10, 0);
             // 
-            // entrance_management
+            // payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,8 +348,9 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1422, 943);
-            this.Name = "entrance_management";
-            this.Text = "entrance_management";
+            this.MinimumSize = new System.Drawing.Size(1422, 943);
+            this.Name = "payment";
+            this.Text = "payment";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -365,12 +366,18 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2TabControl statusControl;
         private System.Windows.Forms.TabPage Entrance;
         private System.Windows.Forms.TabPage Pending;
@@ -378,13 +385,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }

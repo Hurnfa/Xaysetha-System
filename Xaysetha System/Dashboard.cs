@@ -138,6 +138,14 @@ namespace Xaysetha_System
             OpenChildForm(new Form2());
         }
 
+        private void btnEntry_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new entrance_management());
+        }
 
+        private void btnLeave_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new payment());
+        }
     }
 }
