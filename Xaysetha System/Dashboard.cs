@@ -128,9 +128,13 @@ namespace Xaysetha_System
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
-            this.Hide();
+            DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການອອກຈາກລະບົບບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (result == DialogResult.Yes)
+            {
+                new Login().Show();
+                Hide();
+            }
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -146,6 +150,16 @@ namespace Xaysetha_System
         private void btnLeave_Click(object sender, EventArgs e)
         {
             OpenChildForm(new payment());
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການອອກຈາກໂປຣແກຣມບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
