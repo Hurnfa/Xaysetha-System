@@ -47,13 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -76,6 +69,13 @@
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -276,7 +276,7 @@
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Image,
-            this.Name,
+            this.tenantName,
             this.Surname,
             this.Gender,
             this.Age,
@@ -320,48 +320,6 @@
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
-            // 
-            // Image
-            // 
-            this.Image.HeaderText = "ຮູບ";
-            this.Image.MinimumWidth = 6;
-            this.Image.Name = "Image";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "ຊື່";
-            this.Name.MinimumWidth = 6;
-            this.Name.Name = "Name";
-            // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "ນາມສະກຸນ";
-            this.Surname.MinimumWidth = 6;
-            this.Surname.Name = "Surname";
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "ເພດ";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "ອາຍຸ";
-            this.Age.MinimumWidth = 6;
-            this.Age.Name = "Age";
-            // 
-            // Tel
-            // 
-            this.Tel.HeaderText = "ເບີໂທ";
-            this.Tel.MinimumWidth = 6;
-            this.Tel.Name = "Tel";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "ທີ່ຢູ່";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
             // 
             // guna2ComboBox5
             // 
@@ -653,6 +611,48 @@
             this.label14.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Image
+            // 
+            this.Image.HeaderText = "ຮູບ";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            // 
+            // tenantName
+            // 
+            this.tenantName.HeaderText = "ຊື່";
+            this.tenantName.MinimumWidth = 6;
+            this.tenantName.Name = "tenantName";
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "ນາມສະກຸນ";
+            this.Surname.MinimumWidth = 6;
+            this.Surname.Name = "Surname";
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "ເພດ";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "ອາຍຸ";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            // 
+            // Tel
+            // 
+            this.Tel.HeaderText = "ເບີໂທ";
+            this.Tel.MinimumWidth = 6;
+            this.Tel.Name = "Tel";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "ທີ່ຢູ່";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,6 +672,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1422, 943);
+            this.Name = "Form2";
             this.Text = "Form2";
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
@@ -725,13 +726,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2DataGridView data;
-        private System.Windows.Forms.DataGridViewImageColumn Image;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
@@ -740,5 +734,12 @@
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.DataGridViewImageColumn Image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenantName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }

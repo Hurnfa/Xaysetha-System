@@ -61,5 +61,11 @@ namespace Xaysetha_System
                     break;
             }
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            tenant_add tenantAdd = new tenant_add();
+            tenantAdd.Show();
+        }
     }
 }

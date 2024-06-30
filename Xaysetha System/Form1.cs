@@ -13,16 +13,8 @@ namespace Xaysetha_System
 {
     public partial class Login : Form
     {
-        MySqlCommand cmd;
-        MySqlDataAdapter adapter;
-        DataTable dt = new DataTable();
-        db_connect cn = new db_connect();
 
-        public Login()
-        {
-            InitializeComponent();
-            cn.getConnect();
-        }
+        public Login() => InitializeComponent();
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {

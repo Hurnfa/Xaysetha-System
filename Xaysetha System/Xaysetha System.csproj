@@ -214,6 +214,12 @@
     <Compile Include="resident_management.Designer.cs">
       <DependentUpon>resident_management.cs</DependentUpon>
     </Compile>
+    <Compile Include="tenant_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tenant_add.Designer.cs">
+      <DependentUpon>tenant_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="resident_management.resx">
       <DependentUpon>resident_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tenant_add.resx">
+      <DependentUpon>tenant_add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_management.resx">
       <DependentUpon>user_management.cs</DependentUpon>
@@ -371,6 +380,7 @@
     <None Include="Resources\fi_plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mingcute_close-line.png" />
     <None Include="Resources\ph_money.png" />
     <None Include="Resources\ph_city-light.png" />
     <None Include="Resources\ph_house.png" />

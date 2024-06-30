@@ -45,10 +45,10 @@
             this.Pending = new System.Windows.Forms.TabPage();
             this.Rejected = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -269,30 +269,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1302, 594);
             this.guna2Panel3.TabIndex = 21;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(24, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ຄົ້ນຫາ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(24, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 28);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BorderRadius = 4;
@@ -316,6 +292,18 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
             this.guna2TextBox1.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(24, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ຄົ້ນຫາ";
+            // 
             // btnAddUser
             // 
             this.btnAddUser.BorderRadius = 4;
@@ -333,8 +321,21 @@
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(210, 48);
             this.btnAddUser.TabIndex = 18;
-            this.btnAddUser.Text = "ເພີ່ມບັນຊີ";
+            this.btnAddUser.Text = "ເພີ່ມຂໍ້ມູນຜູ້ພັກເຊົາ";
             this.btnAddUser.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(24, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 28);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
             // 
             // entrance_management
             // 
