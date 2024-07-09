@@ -38,8 +38,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.position_combo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -143,36 +141,6 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
             this.guna2TextBox1.TabIndex = 5;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label19.Location = new System.Drawing.Point(414, 29);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(111, 28);
-            this.label19.TabIndex = 16;
-            this.label19.Text = "ປະເພດຜູ້ພັກເຊົ່າ";
-            // 
-            // position_combo
-            // 
-            this.position_combo.BackColor = System.Drawing.Color.Transparent;
-            this.position_combo.BorderRadius = 4;
-            this.position_combo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.position_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.position_combo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.position_combo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.position_combo.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.position_combo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.position_combo.ItemHeight = 30;
-            this.position_combo.Items.AddRange(new object[] {
-            "ບ້ານທັງໝົດ"});
-            this.position_combo.Location = new System.Drawing.Point(419, 60);
-            this.position_combo.Name = "position_combo";
-            this.position_combo.Size = new System.Drawing.Size(244, 36);
-            this.position_combo.TabIndex = 17;
-            // 
             // btnAddUser
             // 
             this.btnAddUser.BorderRadius = 4;
@@ -211,8 +179,6 @@
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.position_combo);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label19);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddUser);
@@ -414,8 +380,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label19;
-        private Guna.UI2.WinForms.Guna2ComboBox position_combo;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;

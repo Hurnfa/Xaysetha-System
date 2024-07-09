@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +47,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -69,13 +76,8 @@
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2ComboBox6 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -244,6 +246,8 @@
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 16;
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2ComboBox6);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label20);
             this.guna2CustomGradientPanel2.Controls.Add(this.data);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2ComboBox5);
             this.guna2CustomGradientPanel2.Controls.Add(this.label19);
@@ -262,16 +266,16 @@
             // 
             // data
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.data.ColumnHeadersHeight = 18;
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -282,14 +286,14 @@
             this.Age,
             this.Tel,
             this.Address});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data.DefaultCellStyle = dataGridViewCellStyle6;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(15, 205);
             this.data.Name = "data";
@@ -320,6 +324,48 @@
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
+            // 
+            // Image
+            // 
+            this.Image.HeaderText = "ຮູບ";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            // 
+            // tenantName
+            // 
+            this.tenantName.HeaderText = "ຊື່";
+            this.tenantName.MinimumWidth = 6;
+            this.tenantName.Name = "tenantName";
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "ນາມສະກຸນ";
+            this.Surname.MinimumWidth = 6;
+            this.Surname.Name = "Surname";
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "ເພດ";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            // 
+            // Age
+            // 
+            this.Age.HeaderText = "ອາຍຸ";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            // 
+            // Tel
+            // 
+            this.Tel.HeaderText = "ເບີໂທ";
+            this.Tel.MinimumWidth = 6;
+            this.Tel.Name = "Tel";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "ທີ່ຢູ່";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
             // 
             // guna2ComboBox5
             // 
@@ -487,11 +533,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(69, 45);
+            this.label7.Location = new System.Drawing.Point(82, 45);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 71);
+            this.label7.Size = new System.Drawing.Size(143, 71);
             this.label7.TabIndex = 6;
-            this.label7.Text = "31,456";
+            this.label7.Text = "1,034";
             // 
             // label8
             // 
@@ -501,9 +547,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label8.Location = new System.Drawing.Point(72, 116);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 56);
+            this.label8.Size = new System.Drawing.Size(165, 28);
             this.label8.TabIndex = 5;
-            this.label8.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
+            this.label8.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel4
@@ -522,11 +568,11 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(69, 45);
+            this.label9.Location = new System.Drawing.Point(78, 45);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 71);
+            this.label9.Size = new System.Drawing.Size(143, 71);
             this.label9.TabIndex = 6;
-            this.label9.Text = "31,456";
+            this.label9.Text = "2,294";
             // 
             // label10
             // 
@@ -534,11 +580,11 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label10.Location = new System.Drawing.Point(72, 116);
+            this.label10.Location = new System.Drawing.Point(95, 116);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(165, 56);
+            this.label10.Size = new System.Drawing.Size(112, 56);
             this.label10.TabIndex = 5;
-            this.label10.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
+            this.label10.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel5
@@ -561,7 +607,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(168, 71);
             this.label11.TabIndex = 6;
-            this.label11.Text = "31,456";
+            this.label11.Text = "19,183";
             // 
             // label12
             // 
@@ -573,7 +619,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(165, 56);
             this.label12.TabIndex = 5;
-            this.label12.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
+            this.label12.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel6
@@ -592,11 +638,11 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label13.Location = new System.Drawing.Point(69, 45);
+            this.label13.Location = new System.Drawing.Point(82, 45);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(168, 71);
+            this.label13.Size = new System.Drawing.Size(143, 71);
             this.label13.TabIndex = 6;
-            this.label13.Text = "31,456";
+            this.label13.Text = "7,634";
             // 
             // label14
             // 
@@ -604,54 +650,42 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label14.Location = new System.Drawing.Point(72, 116);
+            this.label14.Location = new System.Drawing.Point(89, 116);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 56);
+            this.label14.Size = new System.Drawing.Size(112, 56);
             this.label14.TabIndex = 5;
-            this.label14.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
+            this.label14.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Image
+            // guna2ComboBox6
             // 
-            this.Image.HeaderText = "ຮູບ";
-            this.Image.MinimumWidth = 6;
-            this.Image.Name = "Image";
+            this.guna2ComboBox6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox6.BorderRadius = 4;
+            this.guna2ComboBox6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox6.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ComboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.guna2ComboBox6.ItemHeight = 30;
+            this.guna2ComboBox6.Items.AddRange(new object[] {
+            "ບ້ານທັງໝົດ"});
+            this.guna2ComboBox6.Location = new System.Drawing.Point(528, 163);
+            this.guna2ComboBox6.Name = "guna2ComboBox6";
+            this.guna2ComboBox6.Size = new System.Drawing.Size(166, 36);
+            this.guna2ComboBox6.TabIndex = 18;
             // 
-            // tenantName
+            // label20
             // 
-            this.tenantName.HeaderText = "ຊື່";
-            this.tenantName.MinimumWidth = 6;
-            this.tenantName.Name = "tenantName";
-            // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "ນາມສະກຸນ";
-            this.Surname.MinimumWidth = 6;
-            this.Surname.Name = "Surname";
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "ເພດ";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "ອາຍຸ";
-            this.Age.MinimumWidth = 6;
-            this.Age.Name = "Age";
-            // 
-            // Tel
-            // 
-            this.Tel.HeaderText = "ເບີໂທ";
-            this.Tel.MinimumWidth = 6;
-            this.Tel.Name = "Tel";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "ທີ່ຢູ່";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.White;
+            this.label20.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label20.Location = new System.Drawing.Point(533, 132);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 28);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "ຊ່ວງເວລາ";
             // 
             // Form2
             // 
@@ -741,5 +775,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox6;
+        private System.Windows.Forms.Label label20;
     }
 }

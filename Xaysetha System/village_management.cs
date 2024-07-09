@@ -14,16 +14,20 @@ namespace Xaysetha_System
     public partial class village_management : Form
     {
         NpgsqlCommand cmd;
-        NpgsqlDataAdapter adt;
+        NpgsqlDataAdapter adapter;
         NpgsqlConnection conn;
         db_connect cn = new db_connect();
-        DataTable dt = new DataTable();
+        DataTable datatable = new DataTable();
 
         void loadData(string sql)
         {
-            adt = new NpgsqlDataAdapter(sql, cn.conn);
-            adt.Fill(dt);
-            data.DataSource = dt;
+            data.Rows.Clear();
+            data.AutoGenerateColumns = false;
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+            data.Columns["villageID"].DataPropertyName = "villageID";
+            data.Columns["VillageName"].DataPropertyName = "villageName";
         }
 
 

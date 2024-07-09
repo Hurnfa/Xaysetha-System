@@ -149,8 +149,6 @@
             // 
             // btnEntry
             // 
-            this.btnEntry.CustomImages.HoveredImage = global::Xaysetha_System.Properties.Resources.u_angle_down;
-            this.btnEntry.CustomImages.Image = global::Xaysetha_System.Properties.Resources.u_angle_down;
             this.btnEntry.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnEntry.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEntry.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -445,13 +443,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label2.Location = new System.Drawing.Point(21, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 38);
+            this.label2.Size = new System.Drawing.Size(147, 38);
             this.label2.TabIndex = 0;
-            this.label2.Text = "ລາຍງານ";
+            this.label2.Text = "ຊຳລະຄ່າທຳນຽມ";
             // 
             // panelContainer
             // 
