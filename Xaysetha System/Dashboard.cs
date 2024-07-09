@@ -35,6 +35,11 @@ namespace Xaysetha_System
             panelContainerInstance = panelContainer;
         }
 
+        public void showUserName(string name, string surname)
+        {
+            lbName.Text = name + " " + surname;
+        }
+
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,29 @@ namespace Xaysetha_System
 {
     public partial class user_management : Form
     {
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+
         private Form activeForm = null;
+
+        void loadData(string sql)
+        {
+            data.Rows.Clear();
+            data.AutoGenerateColumns = false;
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+            data.Columns["userID"].DataPropertyName = "userID";
+            data.Columns["userName"].DataPropertyName = "userName";
+            data.Columns["Surname"].DataPropertyName = "userLName";
+            data.Columns["Gender"].DataPropertyName = "gender";
+            data.Columns["role"].DataPropertyName = "role";
+            data.Columns["Tel"].DataPropertyName = "phoneNums";
+            data.Columns["password"].DataPropertyName = "userPassword";
+        }
+
         public user_management()
         {
             InitializeComponent();
@@ -20,6 +43,8 @@ namespace Xaysetha_System
             data.Dock = DockStyle.Fill;
             data.AllowUserToAddRows = false;
             data.RowTemplate.Height = 30;
+            cn.getConnect();
+            loadData("SELECT * FROM tb_user;");
         }
 
         private void OpenChildForm(Form childForm)

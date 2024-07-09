@@ -37,7 +37,20 @@ namespace Xaysetha_System
             CustomizedGridView();
             cn.getConnect();
             loadData("SELECT * FROM tb_village;");
+            displayTotalOfVillage();
         }
+
+        public void displayTotalOfVillage()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_village;", cn.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                labelTotalVillage.Text = "ທັງໝົດ " + reader["count"] +" ລາຍການ";
+            }
+        }
+
         public void CustomizedGridView()
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
@@ -75,5 +88,12 @@ namespace Xaysetha_System
             village_management_add village = new village_management_add();
             village.Show();
         }
+
+        private void txtFindVillage_TextChanged(object sender, EventArgs e)
+        {
+/*            datatable.Clear();
+
+            loadData("SELECT * FROM tb_village WHERE CONCAT(villageID, villageName, villageEngName) LIKE '%"+txtFindVillage.Text+"%';");
+*/        }
     }
 }
