@@ -14,7 +14,6 @@ namespace Xaysetha_System
     public partial class Login : Form
     {
 
-        public Login() => InitializeComponent();
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
