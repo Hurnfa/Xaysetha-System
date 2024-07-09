@@ -216,9 +216,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 28);
+            this.label8.Size = new System.Drawing.Size(155, 28);
             this.label8.TabIndex = 8;
-            this.label8.Text = "ເມືອງ ";
+            this.label8.Text = "ປະເພດສະຖານທີ່ພັກເຊົ່າ";
             // 
             // guna2Panel10
             // 
@@ -305,7 +305,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(124, 28);
+            this.label9.Size = new System.Drawing.Size(126, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ຊື່ເຈົ້າຂອງສະຖານທີ່";
             // 

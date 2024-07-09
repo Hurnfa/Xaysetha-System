@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,31 @@ namespace Xaysetha_System
     public partial class place_management : Form
     {
         private Form activeForm = null;
+
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+
+        void loadData(string sql)
+        {
+            data.Rows.Clear();
+            data.AutoGenerateColumns = false;
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+            data.Columns["placeID"].DataPropertyName = "userID";
+            data.Columns["placeName"].DataPropertyName = "userName";
+            data.Columns["villageName"].DataPropertyName = "userLName";
+            data.Columns["ownerName"].DataPropertyName = "gender";
+        }
+
         public place_management()
         {
             InitializeComponent();
             CustomizedGridView();
+            cn.getConnect();
+            loadData("SELECT * FROM tb_place;");
         }
         public void CustomizedGridView()
         {

@@ -16,5 +16,17 @@ namespace Xaysetha_System
         {
             InitializeComponent();
         }
+
+        private void profilePictureBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Choose img(*.jpg; *.png; *.gif; *.bmp)| *.jpg; *.png; *.gif; *.bmp";
+
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                profilePictureBox.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
     }
 }
