@@ -166,5 +166,10 @@ namespace Xaysetha_System
                 Application.Exit();
             }
         }
+
+        private void btnPrinting_Click(object sender, EventArgs e)
+        {
+            new printing().Show();
+        }
     }
 }
