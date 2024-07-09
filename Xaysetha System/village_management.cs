@@ -15,13 +15,14 @@ namespace Xaysetha_System
     {
         NpgsqlCommand cmd;
         NpgsqlDataAdapter adapter;
-        NpgsqlConnection conn;
+        //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
+        village_management_add village = new village_management_add();
 
         void loadData(string sql)
         {
-            data.Rows.Clear();
+            //data.Rows.Clear();
             data.AutoGenerateColumns = false;
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
@@ -49,6 +50,8 @@ namespace Xaysetha_System
             {
                 labelTotalVillage.Text = "ທັງໝົດ " + reader["count"] +" ລາຍການ";
             }
+
+            reader.Close();
         }
 
         public void CustomizedGridView()
@@ -84,16 +87,16 @@ namespace Xaysetha_System
         }
 
         private void btnAddVillage_Click(object sender, EventArgs e)
-        {
-            village_management_add village = new village_management_add();
+        { 
             village.Show();
         }
 
         private void txtFindVillage_TextChanged(object sender, EventArgs e)
         {
-/*            datatable.Clear();
+            datatable.Clear();
 
-            loadData("SELECT * FROM tb_village WHERE CONCAT(villageID, villageName, villageEngName) LIKE '%"+txtFindVillage.Text+"%';");
-*/        }
+            loadData("SELECT * FROM tb_village WHERE CONCAT(\"villageID\", \"villageName\", \"villageEngName\") LIKE '%" + txtFindVillage.Text + "%';");
+        }
+
     }
 }

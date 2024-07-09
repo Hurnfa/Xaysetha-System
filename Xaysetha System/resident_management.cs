@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,49 @@ namespace Xaysetha_System
     public partial class resident_management : Form
     {
         private Form activeForm = null;
+
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        //NpgsqlConnection conn;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+        village_management_add village = new village_management_add();
+
+        void loadData(string sql)
+        {
+            //data.Rows.Clear();
+            data.AutoGenerateColumns = false;
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+            data.Columns["userID"].DataPropertyName = "villageID";
+            data.Columns["profile"].DataPropertyName = "villageName";
+            data.Columns["residentName"].DataPropertyName = "villageID";
+            data.Columns["Surname"].DataPropertyName = "villageName";
+            data.Columns["villageName"].DataPropertyName = "villageID";
+            data.Columns["Tel"].DataPropertyName = "villageName";
+            data.Columns["Gender"].DataPropertyName = "villageID";
+            data.Columns["Religious"].DataPropertyName = "villageName";
+            data.Columns["Job"].DataPropertyName = "villageID";
+        }
+
+        void cbVillageLoad()
+        {
+            DataSet dataSetVillage = new DataSet();
+            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+            adapter.Fill(dataSetVillage);
+            cbVillage.DataSource = dataSetVillage.Tables[0];
+
+            cbVillage.DisplayMember = "villageName";
+            cbVillage.ValueMember = "villageName";
+        }
+
         public resident_management()
         {
             InitializeComponent();
             CustomizedGridView();
+            cn.getConnect();
+            cbVillageLoad();
         }
         public void CustomizedGridView()
         {

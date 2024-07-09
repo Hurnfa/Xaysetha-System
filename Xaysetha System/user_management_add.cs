@@ -108,5 +108,10 @@ namespace Xaysetha_System
         {
             dataChange("INSERT INTO tb_user VALUES(@userID, @userName, @userLName, @phoneNums, @userPassword, @gender, @role);");
         }
+
+        private void labelLinkBackToAddUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            OpenChildForm(new user_management());
+        }
     }
 }

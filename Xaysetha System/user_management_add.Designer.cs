@@ -32,9 +32,9 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
@@ -63,7 +63,7 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.chkShowPassword = new System.Windows.Forms.CheckBox();
+            this.labelLinkBackToAddUser = new System.Windows.Forms.LinkLabel();
             this.guna2Panel1.SuspendLayout();
             this.panelUser.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
@@ -81,22 +81,22 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(52, 766);
+            this.panel1.Size = new System.Drawing.Size(69, 943);
             this.panel1.TabIndex = 9;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.labelLinkBackToAddUser);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(52, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(69, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(962, 69);
+            this.guna2Panel1.Size = new System.Drawing.Size(1283, 85);
             this.guna2Panel1.TabIndex = 11;
             // 
             // label2
@@ -104,10 +104,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(96, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(128, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 23);
+            this.label2.Size = new System.Drawing.Size(22, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = ">";
             // 
@@ -116,24 +115,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(117, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(156, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.Size = new System.Drawing.Size(69, 28);
             this.label1.TabIndex = 7;
             this.label1.Text = "ເພີ່ມບັນຊີ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.label4.Location = new System.Drawing.Point(18, 21);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "ຜູ້ໃຊ້ງານລະບົບ";
             // 
             // panelUser
             // 
@@ -151,10 +137,10 @@
             this.panelUser.Controls.Add(this.label3);
             this.panelUser.Controls.Add(this.btnBack);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelUser.Location = new System.Drawing.Point(52, 69);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUser.Location = new System.Drawing.Point(69, 85);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(962, 697);
+            this.panelUser.Size = new System.Drawing.Size(1283, 858);
             this.panelUser.TabIndex = 12;
             // 
             // guna2Panel8
@@ -163,11 +149,24 @@
             this.guna2Panel8.Controls.Add(this.chkShowPassword);
             this.guna2Panel8.Controls.Add(this.txtPassword);
             this.guna2Panel8.Controls.Add(this.label12);
-            this.guna2Panel8.Location = new System.Drawing.Point(349, 613);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel8.Location = new System.Drawing.Point(465, 754);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(358, 96);
+            this.guna2Panel8.Size = new System.Drawing.Size(477, 118);
             this.guna2Panel8.TabIndex = 13;
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Location = new System.Drawing.Point(25, 84);
+            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(117, 32);
+            this.chkShowPassword.TabIndex = 9;
+            this.chkShowPassword.Text = "ສະແດງລະຫັດ";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // txtPassword
             // 
@@ -184,13 +183,13 @@
             this.txtPassword.IconLeft = global::Xaysetha_System.Properties.Resources.u_lock_alt;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtPassword.Location = new System.Drawing.Point(2, 26);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPassword.Location = new System.Drawing.Point(3, 32);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ຂອງທ່ານ...";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(332, 39);
+            this.txtPassword.Size = new System.Drawing.Size(443, 48);
             this.txtPassword.TabIndex = 6;
             // 
             // label12
@@ -199,10 +198,9 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label12.Location = new System.Drawing.Point(2, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 23);
+            this.label12.Size = new System.Drawing.Size(80, 28);
             this.label12.TabIndex = 8;
             this.label12.Text = "ລະຫັດຜ່ານ";
             // 
@@ -211,10 +209,10 @@
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel7.Controls.Add(this.txtUsername);
             this.guna2Panel7.Controls.Add(this.label11);
-            this.guna2Panel7.Location = new System.Drawing.Point(349, 532);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel7.Location = new System.Drawing.Point(465, 655);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel7.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel7.TabIndex = 12;
             // 
             // txtUsername
@@ -232,13 +230,13 @@
             this.txtUsername.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtUsername.Location = new System.Drawing.Point(2, 26);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUsername.Location = new System.Drawing.Point(3, 32);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຜູ້ໃຊ້ຂອງທ່ານ...";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(332, 39);
+            this.txtUsername.Size = new System.Drawing.Size(443, 48);
             this.txtUsername.TabIndex = 6;
             // 
             // label11
@@ -247,10 +245,9 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label11.Location = new System.Drawing.Point(2, 0);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 23);
+            this.label11.Size = new System.Drawing.Size(49, 28);
             this.label11.TabIndex = 8;
             this.label11.Text = "ຊື່ຜູ້ໃຊ້";
             // 
@@ -260,10 +257,9 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label10.Location = new System.Drawing.Point(344, 485);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(459, 597);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 31);
+            this.label10.Size = new System.Drawing.Size(152, 38);
             this.label10.TabIndex = 12;
             this.label10.Text = "ບັນຊີເຂົ້າສູ່ລະບົບ";
             // 
@@ -272,10 +268,10 @@
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Controls.Add(this.txtPhoneNums);
             this.guna2Panel6.Controls.Add(this.label9);
-            this.guna2Panel6.Location = new System.Drawing.Point(349, 394);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Location = new System.Drawing.Point(465, 485);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel6.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel6.TabIndex = 11;
             // 
             // txtPhoneNums
@@ -293,13 +289,13 @@
             this.txtPhoneNums.IconLeft = global::Xaysetha_System.Properties.Resources.u_phone;
             this.txtPhoneNums.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPhoneNums.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtPhoneNums.Location = new System.Drawing.Point(2, 26);
-            this.txtPhoneNums.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPhoneNums.Location = new System.Drawing.Point(3, 32);
+            this.txtPhoneNums.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhoneNums.Name = "txtPhoneNums";
             this.txtPhoneNums.PasswordChar = '\0';
             this.txtPhoneNums.PlaceholderText = "ກະລຸນາປ້ອນເບີໂທຂອງທ່ານ..";
             this.txtPhoneNums.SelectedText = "";
-            this.txtPhoneNums.Size = new System.Drawing.Size(332, 39);
+            this.txtPhoneNums.Size = new System.Drawing.Size(443, 48);
             this.txtPhoneNums.TabIndex = 6;
             // 
             // label9
@@ -308,10 +304,9 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(2, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 23);
+            this.label9.Size = new System.Drawing.Size(44, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ເບີໂທ";
             // 
@@ -322,10 +317,10 @@
             this.guna2Panel5.Controls.Add(this.rdoFemale);
             this.guna2Panel5.Controls.Add(this.rdoMale);
             this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.Location = new System.Drawing.Point(349, 313);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Location = new System.Drawing.Point(465, 385);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel5.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel5.TabIndex = 11;
             // 
             // rdoOthers
@@ -333,10 +328,10 @@
             this.rdoOthers.AutoSize = true;
             this.rdoOthers.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoOthers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoOthers.Location = new System.Drawing.Point(115, 40);
-            this.rdoOthers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoOthers.Location = new System.Drawing.Point(153, 49);
+            this.rdoOthers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoOthers.Name = "rdoOthers";
-            this.rdoOthers.Size = new System.Drawing.Size(60, 27);
+            this.rdoOthers.Size = new System.Drawing.Size(70, 32);
             this.rdoOthers.TabIndex = 11;
             this.rdoOthers.TabStop = true;
             this.rdoOthers.Text = "ບໍ່ລະບຸ";
@@ -347,10 +342,10 @@
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoFemale.Location = new System.Drawing.Point(60, 40);
-            this.rdoFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoFemale.Location = new System.Drawing.Point(80, 49);
+            this.rdoFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoFemale.Name = "rdoFemale";
-            this.rdoFemale.Size = new System.Drawing.Size(42, 27);
+            this.rdoFemale.Size = new System.Drawing.Size(49, 32);
             this.rdoFemale.TabIndex = 10;
             this.rdoFemale.TabStop = true;
             this.rdoFemale.Text = "ຍິງ";
@@ -361,10 +356,10 @@
             this.rdoMale.AutoSize = true;
             this.rdoMale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoMale.Location = new System.Drawing.Point(2, 39);
-            this.rdoMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoMale.Location = new System.Drawing.Point(3, 48);
+            this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoMale.Name = "rdoMale";
-            this.rdoMale.Size = new System.Drawing.Size(51, 27);
+            this.rdoMale.Size = new System.Drawing.Size(59, 32);
             this.rdoMale.TabIndex = 9;
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "ຊາຍ";
@@ -376,10 +371,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(2, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 23);
+            this.label8.Size = new System.Drawing.Size(40, 28);
             this.label8.TabIndex = 8;
             this.label8.Text = "ເພດ";
             // 
@@ -388,10 +382,10 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.txtRole);
             this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.Location = new System.Drawing.Point(349, 232);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Location = new System.Drawing.Point(465, 286);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel4.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel4.TabIndex = 10;
             // 
             // txtRole
@@ -409,13 +403,13 @@
             this.txtRole.IconLeft = global::Xaysetha_System.Properties.Resources.u_user_plus;
             this.txtRole.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtRole.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtRole.Location = new System.Drawing.Point(2, 26);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtRole.Location = new System.Drawing.Point(3, 32);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRole.Name = "txtRole";
             this.txtRole.PasswordChar = '\0';
             this.txtRole.PlaceholderText = "ກະລຸນາປ້ອນຕຳແໜ່ງຂອງທ່ານ...";
             this.txtRole.SelectedText = "";
-            this.txtRole.Size = new System.Drawing.Size(332, 39);
+            this.txtRole.Size = new System.Drawing.Size(443, 48);
             this.txtRole.TabIndex = 6;
             // 
             // label7
@@ -424,10 +418,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(2, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 23);
+            this.label7.Size = new System.Drawing.Size(60, 28);
             this.label7.TabIndex = 8;
             this.label7.Text = "ຕຳແໜ່ງ";
             // 
@@ -436,10 +429,10 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.txtSurname);
             this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Location = new System.Drawing.Point(349, 150);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(465, 185);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel3.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel3.TabIndex = 9;
             // 
             // txtSurname
@@ -456,13 +449,13 @@
             this.txtSurname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSurname.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtSurname.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSurname.Location = new System.Drawing.Point(2, 26);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSurname.Location = new System.Drawing.Point(3, 32);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.PasswordChar = '\0';
             this.txtSurname.PlaceholderText = "ກະລຸນາປ້ອນນາມສະກຸນຂອງທ່ານ...";
             this.txtSurname.SelectedText = "";
-            this.txtSurname.Size = new System.Drawing.Size(332, 39);
+            this.txtSurname.Size = new System.Drawing.Size(443, 48);
             this.txtSurname.TabIndex = 6;
             // 
             // label6
@@ -471,10 +464,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label6.Location = new System.Drawing.Point(2, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 23);
+            this.label6.Size = new System.Drawing.Size(75, 28);
             this.label6.TabIndex = 8;
             this.label6.Text = "ນາມສະກຸນ";
             // 
@@ -483,10 +475,10 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.Controls.Add(this.txtName);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Location = new System.Drawing.Point(349, 69);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(465, 85);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(358, 68);
+            this.guna2Panel2.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel2.TabIndex = 2;
             // 
             // txtName
@@ -503,13 +495,13 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(2, 26);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.Location = new System.Drawing.Point(3, 32);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຂອງທ່ານ...";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(332, 39);
+            this.txtName.Size = new System.Drawing.Size(443, 48);
             this.txtName.TabIndex = 6;
             // 
             // label5
@@ -518,10 +510,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label5.Location = new System.Drawing.Point(2, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 23);
+            this.label5.Size = new System.Drawing.Size(43, 28);
             this.label5.TabIndex = 8;
             this.label5.Text = "ຊື່ແທ້";
             // 
@@ -531,10 +522,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(344, 22);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(459, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 31);
+            this.label3.Size = new System.Drawing.Size(110, 38);
             this.label3.TabIndex = 1;
             this.label3.Text = "ຂໍ້ມູນທົ່ວໄປ";
             // 
@@ -542,10 +532,10 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.Image = global::Xaysetha_System.Properties.Resources.u_angle_left_b;
-            this.btnBack.Location = new System.Drawing.Point(22, 22);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(29, 27);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(27, 29);
+            this.btnBack.Size = new System.Drawing.Size(36, 36);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 0;
             this.btnBack.TabStop = false;
@@ -563,10 +553,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnSave.Location = new System.Drawing.Point(349, 31);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Location = new System.Drawing.Point(465, 38);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(313, 39);
+            this.btnSave.Size = new System.Drawing.Size(417, 48);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "ບັນທຶກ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -575,47 +565,49 @@
             // 
             this.guna2Panel9.Controls.Add(this.btnSave);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel9.Location = new System.Drawing.Point(52, 651);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel9.Location = new System.Drawing.Point(69, 801);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(962, 115);
+            this.guna2Panel9.Size = new System.Drawing.Size(1283, 142);
             this.guna2Panel9.TabIndex = 13;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1014, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(1352, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(52, 766);
+            this.panel2.Size = new System.Drawing.Size(69, 943);
             this.panel2.TabIndex = 10;
             // 
-            // chkShowPassword
+            // labelLinkBackToAddUser
             // 
-            this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPassword.Location = new System.Drawing.Point(19, 68);
-            this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(92, 25);
-            this.chkShowPassword.TabIndex = 9;
-            this.chkShowPassword.Text = "ສະແດງລະຫັດ";
-            this.chkShowPassword.UseVisualStyleBackColor = true;
-            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            this.labelLinkBackToAddUser.AutoSize = true;
+            this.labelLinkBackToAddUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLinkBackToAddUser.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            this.labelLinkBackToAddUser.Location = new System.Drawing.Point(24, 26);
+            this.labelLinkBackToAddUser.Name = "labelLinkBackToAddUser";
+            this.labelLinkBackToAddUser.Size = new System.Drawing.Size(98, 28);
+            this.labelLinkBackToAddUser.TabIndex = 9;
+            this.labelLinkBackToAddUser.TabStop = true;
+            this.labelLinkBackToAddUser.Text = "ຜູ້ໃຊ້ງານລະບົບ";
+            this.labelLinkBackToAddUser.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            this.labelLinkBackToAddUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelLinkBackToAddUser_LinkClicked);
             // 
             // user_management_add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 766);
+            this.ClientSize = new System.Drawing.Size(1421, 943);
             this.Controls.Add(this.guna2Panel9);
             this.Controls.Add(this.panelUser);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(1066, 1462);
-            this.MinimumSize = new System.Drawing.Size(0, 766);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1421, 1799);
+            this.MinimumSize = new System.Drawing.Size(0, 943);
             this.Name = "user_management_add";
             this.Text = "user_management_add";
             this.guna2Panel1.ResumeLayout(false);
@@ -646,7 +638,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
@@ -680,5 +671,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox chkShowPassword;
+        private System.Windows.Forms.LinkLabel labelLinkBackToAddUser;
     }
 }
