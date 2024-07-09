@@ -7,15 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Xaysetha_System
 {
     public partial class village_management : Form
     {
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adt;
+        NpgsqlConnection conn;
+        db_connect cn = new db_connect();
+        DataTable dt = new DataTable();
+
+        void loadData(string sql)
+        {
+            adt = new NpgsqlDataAdapter(sql, cn.conn);
+            adt.Fill(dt);
+            data.DataSource = dt;
+        }
+
+
         public village_management()
         {
             InitializeComponent();
             CustomizedGridView();
+            cn.getConnect();
+            loadData("SELECT * FROM tb_village;");
         }
         public void CustomizedGridView()
         {

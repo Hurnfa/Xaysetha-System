@@ -15,7 +15,7 @@ namespace Xaysetha_System
         //public MySqlConnection conn = new MySqlConnection();
         public NpgsqlConnection conn = new NpgsqlConnection();
         //public string path = "server=localhost; username=root; database=db_picture; port=3306; password=";
-        public string path = "User Id=postgres.vikiezgjlynnublheair;Password=[YOUR-PASSWORD];Server=aws-0-ap-southeast-1.pooler.supabase.com;Port=6543;Database=postgres;";
+        public string path = "User Id=postgres.vikiezgjlynnublheair;Password=Huawei@123+2023;Server=aws-0-ap-southeast-1.pooler.supabase.com;Port=6543;Database=postgres;";
         //string pwd = "Risd8446+-";
 
         public string userName { get; set; }
@@ -42,7 +42,7 @@ namespace Xaysetha_System
                 {
                     conn.ConnectionString = path;
                     conn.Open();
-                    MessageBox.Show("Connected!");
+                    //MessageBox.Show("Connected!");
                 }
                 catch (Exception ex)
                 {

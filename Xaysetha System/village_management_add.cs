@@ -21,5 +21,10 @@ namespace Xaysetha_System
         {
             this.Hide();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }
