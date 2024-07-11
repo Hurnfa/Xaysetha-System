@@ -98,26 +98,35 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
-            if (columnName == "editButton")
+
+            int village_id = int.Parse(data.Rows[e.RowIndex].Cells["villageID"].Value.ToString());
+
+            switch (columnName)
             {
-                string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
-                int villageID;
-                if (int.TryParse(data.Rows[e.RowIndex].Cells["villageID"].Value.ToString(), out villageID))
-                {
-                    village.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນບ້ານ", "ແກ້ໄຂ", cellData, villageID);
+                case "editButton":
 
-                    village.Show();
-                }
+                    string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
+                    int villageID;
 
-            }
-            else if (columnName == "delButton")
-            {
-                DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (int.TryParse(data.Rows[e.RowIndex].Cells["villageID"].Value.ToString(), out villageID))
+                    {
+                        village.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນບ້ານ", "ແກ້ໄຂ", cellData, villageID);
 
-                if (result == DialogResult.Yes)
-                {
-                    village.dataChange("DELETE FROM tb_village WHERE \"villageID\"=@villageID;", "ລຶບ");
-                }
+                        village.Show();
+                    }
+
+                    break;
+
+                case "delButton":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        village.dataChange("DELETE FROM tb_village WHERE \"villageID\"="+village_id+"", "ລຶບ");
+                    }
+
+                    break;
             }
         }
     }
