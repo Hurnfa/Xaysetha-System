@@ -20,7 +20,7 @@ namespace Xaysetha_System
         //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
-        village_management_add village = new village_management_add("");
+        village_management_add village = new village_management_add();
 
         void loadData(string sql)
         {

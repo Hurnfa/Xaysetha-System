@@ -19,55 +19,116 @@ namespace Xaysetha_System
         DataTable datatable = new DataTable();
         public int id;
 
-        void dataChange(string sql)
+        void dataChange(string sql, string messageBox)
         {
-            cmd = new NpgsqlCommand("select \"villageID\" from tb_village order by \"villageID\" desc limit 1;", cn.conn);
+            cmd = new NpgsqlCommand("SELECT \"villageName\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
 
-            NpgsqlDataReader reader = cmd.ExecuteReader();
+            cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
 
-            while (reader.Read())
+            string output = (string)cmd.ExecuteScalar();
+
+            NpgsqlDataReader reader;
+
+            if (output == txtVillage.Text)
             {
-                id = Convert.ToInt32(reader["villageID"]) + 1;
+                MessageBox.Show("ຂໍ້ມູນດັ່ງກ່າວມີຢູ່ໃນລະບົບແລ້ວ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-                                           
-            reader.Close();
-
-            cmd = new NpgsqlCommand(sql, cn.conn);
-
-            try
+            else
             {
-                cmd.Parameters.AddWithValue("@villageID", id);
-                cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
+                switch (messageBox)
+                {
+                    case "ເພີ່ມ":
 
-                cmd.ExecuteNonQuery();
+                        cmd = new NpgsqlCommand("select \"villageID\" from tb_village order by \"villageID\" desc limit 1;", cn.conn);
 
-                MessageBox.Show("ເພີ່ມບ້ານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        reader = cmd.ExecuteReader();
 
-/*                new village_management().Show();
+                        while (reader.Read())
+                        {
+                            id = Convert.ToInt32(reader["villageID"]) + 1;
+                        }
 
-                Hide();*/
+                        reader.Close();
 
-                txtVillage.Clear();
+                        break;
 
-                //OpenChildForm(new user_management());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                cmd = new NpgsqlCommand(sql, cn.conn);
+
+                try
+                {
+                    cmd.Parameters.AddWithValue("@villageID", id);
+                    cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show(messageBox + "ບ້ານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    /*                new village_management().Show();
+
+                                    Hide();*/
+
+                    txtVillage.Clear();
+
+                    //OpenChildForm(new user_management());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
         }
 
-        public village_management_add(string cellData)
+        /*        public village_management_add(string cellData)
+                {
+                    InitializeComponent();
+                    cn.getConnect();
+                    txtVillage.Text = cellData;
+                }*/
+
+        public void changeInsertToUpdate(string header, string button, string cellData)
+        {
+            labelHeader.Text = header;
+            btnSave.Text = button;
+            txtVillage.Text = cellData;
+        }
+
+        public village_management_add()
         {
             InitializeComponent();
             cn.getConnect();
-            txtVillage.Text = cellData;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dataChange("INSERT INTO tb_village (\"villageID\", \"villageName\") VALUES (@villageID, @villageName);");
+            if (txtVillage.Text != "")
+            {
+                switch (btnSave.Text)
+                {
+                    case "ເພີ່ມ":
+
+                        dataChange("INSERT INTO tb_village (\"villageID\", \"villageName\") VALUES (@villageID, @villageName);", "ເພີ່ມ");
+
+                    break;
+
+                    case "ແກ້ໄຂ":
+
+                        DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dataChange("", "ແກ້ໄຂ");
+                        }
+
+                    break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("ກະລຸນາເພີ່ມຂໍ້ມູນໃສ່ກ່ອນ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)

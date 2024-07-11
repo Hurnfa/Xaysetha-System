@@ -13,7 +13,7 @@ namespace Xaysetha_System
         //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
-        village_management_add village = new village_management_add("");
+        village_management_add village = new village_management_add();
 
         void loadData(string sql)
         {
@@ -83,6 +83,7 @@ namespace Xaysetha_System
 
         private void btnAddVillage_Click(object sender, EventArgs e)
         {
+            village.changeInsertToUpdate("ເພີ່ມຂໍ້ມູນບ້ານ", "ເພີ່ມ", "");
             village.Show();
         }
 
@@ -99,8 +100,13 @@ namespace Xaysetha_System
             if (columnName == "editButton")
             {
                 string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
-                village_management_add village_add = new village_management_add(cellData);
-                village_add.Show();
+
+                village.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນບ້ານ", "ແກ້ໄຂ", cellData);
+
+                village.Show();
+
+/*                village_management_add village_add = new village_management_add(cellData);
+                village_add.Show();*/
 
             }
             else if (columnName == "delButton")
