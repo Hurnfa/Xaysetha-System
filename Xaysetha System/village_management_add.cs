@@ -1,19 +1,12 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    public partial class village_management_add : Form   
+    public partial class village_management_add : Form
     {
-        
+
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
         //Before pushing
@@ -88,12 +81,12 @@ namespace Xaysetha_System
                     txtVillage.Text = cellData;
                 }*/
 
-        public void changeInsertToUpdate(string header, string button, string cellData)
+        public void changeInsertToUpdate(string header, string button, string cellData, int vilID)
         {
             labelHeader.Text = header;
             btnSave.Text = button;
             txtVillage.Text = cellData;
-            //label_id.Text = villageID.ToString();
+            label_id.Text = vilID.ToString();
         }
 
         public village_management_add()
@@ -105,7 +98,7 @@ namespace Xaysetha_System
 
         void getID()
         {
-            if(txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
+            if (txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
             {
                 cmd = new NpgsqlCommand("SELECT \"villageID\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
 
@@ -132,7 +125,7 @@ namespace Xaysetha_System
 
                         dataChange("INSERT INTO tb_village (\"villageID\", \"villageName\") VALUES (@villageID, @villageName);", "ເພີ່ມ");
 
-                    break;
+                        break;
 
                     case "ແກ້ໄຂ":
 
@@ -140,17 +133,17 @@ namespace Xaysetha_System
 
                         if (result == DialogResult.Yes)
                         {
-                            dataChange("UPDATE tb_village SET \"villageName\"=@villageName WHERE \"villageID\"=" + label_id.Text + ";", "ແກ້ໄຂ");                 
+                            dataChange("UPDATE tb_village SET \"villageName\"=@villageName WHERE \"villageID\"=" + label_id.Text + ";", "ແກ້ໄຂ");
                         }
 
-                    break;
+                        break;
                 }
             }
             else
             {
                 MessageBox.Show("ກະລຸນາເພີ່ມຂໍ້ມູນໃສ່ກ່ອນ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
