@@ -32,6 +32,7 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
+            data.Refresh();
             loadData("SELECT * FROM tb_village;");
             displayTotalOfVillage();
         }
@@ -83,7 +84,7 @@ namespace Xaysetha_System
 
         private void btnAddVillage_Click(object sender, EventArgs e)
         {
-            //village.changeInsertToUpdate("ເພີ່ມຂໍ້ມູນບ້ານ", "ເພີ່ມ", "", );
+            village.changeInsertToUpdate("ເພີ່ມຂໍ້ມູນບ້ານ", "ເພີ່ມ", "", 0);
             village.Show();
         }
 
@@ -100,7 +101,7 @@ namespace Xaysetha_System
             if (columnName == "editButton")
             {
                 string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
-                int villageID = 0;
+                int villageID;
                 if (int.TryParse(data.Rows[e.RowIndex].Cells["villageID"].Value.ToString(), out villageID))
                 {
                     village.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນບ້ານ", "ແກ້ໄຂ", cellData, villageID);
@@ -108,15 +109,15 @@ namespace Xaysetha_System
                     village.Show();
                 }
 
-
-
-                /*                village_management_add village_add = new village_management_add(cellData);
-                                village_add.Show();*/
-
             }
             else if (columnName == "delButton")
             {
-                MessageBox.Show("Deleted");
+                DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    village.dataChange("DELETE FROM tb_village WHERE \"villageID\"=@villageID;", "ລຶບ");
+                }
             }
         }
     }

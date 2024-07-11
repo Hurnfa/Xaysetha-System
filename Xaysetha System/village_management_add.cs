@@ -6,14 +6,13 @@ namespace Xaysetha_System
 {
     public partial class village_management_add : Form
     {
-
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
         //Before pushing
         //DataTable datatable = new DataTable();
         public int id;
 
-        void dataChange(string sql, string messageBox)
+        public void dataChange(string sql, string messageBox)
         {
             cmd = new NpgsqlCommand("SELECT \"villageName\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
 
