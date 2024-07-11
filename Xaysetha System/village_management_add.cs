@@ -16,7 +16,8 @@ namespace Xaysetha_System
         
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
-        DataTable datatable = new DataTable();
+        //Before pushing
+        //DataTable datatable = new DataTable();
         public int id;
 
         void dataChange(string sql, string messageBox)
