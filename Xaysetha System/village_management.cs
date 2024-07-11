@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Npgsql;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace Xaysetha_System
 {
@@ -18,7 +13,7 @@ namespace Xaysetha_System
         //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
-        village_management_add village = new village_management_add();
+        village_management_add village = new village_management_add("");
 
         void loadData(string sql)
         {
@@ -48,7 +43,7 @@ namespace Xaysetha_System
 
             while (reader.Read())
             {
-                labelTotalVillage.Text = "ທັງໝົດ " + reader["count"] +" ລາຍການ";
+                labelTotalVillage.Text = "ທັງໝົດ " + reader["count"] + " ລາຍການ";
             }
 
             reader.Close();
@@ -87,7 +82,7 @@ namespace Xaysetha_System
         }
 
         private void btnAddVillage_Click(object sender, EventArgs e)
-        { 
+        {
             village.Show();
         }
 
@@ -98,5 +93,20 @@ namespace Xaysetha_System
             loadData("SELECT * FROM tb_village WHERE CONCAT(\"villageID\", \"villageName\", \"villageEngName\") LIKE '%" + txtFindVillage.Text + "%';");
         }
 
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String columnName = data.Columns[e.ColumnIndex].Name;
+            if (columnName == "editButton")
+            {
+                string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
+                village_management_add village_add = new village_management_add(cellData);
+                village_add.Show();
+
+            }
+            else if (columnName == "delButton")
+            {
+                MessageBox.Show("Deleted");
+            }
+        }
     }
 }

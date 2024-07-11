@@ -11,8 +11,9 @@ using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
-    public partial class village_management_add : Form
+    public partial class village_management_add : Form   
     {
+        
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
@@ -28,7 +29,7 @@ namespace Xaysetha_System
             {
                 id = Convert.ToInt32(reader["villageID"]) + 1;
             }
-
+                                           
             reader.Close();
 
             cmd = new NpgsqlCommand(sql, cn.conn);
@@ -57,10 +58,11 @@ namespace Xaysetha_System
 
         }
 
-        public village_management_add()
+        public village_management_add(string cellData)
         {
             InitializeComponent();
             cn.getConnect();
+            txtVillage.Text = cellData;
         }
 
         private void btnSave_Click(object sender, EventArgs e)

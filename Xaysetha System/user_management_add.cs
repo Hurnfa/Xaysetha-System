@@ -1,12 +1,6 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -18,13 +12,46 @@ namespace Xaysetha_System
         DataTable datatable = new DataTable();
 
         private Form activeForm = null;
-
-        public user_management_add()
+        private readonly string userID;
+        public user_management_add(string userID)
         {
             InitializeComponent();
             panelUser.AutoScroll = true;
             cn.getConnect();
+            this.userID = userID;
+            // Define your SQL query with parameters
+            string query = "SELECT userID, userName, userLName, gender, role, phoneNums, userPassword FROM tb_user WHERE userID = @userID";
+
+            // Create a SqlCommand with parameters
+            NpgsqlCommand command = new NpgsqlCommand(query, cn.conn);
+
+            // Add parameters to the command
+            command.Parameters.AddWithValue("@userID", userID);
+
+            // Execute the query and retrieve data
+            NpgsqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                // Assuming you have textboxes named txtUserID, txtUserName, txtUserLName, txtGender, txtRole, txtPhoneNums, txtUserPassword
+                txtUsername.Text = reader.GetValue(0).ToString();
+                txtName.Text = reader.GetValue(1).ToString();
+                txtSurname.Text = reader.GetValue(2).ToString();
+                string gender = reader.GetValue(3).ToString();
+                rdoMale.Checked = gender == "ຊາຍ";
+                rdoFemale.Checked = gender == "ຍິງ";
+                rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
+                txtRole.Text = reader.GetValue(5).ToString();
+                txtPassword.Text = reader.GetValue(6).ToString();
+            }
+
+
         }
+
+
+
+
+
 
         private void OpenChildForm(Form childForm)
         {
@@ -82,7 +109,7 @@ namespace Xaysetha_System
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n"+ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -94,14 +121,14 @@ namespace Xaysetha_System
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-/*            if (chkShowPassword.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }*/
+            /*            if (chkShowPassword.Checked)
+                        {
+                            txtPassword.UseSystemPasswordChar = false;
+                        }
+                        else
+                        {
+                            txtPassword.UseSystemPasswordChar = true;
+                        }*/
         }
 
         private void btnSave_Click(object sender, EventArgs e)

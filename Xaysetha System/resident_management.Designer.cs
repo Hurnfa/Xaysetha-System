@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnResident = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,17 +45,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profile = new System.Windows.Forms.DataGridViewImageColumn();
-            this.residentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Religious = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Job = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,12 +55,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profile = new System.Windows.Forms.DataGridViewImageColumn();
+            this.residentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Religious = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Job = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnResident
@@ -118,6 +118,17 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1370, 833);
             this.guna2CustomGradientPanel1.TabIndex = 23;
+            // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(861, 59);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(140, 36);
+            this.guna2NumericUpDown1.TabIndex = 33;
             // 
             // guna2ComboBox5
             // 
@@ -177,7 +188,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label18.Location = new System.Drawing.Point(24, 129);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 28);
+            this.label18.Size = new System.Drawing.Size(48, 28);
             this.label18.TabIndex = 28;
             this.label18.Text = "ອາຊີບ";
             // 
@@ -189,7 +200,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label17.Location = new System.Drawing.Point(856, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 28);
+            this.label17.Size = new System.Drawing.Size(38, 28);
             this.label17.TabIndex = 26;
             this.label17.Text = "ອາຍຸ";
             // 
@@ -266,16 +277,16 @@
             // 
             // data
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.data.ColumnHeadersHeight = 18;
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -288,16 +299,16 @@
             this.Gender,
             this.Religious,
             this.Job,
-            this.Edit,
-            this.Delete});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data.DefaultCellStyle = dataGridViewCellStyle6;
+            this.editButton,
+            this.delButton});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data.DefaultCellStyle = dataGridViewCellStyle3;
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
@@ -328,83 +339,8 @@
             this.data.ThemeStyle.RowsStyle.Height = 24;
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
-            // 
-            // userID
-            // 
-            this.userID.HeaderText = "ລະຫັດຜູ້ພັກເຊົ່າ";
-            this.userID.MinimumWidth = 6;
-            this.userID.Name = "userID";
-            // 
-            // profile
-            // 
-            this.profile.HeaderText = "ຮູບ";
-            this.profile.MinimumWidth = 6;
-            this.profile.Name = "profile";
-            // 
-            // residentName
-            // 
-            this.residentName.HeaderText = "ຊື່ຜູ້ພັກເຊົ່າ";
-            this.residentName.MinimumWidth = 6;
-            this.residentName.Name = "residentName";
-            // 
-            // Surname
-            // 
-            this.Surname.HeaderText = "ນາມສະກຸນ";
-            this.Surname.MinimumWidth = 6;
-            this.Surname.Name = "Surname";
-            // 
-            // VillageName
-            // 
-            this.VillageName.HeaderText = "ບ້ານ";
-            this.VillageName.MinimumWidth = 6;
-            this.VillageName.Name = "VillageName";
-            // 
-            // Tel
-            // 
-            this.Tel.HeaderText = "ເບີໂທ";
-            this.Tel.MinimumWidth = 6;
-            this.Tel.Name = "Tel";
-            // 
-            // Gender
-            // 
-            this.Gender.HeaderText = "ເພດ";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            // 
-            // Religious
-            // 
-            this.Religious.HeaderText = "ສາສະໜາ";
-            this.Religious.MinimumWidth = 6;
-            this.Religious.Name = "Religious";
-            // 
-            // Job
-            // 
-            this.Job.HeaderText = "ອາຊີບ";
-            this.Job.MinimumWidth = 6;
-            this.Job.Name = "Job";
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "ຈັດການ";
-            this.Edit.Image = global::Xaysetha_System.Properties.Resources.edit;
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Width = 62;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "ລົບ";
-            this.Delete.Image = global::Xaysetha_System.Properties.Resources.delete;
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Width = 46;
             // 
             // guna2TextBox1
             // 
@@ -520,16 +456,81 @@
             this.panel2.Size = new System.Drawing.Size(26, 943);
             this.panel2.TabIndex = 20;
             // 
-            // guna2NumericUpDown1
+            // userID
             // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(861, 59);
-            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(140, 36);
-            this.guna2NumericUpDown1.TabIndex = 33;
+            this.userID.HeaderText = "ລະຫັດຜູ້ພັກເຊົ່າ";
+            this.userID.MinimumWidth = 6;
+            this.userID.Name = "userID";
+            // 
+            // profile
+            // 
+            this.profile.HeaderText = "ຮູບ";
+            this.profile.MinimumWidth = 6;
+            this.profile.Name = "profile";
+            // 
+            // residentName
+            // 
+            this.residentName.HeaderText = "ຊື່ຜູ້ພັກເຊົ່າ";
+            this.residentName.MinimumWidth = 6;
+            this.residentName.Name = "residentName";
+            // 
+            // Surname
+            // 
+            this.Surname.HeaderText = "ນາມສະກຸນ";
+            this.Surname.MinimumWidth = 6;
+            this.Surname.Name = "Surname";
+            // 
+            // VillageName
+            // 
+            this.VillageName.HeaderText = "ບ້ານ";
+            this.VillageName.MinimumWidth = 6;
+            this.VillageName.Name = "VillageName";
+            // 
+            // Tel
+            // 
+            this.Tel.HeaderText = "ເບີໂທ";
+            this.Tel.MinimumWidth = 6;
+            this.Tel.Name = "Tel";
+            // 
+            // Gender
+            // 
+            this.Gender.HeaderText = "ເພດ";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            // 
+            // Religious
+            // 
+            this.Religious.HeaderText = "ສາສະໜາ";
+            this.Religious.MinimumWidth = 6;
+            this.Religious.Name = "Religious";
+            // 
+            // Job
+            // 
+            this.Job.HeaderText = "ອາຊີບ";
+            this.Job.MinimumWidth = 6;
+            this.Job.Name = "Job";
+            // 
+            // editButton
+            // 
+            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.editButton.HeaderText = "ຈັດການ";
+            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
+            this.editButton.MinimumWidth = 6;
+            this.editButton.Name = "editButton";
+            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editButton.Width = 62;
+            // 
+            // delButton
+            // 
+            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.delButton.HeaderText = "ລົບ";
+            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
+            this.delButton.MinimumWidth = 6;
+            this.delButton.Name = "delButton";
+            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.delButton.Width = 46;
             // 
             // resident_management
             // 
@@ -548,11 +549,11 @@
             this.Text = "resident_management";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,6 +583,7 @@
         private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
         private System.Windows.Forms.Label label18;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private System.Windows.Forms.DataGridViewTextBoxColumn userID;
         private System.Windows.Forms.DataGridViewImageColumn profile;
         private System.Windows.Forms.DataGridViewTextBoxColumn residentName;
@@ -591,8 +593,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Religious;
         private System.Windows.Forms.DataGridViewTextBoxColumn Job;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private System.Windows.Forms.DataGridViewImageColumn editButton;
+        private System.Windows.Forms.DataGridViewImageColumn delButton;
     }
 }

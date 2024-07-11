@@ -99,5 +99,18 @@ namespace Xaysetha_System
                 e.Handled = true;
             }
         }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String columnName = data.Columns[e.ColumnIndex].Name;
+            if (columnName == "editButton")
+            {
+                OpenChildForm(new place_add());
+            }
+            else if (columnName == "delButton")
+            {
+                MessageBox.Show("Deleted");
+            }
+        }
     }
 }

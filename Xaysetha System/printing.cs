@@ -14,7 +14,7 @@ namespace Xaysetha_System
     {
         public printing()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

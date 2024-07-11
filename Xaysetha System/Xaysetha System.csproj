@@ -389,6 +389,7 @@
     <None Include="Resources\fi_plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Group.png" />
     <None Include="Resources\mingcute_close-line.png" />
     <None Include="Resources\ph_money.png" />
     <None Include="Resources\ph_city-light.png" />
@@ -400,6 +401,9 @@
     <None Include="Resources\Upload Image.png" />
     <None Include="Resources\house-03-svgrepo-com 1.png" />
     <None Include="Resources\close.png" />
+    <None Include="Resources\border_color.png" />
+    <None Include="Resources\border_color1.png" />
+    <None Include="Resources\border_color2.png" />
     <Content Include="Resources\delete.png" />
     <None Include="Resources\u_lock-alt.png" />
     <None Include="Resources\u_phone.png" />

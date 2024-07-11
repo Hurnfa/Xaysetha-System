@@ -20,7 +20,7 @@ namespace Xaysetha_System
         //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
-        village_management_add village = new village_management_add();
+        village_management_add village = new village_management_add("");
 
         void loadData(string sql)
         {
@@ -94,10 +94,7 @@ namespace Xaysetha_System
             {
                 e.PaintBackground(e.CellBounds, true);
 
-                using (Brush brush = new SolidBrush(Color.FromArgb(144, 189, 214)))
-                {
-                    e.Graphics.FillRectangle(brush, e.CellBounds);
-                }
+                
 
                 using (Pen pen = new Pen(data.GridColor))
                 {
@@ -116,6 +113,19 @@ namespace Xaysetha_System
         private void btnResident_Click(object sender, EventArgs e)
         {
             OpenChildForm(new resident_add());
+        }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String columnName = data.Columns[e.ColumnIndex].Name;
+            if (columnName == "editButton")
+            {
+                OpenChildForm(new resident_add());
+            }
+            else if (columnName == "delButton")
+            {
+                MessageBox.Show("Deleted");
+            }
         }
     }
 }

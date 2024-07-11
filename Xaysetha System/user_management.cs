@@ -1,12 +1,7 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -103,7 +98,21 @@ namespace Xaysetha_System
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new user_management_add());
+            OpenChildForm(new user_management_add(""));
+        }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String columnName = data.Columns[e.ColumnIndex].Name;
+            if (columnName == "editButton")
+            {
+                string userID = data.Rows[e.RowIndex].Cells["userID"].Value.ToString();
+                OpenChildForm(new user_management_add(userID));
+            }
+            else if (columnName == "delButton")
+            {
+                MessageBox.Show("Deleted");
+            }
         }
     }
 }
