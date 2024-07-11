@@ -93,12 +93,33 @@ namespace Xaysetha_System
             labelHeader.Text = header;
             btnSave.Text = button;
             txtVillage.Text = cellData;
+            //label_id.Text = villageID.ToString();
         }
 
         public village_management_add()
         {
             InitializeComponent();
             cn.getConnect();
+            getID();
+        }
+
+        void getID()
+        {
+            if(txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
+            {
+                cmd = new NpgsqlCommand("SELECT \"villageID\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
+
+                cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
+
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    label_id.Text = reader["villageID"].ToString();
+                }
+
+                reader.Close();
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -119,7 +140,7 @@ namespace Xaysetha_System
 
                         if (result == DialogResult.Yes)
                         {
-                            dataChange("", "ແກ້ໄຂ");
+                            dataChange("UPDATE tb_village SET \"villageName\"=@villageName WHERE \"villageID\"=" + label_id.Text + ";", "ແກ້ໄຂ");                 
                         }
 
                     break;

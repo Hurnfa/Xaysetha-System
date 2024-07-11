@@ -35,6 +35,7 @@
             this.txtVillage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.label_id = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -45,7 +46,7 @@
             this.guna2Panel1.Controls.Add(this.btnClose);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(457, 37);
             this.guna2Panel1.TabIndex = 1;
@@ -55,7 +56,7 @@
             this.btnClose.Image = global::Xaysetha_System.Properties.Resources.close;
             this.btnClose.ImageRotate = 0F;
             this.btnClose.Location = new System.Drawing.Point(425, 10);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(22, 24);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +83,7 @@
             this.guna2Panel2.Controls.Add(this.txtVillage);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Location = new System.Drawing.Point(48, 113);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel2.TabIndex = 3;
@@ -137,12 +138,21 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.Location = new System.Drawing.Point(114, 253);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(228, 39);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "ບັນທຶກ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label_id
+            // 
+            this.label_id.AutoSize = true;
+            this.label_id.Location = new System.Drawing.Point(394, 221);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(35, 13);
+            this.label_id.TabIndex = 20;
+            this.label_id.Text = "label1";
             // 
             // village_management_add
             // 
@@ -150,12 +160,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(457, 316);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label_id);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.labelHeader);
             this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(457, 316);
             this.MinimumSize = new System.Drawing.Size(457, 316);
             this.Name = "village_management_add";
@@ -166,6 +177,7 @@
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,5 +190,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtVillage;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button btnSave;
+        private System.Windows.Forms.Label label_id;
     }
 }

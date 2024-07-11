@@ -100,6 +100,7 @@ namespace Xaysetha_System
             if (columnName == "editButton")
             {
                 string cellData = data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString();
+                //int villageID = Convert.ToInt32(data.Rows[e.RowIndex].Cells["VillageName"].Value.ToString());
 
                 village.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນບ້ານ", "ແກ້ໄຂ", cellData);
 
