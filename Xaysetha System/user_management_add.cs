@@ -13,40 +13,48 @@ namespace Xaysetha_System
 
         private Form activeForm = null;
         private readonly string userID;
-        public user_management_add(string userID)
+
+        public user_management_add()
         {
             InitializeComponent();
             panelUser.AutoScroll = true;
             cn.getConnect();
-            this.userID = userID;
-            // Define your SQL query with parameters
-            string query = "SELECT userID, userName, userLName, gender, role, phoneNums, userPassword FROM tb_user WHERE userID = @userID";
-
-            // Create a SqlCommand with parameters
-            NpgsqlCommand command = new NpgsqlCommand(query, cn.conn);
-
-            // Add parameters to the command
-            command.Parameters.AddWithValue("@userID", userID);
-
-            // Execute the query and retrieve data
-            NpgsqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                // Assuming you have textboxes named txtUserID, txtUserName, txtUserLName, txtGender, txtRole, txtPhoneNums, txtUserPassword
-                txtUsername.Text = reader.GetValue(0).ToString();
-                txtName.Text = reader.GetValue(1).ToString();
-                txtSurname.Text = reader.GetValue(2).ToString();
-                string gender = reader.GetValue(3).ToString();
-                rdoMale.Checked = gender == "ຊາຍ";
-                rdoFemale.Checked = gender == "ຍິງ";
-                rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
-                txtRole.Text = reader.GetValue(5).ToString();
-                txtPassword.Text = reader.GetValue(6).ToString();
-            }
-
-
         }
+
+        /*        public user_management_add(string userID)
+                {
+                    InitializeComponent();
+                    panelUser.AutoScroll = true;
+                    cn.getConnect();
+                    this.userID = userID;
+                    // Define your SQL query with parameters
+                    string query = "SELECT userID, userName, userLName, gender, role, phoneNums, userPassword FROM tb_user WHERE userID = @userID";
+
+                    // Create a SqlCommand with parameters
+                    NpgsqlCommand command = new NpgsqlCommand(query, cn.conn);
+
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@userID", userID);
+
+                    // Execute the query and retrieve data
+                    NpgsqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        // Assuming you have textboxes named txtUserID, txtUserName, txtUserLName, txtGender, txtRole, txtPhoneNums, txtUserPassword
+                        txtUsername.Text = reader.GetValue(0).ToString();
+                        txtName.Text = reader.GetValue(1).ToString();
+                        txtSurname.Text = reader.GetValue(2).ToString();
+                        string gender = reader.GetValue(3).ToString();
+                        rdoMale.Checked = gender == "ຊາຍ";
+                        rdoFemale.Checked = gender == "ຍິງ";
+                        rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
+                        txtRole.Text = reader.GetValue(5).ToString();
+                        txtPassword.Text = reader.GetValue(6).ToString();
+                    }
+
+
+                }*/
 
 
 
@@ -76,7 +84,7 @@ namespace Xaysetha_System
             childForm.Show();
         }
 
-        void dataChange(string sql)
+        public void dataChange(string sql, string messageBox)
         {
             string gender = "ບໍ່ລະບຸ";
 
@@ -103,7 +111,7 @@ namespace Xaysetha_System
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("ເພີ່ມຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(messageBox+"ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 OpenChildForm(new user_management());
             }
@@ -121,19 +129,79 @@ namespace Xaysetha_System
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            /*            if (chkShowPassword.Checked)
-                        {
-                            txtPassword.UseSystemPasswordChar = false;
-                        }
-                        else
-                        {
-                            txtPassword.UseSystemPasswordChar = true;
-                        }*/
+            switch (chkShowPassword.Checked)
+            {
+                case true:
+
+                    txtPassword.UseSystemPasswordChar = true;
+
+                    break;
+
+                case false:
+
+                    txtPassword.UseSystemPasswordChar = false;
+
+                    break;
+            }
+            
+/*            if (chkShowPassword.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else if (chkShowPassword.Checked == false)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }*/
+        }
+
+        public void changeInsertToUpdate(string header, string button)
+        {
+            label_header.Text = header;
+            btnSave.Text = button;
+        }
+
+        public void fetchDataFromMainPage(string user, string name, string surname, string gender, string role, string phoneNums, string userPassword)
+        {
+            txtUsername.Text = user;
+            txtName.Text = name;
+            txtSurname.Text = surname;
+
+            rdoMale.Checked = gender == "ຊາຍ";
+            rdoFemale.Checked = gender == "ຍິງ";
+            rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
+
+            txtRole.Text = role;
+            txtPhoneNums.Text = phoneNums;
+            txtPassword.Text = userPassword;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dataChange("INSERT INTO tb_user VALUES(@userID, @userName, @userLName, @phoneNums, @userPassword, @gender, @role);");
+            if(txtName.TextLength != 0 && txtSurname.TextLength != 0 && txtRole.TextLength != 0 && txtPhoneNums.TextLength != 0 && txtUsername.TextLength != 0 && txtPassword.TextLength != 0)
+            {
+                switch(btnSave.Text)
+                {
+                    case "ບັນທຶກ":
+
+                        dataChange("INSERT INTO tb_user VALUES(@userID, @userName, @userLName, @phoneNums, @userPassword, @gender, @role);", "ເພີ່ມ");
+
+                        break;
+
+                    case "ແກ້ໄຂ":
+
+                        DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            dataChange("UPDATE tb_user SET \"userName\"=@userName, \"userLName\"=@userLName, \"phoneNums\"=@phoneNums, \"userPassword\"=@userPassword, gender=@gender, role=@role WHERE \"userID\"=@userID;", "ແກ້ໄຂ");
+                        }
+
+                        break;
+                }
+            }
+
+
+            
         }
 
         private void labelLinkBackToAddUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

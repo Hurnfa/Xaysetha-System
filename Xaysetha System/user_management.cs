@@ -12,12 +12,13 @@ namespace Xaysetha_System
         NpgsqlDataAdapter adapter;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
+        user_management_add addUser = new user_management_add();
 
         private Form activeForm = null;
 
         void loadData(string sql)
         {
-            data.Rows.Clear();
+            //data.Rows.Clear();
             data.AutoGenerateColumns = false;
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
@@ -31,6 +32,19 @@ namespace Xaysetha_System
             data.Columns["password"].DataPropertyName = "userPassword";
         }
 
+        public void displayTotalOfUser()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_user;", cn.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                labelTotalUser.Text = "ທັງໝົດ " + reader["count"] + " ລາຍການ";
+            }
+
+            reader.Close();
+        }
+
         public user_management()
         {
             InitializeComponent();
@@ -39,6 +53,7 @@ namespace Xaysetha_System
             data.AllowUserToAddRows = false;
             data.RowTemplate.Height = 30;
             cn.getConnect();
+            displayTotalOfUser();
             loadData("SELECT * FROM tb_user;");
         }
 
@@ -64,6 +79,7 @@ namespace Xaysetha_System
             childForm.BringToFront();
             childForm.Show();
         }
+
         public void CustomizedGridView()
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
@@ -98,21 +114,67 @@ namespace Xaysetha_System
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new user_management_add(""));
+            OpenChildForm(new user_management_add());
         }
 
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
-            if (columnName == "editButton")
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            string userID = row.Cells[0].Value?.ToString(),
+                    name = row.Cells[1].Value?.ToString(),
+                    surname = row.Cells[2].Value?.ToString(),
+                    gender = row.Cells[3].Value?.ToString(),
+                    role = row.Cells[4].Value?.ToString(),
+                    phoneNums = row.Cells[5].Value?.ToString(),
+                    userPassword = row.Cells[6].Value?.ToString();
+
+            switch (columnName)
             {
-                string userID = data.Rows[e.RowIndex].Cells["userID"].Value.ToString();
-                OpenChildForm(new user_management_add(userID));
+                case "editButton":
+
+                    addUser.fetchDataFromMainPage(userID, name, surname, gender, role, phoneNums, userPassword);
+
+                    addUser.changeInsertToUpdate("ແກ້ໄຂຂໍ້ມູນ", "ແກ້ໄຂ");
+                    OpenChildForm(addUser);
+
+                    break;
+
+                case "delButton":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນ "+userID+" ນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        /*addUser.dataChange("DELETE FROM tb_user WHERE \"userID\"='" + userID + "'", "ລຶບ");*/
+
+                        cmd = new NpgsqlCommand("DELETE FROM tb_user WHERE \"userID\"=@userID;", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@userID", userID);
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+
+                    break;
             }
-            else if (columnName == "delButton")
-            {
-                MessageBox.Show("Deleted");
-            }
+        }
+
+        private void txtUserSearch_TextChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_user WHERE CONCAT(\"userID\", \"userName\", \"userLName\", gender, role, \"phoneNums\", \"userPassword\") LIKE '%" + txtUserSearch.Text + "%';");
         }
     }
 }

@@ -92,10 +92,10 @@ namespace Xaysetha_System
         {
             InitializeComponent();
             cn.getConnect();
-            getID();
+            //getID();
         }
 
-        void getID()
+/*        void getID()
         {
             if (txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
             {
@@ -112,7 +112,7 @@ namespace Xaysetha_System
 
                 reader.Close();
             }
-        }
+        }*/
 
         private void btnSave_Click(object sender, EventArgs e)
         {

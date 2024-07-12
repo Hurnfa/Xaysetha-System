@@ -75,6 +75,7 @@ namespace Xaysetha_System
         }
 
         private void showSubMenu(Panel subMenu) {
+
             if (subMenu.Visible == false) {
                 hideSubMenu();
                 subMenu.Visible = true;
@@ -110,24 +111,28 @@ namespace Xaysetha_System
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnUserManagement);
+            labelHeader.Text = btnUserManagement.Text;
             OpenChildForm(new user_management());
         }
 
         private void btnVilManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnVilManagement);
+            labelHeader.Text = btnVilManagement.Text;
             OpenChildForm(new village_management());
         }
 
         private void btnTenantManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnTenantManagement);
+            labelHeader.Text = btnTenantManagement.Text;
             OpenChildForm(new resident_management());
         }
 
         private void btnHomeManagement_Click(object sender, EventArgs e)
         {
             ChangeButtonAppearance(btnHomeManagement);
+            labelHeader.Text = btnHomeManagement.Text;
             OpenChildForm(new place_management());
         }
 
@@ -144,11 +149,13 @@ namespace Xaysetha_System
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = btnDashboard.Text;
             OpenChildForm(new Form2());
         }
 
         private void btnEntry_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = btnEntry.Text;
             OpenChildForm(new entrance_management());
         }
 
