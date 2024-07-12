@@ -176,7 +176,7 @@ namespace Xaysetha_System
 
         private void btnPrinting_Click(object sender, EventArgs e)
         {
-            new printing().Show();
+            new printing_docs().Show();
         }
     }
 }
