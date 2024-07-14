@@ -62,7 +62,6 @@ namespace Xaysetha_System
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
             data.ColumnHeadersHeight = 30;
-
         }
 
         private void OpenChildForm(Form childForm)
