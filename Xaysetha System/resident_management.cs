@@ -1,12 +1,7 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -30,7 +25,6 @@ namespace Xaysetha_System
             adapter.Fill(datatable);
             data.DataSource = datatable;
             data.Columns["citizenID"].DataPropertyName = "citizenID";
-            data.Columns["profile"].DataPropertyName = "citizenPics";
             data.Columns["citizenName"].DataPropertyName = "name";
             data.Columns["Surname"].DataPropertyName = "surname";
             data.Columns["villageName"].DataPropertyName = "addr";
@@ -100,7 +94,10 @@ namespace Xaysetha_System
             {
                 e.PaintBackground(e.CellBounds, true);
 
-                
+                using (Brush brush = new SolidBrush(Color.FromArgb(144, 189, 214)))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
 
                 using (Pen pen = new Pen(data.GridColor))
                 {

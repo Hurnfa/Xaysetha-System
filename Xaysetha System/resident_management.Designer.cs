@@ -34,8 +34,6 @@
             this.btnResident = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -56,7 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.citizenID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profile = new System.Windows.Forms.DataGridViewImageColumn();
             this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,8 +96,6 @@
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2NumericUpDown1);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2ComboBox5);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label19);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2ComboBox4);
             this.guna2CustomGradientPanel1.Controls.Add(this.label18);
             this.guna2CustomGradientPanel1.Controls.Add(this.label17);
@@ -130,38 +125,6 @@
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(140, 36);
             this.guna2NumericUpDown1.TabIndex = 33;
             // 
-            // guna2ComboBox5
-            // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 4;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.guna2ComboBox5.ItemHeight = 30;
-            this.guna2ComboBox5.Items.AddRange(new object[] {
-            " ",
-            "ພາຍໃນ",
-            "ຕ່າງປະເທດ"});
-            this.guna2ComboBox5.Location = new System.Drawing.Point(401, 160);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(244, 36);
-            this.guna2ComboBox5.TabIndex = 31;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label19.Location = new System.Drawing.Point(396, 129);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(111, 28);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "ປະເພດຜູ້ພັກເຊົ່າ";
-            // 
             // guna2ComboBox4
             // 
             this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
@@ -188,7 +151,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label18.Location = new System.Drawing.Point(24, 129);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 28);
+            this.label18.Size = new System.Drawing.Size(48, 28);
             this.label18.TabIndex = 28;
             this.label18.Text = "ອາຊີບ";
             // 
@@ -200,7 +163,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label17.Location = new System.Drawing.Point(856, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 28);
+            this.label17.Size = new System.Drawing.Size(38, 28);
             this.label17.TabIndex = 26;
             this.label17.Text = "ອາຍຸ";
             // 
@@ -291,7 +254,6 @@
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.citizenID,
-            this.profile,
             this.citizenName,
             this.Surname,
             this.VillageName,
@@ -458,19 +420,13 @@
             // 
             // citizenID
             // 
-            this.citizenID.HeaderText = "ລະຫັດຜູ້ພັກເຊົ່າ";
+            this.citizenID.HeaderText = "ລະຫັດບຸກຄົນ";
             this.citizenID.MinimumWidth = 6;
             this.citizenID.Name = "citizenID";
             // 
-            // profile
-            // 
-            this.profile.HeaderText = "ຮູບ";
-            this.profile.MinimumWidth = 6;
-            this.profile.Name = "profile";
-            // 
             // citizenName
             // 
-            this.citizenName.HeaderText = "ຊື່ຜູ້ພັກເຊົ່າ";
+            this.citizenName.HeaderText = "ຊື່";
             this.citizenName.MinimumWidth = 6;
             this.citizenName.Name = "citizenName";
             // 
@@ -579,13 +535,10 @@
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
-        private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenID;
-        private System.Windows.Forms.DataGridViewImageColumn profile;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;

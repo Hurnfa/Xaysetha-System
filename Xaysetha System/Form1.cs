@@ -1,13 +1,6 @@
-﻿using MySqlConnector;
-using Npgsql;
+﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -114,6 +107,18 @@ namespace Xaysetha_System
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("ຂໍອະໄພ, ຟັງຊັັນນີ້ຍັງບໍ່ທັນເປີດໃຫ້ບໍລິການ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void txtPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Suppress the Enter key from being processed further
+                e.Handled = true;
+
+                // Call your specific function here
+                getLogIn();
+            }
         }
     }
 }

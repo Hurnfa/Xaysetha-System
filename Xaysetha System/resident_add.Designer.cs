@@ -48,6 +48,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtAddr = new Guna.UI2.WinForms.Guna2TextBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -93,6 +99,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -100,6 +109,8 @@
             this.guna2Panel5.SuspendLayout();
             this.panelUser.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
+            this.guna2Panel19.SuspendLayout();
+            this.guna2Panel18.SuspendLayout();
             this.guna2Panel17.SuspendLayout();
             this.guna2Panel16.SuspendLayout();
             this.guna2Panel15.SuspendLayout();
@@ -115,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.guna2Panel20.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -173,7 +185,7 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.Controls.Add(this.txtName);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Location = new System.Drawing.Point(200, 60);
+            this.guna2Panel2.Location = new System.Drawing.Point(200, 155);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel2.TabIndex = 2;
@@ -218,7 +230,7 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.txtSurname);
             this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Location = new System.Drawing.Point(200, 155);
+            this.guna2Panel3.Location = new System.Drawing.Point(200, 250);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel3.TabIndex = 9;
@@ -263,7 +275,7 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.txtReligious);
             this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.Location = new System.Drawing.Point(200, 345);
+            this.guna2Panel4.Location = new System.Drawing.Point(200, 440);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel4.TabIndex = 10;
@@ -308,7 +320,7 @@
             this.guna2Panel5.Controls.Add(this.rdoFemale);
             this.guna2Panel5.Controls.Add(this.rdoMale);
             this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.Location = new System.Drawing.Point(200, 250);
+            this.guna2Panel5.Location = new System.Drawing.Point(200, 345);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel5.TabIndex = 11;
@@ -388,6 +400,9 @@
             this.guna2CustomGradientPanel2.AutoScroll = true;
             this.guna2CustomGradientPanel2.AutoScrollMargin = new System.Drawing.Size(0, 600);
             this.guna2CustomGradientPanel2.BorderRadius = 25;
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel20);
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel19);
+            this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel18);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel17);
             this.guna2CustomGradientPanel2.Controls.Add(this.label22);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel16);
@@ -412,12 +427,103 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(824, 1200);
             this.guna2CustomGradientPanel2.TabIndex = 15;
             // 
+            // guna2Panel19
+            // 
+            this.guna2Panel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel19.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel19.Controls.Add(this.label24);
+            this.guna2Panel19.Location = new System.Drawing.Point(200, 915);
+            this.guna2Panel19.Name = "guna2Panel19";
+            this.guna2Panel19.Size = new System.Drawing.Size(478, 84);
+            this.guna2Panel19.TabIndex = 15;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BorderRadius = 4;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(24, 24);
+            this.guna2TextBox2.Location = new System.Drawing.Point(3, 32);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "ກະລຸນາປ້ອນຊົນເຜົ່າຂອງທ່ານ..";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(442, 48);
+            this.guna2TextBox2.TabIndex = 6;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label24.Location = new System.Drawing.Point(3, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(55, 28);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "ຊົນເຜົ່າ";
+            // 
+            // guna2Panel18
+            // 
+            this.guna2Panel18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel18.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel18.Controls.Add(this.label4);
+            this.guna2Panel18.Location = new System.Drawing.Point(200, 820);
+            this.guna2Panel18.Name = "guna2Panel18";
+            this.guna2Panel18.Size = new System.Drawing.Size(478, 84);
+            this.guna2Panel18.TabIndex = 14;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderRadius = 4;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = global::Xaysetha_System.Properties.Resources.globe_svgrepo_com_1;
+            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(24, 24);
+            this.guna2TextBox1.Location = new System.Drawing.Point(3, 32);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "ກະລຸນາປ້ອນສັນຊາດຂອງທ່ານ..";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(442, 48);
+            this.guna2TextBox1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 28);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ເຊື້ອຊາດ";
+            // 
             // guna2Panel17
             // 
             this.guna2Panel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel17.Controls.Add(this.txtAddr);
             this.guna2Panel17.Controls.Add(this.label23);
-            this.guna2Panel17.Location = new System.Drawing.Point(200, 1655);
+            this.guna2Panel17.Location = new System.Drawing.Point(200, 1955);
             this.guna2Panel17.Name = "guna2Panel17";
             this.guna2Panel17.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel17.TabIndex = 21;
@@ -440,7 +546,7 @@
             this.txtAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.PasswordChar = '\0';
-            this.txtAddr.PlaceholderText = "ກະລຸນາປ້ອນທີ່ຢູ່ຂອງທ່ານ..";
+            this.txtAddr.PlaceholderText = "ກະລຸນາປ້ອນທີ່ຢູ່ບ່ອນເຮັດວຽກຂອງທ່ານ..";
             this.txtAddr.SelectedText = "";
             this.txtAddr.Size = new System.Drawing.Size(442, 48);
             this.txtAddr.TabIndex = 6;
@@ -463,18 +569,18 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label22.Location = new System.Drawing.Point(200, 1605);
+            this.label22.Location = new System.Drawing.Point(200, 1905);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(160, 38);
+            this.label22.Size = new System.Drawing.Size(176, 38);
             this.label22.TabIndex = 20;
-            this.label22.Text = "ຂໍ້ມູນທີ່ຢູ່ປັດຈຸບັນ";
+            this.label22.Text = "ຂໍ້ມູນບ່ອນເຮັດວຽກ";
             // 
             // guna2Panel16
             // 
             this.guna2Panel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel16.Controls.Add(this.txtMomSurname);
             this.guna2Panel16.Controls.Add(this.label21);
-            this.guna2Panel16.Location = new System.Drawing.Point(200, 1465);
+            this.guna2Panel16.Location = new System.Drawing.Point(200, 1765);
             this.guna2Panel16.Name = "guna2Panel16";
             this.guna2Panel16.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel16.TabIndex = 19;
@@ -520,7 +626,7 @@
             this.guna2Panel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel15.Controls.Add(this.txtMomName);
             this.guna2Panel15.Controls.Add(this.label20);
-            this.guna2Panel15.Location = new System.Drawing.Point(200, 1370);
+            this.guna2Panel15.Location = new System.Drawing.Point(200, 1670);
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel15.TabIndex = 18;
@@ -566,7 +672,7 @@
             this.guna2Panel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel14.Controls.Add(this.txtDadSurname);
             this.guna2Panel14.Controls.Add(this.label19);
-            this.guna2Panel14.Location = new System.Drawing.Point(200, 1275);
+            this.guna2Panel14.Location = new System.Drawing.Point(200, 1575);
             this.guna2Panel14.Name = "guna2Panel14";
             this.guna2Panel14.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel14.TabIndex = 18;
@@ -612,7 +718,7 @@
             this.guna2Panel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel13.Controls.Add(this.txtDadName);
             this.guna2Panel13.Controls.Add(this.label18);
-            this.guna2Panel13.Location = new System.Drawing.Point(200, 1180);
+            this.guna2Panel13.Location = new System.Drawing.Point(200, 1480);
             this.guna2Panel13.Name = "guna2Panel13";
             this.guna2Panel13.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel13.TabIndex = 17;
@@ -659,7 +765,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label17.Location = new System.Drawing.Point(200, 1130);
+            this.label17.Location = new System.Drawing.Point(200, 1430);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(168, 38);
             this.label17.TabIndex = 16;
@@ -670,7 +776,7 @@
             this.guna2Panel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel12.Controls.Add(this.datePickerFamBookIssuedDate);
             this.guna2Panel12.Controls.Add(this.label16);
-            this.guna2Panel12.Location = new System.Drawing.Point(200, 995);
+            this.guna2Panel12.Location = new System.Drawing.Point(200, 1295);
             this.guna2Panel12.Name = "guna2Panel12";
             this.guna2Panel12.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel12.TabIndex = 15;
@@ -709,7 +815,7 @@
             this.guna2Panel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel11.Controls.Add(this.txtFamBookNums);
             this.guna2Panel11.Controls.Add(this.label15);
-            this.guna2Panel11.Location = new System.Drawing.Point(200, 900);
+            this.guna2Panel11.Location = new System.Drawing.Point(200, 1200);
             this.guna2Panel11.Name = "guna2Panel11";
             this.guna2Panel11.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel11.TabIndex = 15;
@@ -755,7 +861,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label14.Location = new System.Drawing.Point(200, 850);
+            this.label14.Location = new System.Drawing.Point(200, 1150);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(168, 38);
             this.label14.TabIndex = 15;
@@ -766,7 +872,7 @@
             this.guna2Panel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel10.Controls.Add(this.txtJobs);
             this.guna2Panel10.Controls.Add(this.label12);
-            this.guna2Panel10.Location = new System.Drawing.Point(200, 725);
+            this.guna2Panel10.Location = new System.Drawing.Point(200, 1010);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel10.TabIndex = 14;
@@ -803,7 +909,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 28);
+            this.label12.Size = new System.Drawing.Size(48, 28);
             this.label12.TabIndex = 8;
             this.label12.Text = "ອາຊີບ";
             // 
@@ -812,7 +918,7 @@
             this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel8.Controls.Add(this.txtNationality);
             this.guna2Panel8.Controls.Add(this.label11);
-            this.guna2Panel8.Location = new System.Drawing.Point(200, 630);
+            this.guna2Panel8.Location = new System.Drawing.Point(200, 725);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel8.TabIndex = 13;
@@ -858,7 +964,7 @@
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel7.Controls.Add(this.txtPhoneNums);
             this.guna2Panel7.Controls.Add(this.label10);
-            this.guna2Panel7.Location = new System.Drawing.Point(200, 535);
+            this.guna2Panel7.Location = new System.Drawing.Point(200, 630);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel7.TabIndex = 12;
@@ -904,7 +1010,7 @@
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Controls.Add(this.datePickerBirthday);
             this.guna2Panel6.Controls.Add(this.label9);
-            this.guna2Panel6.Location = new System.Drawing.Point(200, 440);
+            this.guna2Panel6.Location = new System.Drawing.Point(200, 535);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(478, 84);
             this.guna2Panel6.TabIndex = 11;
@@ -1041,6 +1147,50 @@
             this.panel1.Size = new System.Drawing.Size(70, 943);
             this.panel1.TabIndex = 14;
             // 
+            // guna2Panel20
+            // 
+            this.guna2Panel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel20.Controls.Add(this.guna2TextBox3);
+            this.guna2Panel20.Controls.Add(this.label25);
+            this.guna2Panel20.Location = new System.Drawing.Point(200, 60);
+            this.guna2Panel20.Name = "guna2Panel20";
+            this.guna2Panel20.Size = new System.Drawing.Size(478, 84);
+            this.guna2Panel20.TabIndex = 9;
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.BorderRadius = 4;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox3.Location = new System.Drawing.Point(3, 32);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.Size = new System.Drawing.Size(442, 48);
+            this.guna2TextBox3.TabIndex = 6;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label25.Location = new System.Drawing.Point(3, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(116, 28);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "ລະຫັດລະບຸໂຕຕົນ";
+            // 
             // resident_add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1067,6 +1217,10 @@
             this.panelUser.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
+            this.guna2Panel19.ResumeLayout(false);
+            this.guna2Panel19.PerformLayout();
+            this.guna2Panel18.ResumeLayout(false);
+            this.guna2Panel18.PerformLayout();
             this.guna2Panel17.ResumeLayout(false);
             this.guna2Panel17.PerformLayout();
             this.guna2Panel16.ResumeLayout(false);
@@ -1095,6 +1249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.guna2Panel20.ResumeLayout(false);
+            this.guna2Panel20.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1166,5 +1322,14 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datePickerFamBookIssuedDate;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.LinkLabel linkLableBack;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel18;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel19;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private System.Windows.Forms.Label label24;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel20;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private System.Windows.Forms.Label label25;
     }
 }

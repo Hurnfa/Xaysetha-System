@@ -1,13 +1,8 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -65,12 +60,14 @@ namespace Xaysetha_System
 
             try
             {
-                /*1st missing field*/cmd.Parameters.AddWithValue("@citizenID", total);
+                /*1st missing field*/
+                cmd.Parameters.AddWithValue("@citizenID", total);
                 cmd.Parameters.AddWithValue("@name", txtName.Text);
                 cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
                 cmd.Parameters.AddWithValue("@dob", birthDay);
-                /*2nd missing field*/cmd.Parameters.AddWithValue("@race", "Laotian");
+                /*2nd missing field*/
+                cmd.Parameters.AddWithValue("@race", "Laotian");
                 cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
                 ///*3rd missing field*/cmd.Parameters.AddWithValue("@ethnic");
                 cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
@@ -90,7 +87,7 @@ namespace Xaysetha_System
                 new open_child_form().OpenChildForm(new resident_management());
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -103,7 +100,7 @@ namespace Xaysetha_System
 
             openFileDialog.Filter = "Choose img(*.jpg; *.png; *.gif; *.bmp)| *.jpg; *.png; *.gif; *.bmp";
 
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 profilePictureBox.Image = Image.FromFile(openFileDialog.FileName);
             }
