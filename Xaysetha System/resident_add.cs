@@ -61,15 +61,15 @@ namespace Xaysetha_System
             try
             {
                 /*1st missing field*/
-                cmd.Parameters.AddWithValue("@citizenID", total);
+                cmd.Parameters.AddWithValue("@citizenID", txtCitizenID.Text);
                 cmd.Parameters.AddWithValue("@name", txtName.Text);
                 cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
                 cmd.Parameters.AddWithValue("@dob", birthDay);
                 /*2nd missing field*/
-                cmd.Parameters.AddWithValue("@race", "Laotian");
+                cmd.Parameters.AddWithValue("@race", txtRace.Text);
                 cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
-                ///*3rd missing field*/cmd.Parameters.AddWithValue("@ethnic");
+                /*3rd missing field*/cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
                 cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
                 cmd.Parameters.AddWithValue("@dad_name", txtDadName.Text);
                 cmd.Parameters.AddWithValue("@mom_name", txtMomName.Text);
