@@ -55,9 +55,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.citizenID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.profile = new System.Windows.Forms.DataGridViewImageColumn();
-            this.residentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +90,7 @@
             this.btnResident.Name = "btnResident";
             this.btnResident.Size = new System.Drawing.Size(210, 48);
             this.btnResident.TabIndex = 18;
-            this.btnResident.Text = "ເພີ່ມຂໍ້ມູນຜູ້ພັກເຊົາ";
+            this.btnResident.Text = "ເພີ່ມຂໍ້ມູນປະຊາກອນ";
             this.btnResident.TextOffset = new System.Drawing.Point(10, 0);
             this.btnResident.Click += new System.EventHandler(this.btnResident_Click);
             // 
@@ -188,7 +188,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label18.Location = new System.Drawing.Point(24, 129);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 28);
+            this.label18.Size = new System.Drawing.Size(49, 28);
             this.label18.TabIndex = 28;
             this.label18.Text = "ອາຊີບ";
             // 
@@ -200,7 +200,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label17.Location = new System.Drawing.Point(856, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 28);
+            this.label17.Size = new System.Drawing.Size(39, 28);
             this.label17.TabIndex = 26;
             this.label17.Text = "ອາຍຸ";
             // 
@@ -290,9 +290,9 @@
             this.data.ColumnHeadersHeight = 18;
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userID,
+            this.citizenID,
             this.profile,
-            this.residentName,
+            this.citizenName,
             this.Surname,
             this.VillageName,
             this.Tel,
@@ -436,9 +436,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label4.Location = new System.Drawing.Point(24, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 28);
+            this.label4.Size = new System.Drawing.Size(180, 28);
             this.label4.TabIndex = 6;
-            this.label4.Text = "ຂໍ້ມູນຜູ້ພັກເຊົ່າ";
+            this.label4.Text = "ຂໍ້ມູນປະຊາກອນພາຍໃນເມືອງ";
             // 
             // panel1
             // 
@@ -456,11 +456,11 @@
             this.panel2.Size = new System.Drawing.Size(26, 943);
             this.panel2.TabIndex = 20;
             // 
-            // userID
+            // citizenID
             // 
-            this.userID.HeaderText = "ລະຫັດຜູ້ພັກເຊົ່າ";
-            this.userID.MinimumWidth = 6;
-            this.userID.Name = "userID";
+            this.citizenID.HeaderText = "ລະຫັດຜູ້ພັກເຊົ່າ";
+            this.citizenID.MinimumWidth = 6;
+            this.citizenID.Name = "citizenID";
             // 
             // profile
             // 
@@ -468,11 +468,11 @@
             this.profile.MinimumWidth = 6;
             this.profile.Name = "profile";
             // 
-            // residentName
+            // citizenName
             // 
-            this.residentName.HeaderText = "ຊື່ຜູ້ພັກເຊົ່າ";
-            this.residentName.MinimumWidth = 6;
-            this.residentName.Name = "residentName";
+            this.citizenName.HeaderText = "ຊື່ຜູ້ພັກເຊົ່າ";
+            this.citizenName.MinimumWidth = 6;
+            this.citizenName.Name = "citizenName";
             // 
             // Surname
             // 
@@ -584,9 +584,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn citizenID;
         private System.Windows.Forms.DataGridViewImageColumn profile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn residentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tel;

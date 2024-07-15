@@ -29,15 +29,15 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
-            data.Columns["userID"].DataPropertyName = "villageID";
-            data.Columns["profile"].DataPropertyName = "villageName";
-            data.Columns["residentName"].DataPropertyName = "villageID";
-            data.Columns["Surname"].DataPropertyName = "villageName";
-            data.Columns["villageName"].DataPropertyName = "villageID";
-            data.Columns["Tel"].DataPropertyName = "villageName";
-            data.Columns["Gender"].DataPropertyName = "villageID";
-            data.Columns["Religious"].DataPropertyName = "villageName";
-            data.Columns["Job"].DataPropertyName = "villageID";
+            data.Columns["citizenID"].DataPropertyName = "citizenID";
+            data.Columns["profile"].DataPropertyName = "citizenPics";
+            data.Columns["citizenName"].DataPropertyName = "name";
+            data.Columns["Surname"].DataPropertyName = "surname";
+            data.Columns["villageName"].DataPropertyName = "addr";
+            data.Columns["Tel"].DataPropertyName = "phoneNums";
+            data.Columns["Gender"].DataPropertyName = "gender";
+            data.Columns["Religious"].DataPropertyName = "religion";
+            data.Columns["Job"].DataPropertyName = "occupation";
         }
 
         void cbVillageLoad()
@@ -51,13 +51,20 @@ namespace Xaysetha_System
             cbVillage.ValueMember = "villageName";
         }
 
+        public void dataChange(string sql, string messageBox)
+        {
+
+        }
+
         public resident_management()
         {
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
             cbVillageLoad();
+            loadData("SELECT * FROM tb_citizen;");
         }
+
         public void CustomizedGridView()
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
