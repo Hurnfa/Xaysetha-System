@@ -1,7 +1,10 @@
-﻿using Npgsql;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -16,6 +19,7 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
         village_management_add village = new village_management_add();
+        resident_add resident = new resident_add();
 
         void loadData(string sql)
         {
@@ -36,7 +40,7 @@ namespace Xaysetha_System
 
         void cbVillageLoad()
         {
-            DataSet dataSetVillage = new DataSet();
+            System.Data.DataSet dataSetVillage = new System.Data.DataSet();
             adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
             adapter.Fill(dataSetVillage);
             cbVillage.DataSource = dataSetVillage.Tables[0];
@@ -121,14 +125,52 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
-            if (columnName == "editButton")
+            DataGridViewRow row = data.Rows[e.RowIndex];
+            BigInteger citizen_id = BigInteger.Parse(row.Cells[0].Value.ToString());
+            string name = row.Cells[1].Value?.ToString(),
+                surname = row.Cells[2].Value?.ToString(),
+                village = row.Cells[3].Value?.ToString(),
+                phoneNums = row.Cells[4].Value?.ToString(),
+                gender = row.Cells[5].Value?.ToString(),
+                religion = row.Cells[6].Value?.ToString(),
+                jobs = row.Cells[7].Value?.ToString();
+
+
+            switch (columnName)
             {
-                OpenChildForm(new resident_add());
-            }
-            else if (columnName == "delButton")
-            {
-                MessageBox.Show("Deleted");
+                case "editButton":
+                    //resident.fetchDataFromMainPage();
+
+                    break;
+
+                case "delButton":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@citizenID", citizen_id);
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            loadData("SELECT * FROM tb_citizen;");
+
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
+
+                    break;
             }
         }
-    }
+    }   
 }

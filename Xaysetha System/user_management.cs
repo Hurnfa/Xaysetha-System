@@ -158,6 +158,8 @@ namespace Xaysetha_System
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            loadData("SELECT * FROM tb_user;");
                         }
                         catch (Exception ex)
                         {

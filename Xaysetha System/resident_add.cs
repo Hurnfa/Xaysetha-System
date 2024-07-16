@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -20,22 +21,50 @@ namespace Xaysetha_System
             cn.getConnect();
         }
 
-        public void displayTotalOfUser()
+        public void fetchDataFromMainPage(
+            string citizen_id,
+            string name,
+            string surname,
+            string gender,
+            DateTime birth_day,
+            string race,
+            string nationality,
+            string ethnic,
+            string religion,
+            string dad_name,
+            string mom_name,
+            string familyBook,
+            string workPlace,
+            string occupation,
+            string addr,
+            string phoneNums
+            )
         {
-            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_citizen;", cn.conn);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
+            txtCitizenID.Text = citizen_id;
+            txtName.Text = name;
+            txtSurname.Text = surname;
 
-            while (reader.Read())
-            {
-                total = int.Parse(reader["count"].ToString());
-            }
+            rdoMale.Checked = gender == "ຊາຍ";
+            rdoFemale.Checked = gender == "ຍິງ";
+            rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
 
-            reader.Close();
+            datePickerBirthday.Value = birth_day;
+            txtRace.Text = race;
+            txtNationality.Text = nationality;
+            txtEthnic.Text = ethnic;
+            txtReligious.Text = religion;
+            txtDadName.Text = dad_name;
+            txtMomName.Text = mom_name;
+            txtFamBookNums.Text = familyBook;
+            txtWorkplace.Text = workPlace;
+            txtJobs.Text = occupation;
+            txtAddr.Text = addr;
+            txtPhoneNums.Text = phoneNums;
         }
 
         public void dataChange(string sql, string messageBox)
         {
-            displayTotalOfUser();
+            BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
 
             string gender = "ບໍ່ລະບຸ";
 
@@ -60,7 +89,7 @@ namespace Xaysetha_System
             try
             {
                 /*1st missing field*/
-                cmd.Parameters.AddWithValue("@citizenID", txtCitizenID.Text);
+                cmd.Parameters.AddWithValue("@citizenID", citizenID);
                 cmd.Parameters.AddWithValue("@name", txtName.Text);
                 cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
@@ -76,7 +105,7 @@ namespace Xaysetha_System
                 /*4th missing field*/cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
                 cmd.Parameters.AddWithValue("@citizenPics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
-                cmd.Parameters.AddWithValue("@addr", txtWorkplace.Text);
+                cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
                 cmd.Parameters.AddWithValue("@phoneNums", int.Parse(txtPhoneNums.Text));
 
                 cmd.ExecuteNonQuery();
@@ -117,7 +146,8 @@ namespace Xaysetha_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dataChange("INSERT INTO tb_citizen (\"citizenID\", name, surname, gender, dob, race, nationality, religion, dad_name, mom_name, family_book, \"citizenPics\", occupation, addr, \"phoneNums\") VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @religion, @dad_name, @mom_name, @family_book, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+            //dataChange("INSERT INTO tb_citizen (\"citizenID\", name, surname, gender, dob, race, nationality, religion, dad_name, mom_name, family_book, \"citizenPics\", occupation, addr, \"phoneNums\") VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @religion, @dad_name, @mom_name, @family_book, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+            dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
         }
     }
 }
