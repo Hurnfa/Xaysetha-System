@@ -31,10 +31,6 @@ namespace Xaysetha_System
             string nationality,
             string ethnic,
             string religion,
-            string dad_name,
-            string mom_name,
-            string familyBook,
-            string workPlace,
             string occupation,
             string addr,
             string phoneNums
