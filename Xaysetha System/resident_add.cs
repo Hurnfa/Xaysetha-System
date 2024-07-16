@@ -72,12 +72,12 @@ namespace Xaysetha_System
                 /*3rd missing field*/cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
                 cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
                 cmd.Parameters.AddWithValue("@dad_name", txtDadName.Text);
-                cmd.Parameters.AddWithValue("@mom_name", txtMomName.Text);
+                cmd.Parameters.AddWithValue("@mom_name", txtAddr.Text);
                 cmd.Parameters.AddWithValue("@family_book", int.Parse(txtFamBookNums.Text));
-                ///*4th missing field*/cmd.Parameters.AddWithValue("@workplace");
+                /*4th missing field*/cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
                 cmd.Parameters.AddWithValue("@citizenPics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
-                cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
+                cmd.Parameters.AddWithValue("@addr", txtWorkplace.Text);
                 cmd.Parameters.AddWithValue("@phoneNums", int.Parse(txtPhoneNums.Text));
 
                 cmd.ExecuteNonQuery();
