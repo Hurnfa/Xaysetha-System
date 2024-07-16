@@ -37,7 +37,6 @@ namespace Xaysetha_System
         {
             displayTotalOfUser();
 
-            int id = 0;
             string gender = "ບໍ່ລະບຸ";
 
             if (rdoMale.Checked)
