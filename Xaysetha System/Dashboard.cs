@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
 
 namespace Xaysetha_System
 {
@@ -40,7 +34,7 @@ namespace Xaysetha_System
             lbName.Text = name + " " + surname;
             labelRole.Text = role;
 
-            if(role != "admin")
+            if (role != "admin")
             {
                 btnUserManagement.Enabled = false;
             }
@@ -70,17 +64,21 @@ namespace Xaysetha_System
             childForm.Show();
         }
 
-        private void customizedDesign() { 
+        private void customizedDesign()
+        {
             infoSubMenu.Visible = false;
         }
 
-        private void hideSubMenu() {
-            if (infoSubMenu.Visible == true) {
+        private void hideSubMenu()
+        {
+            if (infoSubMenu.Visible == true)
+            {
                 infoSubMenu.Visible = false;
             }
         }
 
-        private void showSubMenu(Panel subMenu) {
+        private void showSubMenu(Panel subMenu)
+        {
 
             switch (subMenu.Visible)
             {
@@ -98,13 +96,13 @@ namespace Xaysetha_System
                     break;
             }
 
-/*            if (subMenu.Visible == false)
-            {
-                hideSubMenu();
-                subMenu.Visible = true;
-            }
-            else
-                subMenu.Visible = false;*/
+            /*            if (subMenu.Visible == false)
+                        {
+                            hideSubMenu();
+                            subMenu.Visible = true;
+                        }
+                        else
+                            subMenu.Visible = false;*/
         }
 
         private void ChangeButtonAppearance(Guna.UI2.WinForms.Guna2Button clickedButton)
@@ -199,7 +197,8 @@ namespace Xaysetha_System
 
         private void btnPrinting_Click(object sender, EventArgs e)
         {
-            new printing().Show();
+            //new printing().Show();
+            OpenChildForm(new exportBook());
         }
     }
 }

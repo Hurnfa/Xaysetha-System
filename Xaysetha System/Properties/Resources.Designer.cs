@@ -283,6 +283,26 @@ namespace Xaysetha_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_round {
+            get {
+                object obj = ResourceManager.GetObject("ic_round", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_round_close {
+            get {
+                object obj = ResourceManager.GetObject("ic_round-close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_removebg_preview__3_ {
             get {
                 object obj = ResourceManager.GetObject("image-removebg-preview (3)", resourceCulture);
@@ -306,6 +326,16 @@ namespace Xaysetha_System.Properties {
         internal static System.Drawing.Bitmap material_symbols_logout {
             get {
                 object obj = ResourceManager.GetObject("material-symbols_logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_print {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols_print", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
