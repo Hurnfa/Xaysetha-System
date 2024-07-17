@@ -67,7 +67,7 @@ namespace Xaysetha_System
                         {
                             //MessageBox.Show("ສະບາຍດີທ່ານ " + reader["userName"].ToString() +" "+ reader["userLName"].ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            dashboard.showUserName(reader["userName"].ToString(), reader["userLName"].ToString());
+                            dashboard.showUserName(reader["userName"].ToString(), reader["userLName"].ToString(), reader["role"].ToString());
                         }
 
                         /*SqlDataReader rd = cmd.ExecuteReader();

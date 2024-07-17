@@ -140,6 +140,8 @@ namespace Xaysetha_System
             {
                 case "editButton":
                     //resident.fetchDataFromMainPage();
+                    resident.fetchDataFromMainPage(Convert.ToString(citizen_id), name, surname, gender, religion, jobs, village, "ແກ້ໄຂ");
+                    OpenChildForm(resident);
 
                     break;
 

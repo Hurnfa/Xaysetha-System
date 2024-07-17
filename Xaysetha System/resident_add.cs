@@ -26,14 +26,10 @@ namespace Xaysetha_System
             string name,
             string surname,
             string gender,
-            DateTime birth_day,
-            string race,
-            string nationality,
-            string ethnic,
             string religion,
             string occupation,
             string addr,
-            string phoneNums
+            string header
             )
         {
             txtCitizenID.Text = citizen_id;
@@ -44,18 +40,46 @@ namespace Xaysetha_System
             rdoFemale.Checked = gender == "ຍິງ";
             rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
 
-            datePickerBirthday.Value = birth_day;
-            txtRace.Text = race;
-            txtNationality.Text = nationality;
-            txtEthnic.Text = ethnic;
-            txtReligious.Text = religion;
-            txtDadName.Text = dad_name;
-            txtMomName.Text = mom_name;
-            txtFamBookNums.Text = familyBook;
-            txtWorkplace.Text = workPlace;
             txtJobs.Text = occupation;
             txtAddr.Text = addr;
-            txtPhoneNums.Text = phoneNums;
+
+            cmd = new NpgsqlCommand("SELECT * FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+
+            cmd.Parameters.AddWithValue("@citizenID",BigInteger.Parse(citizen_id));
+
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                datePickerBirthday.Value = (DateTime)reader["dob"];
+                txtRace.Text = reader["race"].ToString();
+                txtNationality.Text = reader["nationality"].ToString();
+                txtEthnic.Text = reader["ethnic"].ToString();
+                txtReligious.Text = reader["religion"].ToString();
+                txtDadName.Text = reader["dad_name"].ToString();
+                txtMomName.Text = reader["mom_name"].ToString();
+                txtFamBookNums.Text = reader["family_book"].ToString();
+                txtWorkplace.Text = reader["workplace"].ToString();
+                txtPhoneNums.Text = reader["phoneNums"].ToString();
+            }
+
+            reader.Close();
+
+            /*            datePickerBirthday.Value = birth_day;
+                        txtRace.Text = race;
+                        txtNationality.Text = nationality;
+                        txtEthnic.Text = ethnic;
+                        txtReligious.Text = religion;
+                        txtDadName.Text = dad_name;
+                        txtMomName.Text = mom_name;
+                        txtFamBookNums.Text = familyBook;
+                        txtWorkplace.Text = workPlace;*/
+            txtJobs.Text = occupation;
+            txtAddr.Text = addr;
+            //txtPhoneNums.Text = phoneNums;
+
+            labelHeader.Text = header+"ຂໍ້ມູນ";
+            btnSave.Text = header;
         }
 
         public void dataChange(string sql, string messageBox)
@@ -142,8 +166,20 @@ namespace Xaysetha_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //dataChange("INSERT INTO tb_citizen (\"citizenID\", name, surname, gender, dob, race, nationality, religion, dad_name, mom_name, family_book, \"citizenPics\", occupation, addr, \"phoneNums\") VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @religion, @dad_name, @mom_name, @family_book, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-            dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+            switch (btnSave.Text)
+            {
+                case "ບັນທຶກ":
+
+                    dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+
+                    break;
+
+                case "ແກ້ໄຂ":
+
+
+
+                    break;
+            }
         }
     }
 }

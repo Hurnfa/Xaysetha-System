@@ -35,9 +35,15 @@ namespace Xaysetha_System
             panelContainerInstance = panelContainer;
         }
 
-        public void showUserName(string name, string surname)
+        public void showUserName(string name, string surname, string role)
         {
             lbName.Text = name + " " + surname;
+            labelRole.Text = role;
+
+            if(role != "admin")
+            {
+                btnUserManagement.Enabled = false;
+            }
         }
 
         private Form activeForm = null;
@@ -76,12 +82,29 @@ namespace Xaysetha_System
 
         private void showSubMenu(Panel subMenu) {
 
-            if (subMenu.Visible == false) {
+            switch (subMenu.Visible)
+            {
+                case false:
+
+                    hideSubMenu();
+                    subMenu.Visible = true;
+
+                    break;
+
+                default:
+
+                    subMenu.Visible = false;
+
+                    break;
+            }
+
+/*            if (subMenu.Visible == false)
+            {
                 hideSubMenu();
                 subMenu.Visible = true;
             }
             else
-                subMenu.Visible = false;
+                subMenu.Visible = false;*/
         }
 
         private void ChangeButtonAppearance(Guna.UI2.WinForms.Guna2Button clickedButton)
