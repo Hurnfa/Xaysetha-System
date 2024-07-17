@@ -45,10 +45,10 @@
             this.Pending = new System.Windows.Forms.TabPage();
             this.Rejected = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPayUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -111,7 +111,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnAddUser);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnPayUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(26, 54);
@@ -269,30 +269,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1302, 594);
             this.guna2Panel3.TabIndex = 21;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(24, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ຄົ້ນຫາ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(24, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 28);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BorderRadius = 4;
@@ -316,25 +292,50 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
             this.guna2TextBox1.TabIndex = 5;
             // 
-            // btnAddUser
+            // label2
             // 
-            this.btnAddUser.BorderRadius = 4;
-            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
-            this.btnAddUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddUser.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnAddUser.Location = new System.Drawing.Point(1111, 60);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(210, 48);
-            this.btnAddUser.TabIndex = 18;
-            this.btnAddUser.Text = "ເພີ່ມບັນຊີ";
-            this.btnAddUser.TextOffset = new System.Drawing.Point(10, 0);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(24, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ຄົ້ນຫາ";
+            // 
+            // btnPayUser
+            // 
+            this.btnPayUser.BorderRadius = 4;
+            this.btnPayUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPayUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPayUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            this.btnPayUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayUser.ForeColor = System.Drawing.Color.White;
+            this.btnPayUser.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
+            this.btnPayUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPayUser.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnPayUser.Location = new System.Drawing.Point(1111, 60);
+            this.btnPayUser.Name = "btnPayUser";
+            this.btnPayUser.Size = new System.Drawing.Size(210, 48);
+            this.btnPayUser.TabIndex = 18;
+            this.btnPayUser.Text = "ເພີ່ມບັນຊີ";
+            this.btnPayUser.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnPayUser.Click += new System.EventHandler(this.btnPayUser_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(24, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 28);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
             // 
             // payment
             // 
@@ -385,7 +386,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnAddUser;
+        private Guna.UI2.WinForms.Guna2Button btnPayUser;
         private System.Windows.Forms.Label label1;
     }
 }

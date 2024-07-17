@@ -226,6 +226,12 @@
     <Compile Include="payment.Designer.cs">
       <DependentUpon>payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentDialog.Designer.cs">
+      <DependentUpon>PaymentDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="payment_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentDialog.resx">
+      <DependentUpon>PaymentDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="payment_info.resx">
       <DependentUpon>payment_info.cs</DependentUpon>

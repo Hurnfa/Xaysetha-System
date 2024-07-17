@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -58,6 +51,12 @@ namespace Xaysetha_System
                 default:
                     break;
             }
+        }
+
+        private void btnPayUser_Click(object sender, EventArgs e)
+        {
+            PaymentDialog payment = new PaymentDialog();
+            payment.Show();
         }
     }
 }
