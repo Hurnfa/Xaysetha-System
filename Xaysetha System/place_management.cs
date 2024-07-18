@@ -1,13 +1,7 @@
-﻿using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
-using Npgsql;
+﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -32,8 +26,8 @@ namespace Xaysetha_System
 
             data.Columns["placeID"].DataPropertyName = "placeID";
             data.Columns["placeName"].DataPropertyName = "placeName";
-            data.Columns["villageName"].DataPropertyName = "villageID";
-            data.Columns["ownerName"].DataPropertyName = "citizentID";
+            data.Columns["villageName"].DataPropertyName = "villageName";
+            data.Columns["ownerName"].DataPropertyName = "name";
         }
 
         public place_management()
@@ -41,7 +35,8 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
-            loadData("SELECT * FROM tb_place;");
+            loadData("SELECT \"placeID\", \"placeName\", \"villageName\", name from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
+
         }
         public void CustomizedGridView()
         {
@@ -107,7 +102,7 @@ namespace Xaysetha_System
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
             DataGridViewRow row = data.Rows[e.RowIndex];
-            
+
             string placeID = row.Cells[0].Value?.ToString(),
                 placeName = row.Cells[1].Value?.ToString(),
                 villageID = row.Cells[2].Value?.ToString(),
