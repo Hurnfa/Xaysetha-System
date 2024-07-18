@@ -201,6 +201,12 @@
     <Compile Include="entrance_management.Designer.cs">
       <DependentUpon>entrance_management.cs</DependentUpon>
     </Compile>
+    <Compile Include="exportBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exportBook.Designer.cs">
+      <DependentUpon>exportBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     <Compile Include="payment.Designer.cs">
       <DependentUpon>payment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentDialog.Designer.cs">
+      <DependentUpon>PaymentDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="payment_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +249,12 @@
     </Compile>
     <Compile Include="place_management.Designer.cs">
       <DependentUpon>place_management.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintDialog.Designer.cs">
+      <DependentUpon>PrintDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="printing.cs">
       <SubType>Form</SubType>
@@ -300,6 +318,9 @@
     <EmbeddedResource Include="entrance_management.resx">
       <DependentUpon>entrance_management.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="exportBook.resx">
+      <DependentUpon>exportBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +330,9 @@
     <EmbeddedResource Include="payment.resx">
       <DependentUpon>payment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentDialog.resx">
+      <DependentUpon>PaymentDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="payment_info.resx">
       <DependentUpon>payment_info.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="place_management.resx">
       <DependentUpon>place_management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintDialog.resx">
+      <DependentUpon>PrintDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="printing.resx">
       <DependentUpon>printing.cs</DependentUpon>
@@ -428,6 +455,9 @@
     <None Include="Resources\fi_plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ic_round.png" />
+    <None Include="Resources\ic_round-close.png" />
+    <None Include="Resources\material-symbols_print.png" />
     <None Include="Resources\Group.png" />
     <None Include="Resources\mingcute_close-line.png" />
     <None Include="Resources\ph_money.png" />
