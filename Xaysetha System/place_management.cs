@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace Xaysetha_System
         NpgsqlDataAdapter adapter;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
+        place_add placeAdd = new place_add();
 
         void loadData(string sql)
         {
@@ -27,10 +29,11 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
-            data.Columns["placeID"].DataPropertyName = "userID";
-            data.Columns["placeName"].DataPropertyName = "userName";
-            data.Columns["villageName"].DataPropertyName = "userLName";
-            data.Columns["ownerName"].DataPropertyName = "gender";
+
+            data.Columns["placeID"].DataPropertyName = "placeID";
+            data.Columns["placeName"].DataPropertyName = "placeName";
+            data.Columns["villageName"].DataPropertyName = "villageID";
+            data.Columns["ownerName"].DataPropertyName = "citizentID";
         }
 
         public place_management()
@@ -103,13 +106,49 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
-            if (columnName == "editButton")
+            DataGridViewRow row = data.Rows[e.RowIndex];
+            
+            string placeID = row.Cells[0].Value?.ToString(),
+                placeName = row.Cells[1].Value?.ToString(),
+                villageID = row.Cells[2].Value?.ToString(),
+                unit = row.Cells[3].Value?.ToString(),
+                houseNum = row.Cells[4].Value?.ToString(),
+                citizenID = row.Cells[5].Value?.ToString();
+
+            switch (columnName)
             {
-                OpenChildForm(new place_add());
-            }
-            else if (columnName == "delButton")
-            {
-                MessageBox.Show("Deleted");
+                case "editButton":
+
+                    placeAdd.fetchDataFromMainPage(placeID, placeName, villageID, citizenID, unit, houseNum, "ແກ້ໄຂ");
+                    OpenChildForm(placeAdd);
+
+                    break;
+
+                case "delButton":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        cmd = new NpgsqlCommand("DELETE FROM tb_place WHERE \"placeID\"=@placeID;", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@placeID", placeID);
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            loadData("SELECT * FROM tb_user;");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    break;
             }
         }
     }
