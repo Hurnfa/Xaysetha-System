@@ -61,6 +61,17 @@ namespace Xaysetha_System
                 txtFamBookNums.Text = reader["family_book"].ToString();
                 txtWorkplace.Text = reader["workplace"].ToString();
                 txtPhoneNums.Text = reader["phoneNums"].ToString();
+
+                if (reader["citizenPics"] == DBNull.Value)
+                {
+                    profilePictureBox.Image = null;
+                }
+                else
+                {
+                    byte[] img = (byte[])reader["citizenPics"];
+                    MemoryStream memory = new MemoryStream(img);
+                    profilePictureBox.Image = Image.FromStream(memory);
+                }
             }
 
             reader.Close();
@@ -176,7 +187,12 @@ namespace Xaysetha_System
 
                 case "ແກ້ໄຂ":
 
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+                    if (result == DialogResult.Yes)
+                    {
+                        dataChange("UPDATE tb_citizen set name=@name, surname=@surname, gender=@gender, dob=@dob, race=@race, nationality=@nationality, ethnic=@ethnic, religion=@religion, dad_name=@dad_name, mom_name=@mom_name, family_book=@family_book, workplace=@workplace, \"citizenPics\"=@citizenPics, occupation=@occupation, addr=@addr, \"phoneNums\"=@phoneNums WHERE \"citizenID\"=@citizenID;", "ແກ້ໄຂ");
+                    }
 
                     break;
             }
