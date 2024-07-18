@@ -18,7 +18,7 @@ namespace Xaysetha_System
 
         void loadData(string sql)
         {
-            data.Rows.Clear();
+            //data.Rows.Clear();
             data.AutoGenerateColumns = false;
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
@@ -26,7 +26,10 @@ namespace Xaysetha_System
 
             data.Columns["placeID"].DataPropertyName = "placeID";
             data.Columns["placeName"].DataPropertyName = "placeName";
+            data.Columns["placeType"].DataPropertyName = "placeType";
             data.Columns["villageName"].DataPropertyName = "villageName";
+            data.Columns["houseUnit"].DataPropertyName = "placeHouseUnit";
+            data.Columns["houseNumber"].DataPropertyName = "placeHouseNumber";
             data.Columns["ownerName"].DataPropertyName = "name";
         }
 
@@ -35,7 +38,7 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
-            loadData("SELECT \"placeID\", \"placeName\", \"villageName\", name from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
+            loadData("SELECT * from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
 
         }
         public void CustomizedGridView()
@@ -105,16 +108,17 @@ namespace Xaysetha_System
 
             string placeID = row.Cells[0].Value?.ToString(),
                 placeName = row.Cells[1].Value?.ToString(),
-                villageID = row.Cells[2].Value?.ToString(),
-                unit = row.Cells[3].Value?.ToString(),
-                houseNum = row.Cells[4].Value?.ToString(),
-                citizenID = row.Cells[5].Value?.ToString();
+                placeType = row.Cells[2].Value?.ToString(),
+                villageID = row.Cells[3].Value?.ToString(),
+                unit = row.Cells[4].Value?.ToString(),
+                houseNum = row.Cells[5].Value?.ToString(),
+                citizenID = row.Cells[6].Value?.ToString();
 
             switch (columnName)
             {
                 case "editButton":
 
-                    placeAdd.fetchDataFromMainPage(placeID, placeName, villageID, citizenID, unit, houseNum, "ແກ້ໄຂ");
+                    placeAdd.fetchDataFromMainPage(placeID, placeName, placeType, villageID, citizenID, unit, houseNum, "ແກ້ໄຂ");
                     OpenChildForm(placeAdd);
 
                     break;
@@ -135,7 +139,9 @@ namespace Xaysetha_System
 
                             MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            loadData("SELECT * FROM tb_user;");
+                            datatable.Clear();
+
+                            loadData("SELECT * FROM tb_place;");
                         }
                         catch (Exception ex)
                         {
@@ -145,6 +151,13 @@ namespace Xaysetha_System
 
                     break;
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_place WHERE CONCAT (\"placeID\", \"citizentID\", \"villageID\", \"placeName\",\"placeHouseUnit\", \"placeHouseNumber\", \"placeType\") LIKE '%"+txtSearch.Text+"%'");
         }
     }
 }

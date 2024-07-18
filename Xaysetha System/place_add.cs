@@ -86,17 +86,16 @@ namespace Xaysetha_System
             }
         }
 
-        public void fetchDataFromMainPage(string id, string placeName, string village, string placeOwner, string unit, string houseNum, string header)
+        public void fetchDataFromMainPage(string id, string placeName, string placeType, string village, string placeOwner, string unit, string houseNum, string header)
         {
             txtPlaceName.Text = placeName;
             label_place_id.Text = id;
             labelHeader.Text = header+"ຂໍ້ມູນ";
             btnSave.Text = header;
-            //combobox_village.Text = village;
-
-            cmd = new NpgsqlCommand("SELECT \"villageName\" FROM tb_village WHERE \"villageID\"=" + village, cn.conn);
-            village = (string)cmd.ExecuteScalar();
+            txtHouseNums.Text = houseNum;
+            txtHouseUnit.Text = unit;
             combobox_village.Text = village;
+            combobox_place_type.Text = placeType;
         }
 
         private Form activeForm = null;
@@ -149,7 +148,7 @@ namespace Xaysetha_System
             {
                 case "ບັນທຶກ":
 
-                    dataChange("INSERT INTO tb_place VALUES (@placeID, @placeType, @citizenID, @villageID, @placeName, @placeHouseUnit, @placeHouseNumber)", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_place VALUES (@placeID, @citizenID, @villageID, @placeName, @placeHouseUnit, @placeHouseNumber, @placeType)", "ເພີ່ມ");
 
                     break;
 
@@ -159,7 +158,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        
+                        dataChange("UPDATE tb_place SET \"citizentID\"=@citizenID, \"villageID\"=@villageID, \"placeName\"=@placeName, \"placeHouseUnit\"=@placeHouseUnit, \"placeHouseNumber\"=@placeHouseNumber, \"placeType\"=@placeType WHERE \"placeID\"=@placeID", "ແກ້ໄຂ");
                     }
 
                     break;

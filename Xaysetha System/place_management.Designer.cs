@@ -39,20 +39,21 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.placeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.villageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.houseUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.houseNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -113,7 +114,7 @@
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtSearch);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
@@ -150,6 +151,7 @@
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.placeID,
             this.placeName,
+            this.placeType,
             this.villageName,
             this.houseUnit,
             this.houseNumber,
@@ -199,94 +201,29 @@
             this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
             // 
-            // placeID
+            // txtSearch
             // 
-            this.placeID.HeaderText = "ລະຫັດສະຖານທີ່";
-            this.placeID.MinimumWidth = 6;
-            this.placeID.Name = "placeID";
-            this.placeID.ReadOnly = true;
-            // 
-            // placeName
-            // 
-            this.placeName.HeaderText = "ຊື່ສະຖານທີ່ພັກເຊົາ";
-            this.placeName.MinimumWidth = 6;
-            this.placeName.Name = "placeName";
-            this.placeName.ReadOnly = true;
-            // 
-            // villageName
-            // 
-            this.villageName.HeaderText = "ບ້ານ";
-            this.villageName.MinimumWidth = 6;
-            this.villageName.Name = "villageName";
-            this.villageName.ReadOnly = true;
-            // 
-            // houseUnit
-            // 
-            this.houseUnit.HeaderText = "ໜ່ວຍ";
-            this.houseUnit.MinimumWidth = 6;
-            this.houseUnit.Name = "houseUnit";
-            this.houseUnit.ReadOnly = true;
-            // 
-            // houseNumber
-            // 
-            this.houseNumber.HeaderText = "ເຮືອນເລກທີ";
-            this.houseNumber.MinimumWidth = 6;
-            this.houseNumber.Name = "houseNumber";
-            this.houseNumber.ReadOnly = true;
-            // 
-            // ownerName
-            // 
-            this.ownerName.HeaderText = "ຊື່ເຈົ້າຂອງສະຖານທີ່";
-            this.ownerName.MinimumWidth = 6;
-            this.ownerName.Name = "ownerName";
-            this.ownerName.ReadOnly = true;
-            // 
-            // editButton
-            // 
-            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.editButton.HeaderText = "";
-            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.ReadOnly = true;
-            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 23;
-            // 
-            // delButton
-            // 
-            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.delButton.HeaderText = "";
-            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
-            this.delButton.MinimumWidth = 6;
-            this.delButton.Name = "delButton";
-            this.delButton.ReadOnly = true;
-            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.delButton.Width = 23;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderRadius = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(29, 60);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງສະຖານທີ່...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
-            this.guna2TextBox1.TabIndex = 5;
+            this.txtSearch.BorderRadius = 4;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtSearch.Location = new System.Drawing.Point(29, 60);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງສະຖານທີ່...";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(317, 48);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -356,6 +293,79 @@
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 125;
             // 
+            // placeID
+            // 
+            this.placeID.HeaderText = "ລະຫັດສະຖານທີ່";
+            this.placeID.MinimumWidth = 6;
+            this.placeID.Name = "placeID";
+            this.placeID.ReadOnly = true;
+            // 
+            // placeName
+            // 
+            this.placeName.HeaderText = "ຊື່ສະຖານທີ່ພັກເຊົາ";
+            this.placeName.MinimumWidth = 6;
+            this.placeName.Name = "placeName";
+            this.placeName.ReadOnly = true;
+            // 
+            // placeType
+            // 
+            this.placeType.HeaderText = "ປະເພດສະຖານທີ່";
+            this.placeType.MinimumWidth = 6;
+            this.placeType.Name = "placeType";
+            this.placeType.ReadOnly = true;
+            // 
+            // villageName
+            // 
+            this.villageName.HeaderText = "ບ້ານ";
+            this.villageName.MinimumWidth = 6;
+            this.villageName.Name = "villageName";
+            this.villageName.ReadOnly = true;
+            // 
+            // houseUnit
+            // 
+            this.houseUnit.HeaderText = "ໜ່ວຍ";
+            this.houseUnit.MinimumWidth = 6;
+            this.houseUnit.Name = "houseUnit";
+            this.houseUnit.ReadOnly = true;
+            // 
+            // houseNumber
+            // 
+            this.houseNumber.HeaderText = "ເຮືອນເລກທີ";
+            this.houseNumber.MinimumWidth = 6;
+            this.houseNumber.Name = "houseNumber";
+            this.houseNumber.ReadOnly = true;
+            // 
+            // ownerName
+            // 
+            this.ownerName.HeaderText = "ຊື່ເຈົ້າຂອງສະຖານທີ່";
+            this.ownerName.MinimumWidth = 6;
+            this.ownerName.Name = "ownerName";
+            this.ownerName.ReadOnly = true;
+            // 
+            // editButton
+            // 
+            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.editButton.HeaderText = "";
+            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
+            this.editButton.MinimumWidth = 6;
+            this.editButton.Name = "editButton";
+            this.editButton.ReadOnly = true;
+            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editButton.Width = 23;
+            // 
+            // delButton
+            // 
+            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.delButton.HeaderText = "";
+            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
+            this.delButton.MinimumWidth = 6;
+            this.delButton.Name = "delButton";
+            this.delButton.ReadOnly = true;
+            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.delButton.Width = 23;
+            // 
             // place_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,7 +401,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2DataGridView data;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private System.Windows.Forms.Label label1;
@@ -399,6 +409,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn placeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn placeName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placeType;
         private System.Windows.Forms.DataGridViewTextBoxColumn villageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn houseUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn houseNumber;

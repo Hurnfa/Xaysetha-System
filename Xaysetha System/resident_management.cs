@@ -161,6 +161,8 @@ namespace Xaysetha_System
 
                             MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                            datatable.Clear();
+
                             loadData("SELECT * FROM tb_citizen;");
 
                         }
