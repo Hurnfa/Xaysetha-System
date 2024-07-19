@@ -55,7 +55,7 @@
             this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtNameSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -108,7 +108,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.txtNameSearch);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnResident);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.labelTotal);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(27, 54);
             this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -421,17 +421,17 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "ຄົ້ນຫາ";
             // 
-            // label1
+            // labelTotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(24, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 28);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "ທັງໝົດ 0 ລາຍການ";
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotal.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelTotal.Location = new System.Drawing.Point(24, 222);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(129, 28);
+            this.labelTotal.TabIndex = 19;
+            this.labelTotal.Text = "ທັງໝົດ 0 ລາຍການ";
             // 
             // dataGridViewImageColumn2
             // 
@@ -539,7 +539,7 @@
         private Guna.UI2.WinForms.Guna2DataGridView data;
         private Guna.UI2.WinForms.Guna2TextBox txtNameSearch;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;

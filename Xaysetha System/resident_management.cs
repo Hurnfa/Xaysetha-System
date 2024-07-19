@@ -59,8 +59,18 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
+            getTotalCitizen();
             cbVillageLoad();
             loadData("SELECT * FROM tb_citizen;");
+        }
+
+        void getTotalCitizen()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_citizen;", cn.conn);
+
+            string id = cmd.ExecuteScalar().ToString();
+
+            labelTotal.Text = "ທັງໝົດ "+id+" ລາຍການ";
         }
 
         public void CustomizedGridView()
