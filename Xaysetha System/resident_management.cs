@@ -176,5 +176,48 @@ namespace Xaysetha_System
                     break;
             }
         }
+
+        private void txtNameSearch_TextChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%"+txtNameSearch.Text+"%';");
+        }
+
+        private void cbVillage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%" + txtNameSearch.Text + "%';");
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            switch (cbGender.Text)
+            {
+                case " ":
+                    loadData("SELECT * FROM tb_citizen;");
+                    break;
+
+                default:
+
+                    loadData("SELECT * FROM tb_citizen WHERE CONCAT (gender) LIKE '%" + cbGender.Text + "%';");
+
+                    break;
+            }
+           
+        }
+
+        private void numberPickerAge_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbJobs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
 }
