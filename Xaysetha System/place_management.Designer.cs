@@ -39,12 +39,6 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.placeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.placeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +48,12 @@
             this.ownerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -140,7 +140,7 @@
             this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -200,6 +200,79 @@
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
+            // 
+            // placeID
+            // 
+            this.placeID.HeaderText = "ລະຫັດສະຖານທີ່";
+            this.placeID.MinimumWidth = 6;
+            this.placeID.Name = "placeID";
+            this.placeID.ReadOnly = true;
+            // 
+            // placeName
+            // 
+            this.placeName.HeaderText = "ຊື່ສະຖານທີ່ພັກເຊົາ";
+            this.placeName.MinimumWidth = 6;
+            this.placeName.Name = "placeName";
+            this.placeName.ReadOnly = true;
+            // 
+            // placeType
+            // 
+            this.placeType.HeaderText = "ປະເພດສະຖານທີ່";
+            this.placeType.MinimumWidth = 6;
+            this.placeType.Name = "placeType";
+            this.placeType.ReadOnly = true;
+            // 
+            // villageName
+            // 
+            this.villageName.HeaderText = "ບ້ານ";
+            this.villageName.MinimumWidth = 6;
+            this.villageName.Name = "villageName";
+            this.villageName.ReadOnly = true;
+            // 
+            // houseUnit
+            // 
+            this.houseUnit.HeaderText = "ໜ່ວຍ";
+            this.houseUnit.MinimumWidth = 6;
+            this.houseUnit.Name = "houseUnit";
+            this.houseUnit.ReadOnly = true;
+            // 
+            // houseNumber
+            // 
+            this.houseNumber.HeaderText = "ເຮືອນເລກທີ";
+            this.houseNumber.MinimumWidth = 6;
+            this.houseNumber.Name = "houseNumber";
+            this.houseNumber.ReadOnly = true;
+            // 
+            // ownerName
+            // 
+            this.ownerName.HeaderText = "ຊື່ເຈົ້າຂອງສະຖານທີ່";
+            this.ownerName.MinimumWidth = 6;
+            this.ownerName.Name = "ownerName";
+            this.ownerName.ReadOnly = true;
+            // 
+            // editButton
+            // 
+            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.editButton.HeaderText = "";
+            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
+            this.editButton.MinimumWidth = 6;
+            this.editButton.Name = "editButton";
+            this.editButton.ReadOnly = true;
+            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editButton.Width = 23;
+            // 
+            // delButton
+            // 
+            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.delButton.HeaderText = "";
+            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
+            this.delButton.MinimumWidth = 6;
+            this.delButton.Name = "delButton";
+            this.delButton.ReadOnly = true;
+            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.delButton.Width = 23;
             // 
             // txtSearch
             // 
@@ -292,79 +365,6 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 125;
-            // 
-            // placeID
-            // 
-            this.placeID.HeaderText = "ລະຫັດສະຖານທີ່";
-            this.placeID.MinimumWidth = 6;
-            this.placeID.Name = "placeID";
-            this.placeID.ReadOnly = true;
-            // 
-            // placeName
-            // 
-            this.placeName.HeaderText = "ຊື່ສະຖານທີ່ພັກເຊົາ";
-            this.placeName.MinimumWidth = 6;
-            this.placeName.Name = "placeName";
-            this.placeName.ReadOnly = true;
-            // 
-            // placeType
-            // 
-            this.placeType.HeaderText = "ປະເພດສະຖານທີ່";
-            this.placeType.MinimumWidth = 6;
-            this.placeType.Name = "placeType";
-            this.placeType.ReadOnly = true;
-            // 
-            // villageName
-            // 
-            this.villageName.HeaderText = "ບ້ານ";
-            this.villageName.MinimumWidth = 6;
-            this.villageName.Name = "villageName";
-            this.villageName.ReadOnly = true;
-            // 
-            // houseUnit
-            // 
-            this.houseUnit.HeaderText = "ໜ່ວຍ";
-            this.houseUnit.MinimumWidth = 6;
-            this.houseUnit.Name = "houseUnit";
-            this.houseUnit.ReadOnly = true;
-            // 
-            // houseNumber
-            // 
-            this.houseNumber.HeaderText = "ເຮືອນເລກທີ";
-            this.houseNumber.MinimumWidth = 6;
-            this.houseNumber.Name = "houseNumber";
-            this.houseNumber.ReadOnly = true;
-            // 
-            // ownerName
-            // 
-            this.ownerName.HeaderText = "ຊື່ເຈົ້າຂອງສະຖານທີ່";
-            this.ownerName.MinimumWidth = 6;
-            this.ownerName.Name = "ownerName";
-            this.ownerName.ReadOnly = true;
-            // 
-            // editButton
-            // 
-            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.editButton.HeaderText = "";
-            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.ReadOnly = true;
-            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 23;
-            // 
-            // delButton
-            // 
-            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.delButton.HeaderText = "";
-            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
-            this.delButton.MinimumWidth = 6;
-            this.delButton.Name = "delButton";
-            this.delButton.ReadOnly = true;
-            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.delButton.Width = 23;
             // 
             // place_management
             // 

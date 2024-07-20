@@ -156,7 +156,7 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label18.Location = new System.Drawing.Point(24, 129);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 28);
+            this.label18.Size = new System.Drawing.Size(48, 28);
             this.label18.TabIndex = 28;
             this.label18.Text = "ອາຊີບ";
             // 
@@ -168,7 +168,7 @@
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label17.Location = new System.Drawing.Point(856, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(39, 28);
+            this.label17.Size = new System.Drawing.Size(38, 28);
             this.label17.TabIndex = 26;
             this.label17.Text = "ອາຍຸ";
             // 
@@ -275,7 +275,7 @@
             this.delButton});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
