@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -15,16 +20,94 @@ namespace Xaysetha_System
         public tenant_add()
         {
             InitializeComponent();
+            cn.getConnect();
+        }
+
+        NpgsqlCommand cmd;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+
+        void dataChange(string sql, string messegeBox)
+        {
+            BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
+
+            string gender = "ບໍ່ລະບຸ";
+
+            if (rdoMale.Checked)
+            {
+                gender = "ຊາຍ";
+            }
+            else if (rdoFemale.Checked)
+            {
+                gender = "ຍິງ";
+            }
+
+            DateTime birthDay = datePickerBirthday.Value,
+                famBookIssuedDate = datePickerFamBookIssuedDate.Value;
+
+            MemoryStream memoryStream = new MemoryStream();
+
+            profilePictureBox.Image.Save(memoryStream, profilePictureBox.Image.RawFormat);
+
+            cmd = new NpgsqlCommand(sql, cn.conn);
+
+            try
+            {
+
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                new open_child_form().OpenChildForm(new resident_management());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Hide();
+            //Dispose();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void profilePictureBox_Click(object sender, EventArgs e)
         {
-            this.Close();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "Choose img(*.jpg; *.png; *.gif; *.bmp)| *.jpg; *.png; *.gif; *.bmp";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                profilePictureBox.Image = Image.FromFile(openFileDialog.FileName);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            switch (btnSave.Text)
+            {
+                case "ບັນທຶກ":
+
+                    //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+
+                break;
+
+                case "ແກ້ໄຂ":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        //dataChange("UPDATE tb_citizen set name=@name, surname=@surname, gender=@gender, dob=@dob, race=@race, nationality=@nationality, ethnic=@ethnic, religion=@religion, dad_name=@dad_name, mom_name=@mom_name, family_book=@family_book, workplace=@workplace, \"citizenPics\"=@citizenPics, occupation=@occupation, addr=@addr, \"phoneNums\"=@phoneNums WHERE \"citizenID\"=@citizenID;", "ແກ້ໄຂ");
+                    }
+
+                break;
+            }
         }
     }
 }
