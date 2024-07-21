@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,20 +43,24 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.statusControl = new Guna.UI2.WinForms.Guna2TabControl();
-            this.Entrance = new System.Windows.Forms.TabPage();
-            this.Pending = new System.Windows.Forms.TabPage();
-            this.Rejected = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.data = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.residentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placeLiving = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            this.statusControl.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -107,7 +114,6 @@
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel6);
-            this.guna2CustomGradientPanel1.Controls.Add(this.statusControl);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
@@ -197,73 +203,9 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
-            // statusControl
-            // 
-            this.statusControl.Controls.Add(this.Entrance);
-            this.statusControl.Controls.Add(this.Pending);
-            this.statusControl.Controls.Add(this.Rejected);
-            this.statusControl.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusControl.ItemSize = new System.Drawing.Size(180, 40);
-            this.statusControl.Location = new System.Drawing.Point(29, 165);
-            this.statusControl.Margin = new System.Windows.Forms.Padding(0);
-            this.statusControl.Name = "statusControl";
-            this.statusControl.SelectedIndex = 0;
-            this.statusControl.Size = new System.Drawing.Size(1302, 594);
-            this.statusControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.statusControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.statusControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.statusControl.TabButtonHoverState.ForeColor = System.Drawing.Color.White;
-            this.statusControl.TabButtonHoverState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
-            this.statusControl.TabButtonIdleState.BorderColor = System.Drawing.Color.Empty;
-            this.statusControl.TabButtonIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.statusControl.TabButtonIdleState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.statusControl.TabButtonIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.statusControl.TabButtonIdleState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
-            this.statusControl.TabButtonSelectedState.BorderColor = System.Drawing.Color.Empty;
-            this.statusControl.TabButtonSelectedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(37)))), ((int)(((byte)(49)))));
-            this.statusControl.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.statusControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
-            this.statusControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.statusControl.TabButtonSize = new System.Drawing.Size(180, 40);
-            this.statusControl.TabIndex = 0;
-            this.statusControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.statusControl.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
-            this.statusControl.SelectedIndexChanged += new System.EventHandler(this.statusControl_SelectedIndexChanged);
-            // 
-            // Entrance
-            // 
-            this.Entrance.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entrance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.Entrance.Location = new System.Drawing.Point(4, 44);
-            this.Entrance.Margin = new System.Windows.Forms.Padding(0);
-            this.Entrance.Name = "Entrance";
-            this.Entrance.Size = new System.Drawing.Size(1294, 546);
-            this.Entrance.TabIndex = 0;
-            this.Entrance.Text = "Approved";
-            this.Entrance.UseVisualStyleBackColor = true;
-            // 
-            // Pending
-            // 
-            this.Pending.Location = new System.Drawing.Point(4, 44);
-            this.Pending.Margin = new System.Windows.Forms.Padding(0);
-            this.Pending.Name = "Pending";
-            this.Pending.Size = new System.Drawing.Size(1294, 546);
-            this.Pending.TabIndex = 1;
-            this.Pending.Text = "Pending";
-            this.Pending.UseVisualStyleBackColor = true;
-            // 
-            // Rejected
-            // 
-            this.Rejected.Location = new System.Drawing.Point(4, 44);
-            this.Rejected.Margin = new System.Windows.Forms.Padding(0);
-            this.Rejected.Name = "Rejected";
-            this.Rejected.Size = new System.Drawing.Size(1294, 546);
-            this.Rejected.TabIndex = 2;
-            this.Rejected.Text = "Rejected";
-            this.Rejected.UseVisualStyleBackColor = true;
-            // 
             // guna2Panel3
             // 
+            this.guna2Panel3.Controls.Add(this.data);
             this.guna2Panel3.Location = new System.Drawing.Point(29, 162);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1302, 594);
@@ -337,6 +279,112 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
             // 
+            // data
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.data.ColumnHeadersHeight = 18;
+            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.gender,
+            this.residentName,
+            this.placeLiving,
+            this.Edit,
+            this.Delete});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data.DefaultCellStyle = dataGridViewCellStyle3;
+            this.data.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.data.Location = new System.Drawing.Point(0, 0);
+            this.data.Name = "data";
+            this.data.RowHeadersVisible = false;
+            this.data.RowHeadersWidth = 51;
+            this.data.RowTemplate.Height = 24;
+            this.data.Size = new System.Drawing.Size(1302, 594);
+            this.data.TabIndex = 22;
+            this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.data.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.data.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.data.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.data.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.data.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.data.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.data.ThemeStyle.HeaderStyle.Height = 18;
+            this.data.ThemeStyle.ReadOnly = false;
+            this.data.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.data.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data.ThemeStyle.RowsStyle.Height = 24;
+            this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ລະຫັດ";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "ເພດ";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            // 
+            // residentName
+            // 
+            this.residentName.HeaderText = "ຊື່ ແລະ ນາມສະກຸນ";
+            this.residentName.MinimumWidth = 6;
+            this.residentName.Name = "residentName";
+            // 
+            // placeLiving
+            // 
+            this.placeLiving.HeaderText = "ທີ່ພັກອາໄສປັດຈຸບັນ";
+            this.placeLiving.MinimumWidth = 6;
+            this.placeLiving.Name = "placeLiving";
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = global::Xaysetha_System.Properties.Resources.edit;
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Edit.Width = 23;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = global::Xaysetha_System.Properties.Resources.delete;
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Width = 23;
+            // 
             // entrance_management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,7 +407,8 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            this.statusControl.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,10 +421,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2TabControl statusControl;
-        private System.Windows.Forms.TabPage Entrance;
-        private System.Windows.Forms.TabPage Pending;
-        private System.Windows.Forms.TabPage Rejected;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
@@ -387,5 +432,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2DataGridView data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn residentName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn placeLiving;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

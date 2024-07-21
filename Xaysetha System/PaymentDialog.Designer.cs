@@ -52,10 +52,13 @@
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbVillage = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnResident = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbVillage = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel20.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -65,6 +68,7 @@
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel7.SuspendLayout();
+            this.guna2Panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -399,6 +403,24 @@
             this.guna2Panel4.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel4.TabIndex = 14;
             // 
+            // cbVillage
+            // 
+            this.cbVillage.BackColor = System.Drawing.Color.Transparent;
+            this.cbVillage.BorderRadius = 4;
+            this.cbVillage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbVillage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVillage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbVillage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbVillage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVillage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.cbVillage.ItemHeight = 30;
+            this.cbVillage.Items.AddRange(new object[] {
+            "ບ້ານທັງໝົດ"});
+            this.cbVillage.Location = new System.Drawing.Point(3, 44);
+            this.cbVillage.Name = "cbVillage";
+            this.cbVillage.Size = new System.Drawing.Size(442, 36);
+            this.cbVillage.TabIndex = 24;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -434,7 +456,8 @@
             // guna2Panel7
             // 
             this.guna2Panel7.AutoScroll = true;
-            this.guna2Panel7.AutoScrollMargin = new System.Drawing.Size(0, 40);
+            this.guna2Panel7.AutoScrollMargin = new System.Drawing.Size(0, 60);
+            this.guna2Panel7.Controls.Add(this.guna2Panel8);
             this.guna2Panel7.Controls.Add(this.label3);
             this.guna2Panel7.Controls.Add(this.guna2Panel20);
             this.guna2Panel7.Controls.Add(this.guna2Panel4);
@@ -448,23 +471,51 @@
             this.guna2Panel7.Size = new System.Drawing.Size(652, 666);
             this.guna2Panel7.TabIndex = 21;
             // 
-            // cbVillage
+            // guna2Panel8
             // 
-            this.cbVillage.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage.BorderRadius = 4;
-            this.cbVillage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVillage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.cbVillage.ItemHeight = 30;
-            this.cbVillage.Items.AddRange(new object[] {
-            "ບ້ານທັງໝົດ"});
-            this.cbVillage.Location = new System.Drawing.Point(3, 44);
-            this.cbVillage.Name = "cbVillage";
-            this.cbVillage.Size = new System.Drawing.Size(442, 36);
-            this.cbVillage.TabIndex = 24;
+            this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel8.BorderThickness = 2;
+            this.guna2Panel8.Controls.Add(this.guna2TextBox4);
+            this.guna2Panel8.Controls.Add(this.label7);
+            this.guna2Panel8.Location = new System.Drawing.Point(86, 784);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(477, 84);
+            this.guna2Panel8.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "ຜູ້ຮັບເງິນ";
+            // 
+            // guna2TextBox4
+            // 
+            this.guna2TextBox4.BorderRadius = 4;
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox4.Location = new System.Drawing.Point(3, 32);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderText = "ກະລຸນາຊື່ຜູ້ຮັບເງິນ...";
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.Size = new System.Drawing.Size(443, 48);
+            this.guna2TextBox4.TabIndex = 9;
             // 
             // PaymentDialog
             // 
@@ -497,6 +548,8 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
+            this.guna2Panel8.ResumeLayout(false);
+            this.guna2Panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,5 +585,8 @@
         private Guna.UI2.WinForms.Guna2Button btnResident;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private System.Windows.Forms.Label label7;
     }
 }

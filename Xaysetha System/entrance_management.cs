@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -44,23 +37,7 @@ namespace Xaysetha_System
             childForm.BringToFront();
         }
 
-        private void statusControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int selectedIndex = statusControl.SelectedIndex;
 
-            switch (selectedIndex)
-            {
-                case 0:
-                    OpenChildForm(new entrance_info_table(), statusControl.TabPages[selectedIndex]);
-                    break;
-                case 1:
-                    OpenChildForm(new entrance_info_table(), statusControl.TabPages[selectedIndex]);
-                    break;
-                // Add more cases if you have more tabs
-                default:
-                    break;
-            }
-        }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
