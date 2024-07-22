@@ -73,10 +73,15 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            string tenantID;
 
             switch (columnName)
             {
                 case "Edit":
+
+                    //tenantAdd.fetchDataFromMainPage();
 
                     tenantAdd.Show();
 

@@ -29,7 +29,7 @@ namespace Xaysetha_System
 
         void dataChange(string sql, string messegeBox)
         {
-            BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
+            BigInteger citizenID = BigInteger.Parse(txtTenantID.Text);
 
             string gender = "ບໍ່ລະບຸ";
 
@@ -42,8 +42,7 @@ namespace Xaysetha_System
                 gender = "ຍິງ";
             }
 
-            DateTime birthDay = datePickerBirthday.Value,
-                famBookIssuedDate = datePickerFamBookIssuedDate.Value;
+            DateTime birthDay = datePickerBirthday.Value;
 
             MemoryStream memoryStream = new MemoryStream();
 
@@ -53,14 +52,28 @@ namespace Xaysetha_System
 
             try
             {
-
+                cmd.Parameters.AddWithValue("@tenantID", citizenID);
+                cmd.Parameters.AddWithValue("@firstname", txtName.Text);
+                cmd.Parameters.AddWithValue("@lastname", txtSurname.Text);
+                cmd.Parameters.AddWithValue("@gender", gender);
+                cmd.Parameters.AddWithValue("@dob", birthDay);
+                cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
+                cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
+                cmd.Parameters.AddWithValue("@village", txtVillage.Text);
+                cmd.Parameters.AddWithValue("@district", txtDistrict.Text);
+                cmd.Parameters.AddWithValue("@province", txtProvince.Text);
+                cmd.Parameters.AddWithValue("@fambookID", BigInteger.Parse(txtFamBookID.Text));
+                /*1st missing field*/ cmd.Parameters.AddWithValue("@description", "");
+                cmd.Parameters.AddWithValue("@famBookIssue", datePickerFamBookIssueDate.Value);
+                cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
 
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                new open_child_form().OpenChildForm(new resident_management());
-
+                //new entrance_management().Show();
+                new open_child_form().OpenChildForm(new entrance_management());
+                Hide();
             }
             catch (Exception ex)
             {
@@ -94,7 +107,7 @@ namespace Xaysetha_System
                 case "ບັນທຶກ":
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-
+                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @province, @fambookID, @description, @famBookIssue, @tenantpics);", "ເພີ່ມ");
                 break;
 
                 case "ແກ້ໄຂ":
