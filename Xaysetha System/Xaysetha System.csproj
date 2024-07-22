@@ -189,12 +189,6 @@
       <DependentUpon>Database_Config.cs</DependentUpon>
     </Compile>
     <Compile Include="db_connect.cs" />
-    <Compile Include="entrance_info_table.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="entrance_info_table.Designer.cs">
-      <DependentUpon>entrance_info_table.cs</DependentUpon>
-    </Compile>
     <Compile Include="entrance_management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Database_Config.resx">
       <DependentUpon>Database_Config.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="entrance_info_table.resx">
-      <DependentUpon>entrance_info_table.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="entrance_management.resx">
       <DependentUpon>entrance_management.cs</DependentUpon>

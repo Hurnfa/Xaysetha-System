@@ -1,6 +1,8 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
+using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -13,6 +15,7 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
             loadData("SELECT * FROM tb_tenant;");
+            CustomizedGridView();
         }
 
         NpgsqlCommand cmd;
@@ -37,31 +40,12 @@ namespace Xaysetha_System
             data.Columns[4].DataPropertyName = "province";
         }
 
-        private void OpenChildForm(Form childForm, TabPage tabPage)
+        public void CustomizedGridView()
         {
-            // Close the current active form if there is one
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
+            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
+            data.ColumnHeadersHeight = 30;
 
-            // Set the new form as the active form
-            activeForm = childForm;
-
-            // Configure the form to be displayed within the tab page
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            // Clear the tab page controls and add the new form
-            tabPage.Controls.Clear();
-            tabPage.Controls.Add(childForm);
-
-            // Bring the form to the front and show it
-            childForm.Show();
-            childForm.BringToFront();
         }
-
 
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -74,19 +58,22 @@ namespace Xaysetha_System
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
             DataGridViewRow row = data.Rows[e.RowIndex];
-
-            string tenantID;
+            BigInteger tenant_id = BigInteger.Parse(row.Cells[0].Value.ToString());
+            string name = row.Cells[1].Value?.ToString(),
+                surname = row.Cells[2].Value?.ToString(),
+                village = row.Cells[3].Value?.ToString(),
+                gender = row.Cells[4].Value?.ToString();
 
             switch (columnName)
             {
-                case "Edit":
+                case "editButton":
 
                     //tenantAdd.fetchDataFromMainPage();
-
+                    tenantAdd.fetchDataFromMainPage(Convert.ToString(tenant_id), name, surname, gender, village, "ແກ້ໄຂ");
                     tenantAdd.Show();
 
 
-                break;
+                    break;
 
                 case "Delete":
 
@@ -94,27 +81,52 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-/*                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+                        /*                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
 
-                        try
-                        {
-                            cmd.Parameters.AddWithValue("@citizenID", citizen_id);
+                                                try
+                                                {
+                                                    cmd.Parameters.AddWithValue("@citizenID", citizen_id);
 
-                            cmd.ExecuteNonQuery();
+                                                    cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                    MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            datatable.Clear();
+                                                    datatable.Clear();
 
-                            loadData("SELECT * FROM tb_citizen;");
+                                                    loadData("SELECT * FROM tb_citizen;");
 
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }*/
+                                                }
+                                                catch (Exception ex)
+                                                {
+                                                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                }*/
                     }
-                break;
+                    break;
+            }
+        }
+
+        private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            {
+                e.PaintBackground(e.CellBounds, true);
+
+                using (Brush brush = new SolidBrush(Color.FromArgb(144, 189, 214)))
+                {
+                    e.Graphics.FillRectangle(brush, e.CellBounds);
+                }
+
+                using (Pen pen = new Pen(data.GridColor))
+                {
+                    Rectangle rect = e.CellBounds;
+                    rect.Width -= 1;
+                    rect.Height -= 1;
+                    e.Graphics.DrawRectangle(pen, rect);
+                }
+
+                e.PaintContent(e.CellBounds);
+
+                e.Handled = true;
             }
         }
     }

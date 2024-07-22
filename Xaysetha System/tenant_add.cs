@@ -1,17 +1,10 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -32,7 +25,6 @@ namespace Xaysetha_System
             string name,
             string surname,
             string gender,
-            string occupation,
             string addr,
             string header
             )
@@ -50,7 +42,7 @@ namespace Xaysetha_System
 
             cmd = new NpgsqlCommand("SELECT * FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
 
-            cmd.Parameters.AddWithValue("@citizenID", BigInteger.Parse(tenant_id));
+            cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenant_id));
 
             NpgsqlDataReader reader = cmd.ExecuteReader();
 
@@ -63,7 +55,7 @@ namespace Xaysetha_System
                 //txtReligious.Text = reader["religion"].ToString();
                 //txtDadName.Text = reader["dad_name"].ToString();
                 //txtMomName.Text = reader["mom_name"].ToString();
-                txtFamBookID.Text = reader["family_book"].ToString();
+                txtFamBookID.Text = reader["fambookID"].ToString();
                 //txtWorkplace.Text = reader["workplace"].ToString();
                 //txtPhoneNums.Text = reader["phoneNums"].ToString();
 
@@ -73,7 +65,7 @@ namespace Xaysetha_System
                 }
                 else
                 {
-                    byte[] img = (byte[])reader["citizenPics"];
+                    byte[] img = (byte[])reader["tenantpics"];
                     MemoryStream memory = new MemoryStream(img);
                     profilePictureBox.Image = Image.FromStream(memory);
                 }
@@ -90,11 +82,11 @@ namespace Xaysetha_System
                         txtMomName.Text = mom_name;
                         txtFamBookNums.Text = familyBook;
                         txtWorkplace.Text = workPlace;*/
-            txtJobs.Text = occupation;
+            //txtJobs.Text = occupation;
             //txtAddr.Text = addr;
             //txtPhoneNums.Text = phoneNums;
 
-            label_header.Text = "ຟອມ"+header + "ຂໍ້ມູນຜູ້ພັກເຊົ່າ";
+            label_header.Text = "ຟອມ" + header + "ຂໍ້ມູນຜູ້ພັກເຊົ່າ";
             btnSave.Text = header;
         }
 
@@ -134,7 +126,8 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@district", txtDistrict.Text);
                 cmd.Parameters.AddWithValue("@province", txtProvince.Text);
                 cmd.Parameters.AddWithValue("@fambookID", BigInteger.Parse(txtFamBookID.Text));
-                /*1st missing field*/ cmd.Parameters.AddWithValue("@description", "");
+                /*1st missing field*/
+                cmd.Parameters.AddWithValue("@description", "");
                 cmd.Parameters.AddWithValue("@famBookIssue", datePickerFamBookIssueDate.Value);
                 cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
 
@@ -179,7 +172,7 @@ namespace Xaysetha_System
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
                     dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @province, @fambookID, @description, @famBookIssue, @tenantpics);", "ເພີ່ມ");
-                break;
+                    break;
 
                 case "ແກ້ໄຂ":
 
@@ -190,7 +183,7 @@ namespace Xaysetha_System
                         //dataChange("UPDATE tb_citizen set name=@name, surname=@surname, gender=@gender, dob=@dob, race=@race, nationality=@nationality, ethnic=@ethnic, religion=@religion, dad_name=@dad_name, mom_name=@mom_name, family_book=@family_book, workplace=@workplace, \"citizenPics\"=@citizenPics, occupation=@occupation, addr=@addr, \"phoneNums\"=@phoneNums WHERE \"citizenID\"=@citizenID;", "ແກ້ໄຂ");
                     }
 
-                break;
+                    break;
             }
         }
     }

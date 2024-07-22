@@ -1,6 +1,4 @@
-﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
-using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
-using Npgsql;
+﻿using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
@@ -70,7 +68,7 @@ namespace Xaysetha_System
 
             string id = cmd.ExecuteScalar().ToString();
 
-            labelTotal.Text = "ທັງໝົດ "+id+" ລາຍການ";
+            labelTotal.Text = "ທັງໝົດ " + id + " ລາຍການ";
         }
 
         public void CustomizedGridView()
@@ -176,7 +174,7 @@ namespace Xaysetha_System
                             loadData("SELECT * FROM tb_citizen;");
 
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
                             MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
@@ -191,7 +189,7 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%"+txtNameSearch.Text+"%';");
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%" + txtNameSearch.Text + "%';");
         }
 
         private void cbVillage_SelectedIndexChanged(object sender, EventArgs e)
@@ -217,7 +215,7 @@ namespace Xaysetha_System
 
                     break;
             }
-           
+
         }
 
         private void numberPickerAge_ValueChanged(object sender, EventArgs e)
@@ -229,5 +227,5 @@ namespace Xaysetha_System
         {
 
         }
-    }   
+    }
 }
