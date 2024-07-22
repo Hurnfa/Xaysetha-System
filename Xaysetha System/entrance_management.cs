@@ -37,7 +37,7 @@ namespace Xaysetha_System
             data.Columns[1].DataPropertyName = "firstname";
             data.Columns[2].DataPropertyName = "lastname";
             data.Columns[3].DataPropertyName = "gender";
-            data.Columns[4].DataPropertyName = "province";
+            data.Columns[4].DataPropertyName = "village";
         }
 
         public void CustomizedGridView()
@@ -75,31 +75,31 @@ namespace Xaysetha_System
 
                     break;
 
-                case "Delete":
+                case "delButton":
 
                     DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
-                        /*                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+                        cmd = new NpgsqlCommand("DELETE FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
 
-                                                try
-                                                {
-                                                    cmd.Parameters.AddWithValue("@citizenID", citizen_id);
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@tenantID", tenant_id);
 
-                                                    cmd.ExecuteNonQuery();
+                            cmd.ExecuteNonQuery();
 
-                                                    MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                                    datatable.Clear();
+                            datatable.Clear();
 
-                                                    loadData("SELECT * FROM tb_citizen;");
+                            loadData("SELECT * FROM tb_tenant;");
 
-                                                }
-                                                catch (Exception ex)
-                                                {
-                                                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                                }*/
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     break;
             }

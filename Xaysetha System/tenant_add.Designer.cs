@@ -44,7 +44,7 @@
             this.txtReligion = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtWorkplace = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDistrict = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtVillage = new Guna.UI2.WinForms.Guna2TextBox();
@@ -352,36 +352,36 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.txtWorkplace);
+            this.guna2Panel1.Controls.Add(this.txtDistrict);
             this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Location = new System.Drawing.Point(200, 1532);
+            this.guna2Panel1.Location = new System.Drawing.Point(200, 1504);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel1.TabIndex = 22;
             // 
-            // txtWorkplace
+            // txtDistrict
             // 
-            this.txtWorkplace.BorderRadius = 4;
-            this.txtWorkplace.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtWorkplace.DefaultText = "";
-            this.txtWorkplace.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtWorkplace.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtWorkplace.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtWorkplace.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtWorkplace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWorkplace.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWorkplace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtWorkplace.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtWorkplace.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtWorkplace.Location = new System.Drawing.Point(3, 32);
-            this.txtWorkplace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtWorkplace.Name = "txtWorkplace";
-            this.txtWorkplace.PasswordChar = '\0';
-            this.txtWorkplace.PlaceholderText = "ກະລຸນາປ້ອນທີ່ຢູ່ຂອງທ່ານ..";
-            this.txtWorkplace.SelectedText = "";
-            this.txtWorkplace.Size = new System.Drawing.Size(443, 48);
-            this.txtWorkplace.TabIndex = 6;
+            this.txtDistrict.BorderRadius = 4;
+            this.txtDistrict.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDistrict.DefaultText = "";
+            this.txtDistrict.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDistrict.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDistrict.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDistrict.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDistrict.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDistrict.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDistrict.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDistrict.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtDistrict.IconLeftSize = new System.Drawing.Size(24, 24);
+            this.txtDistrict.Location = new System.Drawing.Point(11, 32);
+            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDistrict.Name = "txtDistrict";
+            this.txtDistrict.PasswordChar = '\0';
+            this.txtDistrict.PlaceholderText = "ກະລຸນາປ້ອນທີ່ຢູ່ຂອງທ່ານ..";
+            this.txtDistrict.SelectedText = "";
+            this.txtDistrict.Size = new System.Drawing.Size(443, 48);
+            this.txtDistrict.TabIndex = 6;
             // 
             // label1
             // 
@@ -391,16 +391,16 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 28);
+            this.label1.Size = new System.Drawing.Size(136, 28);
             this.label1.TabIndex = 8;
-            this.label1.Text = "ທີ່ຕັ້ງສະຖານທີ່ເຮັດວຽກ(ບ້ານ) ";
+            this.label1.Text = "ທີ່ຢູ່ປັດຈຸບັນ (ເມືອງ) ";
             // 
             // guna2Panel17
             // 
             this.guna2Panel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel17.Controls.Add(this.txtVillage);
             this.guna2Panel17.Controls.Add(this.label23);
-            this.guna2Panel17.Location = new System.Drawing.Point(200, 1425);
+            this.guna2Panel17.Location = new System.Drawing.Point(200, 1398);
             this.guna2Panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel17.Name = "guna2Panel17";
             this.guna2Panel17.Size = new System.Drawing.Size(477, 90);
@@ -447,7 +447,7 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label22.Location = new System.Drawing.Point(204, 1363);
+            this.label22.Location = new System.Drawing.Point(208, 1341);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(160, 38);
             this.label22.TabIndex = 20;
@@ -485,7 +485,7 @@
             this.datePickerFamBookIssueDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.datePickerFamBookIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datePickerFamBookIssueDate.Location = new System.Drawing.Point(8, 143);
-            this.datePickerFamBookIssueDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datePickerFamBookIssueDate.Margin = new System.Windows.Forms.Padding(4);
             this.datePickerFamBookIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datePickerFamBookIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datePickerFamBookIssueDate.Name = "datePickerFamBookIssueDate";
@@ -1027,7 +1027,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datePickerBirthday;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtWorkplace;
+        private Guna.UI2.WinForms.Guna2TextBox txtDistrict;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

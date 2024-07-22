@@ -25,7 +25,7 @@ namespace Xaysetha_System
             string name,
             string surname,
             string gender,
-            string addr,
+            string village,
             string header
             )
         {
@@ -38,7 +38,7 @@ namespace Xaysetha_System
             rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
 
             //txtJobs.Text = occupation;
-            txtProvince.Text = addr;
+
 
             cmd = new NpgsqlCommand("SELECT * FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
 
@@ -49,15 +49,15 @@ namespace Xaysetha_System
             while (reader.Read())
             {
                 datePickerBirthday.Value = (DateTime)reader["dob"];
-                //txtRace.Text = reader["race"].ToString();
                 txtNationality.Text = reader["nationality"].ToString();
-                //txtEthnic.Text = reader["ethnic"].ToString();
-                //txtReligious.Text = reader["religion"].ToString();
-                //txtDadName.Text = reader["dad_name"].ToString();
-                //txtMomName.Text = reader["mom_name"].ToString();
+                txtEthnic.Text = reader["ethnics"].ToString();
+                txtReligion.Text = reader["religion"].ToString();
                 txtFamBookID.Text = reader["fambookID"].ToString();
-                //txtWorkplace.Text = reader["workplace"].ToString();
-                //txtPhoneNums.Text = reader["phoneNums"].ToString();
+                datePickerFamBookIssueDate.Value = (DateTime)reader["famBookIssueDate"];
+                txtDistrict.Text = reader["district"].ToString();
+                txtPhoneNums.Text = reader["phoneNums"].ToString();
+                txtJobs.Text = reader["occupation"].ToString();
+                txtVillage.Text = reader["village"].ToString();
 
                 if (reader["tenantpics"] == DBNull.Value)
                 {
@@ -73,18 +73,7 @@ namespace Xaysetha_System
 
             reader.Close();
 
-            /*            datePickerBirthday.Value = birth_day;
-                        txtRace.Text = race;
-                        txtNationality.Text = nationality;
-                        txtEthnic.Text = ethnic;
-                        txtReligious.Text = religion;
-                        txtDadName.Text = dad_name;
-                        txtMomName.Text = mom_name;
-                        txtFamBookNums.Text = familyBook;
-                        txtWorkplace.Text = workPlace;*/
-            //txtJobs.Text = occupation;
-            //txtAddr.Text = addr;
-            //txtPhoneNums.Text = phoneNums;
+
 
             label_header.Text = "ຟອມ" + header + "ຂໍ້ມູນຜູ້ພັກເຊົ່າ";
             btnSave.Text = header;
@@ -92,7 +81,7 @@ namespace Xaysetha_System
 
         void dataChange(string sql, string messegeBox)
         {
-            BigInteger citizenID = BigInteger.Parse(txtTenantID.Text);
+            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text);
 
             string gender = "ບໍ່ລະບຸ";
 
@@ -115,20 +104,21 @@ namespace Xaysetha_System
 
             try
             {
-                cmd.Parameters.AddWithValue("@tenantID", citizenID);
+                cmd.Parameters.AddWithValue("@tenantID", tenantID);
                 cmd.Parameters.AddWithValue("@firstname", txtName.Text);
                 cmd.Parameters.AddWithValue("@lastname", txtSurname.Text);
                 cmd.Parameters.AddWithValue("@gender", gender);
-                cmd.Parameters.AddWithValue("@dob", birthDay);
                 cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
+                cmd.Parameters.AddWithValue("@religion", txtReligion.Text);
+                cmd.Parameters.AddWithValue("@dob", birthDay);
                 cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
+                cmd.Parameters.AddWithValue("@phoneNums", txtPhoneNums.Text);
+                cmd.Parameters.AddWithValue("@ethnics", txtEthnic.Text);
+                cmd.Parameters.AddWithValue("@fambookID", BigInteger.Parse(txtFamBookID.Text));
+                cmd.Parameters.AddWithValue("@description", "");
+                cmd.Parameters.AddWithValue("@famBookIssueDate", datePickerFamBookIssueDate.Value);
                 cmd.Parameters.AddWithValue("@village", txtVillage.Text);
                 cmd.Parameters.AddWithValue("@district", txtDistrict.Text);
-                cmd.Parameters.AddWithValue("@province", txtProvince.Text);
-                cmd.Parameters.AddWithValue("@fambookID", BigInteger.Parse(txtFamBookID.Text));
-                /*1st missing field*/
-                cmd.Parameters.AddWithValue("@description", "");
-                cmd.Parameters.AddWithValue("@famBookIssue", datePickerFamBookIssueDate.Value);
                 cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
 
                 cmd.ExecuteNonQuery();
@@ -171,7 +161,7 @@ namespace Xaysetha_System
                 case "ບັນທຶກ":
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @province, @fambookID, @description, @famBookIssue, @tenantpics);", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics);", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":
@@ -180,7 +170,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        //dataChange("UPDATE tb_citizen set name=@name, surname=@surname, gender=@gender, dob=@dob, race=@race, nationality=@nationality, ethnic=@ethnic, religion=@religion, dad_name=@dad_name, mom_name=@mom_name, family_book=@family_book, workplace=@workplace, \"citizenPics\"=@citizenPics, occupation=@occupation, addr=@addr, \"phoneNums\"=@phoneNums WHERE \"citizenID\"=@citizenID;", "ແກ້ໄຂ");
+                        dataChange("UPDATE tb_tenant set firstname=@firstname, lastname=@lastname, gender=@gender, dob=@dob, nationality=@nationality, occupation=@occupation, village=@village, district=@district, \"fambookID\"=@fambookID, description=@description, \"famBookIssueDate\"=@famBookIssueDate, tenantpics=@tenantpics, religion=@religion, \"phoneNums\"=@phoneNums, ethnics=@ethnics WHERE \"tenantID\"=@tenantID", "ແກ້ໄຂ");
                     }
 
                     break;
