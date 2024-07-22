@@ -77,7 +77,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_header = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.label13 = new System.Windows.Forms.Label();
@@ -843,7 +843,7 @@
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
             this.guna2GradientPanel2.Controls.Add(this.btnClose);
-            this.guna2GradientPanel2.Controls.Add(this.label4);
+            this.guna2GradientPanel2.Controls.Add(this.label_header);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(2);
@@ -864,17 +864,17 @@
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label4
+            // label_header
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(268, 12);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(310, 39);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "ຟອມປ້ອນຂໍ້ມູນຜູ້ພັກເຊົາຕ່າງແດນ";
+            this.label_header.AutoSize = true;
+            this.label_header.Font = new System.Drawing.Font("Noto Sans Lao", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_header.ForeColor = System.Drawing.Color.White;
+            this.label_header.Location = new System.Drawing.Point(268, 12);
+            this.label_header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_header.Name = "label_header";
+            this.label_header.Size = new System.Drawing.Size(310, 39);
+            this.label_header.TabIndex = 7;
+            this.label_header.Text = "ຟອມປ້ອນຂໍ້ມູນຜູ້ພັກເຊົາຕ່າງແດນ";
             // 
             // guna2Panel4
             // 
@@ -1107,7 +1107,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2TextBox txtReligion;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_header;
         private Guna.UI2.WinForms.Guna2PictureBox btnClose;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
         private Guna.UI2.WinForms.Guna2TextBox txtPhoneNums;

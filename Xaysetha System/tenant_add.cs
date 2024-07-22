@@ -27,6 +27,77 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
 
+        public void fetchDataFromMainPage(
+            string tenant_id,
+            string name,
+            string surname,
+            string gender,
+            string occupation,
+            string addr,
+            string header
+            )
+        {
+            txtTenantID.Text = tenant_id;
+            txtName.Text = name;
+            txtSurname.Text = surname;
+
+            rdoMale.Checked = gender == "ຊາຍ";
+            rdoFemale.Checked = gender == "ຍິງ";
+            rdoOthers.Checked = !(rdoMale.Checked || rdoFemale.Checked);
+
+            //txtJobs.Text = occupation;
+            txtProvince.Text = addr;
+
+            cmd = new NpgsqlCommand("SELECT * FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+
+            cmd.Parameters.AddWithValue("@citizenID", BigInteger.Parse(tenant_id));
+
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                datePickerBirthday.Value = (DateTime)reader["dob"];
+                //txtRace.Text = reader["race"].ToString();
+                txtNationality.Text = reader["nationality"].ToString();
+                //txtEthnic.Text = reader["ethnic"].ToString();
+                //txtReligious.Text = reader["religion"].ToString();
+                //txtDadName.Text = reader["dad_name"].ToString();
+                //txtMomName.Text = reader["mom_name"].ToString();
+                txtFamBookID.Text = reader["family_book"].ToString();
+                //txtWorkplace.Text = reader["workplace"].ToString();
+                //txtPhoneNums.Text = reader["phoneNums"].ToString();
+
+                if (reader["tenantpics"] == DBNull.Value)
+                {
+                    profilePictureBox.Image = null;
+                }
+                else
+                {
+                    byte[] img = (byte[])reader["citizenPics"];
+                    MemoryStream memory = new MemoryStream(img);
+                    profilePictureBox.Image = Image.FromStream(memory);
+                }
+            }
+
+            reader.Close();
+
+            /*            datePickerBirthday.Value = birth_day;
+                        txtRace.Text = race;
+                        txtNationality.Text = nationality;
+                        txtEthnic.Text = ethnic;
+                        txtReligious.Text = religion;
+                        txtDadName.Text = dad_name;
+                        txtMomName.Text = mom_name;
+                        txtFamBookNums.Text = familyBook;
+                        txtWorkplace.Text = workPlace;*/
+            txtJobs.Text = occupation;
+            //txtAddr.Text = addr;
+            //txtPhoneNums.Text = phoneNums;
+
+            label_header.Text = "ຟອມ"+header + "ຂໍ້ມູນຜູ້ພັກເຊົ່າ";
+            btnSave.Text = header;
+        }
+
         void dataChange(string sql, string messegeBox)
         {
             BigInteger citizenID = BigInteger.Parse(txtTenantID.Text);
