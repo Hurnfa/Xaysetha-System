@@ -182,6 +182,9 @@ namespace Xaysetha_System
 
         private void btnLeave_Click(object sender, EventArgs e)
         {
+            //payment button
+
+            labelHeader.Text = btnLeave.Text;
             OpenChildForm(new payment());
         }
 
@@ -197,7 +200,7 @@ namespace Xaysetha_System
 
         private void btnPrinting_Click(object sender, EventArgs e)
         {
-            //new printing().Show();
+            labelHeader.Text = btnPrinting.Text;
             OpenChildForm(new exportBook());
         }
 

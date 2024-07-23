@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
             this.paymentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenantID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.residentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issuePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -59,10 +59,10 @@
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.paymentID,
-            this.bookID,
+            this.tenantID,
             this.residentName,
-            this.issueDate,
-            this.dueDate,
+            this.duration,
+            this.price,
             this.issuePerson,
             this.Edit,
             this.Delete});
@@ -77,11 +77,12 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
+            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data.Name = "data";
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1082, 499);
+            this.data.Size = new System.Drawing.Size(812, 405);
             this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -111,11 +112,11 @@
             this.paymentID.MinimumWidth = 6;
             this.paymentID.Name = "paymentID";
             // 
-            // bookID
+            // tenantID
             // 
-            this.bookID.HeaderText = "ເລກລະຫັດປື້ມພັກເຊົາ";
-            this.bookID.MinimumWidth = 6;
-            this.bookID.Name = "bookID";
+            this.tenantID.HeaderText = "ລະຫັດຜູ້ພັກເຊົາ";
+            this.tenantID.MinimumWidth = 6;
+            this.tenantID.Name = "tenantID";
             // 
             // residentName
             // 
@@ -123,17 +124,17 @@
             this.residentName.MinimumWidth = 6;
             this.residentName.Name = "residentName";
             // 
-            // issueDate
+            // duration
             // 
-            this.issueDate.HeaderText = "ວັນທີ່ລົງຖະບຽນ";
-            this.issueDate.MinimumWidth = 6;
-            this.issueDate.Name = "issueDate";
+            this.duration.HeaderText = "ໄລຍະເວລາພັກເຊົ່າ";
+            this.duration.MinimumWidth = 6;
+            this.duration.Name = "duration";
             // 
-            // dueDate
+            // price
             // 
-            this.dueDate.HeaderText = "ມຶ້ກຳນົດຈ່າຍເງິນ";
-            this.dueDate.MinimumWidth = 6;
-            this.dueDate.Name = "dueDate";
+            this.price.HeaderText = "ລາຄາ";
+            this.price.MinimumWidth = 6;
+            this.price.Name = "price";
             // 
             // issuePerson
             // 
@@ -150,7 +151,7 @@
             this.Edit.Name = "Edit";
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Width = 23;
+            this.Edit.Width = 20;
             // 
             // Delete
             // 
@@ -161,15 +162,16 @@
             this.Delete.Name = "Delete";
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Width = 23;
+            this.Delete.Width = 20;
             // 
             // payment_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 499);
+            this.ClientSize = new System.Drawing.Size(812, 405);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "payment_info";
             this.Text = "payment_info";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
@@ -181,10 +183,10 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView data;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenantID;
         private System.Windows.Forms.DataGridViewTextBoxColumn residentName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dueDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn issuePerson;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;

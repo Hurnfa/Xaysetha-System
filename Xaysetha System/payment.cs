@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Npgsql;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -6,10 +8,25 @@ namespace Xaysetha_System
     public partial class payment : Form
     {
         private Form activeForm = null;
+        payment_info table_payment = new payment_info();
+        db_connect cn = new db_connect();
+        NpgsqlDataAdapter adapter;
+        DataTable dataTable = new DataTable();
+
         public payment()
         {
             InitializeComponent();
+            cn.getConnect();
+            OpenChildForm(table_payment, statusControl.TabPages[0]);
+            table_payment.loadData("SELECT * FROM tb_payment;");
         }
+
+        void loadData(string sql)
+        {
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(dataTable);
+        }
+
         private void OpenChildForm(Form childForm, TabPage tabPage)
         {
             // Close the current active form if there is one
@@ -45,6 +62,9 @@ namespace Xaysetha_System
                     OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
                     break;
                 case 1:
+                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
+                    break;
+                case 2:
                     OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
                     break;
                 // Add more cases if you have more tabs

@@ -10,10 +10,12 @@ namespace Xaysetha_System
     public partial class entrance_management : Form
     {
         private Form activeForm = null;
+
         public entrance_management()
         {
             InitializeComponent();
             cn.getConnect();
+            displayTotalOfUser();
             loadData("SELECT * FROM tb_tenant;");
             CustomizedGridView();
         }
@@ -24,6 +26,19 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
         tenant_add tenantAdd = new tenant_add();
+
+        public void displayTotalOfUser()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_tenant;", cn.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                labelTotal.Text = "ທັງໝົດ " + reader["count"] + " ລາຍການ";
+            }
+
+            reader.Close();
+        }
 
         public void loadData(string sql)
         {
@@ -128,6 +143,13 @@ namespace Xaysetha_System
 
                 e.Handled = true;
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_tenant WHERE CONCAT(\"tenantID\", firstname, lastname) LIKE '%"+txtSearch.Text+"%'");
         }
     }
 }

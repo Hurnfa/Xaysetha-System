@@ -174,14 +174,15 @@ namespace Xaysetha_System
 
                 cmd.Parameters.AddWithValue("@paymentID", random.Next());
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
+                cmd.Parameters.AddWithValue("@paymentStatus", "Pending");
                 cmd.Parameters.AddWithValue("@userID", "admin");
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                new open_child_form().OpenChildForm(new entrance_management());
-                Hide();
+                //new open_child_form().OpenChildForm(new entrance_management());
+                //Hide();
             }
             catch (Exception ex)
             {
@@ -216,7 +217,7 @@ namespace Xaysetha_System
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
                     dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics);", "ເພີ່ມ");
-                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, user_id) VALUES (@paymentID, @tenantID, @userID)", "ເພີ່ມ");
+                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, payment_status, user_id) VALUES (@paymentID, @tenantID, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":
