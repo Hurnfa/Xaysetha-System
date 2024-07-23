@@ -200,5 +200,10 @@ namespace Xaysetha_System
             //new printing().Show();
             OpenChildForm(new exportBook());
         }
+
+        private void labelRole_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

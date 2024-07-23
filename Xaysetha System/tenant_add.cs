@@ -10,6 +10,7 @@ namespace Xaysetha_System
 {
     public partial class tenant_add : Form
     {
+
         public tenant_add()
         {
             InitializeComponent();
@@ -136,6 +137,59 @@ namespace Xaysetha_System
             }
         }
 
+        //public BigInteger GenerateUniquePaymentID()
+        //{
+        //    BigInteger paymentID = 1;
+        //    bool isUnique = false;
+
+        //    while (!isUnique)
+        //    {
+        //        paymentID = random.Next(100000, 999999); // Adjust the range as needed
+
+        //        using (NpgsqlCommand checkCmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_payment WHERE payment_id = @paymentID", cn.conn))
+        //        {
+        //            checkCmd.Parameters.AddWithValue("@paymentID", paymentID);
+        //            BigInteger count = BigInteger.Parse(checkCmd.ExecuteScalar().ToString());
+
+        //            if (count == 0)
+        //            {
+        //                isUnique = true;
+        //            }
+        //        }
+        //    }
+
+        //    return paymentID;
+        //}
+
+        void sentDataToPayment(string sql, string messegeBox)
+        {
+            //BigInteger paymentID = GenerateUniquePaymentID();
+            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text);
+            Random random = new Random();
+
+            try
+            {
+
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn.conn);
+
+                cmd.Parameters.AddWithValue("@paymentID", random.Next());
+                cmd.Parameters.AddWithValue("@tenantID", tenantID);
+                cmd.Parameters.AddWithValue("@userID", "admin");
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                new open_child_form().OpenChildForm(new entrance_management());
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Hide();
@@ -162,6 +216,7 @@ namespace Xaysetha_System
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
                     dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics);", "ເພີ່ມ");
+                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, user_id) VALUES (@paymentID, @tenantID, @userID)", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":
