@@ -35,7 +35,7 @@ namespace Xaysetha_System
             // Close the current active form if there is one
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Hide();
             }
 
             // Set the new form as the active form
@@ -58,14 +58,17 @@ namespace Xaysetha_System
         private void statusControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = statusControl.SelectedIndex;
+            table_payment.dataTable.Clear();
 
             switch (selectedIndex)
             {
                 case 0:
-                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
+                    table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                  
                     break;
                 case 1:
-                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
+                    table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                    
                     break;
                 case 2:
                     OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);

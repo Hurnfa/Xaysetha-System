@@ -1,6 +1,9 @@
 ﻿using Npgsql;
+//using Org.BouncyCastle.Math;
+using System;
 using System.Data;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -10,7 +13,8 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
         NpgsqlDataAdapter adapter;
-        DataTable dataTable = new DataTable();
+        public DataTable dataTable = new DataTable();
+        PaymentDialog paymentDialog = new PaymentDialog();
 
         public payment_info()
         {
@@ -22,20 +26,21 @@ namespace Xaysetha_System
 
         public void loadData(string sql)
         {
-            data.AutoGenerateColumns = false;
+            if (data.Rows.Count > 0)
+            {
+                data.AutoGenerateColumns = false;
 
-            adapter = new NpgsqlDataAdapter(sql, cn.conn);
-            adapter.Fill(dataTable);
-            data.DataSource = dataTable;
+                adapter = new NpgsqlDataAdapter(sql, cn.conn);
+                adapter.Fill(dataTable);
+                data.DataSource = dataTable;
 
-            data.Columns[0].DataPropertyName = "payment_id";
-            data.Columns[1].DataPropertyName = "tenant_id";
-            data.Columns[3].DataPropertyName = "duration";
-            data.Columns[4].DataPropertyName = "price";
-            data.Columns[5].DataPropertyName = "user_id";
-
-            //cmd = new NpgsqlCommand("SELECT firstname, lastname FROM tb_tenant WHERE ");
-
+                data.Columns[0].DataPropertyName = "payment_id";
+                data.Columns[1].DataPropertyName = "tenant_id";
+                data.Columns[2].DataPropertyName = "firstname";
+                data.Columns[3].DataPropertyName = "duration";
+                data.Columns[4].DataPropertyName = "price";
+                data.Columns[5].DataPropertyName = "user_id";
+            }
         }
 
         public void CustomizedGridView()
@@ -79,6 +84,57 @@ namespace Xaysetha_System
                 e.PaintContent(e.CellBounds);
 
                 e.Handled = true;
+            }
+        }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+            BigInteger payment_id = BigInteger.Parse(row.Cells[0].Value?.ToString());
+            string tenantID = row.Cells[1].Value?.ToString(),
+                userID = row.Cells[5].Value?.ToString();
+            int duration = int.Parse(row.Cells[3].Value?.ToString());
+            float price = float.Parse(row.Cells[4].Value?.ToString());
+
+
+            switch (columnName)
+            {
+                case "Edit":
+
+                    paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, duration, price);
+                    paymentDialog.ShowDialog();
+
+                    break;
+
+                case "Delete":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        cmd = new NpgsqlCommand("DELETE FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@paymentID", payment_id);
+
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("ລຶບຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            dataTable.Clear();
+
+                            loadData("SELECT * FROM tb_payment;");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                    break;
             }
         }
     }

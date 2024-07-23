@@ -174,7 +174,7 @@ namespace Xaysetha_System
 
                 cmd.Parameters.AddWithValue("@paymentID", random.Next());
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
-                cmd.Parameters.AddWithValue("@paymentStatus", "Pending");
+                cmd.Parameters.AddWithValue("@paymentStatus", "ລໍຖ້າຊຳລະ");
                 cmd.Parameters.AddWithValue("@userID", "admin");
 
                 cmd.ExecuteNonQuery();

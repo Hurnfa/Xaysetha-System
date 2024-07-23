@@ -31,33 +31,33 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtCitizenID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenantID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenantName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenantPlace = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPurpose = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoSixMonths = new System.Windows.Forms.RadioButton();
+            this.rdoThreeMonths = new System.Windows.Forms.RadioButton();
+            this.rdoOneMonth = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbVillage = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboboxPaymentStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnResident = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.guna2Panel20.SuspendLayout();
@@ -88,7 +88,7 @@
             this.btnClose.Image = global::Xaysetha_System.Properties.Resources.ic_round;
             this.btnClose.ImageRotate = 0F;
             this.btnClose.Location = new System.Drawing.Point(539, 20);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 41);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,35 +100,35 @@
             // 
             this.guna2Panel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel20.BorderThickness = 2;
-            this.guna2Panel20.Controls.Add(this.txtCitizenID);
+            this.guna2Panel20.Controls.Add(this.txtTenantID);
             this.guna2Panel20.Controls.Add(this.label25);
             this.guna2Panel20.Location = new System.Drawing.Point(65, 68);
-            this.guna2Panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel20.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel20.Name = "guna2Panel20";
             this.guna2Panel20.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel20.TabIndex = 10;
             // 
-            // txtCitizenID
+            // txtTenantID
             // 
-            this.txtCitizenID.BorderRadius = 4;
-            this.txtCitizenID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCitizenID.DefaultText = "";
-            this.txtCitizenID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCitizenID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCitizenID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCitizenID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCitizenID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCitizenID.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCitizenID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCitizenID.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtCitizenID.Location = new System.Drawing.Point(2, 26);
-            this.txtCitizenID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtCitizenID.Name = "txtCitizenID";
-            this.txtCitizenID.PasswordChar = '\0';
-            this.txtCitizenID.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.txtCitizenID.SelectedText = "";
-            this.txtCitizenID.Size = new System.Drawing.Size(332, 39);
-            this.txtCitizenID.TabIndex = 6;
+            this.txtTenantID.BorderRadius = 4;
+            this.txtTenantID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenantID.DefaultText = "";
+            this.txtTenantID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenantID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenantID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantID.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenantID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantID.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtTenantID.Location = new System.Drawing.Point(2, 26);
+            this.txtTenantID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTenantID.Name = "txtTenantID";
+            this.txtTenantID.PasswordChar = '\0';
+            this.txtTenantID.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
+            this.txtTenantID.SelectedText = "";
+            this.txtTenantID.Size = new System.Drawing.Size(332, 39);
+            this.txtTenantID.TabIndex = 6;
             // 
             // label25
             // 
@@ -160,35 +160,35 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.guna2TextBox1);
+            this.guna2Panel1.Controls.Add(this.txtTenantName);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Location = new System.Drawing.Point(65, 150);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel1.TabIndex = 11;
             // 
-            // guna2TextBox1
+            // txtTenantName
             // 
-            this.guna2TextBox1.BorderRadius = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(2, 26);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(332, 39);
-            this.guna2TextBox1.TabIndex = 6;
+            this.txtTenantName.BorderRadius = 4;
+            this.txtTenantName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenantName.DefaultText = "";
+            this.txtTenantName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenantName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenantName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantName.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenantName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantName.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtTenantName.Location = new System.Drawing.Point(2, 26);
+            this.txtTenantName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTenantName.Name = "txtTenantName";
+            this.txtTenantName.PasswordChar = '\0';
+            this.txtTenantName.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
+            this.txtTenantName.SelectedText = "";
+            this.txtTenantName.Size = new System.Drawing.Size(332, 39);
+            this.txtTenantName.TabIndex = 6;
             // 
             // label2
             // 
@@ -207,35 +207,35 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderThickness = 2;
-            this.guna2Panel2.Controls.Add(this.guna2TextBox2);
+            this.guna2Panel2.Controls.Add(this.txtTenantPlace);
             this.guna2Panel2.Controls.Add(this.label4);
             this.guna2Panel2.Location = new System.Drawing.Point(65, 231);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel2.TabIndex = 12;
             // 
-            // guna2TextBox2
+            // txtTenantPlace
             // 
-            this.guna2TextBox2.BorderRadius = 4;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.Location = new System.Drawing.Point(2, 26);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(332, 39);
-            this.guna2TextBox2.TabIndex = 6;
+            this.txtTenantPlace.BorderRadius = 4;
+            this.txtTenantPlace.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenantPlace.DefaultText = "";
+            this.txtTenantPlace.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenantPlace.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenantPlace.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantPlace.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenantPlace.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantPlace.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenantPlace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenantPlace.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtTenantPlace.Location = new System.Drawing.Point(2, 26);
+            this.txtTenantPlace.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTenantPlace.Name = "txtTenantPlace";
+            this.txtTenantPlace.PasswordChar = '\0';
+            this.txtTenantPlace.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
+            this.txtTenantPlace.SelectedText = "";
+            this.txtTenantPlace.Size = new System.Drawing.Size(332, 39);
+            this.txtTenantPlace.TabIndex = 6;
             // 
             // label4
             // 
@@ -254,35 +254,35 @@
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderThickness = 2;
-            this.guna2Panel3.Controls.Add(this.guna2TextBox3);
+            this.guna2Panel3.Controls.Add(this.txtPurpose);
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.Location = new System.Drawing.Point(65, 312);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel3.TabIndex = 13;
             // 
-            // guna2TextBox3
+            // txtPurpose
             // 
-            this.guna2TextBox3.BorderRadius = 4;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox3.Location = new System.Drawing.Point(2, 26);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(332, 39);
-            this.guna2TextBox3.TabIndex = 6;
+            this.txtPurpose.BorderRadius = 4;
+            this.txtPurpose.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPurpose.DefaultText = "";
+            this.txtPurpose.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPurpose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPurpose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPurpose.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPurpose.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPurpose.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
+            this.txtPurpose.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPurpose.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtPurpose.Location = new System.Drawing.Point(2, 26);
+            this.txtPurpose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPurpose.Name = "txtPurpose";
+            this.txtPurpose.PasswordChar = '\0';
+            this.txtPurpose.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
+            this.txtPurpose.SelectedText = "";
+            this.txtPurpose.Size = new System.Drawing.Size(332, 39);
+            this.txtPurpose.TabIndex = 6;
             // 
             // label5
             // 
@@ -300,57 +300,57 @@
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.Controls.Add(this.radioButton3);
-            this.guna2Panel5.Controls.Add(this.radioButton2);
-            this.guna2Panel5.Controls.Add(this.radioButton1);
+            this.guna2Panel5.Controls.Add(this.rdoSixMonths);
+            this.guna2Panel5.Controls.Add(this.rdoThreeMonths);
+            this.guna2Panel5.Controls.Add(this.rdoOneMonth);
             this.guna2Panel5.Controls.Add(this.label8);
             this.guna2Panel5.Location = new System.Drawing.Point(68, 393);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel5.TabIndex = 14;
             // 
-            // radioButton3
+            // rdoSixMonths
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(169, 39);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 27);
-            this.radioButton3.TabIndex = 11;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "6 ເດືອນ";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdoSixMonths.AutoSize = true;
+            this.rdoSixMonths.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoSixMonths.ForeColor = System.Drawing.Color.White;
+            this.rdoSixMonths.Location = new System.Drawing.Point(169, 39);
+            this.rdoSixMonths.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoSixMonths.Name = "rdoSixMonths";
+            this.rdoSixMonths.Size = new System.Drawing.Size(71, 27);
+            this.rdoSixMonths.TabIndex = 11;
+            this.rdoSixMonths.TabStop = true;
+            this.rdoSixMonths.Text = "6 ເດືອນ";
+            this.rdoSixMonths.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoThreeMonths
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(84, 40);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 27);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "3 ເດືອນ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoThreeMonths.AutoSize = true;
+            this.rdoThreeMonths.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoThreeMonths.ForeColor = System.Drawing.Color.White;
+            this.rdoThreeMonths.Location = new System.Drawing.Point(84, 40);
+            this.rdoThreeMonths.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoThreeMonths.Name = "rdoThreeMonths";
+            this.rdoThreeMonths.Size = new System.Drawing.Size(71, 27);
+            this.rdoThreeMonths.TabIndex = 10;
+            this.rdoThreeMonths.TabStop = true;
+            this.rdoThreeMonths.Text = "3 ເດືອນ";
+            this.rdoThreeMonths.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoOneMonth
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(2, 39);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 27);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "1 ເດືອນ";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoOneMonth.AutoSize = true;
+            this.rdoOneMonth.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoOneMonth.ForeColor = System.Drawing.Color.White;
+            this.rdoOneMonth.Location = new System.Drawing.Point(2, 39);
+            this.rdoOneMonth.Margin = new System.Windows.Forms.Padding(2);
+            this.rdoOneMonth.Name = "rdoOneMonth";
+            this.rdoOneMonth.Size = new System.Drawing.Size(71, 27);
+            this.rdoOneMonth.TabIndex = 9;
+            this.rdoOneMonth.TabStop = true;
+            this.rdoOneMonth.Text = "1 ເດືອນ";
+            this.rdoOneMonth.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -369,32 +369,34 @@
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderThickness = 2;
-            this.guna2Panel4.Controls.Add(this.cbVillage);
+            this.guna2Panel4.Controls.Add(this.comboboxPaymentStatus);
             this.guna2Panel4.Controls.Add(this.label6);
             this.guna2Panel4.Location = new System.Drawing.Point(65, 557);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel4.TabIndex = 14;
             // 
-            // cbVillage
+            // comboboxPaymentStatus
             // 
-            this.cbVillage.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage.BorderRadius = 4;
-            this.cbVillage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVillage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.cbVillage.ItemHeight = 30;
-            this.cbVillage.Items.AddRange(new object[] {
-            "ບ້ານທັງໝົດ"});
-            this.cbVillage.Location = new System.Drawing.Point(2, 36);
-            this.cbVillage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbVillage.Name = "cbVillage";
-            this.cbVillage.Size = new System.Drawing.Size(332, 36);
-            this.cbVillage.TabIndex = 24;
+            this.comboboxPaymentStatus.BackColor = System.Drawing.Color.Transparent;
+            this.comboboxPaymentStatus.BorderRadius = 4;
+            this.comboboxPaymentStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboboxPaymentStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxPaymentStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxPaymentStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxPaymentStatus.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
+            this.comboboxPaymentStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.comboboxPaymentStatus.ItemHeight = 30;
+            this.comboboxPaymentStatus.Items.AddRange(new object[] {
+            " ",
+            "ລໍຖ້າຊຳລະ",
+            "ຊຳລະແລ້ວ"});
+            this.comboboxPaymentStatus.Location = new System.Drawing.Point(6, 25);
+            this.comboboxPaymentStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.comboboxPaymentStatus.Name = "comboboxPaymentStatus";
+            this.comboboxPaymentStatus.Size = new System.Drawing.Size(332, 36);
+            this.comboboxPaymentStatus.TabIndex = 24;
             // 
             // label6
             // 
@@ -424,7 +426,7 @@
             this.btnResident.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnResident.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnResident.Location = new System.Drawing.Point(419, 703);
-            this.btnResident.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResident.Margin = new System.Windows.Forms.Padding(2);
             this.btnResident.Name = "btnResident";
             this.btnResident.Size = new System.Drawing.Size(158, 44);
             this.btnResident.TabIndex = 20;
@@ -444,7 +446,7 @@
             this.guna2Panel7.Controls.Add(this.guna2Panel5);
             this.guna2Panel7.Controls.Add(this.guna2Panel3);
             this.guna2Panel7.Location = new System.Drawing.Point(59, 85);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(489, 541);
             this.guna2Panel7.TabIndex = 21;
@@ -453,36 +455,36 @@
             // 
             this.guna2Panel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel9.BorderThickness = 2;
-            this.guna2Panel9.Controls.Add(this.guna2TextBox5);
+            this.guna2Panel9.Controls.Add(this.txtPrice);
             this.guna2Panel9.Controls.Add(this.label10);
             this.guna2Panel9.Location = new System.Drawing.Point(65, 476);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel9.TabIndex = 25;
             // 
-            // guna2TextBox5
+            // txtPrice
             // 
-            this.guna2TextBox5.BorderRadius = 4;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox5.Location = new System.Drawing.Point(2, 26);
-            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.ReadOnly = true;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(332, 39);
-            this.guna2TextBox5.TabIndex = 10;
+            this.txtPrice.BorderRadius = 4;
+            this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.DefaultText = "";
+            this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrice.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtPrice.Location = new System.Drawing.Point(2, 26);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.PasswordChar = '\0';
+            this.txtPrice.PlaceholderText = "";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.SelectedText = "";
+            this.txtPrice.Size = new System.Drawing.Size(332, 39);
+            this.txtPrice.TabIndex = 10;
             // 
             // label10
             // 
@@ -501,35 +503,35 @@
             // 
             this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel8.BorderThickness = 2;
-            this.guna2Panel8.Controls.Add(this.guna2TextBox4);
+            this.guna2Panel8.Controls.Add(this.txtUser);
             this.guna2Panel8.Controls.Add(this.label7);
             this.guna2Panel8.Location = new System.Drawing.Point(65, 637);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel8.TabIndex = 25;
             // 
-            // guna2TextBox4
+            // txtUser
             // 
-            this.guna2TextBox4.BorderRadius = 4;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox4.Location = new System.Drawing.Point(2, 26);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "ກະລຸນາຊື່ຜູ້ຮັບເງິນ...";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(332, 39);
-            this.guna2TextBox4.TabIndex = 9;
+            this.txtUser.BorderRadius = 4;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.DefaultText = "";
+            this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUser.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtUser.Location = new System.Drawing.Point(2, 26);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
+            this.txtUser.PlaceholderText = "ກະລຸນາຊື່ຜູ້ຮັບເງິນ...";
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(332, 39);
+            this.txtUser.TabIndex = 9;
             // 
             // label7
             // 
@@ -555,7 +557,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PaymentDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaymentDialog";
@@ -588,33 +590,33 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox btnClose;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel20;
-        private Guna.UI2.WinForms.Guna2TextBox txtCitizenID;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenantID;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenantName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenantPlace;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtPurpose;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoSixMonths;
+        private System.Windows.Forms.RadioButton rdoThreeMonths;
+        private System.Windows.Forms.RadioButton rdoOneMonth;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btnResident;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillage;
+        private Guna.UI2.WinForms.Guna2ComboBox comboboxPaymentStatus;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtUser;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private System.Windows.Forms.Label label10;
     }
 }
