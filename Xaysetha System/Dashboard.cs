@@ -29,10 +29,11 @@ namespace Xaysetha_System
             panelContainerInstance = panelContainer;
         }
 
-        public void showUserName(string name, string surname, string role)
+        public void showUserName(string name, string surname, string role, string userid)
         {
             lbName.Text = name + " " + surname;
             labelRole.Text = role;
+            label_username.Text = userid;
 
             if (role != "admin")
             {
@@ -177,7 +178,7 @@ namespace Xaysetha_System
         private void btnEntry_Click(object sender, EventArgs e)
         {
             labelHeader.Text = btnEntry.Text;
-            OpenChildForm(new entrance_management());
+            OpenChildForm(new entrance_management(label_username.Text));
         }
 
         private void btnLeave_Click(object sender, EventArgs e)

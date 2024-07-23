@@ -102,7 +102,7 @@ namespace Xaysetha_System
             {
                 case "Edit":
 
-                    paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, duration, price);
+                    paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, duration, price, "ແກ້ໄຂ");
                     paymentDialog.ShowDialog();
 
                     break;

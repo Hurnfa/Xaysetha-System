@@ -50,6 +50,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelHeader = new System.Windows.Forms.Label();
             this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.label_username = new System.Windows.Forms.Label();
             this.sideBar.SuspendLayout();
             this.infoSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -407,6 +408,7 @@
             // panelName
             // 
             this.panelName.BackColor = System.Drawing.Color.White;
+            this.panelName.Controls.Add(this.label_username);
             this.panelName.Controls.Add(this.labelRole);
             this.panelName.Controls.Add(this.lbName);
             this.panelName.Controls.Add(this.guna2PictureBox1);
@@ -415,7 +417,7 @@
             this.panelName.Location = new System.Drawing.Point(425, 0);
             this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(1422, 81);
+            this.panelName.Size = new System.Drawing.Size(1422, 111);
             this.panelName.TabIndex = 1;
             // 
             // labelRole
@@ -424,7 +426,7 @@
             this.labelRole.AutoSize = true;
             this.labelRole.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelRole.Location = new System.Drawing.Point(1233, 44);
+            this.labelRole.Location = new System.Drawing.Point(1233, 64);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(122, 28);
             this.labelRole.TabIndex = 6;
@@ -437,7 +439,7 @@
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.lbName.Location = new System.Drawing.Point(1233, 12);
+            this.lbName.Location = new System.Drawing.Point(1232, 6);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(162, 33);
             this.lbName.TabIndex = 5;
@@ -449,10 +451,10 @@
             this.guna2PictureBox1.BorderRadius = 4;
             this.guna2PictureBox1.Image = global::Xaysetha_System.Properties.Resources.Ellipse_1;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1131, 6);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1123, 12);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(65, 65);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(82, 82);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
@@ -472,11 +474,23 @@
             // 
             this.panelContainer.AutoScroll = true;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(425, 81);
+            this.panelContainer.Location = new System.Drawing.Point(425, 111);
             this.panelContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1422, 943);
+            this.panelContainer.Size = new System.Drawing.Size(1422, 913);
             this.panelContainer.TabIndex = 2;
+            // 
+            // label_username
+            // 
+            this.label_username.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.label_username.AutoSize = true;
+            this.label_username.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label_username.Location = new System.Drawing.Point(1233, 36);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(95, 28);
+            this.label_username.TabIndex = 7;
+            this.label_username.Text = "username";
             // 
             // Dashboard
             // 
@@ -528,5 +542,6 @@
         private System.Windows.Forms.Label lbName;
         private Guna.UI2.WinForms.Guna2Panel panelContainer;
         private System.Windows.Forms.Label labelRole;
+        private System.Windows.Forms.Label label_username;
     }
 }

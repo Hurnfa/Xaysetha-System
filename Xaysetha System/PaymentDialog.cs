@@ -17,6 +17,7 @@ namespace Xaysetha_System
     {
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
+        int duration;
 
         public PaymentDialog()
         {
@@ -29,7 +30,8 @@ namespace Xaysetha_System
             string tenantID, 
             string userID, 
             int duration, 
-            float price
+            float price,
+            string header
         )
         {
             label_payment_id.Text = paymentID.ToString();
@@ -89,6 +91,8 @@ namespace Xaysetha_System
 
             comboboxPaymentStatus.Text = cmd.ExecuteScalar().ToString();
 
+            btnSave.Text = header + "ການຊຳລະ";
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -96,9 +100,98 @@ namespace Xaysetha_System
             Hide();
         }
 
+        void dataChange(string sql)
+        {
+/*            float price = 30000;
+
+            if (rdoOneMonth.Checked)
+            {
+                duration = 1;
+                txtPrice.Text = price.ToString();
+            }
+            else if (rdoThreeMonths.Checked)
+            {
+                duration = 3;
+                txtPrice.Text = price.ToString();
+            }
+            else if (rdoSixMonths.Checked)
+            {
+                duration = 6;
+                price += 30000;
+                txtPrice.Text = price.ToString();
+            }*/
+
+            cmd = new NpgsqlCommand(sql, cn.conn);
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@duration", duration);
+                cmd.Parameters.AddWithValue("@price", float.Parse(txtPrice.Text));
+                cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
+                cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
+                cmd.Parameters.AddWithValue("@paymentID", BigInteger.Parse(label_payment_id.Text));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("ຊຳລະເງິນສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //new payment_info().dataTable.Clear();
+
+                Hide();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            switch (btnSave.Text)
+            {
+                case "ຊຳລະ":
 
+
+
+                break;
+
+                case "ແກ້ໄຂການຊຳລະ":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        dataChange("UPDATE tb_payment SET duration=@duration, price=@price, payment_date=@paymentDate, payment_status=@paymentStatus WHERE payment_id=@paymentID");
+                    }
+
+                break;
+            }
+
+        }
+
+        private void rdoOneMonth_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+            duration = 1;
+            txtPrice.Text = "30000";
+            comboboxPaymentStatus.Text = "ຊຳລະແລ້ວ";
+        }
+
+        private void rdoThreeMonths_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+            duration = 3;
+            txtPrice.Text = "30000";
+            comboboxPaymentStatus.Text = "ຊຳລະແລ້ວ";
+        }
+
+        private void rdoSixMonths_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+            duration = 6;
+            txtPrice.Text = "60000";
+            comboboxPaymentStatus.Text = "ຊຳລະແລ້ວ";
         }
     }
 }

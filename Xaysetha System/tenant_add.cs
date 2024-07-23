@@ -11,10 +11,11 @@ namespace Xaysetha_System
     public partial class tenant_add : Form
     {
 
-        public tenant_add()
+        public tenant_add(string username)
         {
             InitializeComponent();
             cn.getConnect();
+            label_username.Text = username;
         }
 
         NpgsqlCommand cmd;
@@ -127,7 +128,7 @@ namespace Xaysetha_System
                 MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //new entrance_management().Show();
-                new open_child_form().OpenChildForm(new entrance_management());
+                new open_child_form().OpenChildForm(new entrance_management(label_username.Text));
                 Hide();
             }
             catch (Exception ex)
@@ -163,6 +164,21 @@ namespace Xaysetha_System
 
         void sentDataToPayment(string sql, string messegeBox)
         {
+/*            cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userName");
+
+            cmd.Parameters.AddWithValue("@userName", label_username.Text);
+
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            string username;
+
+            while (reader.Read())
+            {
+                username = reader["userName"].ToString() + " " + reader["userLName"].ToString();
+            }
+
+            reader.Close();*/
+
             //BigInteger paymentID = GenerateUniquePaymentID();
             BigInteger tenantID = BigInteger.Parse(txtTenantID.Text);
             Random random = new Random();
@@ -177,7 +193,7 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@duration", 0);
                 cmd.Parameters.AddWithValue("price", 0);
                 cmd.Parameters.AddWithValue("@paymentStatus", "ລໍຖ້າຊຳລະ");
-                cmd.Parameters.AddWithValue("@userID", "admin");
+                cmd.Parameters.AddWithValue("@userID", label_username.Text);
 
                 cmd.ExecuteNonQuery();
 

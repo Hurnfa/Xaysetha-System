@@ -61,10 +61,10 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(20, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(27, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1026, 44);
+            this.guna2Panel1.Size = new System.Drawing.Size(1367, 54);
             this.guna2Panel1.TabIndex = 19;
             // 
             // label4
@@ -72,38 +72,37 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label4.Location = new System.Drawing.Point(18, 21);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(24, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 23);
+            this.label4.Size = new System.Drawing.Size(143, 28);
             this.label4.TabIndex = 6;
             this.label4.Text = "ຈັດການຂໍ້ມູນຊຳລະເງິນ";
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1046, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(1394, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(20, 766);
+            this.panel2.Size = new System.Drawing.Size(27, 943);
             this.panel2.TabIndex = 18;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(20, 766);
+            this.panel1.Size = new System.Drawing.Size(27, 943);
             this.panel1.TabIndex = 17;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(20, 720);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(27, 886);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1026, 46);
+            this.guna2Panel2.Size = new System.Drawing.Size(1367, 57);
             this.guna2Panel2.TabIndex = 20;
             // 
             // guna2CustomGradientPanel1
@@ -119,10 +118,10 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.btnPayUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(20, 44);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(27, 54);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1026, 676);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1367, 832);
             this.guna2CustomGradientPanel1.TabIndex = 21;
             // 
             // guna2Panel4
@@ -130,10 +129,10 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.guna2DateTimePicker2);
             this.guna2Panel4.Controls.Add(this.label3);
-            this.guna2Panel4.Location = new System.Drawing.Point(530, 23);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Location = new System.Drawing.Point(707, 28);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(196, 68);
+            this.guna2Panel4.Size = new System.Drawing.Size(261, 84);
             this.guna2Panel4.TabIndex = 23;
             // 
             // guna2DateTimePicker2
@@ -144,12 +143,12 @@
             this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
             this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(2, 25);
-            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DateTimePicker2.Location = new System.Drawing.Point(3, 31);
+            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(187, 39);
+            this.guna2DateTimePicker2.Size = new System.Drawing.Size(249, 48);
             this.guna2DateTimePicker2.TabIndex = 9;
             this.guna2DateTimePicker2.UseTransparentBackground = true;
             this.guna2DateTimePicker2.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -160,10 +159,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(2, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 23);
+            this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 8;
             this.label3.Text = "ຫາວັນທີ່";
             // 
@@ -172,10 +170,10 @@
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Controls.Add(this.guna2DateTimePicker1);
             this.guna2Panel6.Controls.Add(this.label9);
-            this.guna2Panel6.Location = new System.Drawing.Point(289, 23);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Location = new System.Drawing.Point(385, 28);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(196, 68);
+            this.guna2Panel6.Size = new System.Drawing.Size(261, 84);
             this.guna2Panel6.TabIndex = 22;
             // 
             // guna2DateTimePicker1
@@ -186,12 +184,12 @@
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(2, 25);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(3, 31);
+            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(187, 39);
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(249, 48);
             this.guna2DateTimePicker1.TabIndex = 9;
             this.guna2DateTimePicker1.UseTransparentBackground = true;
             this.guna2DateTimePicker1.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -202,10 +200,9 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(2, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 23);
+            this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -216,11 +213,11 @@
             this.statusControl.Controls.Add(this.Rejected);
             this.statusControl.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusControl.ItemSize = new System.Drawing.Size(180, 40);
-            this.statusControl.Location = new System.Drawing.Point(22, 134);
+            this.statusControl.Location = new System.Drawing.Point(29, 165);
             this.statusControl.Margin = new System.Windows.Forms.Padding(0);
             this.statusControl.Name = "statusControl";
             this.statusControl.SelectedIndex = 0;
-            this.statusControl.Size = new System.Drawing.Size(976, 483);
+            this.statusControl.Size = new System.Drawing.Size(1301, 594);
             this.statusControl.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.statusControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.statusControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -249,7 +246,7 @@
             this.Entrance.Location = new System.Drawing.Point(4, 44);
             this.Entrance.Margin = new System.Windows.Forms.Padding(0);
             this.Entrance.Name = "Entrance";
-            this.Entrance.Size = new System.Drawing.Size(968, 435);
+            this.Entrance.Size = new System.Drawing.Size(1293, 546);
             this.Entrance.TabIndex = 0;
             this.Entrance.Text = "Approved";
             this.Entrance.UseVisualStyleBackColor = true;
@@ -259,7 +256,7 @@
             this.Pending.Location = new System.Drawing.Point(4, 44);
             this.Pending.Margin = new System.Windows.Forms.Padding(0);
             this.Pending.Name = "Pending";
-            this.Pending.Size = new System.Drawing.Size(968, 435);
+            this.Pending.Size = new System.Drawing.Size(1293, 546);
             this.Pending.TabIndex = 1;
             this.Pending.Text = "Pending";
             this.Pending.UseVisualStyleBackColor = true;
@@ -269,17 +266,17 @@
             this.Rejected.Location = new System.Drawing.Point(4, 44);
             this.Rejected.Margin = new System.Windows.Forms.Padding(0);
             this.Rejected.Name = "Rejected";
-            this.Rejected.Size = new System.Drawing.Size(968, 435);
+            this.Rejected.Size = new System.Drawing.Size(1293, 546);
             this.Rejected.TabIndex = 2;
             this.Rejected.Text = "Rejected";
             this.Rejected.UseVisualStyleBackColor = true;
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.Location = new System.Drawing.Point(22, 132);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(29, 162);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(976, 483);
+            this.guna2Panel3.Size = new System.Drawing.Size(1301, 594);
             this.guna2Panel3.TabIndex = 21;
             // 
             // guna2TextBox1
@@ -296,13 +293,13 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
             this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(22, 49);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.guna2TextBox1.Location = new System.Drawing.Point(29, 60);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງ...";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(238, 39);
+            this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
             this.guna2TextBox1.TabIndex = 5;
             // 
             // label2
@@ -311,10 +308,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(18, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(24, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 23);
+            this.label2.Size = new System.Drawing.Size(50, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "ຄົ້ນຫາ";
             // 
@@ -325,16 +321,17 @@
             this.btnPayUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPayUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPayUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPayUser.Enabled = false;
             this.btnPayUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
             this.btnPayUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayUser.ForeColor = System.Drawing.Color.White;
             this.btnPayUser.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
             this.btnPayUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayUser.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnPayUser.Location = new System.Drawing.Point(833, 49);
-            this.btnPayUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPayUser.Location = new System.Drawing.Point(1111, 60);
+            this.btnPayUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPayUser.Name = "btnPayUser";
-            this.btnPayUser.Size = new System.Drawing.Size(158, 39);
+            this.btnPayUser.Size = new System.Drawing.Size(211, 48);
             this.btnPayUser.TabIndex = 18;
             this.btnPayUser.Text = "ເພີ່ມບັນຊີ";
             this.btnPayUser.TextOffset = new System.Drawing.Point(10, 0);
@@ -346,27 +343,26 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(18, 106);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(24, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 23);
+            this.label1.Size = new System.Drawing.Size(129, 28);
             this.label1.TabIndex = 19;
             this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
             // 
             // payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 766);
+            this.ClientSize = new System.Drawing.Size(1421, 943);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(1066, 766);
-            this.MinimumSize = new System.Drawing.Size(1066, 766);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1421, 943);
+            this.MinimumSize = new System.Drawing.Size(1421, 943);
             this.Name = "payment";
             this.Text = "payment";
             this.guna2Panel1.ResumeLayout(false);

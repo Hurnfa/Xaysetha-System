@@ -11,13 +11,14 @@ namespace Xaysetha_System
     {
         private Form activeForm = null;
 
-        public entrance_management()
+        public entrance_management(string username)
         {
             InitializeComponent();
             cn.getConnect();
             displayTotalOfUser();
             loadData("SELECT * FROM tb_tenant;");
             CustomizedGridView();
+            label_user.Text = username;
         }
 
         NpgsqlCommand cmd;
@@ -25,7 +26,7 @@ namespace Xaysetha_System
         //NpgsqlConnection conn;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
-        tenant_add tenantAdd = new tenant_add();
+        //tenant_add tenantAdd = new tenant_add();
 
         public void displayTotalOfUser()
         {
@@ -65,7 +66,7 @@ namespace Xaysetha_System
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            tenant_add tenantAdd = new tenant_add();
+            tenant_add tenantAdd = new tenant_add(label_user.Text);
             tenantAdd.Show();
         }
 
@@ -84,6 +85,7 @@ namespace Xaysetha_System
                 case "editButton":
 
                     //tenantAdd.fetchDataFromMainPage();
+                    tenant_add tenantAdd = new tenant_add(label_user.Text);
                     tenantAdd.fetchDataFromMainPage(Convert.ToString(tenant_id), name, surname, gender, village, "ແກ້ໄຂ");
                     tenantAdd.Show();
 
