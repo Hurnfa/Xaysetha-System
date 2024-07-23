@@ -76,8 +76,8 @@ namespace Xaysetha_System
             BigInteger tenant_id = BigInteger.Parse(row.Cells[0].Value.ToString());
             string name = row.Cells[1].Value?.ToString(),
                 surname = row.Cells[2].Value?.ToString(),
-                village = row.Cells[3].Value?.ToString(),
-                gender = row.Cells[4].Value?.ToString();
+                 gender = row.Cells[3].Value?.ToString(),
+                village = row.Cells[4].Value?.ToString();
 
             switch (columnName)
             {

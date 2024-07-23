@@ -32,7 +32,21 @@ namespace Xaysetha_System
             float price
         )
         {
+            label_payment_id.Text = paymentID.ToString();
             txtTenantID.Text = tenantID;
+
+            cmd = new NpgsqlCommand("SELECT firstname, lastname FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+
+            cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenantID));
+
+            NpgsqlDataReader reader1 = cmd.ExecuteReader();
+
+            while (reader1.Read())
+            {
+                txtTenantName.Text = reader1["firstname"].ToString() + " " + reader1["lastname"].ToString();
+            }
+
+            reader1.Close();
 
             switch (duration)
             {
@@ -69,11 +83,22 @@ namespace Xaysetha_System
             }
             reader.Close();
 
+            cmd = new NpgsqlCommand("SELECT payment_status FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
+
+            cmd.Parameters.AddWithValue("@paymentID", paymentID);
+
+            comboboxPaymentStatus.Text = cmd.ExecuteScalar().ToString();
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

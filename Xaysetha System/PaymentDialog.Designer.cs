@@ -51,7 +51,7 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.comboboxPaymentStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnResident = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,6 +59,7 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label_payment_id = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.guna2Panel20.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -101,6 +102,7 @@
             this.guna2Panel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel20.BorderThickness = 2;
             this.guna2Panel20.Controls.Add(this.txtTenantID);
+            this.guna2Panel20.Controls.Add(this.label_payment_id);
             this.guna2Panel20.Controls.Add(this.label25);
             this.guna2Panel20.Location = new System.Drawing.Point(65, 68);
             this.guna2Panel20.Margin = new System.Windows.Forms.Padding(2);
@@ -411,26 +413,27 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "ສະຖານະ";
             // 
-            // btnResident
+            // btnSave
             // 
-            this.btnResident.BorderColor = System.Drawing.Color.White;
-            this.btnResident.BorderRadius = 4;
-            this.btnResident.BorderThickness = 2;
-            this.btnResident.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnResident.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnResident.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnResident.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnResident.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.btnResident.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResident.ForeColor = System.Drawing.Color.White;
-            this.btnResident.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnResident.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnResident.Location = new System.Drawing.Point(419, 703);
-            this.btnResident.Margin = new System.Windows.Forms.Padding(2);
-            this.btnResident.Name = "btnResident";
-            this.btnResident.Size = new System.Drawing.Size(158, 44);
-            this.btnResident.TabIndex = 20;
-            this.btnResident.Text = "ຊຳລະ";
+            this.btnSave.BorderColor = System.Drawing.Color.White;
+            this.btnSave.BorderRadius = 4;
+            this.btnSave.BorderThickness = 2;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            this.btnSave.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSave.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnSave.Location = new System.Drawing.Point(419, 703);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(158, 44);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "ຊຳລະ";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // guna2Panel7
             // 
@@ -546,6 +549,19 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "ຜູ້ຮັບເງິນ";
             // 
+            // label_payment_id
+            // 
+            this.label_payment_id.AutoSize = true;
+            this.label_payment_id.BackColor = System.Drawing.Color.Transparent;
+            this.label_payment_id.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_payment_id.ForeColor = System.Drawing.Color.White;
+            this.label_payment_id.Location = new System.Drawing.Point(20, 42);
+            this.label_payment_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_payment_id.Name = "label_payment_id";
+            this.label_payment_id.Size = new System.Drawing.Size(110, 23);
+            this.label_payment_id.TabIndex = 12;
+            this.label_payment_id.Text = "ກຳໜົດເວລາພັກເຊົາ";
+            // 
             // PaymentDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,7 +569,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(112)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(596, 772);
             this.Controls.Add(this.guna2Panel7);
-            this.Controls.Add(this.btnResident);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -609,7 +625,7 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button btnResident;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2ComboBox comboboxPaymentStatus;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
@@ -618,5 +634,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_payment_id;
     }
 }

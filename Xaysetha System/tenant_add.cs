@@ -174,6 +174,8 @@ namespace Xaysetha_System
 
                 cmd.Parameters.AddWithValue("@paymentID", random.Next());
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
+                cmd.Parameters.AddWithValue("@duration", 0);
+                cmd.Parameters.AddWithValue("price", 0);
                 cmd.Parameters.AddWithValue("@paymentStatus", "ລໍຖ້າຊຳລະ");
                 cmd.Parameters.AddWithValue("@userID", "admin");
 
@@ -217,7 +219,7 @@ namespace Xaysetha_System
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
                     dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics);", "ເພີ່ມ");
-                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, payment_status, user_id) VALUES (@paymentID, @tenantID, @paymentStatus, @userID)", "ເພີ່ມ");
+                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, duration, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @duration, @price, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":
