@@ -157,7 +157,7 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_place WHERE CONCAT (\"placeID\", \"citizentID\", \"villageID\", \"placeName\",\"placeHouseUnit\", \"placeHouseNumber\", \"placeType\") LIKE '%"+txtSearch.Text+"%'");
+            loadData("SELECT * FROM tb_place WHERE CONCAT (\"placeID\", \"citizentID\", \"villageID\", \"placeName\",\"placeHouseUnit\", \"placeHouseNumber\", \"placeType\") LIKE '%" + txtSearch.Text + "%'");
         }
     }
 }

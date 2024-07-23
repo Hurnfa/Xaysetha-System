@@ -18,7 +18,10 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
             OpenChildForm(table_payment, statusControl.TabPages[0]);
-            table_payment.loadData("SELECT * FROM tb_payment;");
+            //table_payment.loadData("SELECT * FROM tb_payment;");
+            //loadData("SELECT * from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
+            table_payment.loadData("SELECT * from tb_payment INNER JOIN tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\";");
+
         }
 
         void loadData(string sql)

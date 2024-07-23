@@ -45,6 +45,8 @@
             // 
             // data
             // 
+            this.data.AllowUserToResizeColumns = false;
+            this.data.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -69,20 +71,21 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.data.DefaultCellStyle = dataGridViewCellStyle3;
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
-            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data.Name = "data";
+            this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(812, 405);
+            this.data.Size = new System.Drawing.Size(1083, 498);
             this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -97,7 +100,7 @@
             this.data.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.data.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.ThemeStyle.HeaderStyle.Height = 18;
-            this.data.ThemeStyle.ReadOnly = false;
+            this.data.ThemeStyle.ReadOnly = true;
             this.data.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,42 +108,49 @@
             this.data.ThemeStyle.RowsStyle.Height = 24;
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
             // 
             // paymentID
             // 
             this.paymentID.HeaderText = "ລະຫັດ";
             this.paymentID.MinimumWidth = 6;
             this.paymentID.Name = "paymentID";
+            this.paymentID.ReadOnly = true;
             // 
             // tenantID
             // 
             this.tenantID.HeaderText = "ລະຫັດຜູ້ພັກເຊົາ";
             this.tenantID.MinimumWidth = 6;
             this.tenantID.Name = "tenantID";
+            this.tenantID.ReadOnly = true;
             // 
             // residentName
             // 
             this.residentName.HeaderText = "ຊື່ ແລະ ນາມສະກຸນ";
             this.residentName.MinimumWidth = 6;
             this.residentName.Name = "residentName";
+            this.residentName.ReadOnly = true;
             // 
             // duration
             // 
             this.duration.HeaderText = "ໄລຍະເວລາພັກເຊົ່າ";
             this.duration.MinimumWidth = 6;
             this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
             // 
             // price
             // 
             this.price.HeaderText = "ລາຄາ";
             this.price.MinimumWidth = 6;
             this.price.Name = "price";
+            this.price.ReadOnly = true;
             // 
             // issuePerson
             // 
             this.issuePerson.HeaderText = "ອອກໂດຍ";
             this.issuePerson.MinimumWidth = 6;
             this.issuePerson.Name = "issuePerson";
+            this.issuePerson.ReadOnly = true;
             // 
             // Edit
             // 
@@ -149,9 +159,10 @@
             this.Edit.Image = global::Xaysetha_System.Properties.Resources.edit;
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Width = 20;
+            this.Edit.Width = 23;
             // 
             // Delete
             // 
@@ -160,18 +171,19 @@
             this.Delete.Image = global::Xaysetha_System.Properties.Resources.delete;
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Width = 20;
+            this.Delete.Width = 23;
             // 
             // payment_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 405);
+            this.ClientSize = new System.Drawing.Size(1083, 498);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "payment_info";
             this.Text = "payment_info";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
