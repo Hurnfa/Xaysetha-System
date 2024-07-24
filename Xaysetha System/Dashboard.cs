@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -187,6 +188,12 @@ namespace Xaysetha_System
 
             labelHeader.Text = btnLeave.Text;
             OpenChildForm(new payment());
+
+/*            printing loadBill = new printing();
+
+            loadBill.loadDataToReport(132132132, "Hello", "World", 0, 0, "admin");
+
+            loadBill.Show();*/
         }
 
         private void logo_Click(object sender, EventArgs e)

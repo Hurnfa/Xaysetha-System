@@ -130,7 +130,7 @@ namespace Xaysetha_System
 
                 //new entrance_management().Show();
                 new open_child_form().OpenChildForm(new entrance_management(label_username.Text));
-                Hide();
+                //Hide();
             }
             catch (Exception ex)
             {
@@ -183,7 +183,6 @@ namespace Xaysetha_System
             //BigInteger paymentID = GenerateUniquePaymentID();
             BigInteger tenantID = BigInteger.Parse(txtTenantID.Text),
                 paymentID = new Random().Next();
-            Random random = new Random();
 
             try
             {
@@ -201,20 +200,11 @@ namespace Xaysetha_System
 
                 cmd.ExecuteNonQuery();
 
-                new printing(paymentID.ToString(), txtName.Text, txtSurname.Text, 0, 0, label_username.Text).Show();
+                printing loadBill = new printing();
 
+                loadBill.loadDataToReport(paymentID, txtName.Text, txtSurname.Text, 0, 0, label_username.Text);
 
-                //ReportParameter parameter = new ReportParameter();
-                ReportParameterCollection rp = new ReportParameterCollection();
-
-
-
-
-
-                //MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //new open_child_form().OpenChildForm(new entrance_management());
-                //Hide();
+                loadBill.Show();
             }
             catch (Exception ex)
             {
