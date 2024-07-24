@@ -111,6 +111,7 @@
             this.txtVillage.SelectedText = "";
             this.txtVillage.Size = new System.Drawing.Size(443, 48);
             this.txtVillage.TabIndex = 6;
+            this.txtVillage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVillage_KeyPress);
             // 
             // label5
             // 

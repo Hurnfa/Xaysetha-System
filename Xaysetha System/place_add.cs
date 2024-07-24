@@ -1,12 +1,6 @@
 ﻿using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -66,8 +60,8 @@ namespace Xaysetha_System
 
             try
             {
-                cmd.Parameters.AddWithValue("@placeID", txtHouseUnit.Text+"/"+txtHouseNums.Text);
-                cmd.Parameters.AddWithValue("@placeType", combobox_place_type.Text);              
+                cmd.Parameters.AddWithValue("@placeID", txtHouseUnit.Text + "/" + txtHouseNums.Text);
+                cmd.Parameters.AddWithValue("@placeType", combobox_place_type.Text);
                 cmd.Parameters.AddWithValue("@citizenID", combobox_citizen.SelectedValue);
                 cmd.Parameters.AddWithValue("@villageID", combobox_village.SelectedValue);
                 cmd.Parameters.AddWithValue("@placeName", txtPlaceName.Text);
@@ -90,7 +84,7 @@ namespace Xaysetha_System
         {
             txtPlaceName.Text = placeName;
             label_place_id.Text = id;
-            labelHeader.Text = header+"ຂໍ້ມູນ";
+            labelHeader.Text = header + "ຂໍ້ມູນ";
             btnSave.Text = header;
             txtHouseNums.Text = houseNum;
             txtHouseUnit.Text = unit;
@@ -163,7 +157,45 @@ namespace Xaysetha_System
 
                     break;
 
-            }        
+            }
+        }
+
+        private void txtPlaceName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHouseNums_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHouseUnit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

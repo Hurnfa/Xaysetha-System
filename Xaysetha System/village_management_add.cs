@@ -95,24 +95,24 @@ namespace Xaysetha_System
             //getID();
         }
 
-/*        void getID()
-        {
-            if (txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
-            {
-                cmd = new NpgsqlCommand("SELECT \"villageID\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
-
-                cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
-
-                NpgsqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+        /*        void getID()
                 {
-                    label_id.Text = reader["villageID"].ToString();
-                }
+                    if (txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
+                    {
+                        cmd = new NpgsqlCommand("SELECT \"villageID\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
 
-                reader.Close();
-            }
-        }*/
+                        cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
+
+                        NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            label_id.Text = reader["villageID"].ToString();
+                        }
+
+                        reader.Close();
+                    }
+                }*/
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -148,6 +148,14 @@ namespace Xaysetha_System
         private void btnClose_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void txtVillage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

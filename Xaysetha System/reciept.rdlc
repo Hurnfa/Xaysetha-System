@@ -87,6 +87,7 @@
                     <Value>=Parameters!paymentID.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                       <Color>Brown</Color>
                     </Style>
                   </TextRun>
@@ -95,7 +96,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>paymentID</rd:DefaultName>
-            <Top>1.00813in</Top>
+            <Top>1in</Top>
             <Left>5.08854in</Left>
             <Height>0.25in</Height>
             <Width>1.09375in</Width>
@@ -130,7 +131,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.00813in</Top>
+            <Top>1in</Top>
             <Left>4.39409in</Left>
             <Height>0.26514in</Height>
             <Width>0.54167in</Width>
@@ -156,6 +157,7 @@
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -163,7 +165,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantName</rd:DefaultName>
-            <Top>1.87375in</Top>
+            <Top>1.85in</Top>
             <Left>0.89458in</Left>
             <Height>0.28125in</Height>
             <Width>1.19792in</Width>
@@ -185,7 +187,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>ໄດ້ຮັບເງິນຈຳນວນ</Value>
+                    <Value>ໄດ້ຮັບເງິນຈຳນວນ:</Value>
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -198,10 +200,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.87375in</Top>
+            <Top>1.85in</Top>
             <Left>3.53347in</Left>
             <Height>0.28125in</Height>
-            <Width>1.0625in</Width>
+            <Width>1.21042in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -223,6 +225,7 @@
                     <Value>=Parameters!price.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -230,10 +233,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>price</rd:DefaultName>
-            <Top>1.87375in</Top>
-            <Left>4.66889in</Left>
+            <Top>1.85in</Top>
+            <Left>4.78556in</Left>
             <Height>0.28125in</Height>
-            <Width>0.65923in</Width>
+            <Width>1.0252in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -265,7 +268,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.21528in</Top>
+            <Top>2.23in</Top>
             <Left>0.32851in</Left>
             <Height>0.28125in</Height>
             <Width>3.29167in</Width>
@@ -290,6 +293,7 @@
                     <Value>=Parameters!paymentDate.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -297,10 +301,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>paymentDate</rd:DefaultName>
-            <Top>2.22917in</Top>
+            <Top>2.23in</Top>
             <Left>3.68962in</Left>
             <Height>0.28125in</Height>
-            <Width>1.3125in</Width>
+            <Width>1.75417in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -332,7 +336,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.56597in</Top>
+            <Top>2.61in</Top>
             <Left>0.32851in</Left>
             <Height>0.28125in</Height>
             <Width>1.71132in</Width>
@@ -357,6 +361,7 @@
                     <Value>=Parameters!duration.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -364,10 +369,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>duration</rd:DefaultName>
-            <Top>2.56597in</Top>
+            <Top>2.61in</Top>
             <Left>2.10927in</Left>
             <Height>0.28125in</Height>
-            <Width>0.95833in</Width>
+            <Width>0.65in</Width>
             <ZIndex>10</ZIndex>
             <Style>
               <Border>
@@ -399,8 +404,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.56597in</Top>
-            <Left>3.13705in</Left>
+            <Top>2.61in</Top>
+            <Left>2.82871in</Left>
             <Height>0.28125in</Height>
             <Width>0.51736in</Width>
             <ZIndex>11</ZIndex>
@@ -434,7 +439,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.91667in</Top>
+            <Top>3.79167in</Top>
             <Left>4.90847in</Left>
             <Height>0.28125in</Height>
             <Width>0.68701in</Width>
@@ -460,6 +465,7 @@
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -493,6 +499,7 @@
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -526,6 +533,7 @@
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                       <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -533,7 +541,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantLName</rd:DefaultName>
-            <Top>1.87375in</Top>
+            <Top>1.85in</Top>
             <Left>2.16194in</Left>
             <Height>0.28125in</Height>
             <Width>1.30208in</Width>
@@ -568,8 +576,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.87375in</Top>
-            <Left>5.39757in</Left>
+            <Top>1.85in</Top>
+            <Left>5.8802in</Left>
             <Height>0.28125in</Height>
             <Width>0.63542in</Width>
             <ZIndex>16</ZIndex>

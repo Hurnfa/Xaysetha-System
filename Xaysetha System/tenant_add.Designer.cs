@@ -39,52 +39,52 @@
             this.profilePictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.datePickerBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rdoMale = new System.Windows.Forms.RadioButton();
-            this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoOthers = new System.Windows.Forms.RadioButton();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtSurname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtNationality = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtJobs = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtFamBookID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.datePickerFamBookIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
+            this.datePickerFamBookIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtFamBookID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label23 = new System.Windows.Forms.Label();
             this.txtVillage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtDistrict = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtReligion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtPhoneNums = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label24 = new System.Windows.Forms.Label();
             this.txtEthnic = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label_username = new System.Windows.Forms.Label();
             this.txtTenantID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label_username = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
@@ -241,18 +241,6 @@
             this.guna2Panel6.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel6.TabIndex = 11;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 28);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "ວັນ/ເດືອນ/ປີເກີດ ";
-            // 
             // datePickerBirthday
             // 
             this.datePickerBirthday.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
@@ -271,6 +259,18 @@
             this.datePickerBirthday.UseTransparentBackground = true;
             this.datePickerBirthday.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 28);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "ວັນ/ເດືອນ/ປີເກີດ ";
+            // 
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
@@ -283,46 +283,6 @@
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel5.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 28);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "ເພດ";
-            // 
-            // rdoMale
-            // 
-            this.rdoMale.AutoSize = true;
-            this.rdoMale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoMale.Location = new System.Drawing.Point(3, 48);
-            this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdoMale.Name = "rdoMale";
-            this.rdoMale.Size = new System.Drawing.Size(59, 32);
-            this.rdoMale.TabIndex = 9;
-            this.rdoMale.TabStop = true;
-            this.rdoMale.Text = "ຊາຍ";
-            this.rdoMale.UseVisualStyleBackColor = true;
-            // 
-            // rdoFemale
-            // 
-            this.rdoFemale.AutoSize = true;
-            this.rdoFemale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoFemale.Location = new System.Drawing.Point(80, 49);
-            this.rdoFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdoFemale.Name = "rdoFemale";
-            this.rdoFemale.Size = new System.Drawing.Size(49, 32);
-            this.rdoFemale.TabIndex = 10;
-            this.rdoFemale.TabStop = true;
-            this.rdoFemale.Text = "ຍິງ";
-            this.rdoFemale.UseVisualStyleBackColor = true;
             // 
             // rdoOthers
             // 
@@ -338,6 +298,46 @@
             this.rdoOthers.Text = "ບໍ່ລະບຸ";
             this.rdoOthers.UseVisualStyleBackColor = true;
             // 
+            // rdoFemale
+            // 
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoFemale.Location = new System.Drawing.Point(80, 49);
+            this.rdoFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(49, 32);
+            this.rdoFemale.TabIndex = 10;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "ຍິງ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdoMale
+            // 
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoMale.Location = new System.Drawing.Point(3, 48);
+            this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(59, 32);
+            this.rdoMale.TabIndex = 9;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "ຊາຍ";
+            this.rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 28);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "ເພດ";
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
@@ -348,18 +348,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel3.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 28);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "ນາມສະກຸນ";
             // 
             // txtSurname
             // 
@@ -383,6 +371,19 @@
             this.txtSurname.SelectedText = "";
             this.txtSurname.Size = new System.Drawing.Size(443, 48);
             this.txtSurname.TabIndex = 6;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 28);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "ນາມສະກຸນ";
             // 
             // guna2Panel2
             // 
@@ -394,18 +395,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel2.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 28);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "ຊື່ແທ້";
             // 
             // txtName
             // 
@@ -429,6 +418,19 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(443, 48);
             this.txtName.TabIndex = 6;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 28);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ຊື່ແທ້";
             // 
             // label3
             // 
@@ -453,18 +455,6 @@
             this.guna2Panel8.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel8.TabIndex = 13;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label11.Location = new System.Drawing.Point(3, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 28);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "ສັນຊາດ";
-            // 
             // txtNationality
             // 
             this.txtNationality.BorderRadius = 4;
@@ -488,6 +478,19 @@
             this.txtNationality.SelectedText = "";
             this.txtNationality.Size = new System.Drawing.Size(443, 48);
             this.txtNationality.TabIndex = 6;
+            this.txtNationality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNationality_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 28);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "ສັນຊາດ";
             // 
             // guna2Panel10
             // 
@@ -499,18 +502,6 @@
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel10.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 28);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "ອາຊີບ";
             // 
             // txtJobs
             // 
@@ -535,6 +526,19 @@
             this.txtJobs.SelectedText = "";
             this.txtJobs.Size = new System.Drawing.Size(443, 48);
             this.txtJobs.TabIndex = 6;
+            this.txtJobs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJobs_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 28);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "ອາຊີບ";
             // 
             // label14
             // 
@@ -561,17 +565,32 @@
             this.guna2Panel11.Size = new System.Drawing.Size(477, 211);
             this.guna2Panel11.TabIndex = 15;
             // 
-            // label15
+            // label16
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label15.Location = new System.Drawing.Point(3, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(106, 28);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "ເລກສຳມະໂນຄົວ";
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label16.Location = new System.Drawing.Point(10, 111);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(61, 28);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "ລົງວັນທີ";
+            // 
+            // datePickerFamBookIssueDate
+            // 
+            this.datePickerFamBookIssueDate.Checked = true;
+            this.datePickerFamBookIssueDate.FillColor = System.Drawing.Color.White;
+            this.datePickerFamBookIssueDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.datePickerFamBookIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.datePickerFamBookIssueDate.Location = new System.Drawing.Point(8, 143);
+            this.datePickerFamBookIssueDate.Margin = new System.Windows.Forms.Padding(4);
+            this.datePickerFamBookIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.datePickerFamBookIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datePickerFamBookIssueDate.Name = "datePickerFamBookIssueDate";
+            this.datePickerFamBookIssueDate.Size = new System.Drawing.Size(446, 48);
+            this.datePickerFamBookIssueDate.TabIndex = 9;
+            this.datePickerFamBookIssueDate.Value = new System.DateTime(2024, 7, 22, 12, 35, 34, 829);
             // 
             // txtFamBookID
             // 
@@ -595,33 +614,19 @@
             this.txtFamBookID.SelectedText = "";
             this.txtFamBookID.Size = new System.Drawing.Size(443, 48);
             this.txtFamBookID.TabIndex = 6;
+            this.txtFamBookID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFamBookID_KeyPress);
             // 
-            // datePickerFamBookIssueDate
+            // label15
             // 
-            this.datePickerFamBookIssueDate.Checked = true;
-            this.datePickerFamBookIssueDate.FillColor = System.Drawing.Color.White;
-            this.datePickerFamBookIssueDate.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.datePickerFamBookIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datePickerFamBookIssueDate.Location = new System.Drawing.Point(8, 143);
-            this.datePickerFamBookIssueDate.Margin = new System.Windows.Forms.Padding(4);
-            this.datePickerFamBookIssueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datePickerFamBookIssueDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.datePickerFamBookIssueDate.Name = "datePickerFamBookIssueDate";
-            this.datePickerFamBookIssueDate.Size = new System.Drawing.Size(446, 48);
-            this.datePickerFamBookIssueDate.TabIndex = 9;
-            this.datePickerFamBookIssueDate.Value = new System.DateTime(2024, 7, 22, 12, 35, 34, 829);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label16.Location = new System.Drawing.Point(10, 111);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(61, 28);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "ລົງວັນທີ";
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 28);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "ເລກສຳມະໂນຄົວ";
             // 
             // label22
             // 
@@ -646,18 +651,6 @@
             this.guna2Panel17.Size = new System.Drawing.Size(477, 90);
             this.guna2Panel17.TabIndex = 21;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label23.Location = new System.Drawing.Point(3, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(177, 28);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "ທີ່ຢູ່ປັດຈຸບັນ(ຫນ່ວຍ, ບ້ານ) ";
-            // 
             // txtVillage
             // 
             this.txtVillage.BorderRadius = 4;
@@ -680,6 +673,19 @@
             this.txtVillage.SelectedText = "";
             this.txtVillage.Size = new System.Drawing.Size(443, 48);
             this.txtVillage.TabIndex = 6;
+            this.txtVillage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVillage_KeyPress);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label23.Location = new System.Drawing.Point(3, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(177, 28);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "ທີ່ຢູ່ປັດຈຸບັນ(ຫນ່ວຍ, ບ້ານ) ";
             // 
             // guna2Panel1
             // 
@@ -691,18 +697,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel1.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 28);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "ທີ່ຢູ່ປັດຈຸບັນ (ເມືອງ) ";
             // 
             // txtDistrict
             // 
@@ -726,6 +720,19 @@
             this.txtDistrict.SelectedText = "";
             this.txtDistrict.Size = new System.Drawing.Size(443, 48);
             this.txtDistrict.TabIndex = 6;
+            this.txtDistrict.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistrict_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 28);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "ທີ່ຢູ່ປັດຈຸບັນ (ເມືອງ) ";
             // 
             // guna2Panel9
             // 
@@ -737,18 +744,6 @@
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel9.TabIndex = 23;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 28);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "ສາສະໜາ";
             // 
             // txtReligion
             // 
@@ -773,6 +768,19 @@
             this.txtReligion.SelectedText = "";
             this.txtReligion.Size = new System.Drawing.Size(443, 48);
             this.txtReligion.TabIndex = 6;
+            this.txtReligion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReligion_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "ສາສະໜາ";
             // 
             // guna2Panel12
             // 
@@ -784,18 +792,6 @@
             this.guna2Panel12.Name = "guna2Panel12";
             this.guna2Panel12.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel12.TabIndex = 24;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 28);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "ເບີໂທ";
             // 
             // txtPhoneNums
             // 
@@ -820,6 +816,19 @@
             this.txtPhoneNums.SelectedText = "";
             this.txtPhoneNums.Size = new System.Drawing.Size(443, 48);
             this.txtPhoneNums.TabIndex = 6;
+            this.txtPhoneNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNums_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 28);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "ເບີໂທ";
             // 
             // guna2Panel19
             // 
@@ -831,18 +840,6 @@
             this.guna2Panel19.Name = "guna2Panel19";
             this.guna2Panel19.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel19.TabIndex = 25;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label24.Location = new System.Drawing.Point(3, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(55, 28);
-            this.label24.TabIndex = 8;
-            this.label24.Text = "ຊົນເຜົ່າ";
             // 
             // txtEthnic
             // 
@@ -866,6 +863,19 @@
             this.txtEthnic.SelectedText = "";
             this.txtEthnic.Size = new System.Drawing.Size(443, 48);
             this.txtEthnic.TabIndex = 6;
+            this.txtEthnic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEthnic_KeyPress);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label24.Location = new System.Drawing.Point(3, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(55, 28);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "ຊົນເຜົ່າ";
             // 
             // guna2Panel13
             // 
@@ -878,30 +888,6 @@
             this.guna2Panel13.Name = "guna2Panel13";
             this.guna2Panel13.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel13.TabIndex = 9;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 28);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "ລະຫັດລະບຸໂຕຕົນ";
-            // 
-            // label_username
-            // 
-            this.label_username.AutoSize = true;
-            this.label_username.BackColor = System.Drawing.Color.Transparent;
-            this.label_username.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label_username.Location = new System.Drawing.Point(44, 43);
-            this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(116, 28);
-            this.label_username.TabIndex = 9;
-            this.label_username.Text = "ລະຫັດລະບຸໂຕຕົນ";
             // 
             // txtTenantID
             // 
@@ -924,6 +910,31 @@
             this.txtTenantID.SelectedText = "";
             this.txtTenantID.Size = new System.Drawing.Size(443, 48);
             this.txtTenantID.TabIndex = 6;
+            this.txtTenantID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenantID_KeyPress);
+            // 
+            // label_username
+            // 
+            this.label_username.AutoSize = true;
+            this.label_username.BackColor = System.Drawing.Color.Transparent;
+            this.label_username.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label_username.Location = new System.Drawing.Point(44, 43);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(116, 28);
+            this.label_username.TabIndex = 9;
+            this.label_username.Text = "ລະຫັດລະບຸໂຕຕົນ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 28);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "ລະຫັດລະບຸໂຕຕົນ";
             // 
             // guna2CustomGradientPanel2
             // 

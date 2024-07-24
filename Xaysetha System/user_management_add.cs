@@ -111,7 +111,7 @@ namespace Xaysetha_System
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show(messageBox+"ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(messageBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 OpenChildForm(new user_management());
             }
@@ -143,15 +143,15 @@ namespace Xaysetha_System
 
                     break;
             }
-            
-/*            if (chkShowPassword.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else if (chkShowPassword.Checked == false)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }*/
+
+            /*            if (chkShowPassword.Checked)
+                        {
+                            txtPassword.UseSystemPasswordChar = false;
+                        }
+                        else if (chkShowPassword.Checked == false)
+                        {
+                            txtPassword.UseSystemPasswordChar = false;
+                        }*/
         }
 
         public void changeInsertToUpdate(string header, string button)
@@ -177,9 +177,9 @@ namespace Xaysetha_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtName.TextLength != 0 && txtSurname.TextLength != 0 && txtRole.TextLength != 0 && txtPhoneNums.TextLength != 0 && txtUsername.TextLength != 0 && txtPassword.TextLength != 0)
+            if (txtName.TextLength != 0 && txtSurname.TextLength != 0 && txtRole.TextLength != 0 && txtPhoneNums.TextLength != 0 && txtUsername.TextLength != 0 && txtPassword.TextLength != 0)
             {
-                switch(btnSave.Text)
+                switch (btnSave.Text)
                 {
                     case "ບັນທຶກ":
 
@@ -201,12 +201,59 @@ namespace Xaysetha_System
             }
 
 
-            
+
         }
 
         private void labelLinkBackToAddUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             OpenChildForm(new user_management());
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRole_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneNums_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+       (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

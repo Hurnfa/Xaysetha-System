@@ -219,6 +219,7 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(443, 48);
             this.txtName.TabIndex = 6;
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label6
             // 
@@ -265,6 +266,7 @@
             this.txtSurname.SelectedText = "";
             this.txtSurname.Size = new System.Drawing.Size(443, 48);
             this.txtSurname.TabIndex = 6;
+            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // label7
             // 
@@ -312,6 +314,7 @@
             this.txtReligious.SelectedText = "";
             this.txtReligious.Size = new System.Drawing.Size(443, 48);
             this.txtReligious.TabIndex = 6;
+            this.txtReligious.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReligious_KeyPress);
             // 
             // guna2Panel9
             // 
@@ -476,6 +479,7 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(443, 48);
             this.guna2TextBox1.TabIndex = 6;
+            this.guna2TextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox1_KeyPress);
             // 
             // label26
             // 
@@ -521,6 +525,7 @@
             this.txtCitizenID.SelectedText = "";
             this.txtCitizenID.Size = new System.Drawing.Size(443, 48);
             this.txtCitizenID.TabIndex = 6;
+            this.txtCitizenID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCitizenID_KeyPress);
             // 
             // label25
             // 
@@ -567,6 +572,7 @@
             this.txtEthnic.SelectedText = "";
             this.txtEthnic.Size = new System.Drawing.Size(443, 48);
             this.txtEthnic.TabIndex = 6;
+            this.txtEthnic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEthnic_KeyPress);
             // 
             // label24
             // 
@@ -614,6 +620,7 @@
             this.txtRace.SelectedText = "";
             this.txtRace.Size = new System.Drawing.Size(443, 48);
             this.txtRace.TabIndex = 6;
+            this.txtRace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRace_KeyPress);
             // 
             // label4
             // 
@@ -660,6 +667,7 @@
             this.txtWorkplace.SelectedText = "";
             this.txtWorkplace.Size = new System.Drawing.Size(443, 48);
             this.txtWorkplace.TabIndex = 6;
+            this.txtWorkplace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWorkplace_KeyPress);
             // 
             // label23
             // 
@@ -718,6 +726,7 @@
             this.txtDistrict.SelectedText = "";
             this.txtDistrict.Size = new System.Drawing.Size(443, 48);
             this.txtDistrict.TabIndex = 6;
+            this.txtDistrict.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistrict_KeyPress);
             // 
             // label21
             // 
@@ -764,6 +773,7 @@
             this.txtAddr.SelectedText = "";
             this.txtAddr.Size = new System.Drawing.Size(443, 48);
             this.txtAddr.TabIndex = 6;
+            this.txtAddr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddr_KeyPress);
             // 
             // label20
             // 
@@ -811,6 +821,7 @@
             this.txtMomName.SelectedText = "";
             this.txtMomName.Size = new System.Drawing.Size(443, 48);
             this.txtMomName.TabIndex = 6;
+            this.txtMomName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMomName_KeyPress);
             // 
             // label19
             // 
@@ -858,6 +869,7 @@
             this.txtDadName.SelectedText = "";
             this.txtDadName.Size = new System.Drawing.Size(443, 48);
             this.txtDadName.TabIndex = 6;
+            this.txtDadName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDadName_KeyPress);
             // 
             // label18
             // 
@@ -957,6 +969,7 @@
             this.txtFamBookNums.SelectedText = "";
             this.txtFamBookNums.Size = new System.Drawing.Size(443, 48);
             this.txtFamBookNums.TabIndex = 6;
+            this.txtFamBookNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFamBookNums_KeyPress);
             // 
             // label15
             // 
@@ -1016,6 +1029,7 @@
             this.txtJobs.SelectedText = "";
             this.txtJobs.Size = new System.Drawing.Size(443, 48);
             this.txtJobs.TabIndex = 6;
+            this.txtJobs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJobs_KeyPress);
             // 
             // label12
             // 
@@ -1063,6 +1077,7 @@
             this.txtNationality.SelectedText = "";
             this.txtNationality.Size = new System.Drawing.Size(443, 48);
             this.txtNationality.TabIndex = 6;
+            this.txtNationality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNationality_KeyPress);
             // 
             // label11
             // 
@@ -1110,6 +1125,7 @@
             this.txtPhoneNums.SelectedText = "";
             this.txtPhoneNums.Size = new System.Drawing.Size(443, 48);
             this.txtPhoneNums.TabIndex = 6;
+            this.txtPhoneNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNums_KeyPress);
             // 
             // label10
             // 
@@ -1144,8 +1160,8 @@
             this.datePickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.datePickerBirthday.Location = new System.Drawing.Point(3, 31);
             this.datePickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datePickerBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.datePickerBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.datePickerBirthday.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
+            this.datePickerBirthday.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             this.datePickerBirthday.Name = "datePickerBirthday";
             this.datePickerBirthday.Size = new System.Drawing.Size(443, 48);
             this.datePickerBirthday.TabIndex = 9;

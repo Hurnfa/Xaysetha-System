@@ -18,6 +18,8 @@ namespace Xaysetha_System
         public resident_add()
         {
             InitializeComponent();
+            datePickerBirthday.MaxDate = DateTime.Now.AddYears(-18);
+            datePickerFamBookIssuedDate.MaxDate = DateTime.Now.AddDays(-7);
             cn.getConnect();
         }
 
@@ -45,7 +47,7 @@ namespace Xaysetha_System
 
             cmd = new NpgsqlCommand("SELECT * FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
 
-            cmd.Parameters.AddWithValue("@citizenID",BigInteger.Parse(citizen_id));
+            cmd.Parameters.AddWithValue("@citizenID", BigInteger.Parse(citizen_id));
 
             NpgsqlDataReader reader = cmd.ExecuteReader();
 
@@ -89,7 +91,7 @@ namespace Xaysetha_System
             txtAddr.Text = addr;
             //txtPhoneNums.Text = phoneNums;
 
-            labelHeader.Text = header+"ຂໍ້ມູນ";
+            labelHeader.Text = header + "ຂໍ້ມູນ";
             btnSave.Text = header;
         }
 
@@ -128,12 +130,14 @@ namespace Xaysetha_System
                 /*2nd missing field*/
                 cmd.Parameters.AddWithValue("@race", txtRace.Text);
                 cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
-                /*3rd missing field*/cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
+                /*3rd missing field*/
+                cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
                 cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
                 cmd.Parameters.AddWithValue("@dad_name", txtDadName.Text);
                 cmd.Parameters.AddWithValue("@mom_name", txtAddr.Text);
                 cmd.Parameters.AddWithValue("@family_book", BigInteger.Parse(txtFamBookNums.Text));
-                /*4th missing field*/cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
+                /*4th missing field*/
+                cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
                 cmd.Parameters.AddWithValue("@citizenPics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
                 cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
@@ -195,6 +199,148 @@ namespace Xaysetha_System
                     }
 
                     break;
+            }
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCitizenID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtReligious_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNationality_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneNums_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRace_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEthnic_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtJobs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtFamBookNums_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDadName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMomName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAddr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDistrict_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtWorkplace_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

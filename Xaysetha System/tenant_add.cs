@@ -1,5 +1,4 @@
-﻿using Microsoft.Reporting.WebForms;
-using Npgsql;
+﻿using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
@@ -16,6 +15,8 @@ namespace Xaysetha_System
         {
             InitializeComponent();
             cn.getConnect();
+            datePickerBirthday.MaxDate = DateTime.Now.AddYears(-18);
+            datePickerFamBookIssueDate.MaxDate = DateTime.Now.AddDays(-7);
             label_username.Text = username;
         }
 
@@ -138,58 +139,16 @@ namespace Xaysetha_System
 
             }
         }
-
-        //public BigInteger GenerateUniquePaymentID()
-        //{
-        //    BigInteger paymentID = 1;
-        //    bool isUnique = false;
-
-        //    while (!isUnique)
-        //    {
-        //        paymentID = random.Next(100000, 999999); // Adjust the range as needed
-
-        //        using (NpgsqlCommand checkCmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_payment WHERE payment_id = @paymentID", cn.conn))
-        //        {
-        //            checkCmd.Parameters.AddWithValue("@paymentID", paymentID);
-        //            BigInteger count = BigInteger.Parse(checkCmd.ExecuteScalar().ToString());
-
-        //            if (count == 0)
-        //            {
-        //                isUnique = true;
-        //            }
-        //        }
-        //    }
-
-        //    return paymentID;
-        //}
-
         void sentDataToPayment(string sql, string messegeBox)
         {
-/*            cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userName");
-
-            cmd.Parameters.AddWithValue("@userName", label_username.Text);
-
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-
-            string username;
-
-            while (reader.Read())
-            {
-                username = reader["userName"].ToString() + " " + reader["userLName"].ToString();
-            }
-
-            reader.Close();*/
-
-            //BigInteger paymentID = GenerateUniquePaymentID();
             BigInteger tenantID = BigInteger.Parse(txtTenantID.Text),
                 paymentID = new Random().Next();
-
             try
             {
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, cn.conn);
 
-                
+
 
                 cmd.Parameters.AddWithValue("@paymentID", paymentID);
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
@@ -254,5 +213,115 @@ namespace Xaysetha_System
                     break;
             }
         }
+
+        private void txtTenantID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSurname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtNationality_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtReligion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtJobs_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneNums_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEthnic_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtFamBookID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtVillage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDistrict_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+
