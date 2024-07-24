@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Microsoft.Reporting.WebForms;
+using Npgsql;
 using System;
 using System.Data;
 using System.Drawing;
@@ -180,7 +181,8 @@ namespace Xaysetha_System
             reader.Close();*/
 
             //BigInteger paymentID = GenerateUniquePaymentID();
-            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text);
+            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text),
+                paymentID = new Random().Next();
             Random random = new Random();
 
             try
@@ -188,7 +190,9 @@ namespace Xaysetha_System
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, cn.conn);
 
-                cmd.Parameters.AddWithValue("@paymentID", random.Next());
+                
+
+                cmd.Parameters.AddWithValue("@paymentID", paymentID);
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
                 cmd.Parameters.AddWithValue("@duration", 0);
                 cmd.Parameters.AddWithValue("price", 0);
@@ -196,6 +200,16 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@userID", label_username.Text);
 
                 cmd.ExecuteNonQuery();
+
+                new printing(paymentID.ToString(), txtName.Text, txtSurname.Text, 0, 0, label_username.Text).Show();
+
+
+                //ReportParameter parameter = new ReportParameter();
+                ReportParameterCollection rp = new ReportParameterCollection();
+
+
+
+
 
                 //MessageBox.Show(messegeBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
