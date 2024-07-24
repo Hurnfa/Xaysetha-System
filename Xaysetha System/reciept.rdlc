@@ -87,6 +87,7 @@
                     <Value>=Parameters!paymentID.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
+                      <Color>Brown</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>

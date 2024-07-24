@@ -187,13 +187,9 @@ namespace Xaysetha_System
             //payment button
 
             labelHeader.Text = btnLeave.Text;
-            OpenChildForm(new payment());
-
-/*            printing loadBill = new printing();
-
-            loadBill.loadDataToReport(132132132, "Hello", "World", 0, 0, "admin");
-
-            loadBill.Show();*/
+            payment payment = new payment();
+            payment.fetchDataFromMainPage(label_username.Text);
+            OpenChildForm(payment);
         }
 
         private void logo_Click(object sender, EventArgs e)

@@ -25,11 +25,16 @@ namespace Xaysetha_System
             cn.getConnect();
         }
 
+        public void fetchDataFromMainPage(string userID)
+        {
+            txtUser.Text = userID;
+        }
+
         public void fetchDataFromTable(
-            BigInteger paymentID, 
-            string tenantID, 
-            string userID, 
-            int duration, 
+            BigInteger paymentID,
+            string tenantID,
+            string userID,
+            int duration,
             float price,
             string header
         )
@@ -60,8 +65,8 @@ namespace Xaysetha_System
 
                 case 3:
 
-                    rdoThreeMonths.Checked = true; 
-                    
+                    rdoThreeMonths.Checked = true;
+
                     break;
 
                 case 6:
@@ -93,6 +98,9 @@ namespace Xaysetha_System
 
             btnSave.Text = header + "ການຊຳລະ";
 
+            txtTenantID.ReadOnly = true;
+            txtTenantName.ReadOnly = true;
+            txtUser.ReadOnly = true;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -100,36 +108,20 @@ namespace Xaysetha_System
             Hide();
         }
 
-        void dataChange(string sql)
+        void dataChange(string sql, string des, BigInteger paymentID)
         {
-/*            float price = 30000;
-
-            if (rdoOneMonth.Checked)
-            {
-                duration = 1;
-                txtPrice.Text = price.ToString();
-            }
-            else if (rdoThreeMonths.Checked)
-            {
-                duration = 3;
-                txtPrice.Text = price.ToString();
-            }
-            else if (rdoSixMonths.Checked)
-            {
-                duration = 6;
-                price += 30000;
-                txtPrice.Text = price.ToString();
-            }*/
-
             cmd = new NpgsqlCommand(sql, cn.conn);
 
             try
             {
+                cmd.Parameters.AddWithValue("@paymentID", paymentID);
+                cmd.Parameters.AddWithValue("@tenant_id", BigInteger.Parse(txtTenantID.Text));
+                cmd.Parameters.AddWithValue("@description", des);
                 cmd.Parameters.AddWithValue("@duration", duration);
                 cmd.Parameters.AddWithValue("@price", float.Parse(txtPrice.Text));
                 cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
                 cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
-                cmd.Parameters.AddWithValue("@paymentID", BigInteger.Parse(label_payment_id.Text));
+                cmd.Parameters.AddWithValue("@user_id", txtUser.Text);
 
                 cmd.ExecuteNonQuery();
 
@@ -152,7 +144,10 @@ namespace Xaysetha_System
             {
                 case "ຊຳລະ":
 
-
+                    dataChange("INSERT INTO tb_payment VALUES(@paymentID, @tenant_id, @description, @duration, @price, @paymentDate, @paymentStatus, @user_id);",
+                        "ຕໍ່ອາຍຸພັກເຊົ່າ",
+                        new Random().Next()
+                    );
 
                 break;
 
@@ -162,10 +157,13 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_payment SET duration=@duration, price=@price, payment_date=@paymentDate, payment_status=@paymentStatus WHERE payment_id=@paymentID");
+                        dataChange("UPDATE tb_payment SET duration=@duration, price=@price, payment_date=@paymentDate, payment_status=@paymentStatus WHERE payment_id=@paymentID",
+                            "ຈ່າຍຄ່າລົງທະບຽນພັກເຊົ່າ",
+                            BigInteger.Parse(label_payment_id.Text)
+                        );
                     }
 
-                break;
+                    break;
             }
 
         }
@@ -193,5 +191,42 @@ namespace Xaysetha_System
             txtPrice.Text = "60000";
             comboboxPaymentStatus.Text = "ຊຳລະແລ້ວ";
         }
+
+        private void comboboxPaymentStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboboxPaymentStatus.Text)
+            {
+                case " ":
+
+                    rdoOneMonth.Checked = false;
+                    rdoThreeMonths.Checked = false;
+                    rdoSixMonths.Checked = false;
+                    txtPrice.Clear();
+
+                break;
+            }
+        }
+
+        private void txtTenantName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case (char)Keys.Enter:
+
+                    cmd = new NpgsqlCommand("SELECT \"tenantID\" FROM tb_tenant WHERE firstname='" + txtTenantName.Text + "'", cn.conn);
+
+                    NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtTenantID.Text = reader["tenantID"].ToString();
+                    }
+
+                    reader.Close();
+
+                break;
+            }
+        }
     }
 }
+

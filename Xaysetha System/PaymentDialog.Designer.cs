@@ -119,7 +119,6 @@
             this.txtTenantID.Name = "txtTenantID";
             this.txtTenantID.PasswordChar = '\0';
             this.txtTenantID.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.txtTenantID.ReadOnly = true;
             this.txtTenantID.SelectedText = "";
             this.txtTenantID.Size = new System.Drawing.Size(443, 48);
             this.txtTenantID.TabIndex = 6;
@@ -190,10 +189,10 @@
             this.txtTenantName.Name = "txtTenantName";
             this.txtTenantName.PasswordChar = '\0';
             this.txtTenantName.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
-            this.txtTenantName.ReadOnly = true;
             this.txtTenantName.SelectedText = "";
             this.txtTenantName.Size = new System.Drawing.Size(443, 48);
             this.txtTenantName.TabIndex = 6;
+            this.txtTenantName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenantName_KeyPress);
             // 
             // label2
             // 
@@ -309,6 +308,7 @@
             this.comboboxPaymentStatus.Name = "comboboxPaymentStatus";
             this.comboboxPaymentStatus.Size = new System.Drawing.Size(441, 36);
             this.comboboxPaymentStatus.TabIndex = 24;
+            this.comboboxPaymentStatus.SelectedIndexChanged += new System.EventHandler(this.comboboxPaymentStatus_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -402,7 +402,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 28);
+            this.label10.Size = new System.Drawing.Size(79, 28);
             this.label10.TabIndex = 8;
             this.label10.Text = "ຈຳນວນເງິນ";
             // 

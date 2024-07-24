@@ -24,6 +24,11 @@ namespace Xaysetha_System
 
         }
 
+        public void fetchDataFromMainPage(string userID)
+        {
+            label_userid.Text = userID;
+        }
+
         void loadData(string sql)
         {
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
@@ -82,6 +87,7 @@ namespace Xaysetha_System
         private void btnPayUser_Click(object sender, EventArgs e)
         {
             PaymentDialog payment = new PaymentDialog();
+            payment.fetchDataFromMainPage(label_userid.Text);
             payment.Show();
         }
     }

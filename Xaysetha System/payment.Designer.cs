@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnPayUser = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_userid = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
@@ -108,13 +109,14 @@
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnPayUser);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label_userid);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel6);
             this.guna2CustomGradientPanel1.Controls.Add(this.statusControl);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnPayUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(27, 54);
@@ -201,7 +203,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 28);
+            this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -309,7 +311,6 @@
             this.btnPayUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnPayUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnPayUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPayUser.Enabled = false;
             this.btnPayUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
             this.btnPayUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayUser.ForeColor = System.Drawing.Color.White;
@@ -336,6 +337,17 @@
             this.label1.Size = new System.Drawing.Size(129, 28);
             this.label1.TabIndex = 19;
             this.label1.Text = "ທັງໝົດ 3 ລາຍການ";
+            // 
+            // label_userid
+            // 
+            this.label_userid.AutoSize = true;
+            this.label_userid.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_userid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label_userid.Location = new System.Drawing.Point(1147, 60);
+            this.label_userid.Name = "label_userid";
+            this.label_userid.Size = new System.Drawing.Size(143, 28);
+            this.label_userid.TabIndex = 7;
+            this.label_userid.Text = "ຈັດການຂໍ້ມູນຊຳລະເງິນ";
             // 
             // payment
             // 
@@ -388,5 +400,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnPayUser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_userid;
     }
 }
