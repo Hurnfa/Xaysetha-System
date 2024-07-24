@@ -19,7 +19,6 @@ namespace Xaysetha_System
 
         private void printing_Load(object sender, EventArgs e)
         {
-
             this.reportViewer1.RefreshReport();
         }
     }
