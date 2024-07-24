@@ -166,7 +166,7 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.txtTenantName);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Location = new System.Drawing.Point(87, 185);
+            this.guna2Panel1.Location = new System.Drawing.Point(87, 184);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(477, 84);
@@ -214,7 +214,7 @@
             this.guna2Panel5.Controls.Add(this.rdoThreeMonths);
             this.guna2Panel5.Controls.Add(this.rdoOneMonth);
             this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.Location = new System.Drawing.Point(91, 484);
+            this.guna2Panel5.Location = new System.Drawing.Point(87, 284);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(477, 84);
@@ -283,7 +283,7 @@
             this.guna2Panel4.BorderThickness = 2;
             this.guna2Panel4.Controls.Add(this.comboboxPaymentStatus);
             this.guna2Panel4.Controls.Add(this.label6);
-            this.guna2Panel4.Location = new System.Drawing.Point(87, 686);
+            this.guna2Panel4.Location = new System.Drawing.Point(87, 484);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(477, 84);
@@ -346,8 +346,6 @@
             // 
             // guna2Panel7
             // 
-            this.guna2Panel7.AutoScroll = true;
-            this.guna2Panel7.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.guna2Panel7.Controls.Add(this.guna2Panel9);
             this.guna2Panel7.Controls.Add(this.guna2Panel8);
             this.guna2Panel7.Controls.Add(this.label3);
@@ -358,7 +356,7 @@
             this.guna2Panel7.Location = new System.Drawing.Point(79, 105);
             this.guna2Panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(652, 666);
+            this.guna2Panel7.Size = new System.Drawing.Size(652, 690);
             this.guna2Panel7.TabIndex = 21;
             // 
             // guna2Panel9
@@ -367,7 +365,7 @@
             this.guna2Panel9.BorderThickness = 2;
             this.guna2Panel9.Controls.Add(this.txtPrice);
             this.guna2Panel9.Controls.Add(this.label10);
-            this.guna2Panel9.Location = new System.Drawing.Point(87, 586);
+            this.guna2Panel9.Location = new System.Drawing.Point(87, 384);
             this.guna2Panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(477, 84);
@@ -404,7 +402,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 28);
+            this.label10.Size = new System.Drawing.Size(78, 28);
             this.label10.TabIndex = 8;
             this.label10.Text = "ຈຳນວນເງິນ";
             // 
@@ -414,7 +412,7 @@
             this.guna2Panel8.BorderThickness = 2;
             this.guna2Panel8.Controls.Add(this.txtUser);
             this.guna2Panel8.Controls.Add(this.label7);
-            this.guna2Panel8.Location = new System.Drawing.Point(87, 784);
+            this.guna2Panel8.Location = new System.Drawing.Point(87, 584);
             this.guna2Panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(477, 84);

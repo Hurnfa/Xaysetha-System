@@ -43,7 +43,6 @@
             this.statusControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.Entrance = new System.Windows.Forms.TabPage();
             this.Pending = new System.Windows.Forms.TabPage();
-            this.Rejected = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -202,7 +201,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
+            this.label9.Size = new System.Drawing.Size(89, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -210,7 +209,6 @@
             // 
             this.statusControl.Controls.Add(this.Entrance);
             this.statusControl.Controls.Add(this.Pending);
-            this.statusControl.Controls.Add(this.Rejected);
             this.statusControl.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusControl.ItemSize = new System.Drawing.Size(180, 40);
             this.statusControl.Location = new System.Drawing.Point(29, 165);
@@ -260,16 +258,6 @@
             this.Pending.TabIndex = 1;
             this.Pending.Text = "Pending";
             this.Pending.UseVisualStyleBackColor = true;
-            // 
-            // Rejected
-            // 
-            this.Rejected.Location = new System.Drawing.Point(4, 44);
-            this.Rejected.Margin = new System.Windows.Forms.Padding(0);
-            this.Rejected.Name = "Rejected";
-            this.Rejected.Size = new System.Drawing.Size(1293, 546);
-            this.Rejected.TabIndex = 2;
-            this.Rejected.Text = "Rejected";
-            this.Rejected.UseVisualStyleBackColor = true;
             // 
             // guna2Panel3
             // 
@@ -395,7 +383,6 @@
         private Guna.UI2.WinForms.Guna2TabControl statusControl;
         private System.Windows.Forms.TabPage Entrance;
         private System.Windows.Forms.TabPage Pending;
-        private System.Windows.Forms.TabPage Rejected;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
