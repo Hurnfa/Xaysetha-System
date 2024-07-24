@@ -2,12 +2,6 @@
 using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -18,45 +12,39 @@ namespace Xaysetha_System
         NpgsqlCommand cmd;
 
         public printing(
-            string paymentID, 
-            string tenantName, 
-            string tenantLName, 
-            float price, 
-            int duration, 
+            string paymentID,
+            string tenantName,
+            string tenantLName,
+            float price,
+            int duration,
             string username
         )
         {
             InitializeComponent();
 
-            ReportParameterCollection rp = new ReportParameterCollection();
-
-            cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userID");
+            cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userID", cn.conn); // Assuming 'connection' is your NpgsqlConnection
             cmd.Parameters.AddWithValue("@userID", username);
 
             NpgsqlDataReader reader = cmd.ExecuteReader();
 
+            // Create a list to hold ReportParameter objects
+            List<ReportParameter> reportParameters = new List<ReportParameter>();
+
             while (reader.Read())
             {
-                rp.Add(new ReportParameter("userName", reader["userName"].ToString()));
-                rp.Add(new ReportParameter("userLName", reader["userLName"].ToString()));
+                reportParameters.Add(new ReportParameter("userName", reader["userName"].ToString()));
+                reportParameters.Add(new ReportParameter("userLName", reader["userLName"].ToString()));
             }
 
             reader.Close();
 
-            ReportParameter payment_id = new ReportParameter("paymentID", paymentID),
-                tenant_name = new ReportParameter("tenantName", tenantName),
-                tenant_lname = new ReportParameter("tenantName", tenantName);
+            reportParameters.Add(new ReportParameter("paymentID", paymentID));
+            reportParameters.Add(new ReportParameter("tenantName", tenantName));
+            reportParameters.Add(new ReportParameter("tenantLName", tenantLName));
+            reportParameters.Add(new ReportParameter("price", price.ToString()));
+            reportParameters.Add(new ReportParameter("duration", duration.ToString()));
 
-            //reportViewer1.LocalReport.SetParameters(payment_id);
-
-            /*            rp.Add(new ReportParameter("paymentID", paymentID));
-                        rp.Add(new ReportParameter("tenantName", tenantName));
-                        rp.Add(new ReportParameter("tenantLName", tenantLName));
-                        rp.Add(new ReportParameter("price", price.ToString()));
-                        rp.Add(new ReportParameter("duration", duration.ToString()));
-            */
-            //reportViewer1.LocalReport.SetParameters(rp);
-
+            reportViewer1.LocalReport.SetParameters((IEnumerable<Microsoft.Reporting.WinForms.ReportParameter>)reportParameters);
             reportViewer1.RefreshReport();
         }
 
