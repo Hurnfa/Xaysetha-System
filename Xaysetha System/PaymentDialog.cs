@@ -10,6 +10,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -108,6 +109,8 @@ namespace Xaysetha_System
             Hide();
         }
 
+        string name, surname, gender;
+
         void dataChange(string sql, string des, BigInteger paymentID)
         {
             cmd = new NpgsqlCommand(sql, cn.conn);
@@ -126,6 +129,27 @@ namespace Xaysetha_System
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("ຊຳລະເງິນສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+
+                cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
+
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    name = reader["firstname"].ToString();
+                    surname = reader["lastname"].ToString();
+                    gender = reader["gender"].ToString();
+                }
+
+                reader.Close();
+
+                printing loadBill = new printing();
+
+                loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, txtUser.Text, gender);
+
+                loadBill.Show();
 
                 //new payment_info().dataTable.Clear();
 
