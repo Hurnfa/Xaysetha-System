@@ -2,7 +2,6 @@
 using Npgsql;
 //using Org.BouncyCastle.Math;
 using System;
-using System.Collections.Generic;
 using System.Numerics;
 using System.Windows.Forms;
 
@@ -19,7 +18,7 @@ namespace Xaysetha_System
             cn.getConnect();
         }
 
-        string title; 
+        string title;
 
         public void loadDataToReport(
             BigInteger paymentID,
@@ -37,19 +36,19 @@ namespace Xaysetha_System
 
                     title = "ທ້າວ";
 
-                break;
+                    break;
 
                 case "ຍິງ":
 
                     title = "ຍິງ";
 
-                break;
+                    break;
 
                 default:
 
                     title = "ທ່ານ";
 
-                break;
+                    break;
             }
 
             cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userID", cn.conn); // Assuming 'connection' is your NpgsqlConnection
@@ -57,7 +56,7 @@ namespace Xaysetha_System
 
             NpgsqlDataReader reader = cmd.ExecuteReader();
             // Create a list to hold ReportParameter objects
-           ReportParameterCollection rp = new ReportParameterCollection();
+            ReportParameterCollection rp = new ReportParameterCollection();
 
             while (reader.Read())
             {
