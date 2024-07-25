@@ -1,14 +1,41 @@
-﻿using System.Drawing;
+﻿using Npgsql;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace Xaysetha_System
 {
     public partial class tenant_confirmation : Form
     {
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+        export_book_info exportBookInfo = new export_book_info();
+
         public tenant_confirmation()
         {
             InitializeComponent();
+            cn.getConnect();
             CustomizedGridView();
+/*            loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");*/
+        }
+
+        public void loadData(string sql)
+        {
+            data.AutoGenerateColumns = false;
+
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+
+            data.Columns[0].DataPropertyName = "tenantID";
+            data.Columns[1].DataPropertyName = "firstname";
+            data.Columns[2].DataPropertyName = "lastname";
+            //data.Columns[3].DataPropertyName = "firstname";
+            data.Columns[4].DataPropertyName = "payment_status";
         }
 
         public void CustomizedGridView()

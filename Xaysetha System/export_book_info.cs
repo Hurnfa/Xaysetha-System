@@ -1,14 +1,38 @@
-﻿using System.Drawing;
+﻿using Npgsql;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
     public partial class export_book_info : Form
     {
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+
         public export_book_info()
         {
             InitializeComponent();
+            cn.getConnect();
             CustomizedGridView();
+        }
+
+        public void loadData(string sql)
+        {
+            data.AutoGenerateColumns = false;
+
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+
+            data.Columns[0].DataPropertyName = "resBookID";
+            data.Columns[1].DataPropertyName = "firstname";
+            data.Columns[2].DataPropertyName = "lastname";
+            //data.Columns[3].DataPropertyName = "firstname";
+            data.Columns[4].DataPropertyName = "issueDate";
+            data.Columns[5].DataPropertyName = "expDate";
         }
 
         public void CustomizedGridView()

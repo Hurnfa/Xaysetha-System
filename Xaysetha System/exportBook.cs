@@ -6,54 +6,104 @@ namespace Xaysetha_System
 {
     public partial class exportBook : Form
     {
-        public exportBook()
-        {
-            InitializeComponent();
-            cn.getConnect();
-            loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
-                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
-        }
-
+        private Form activeForm = null;
         NpgsqlCommand cmd;
         NpgsqlDataAdapter adapter;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
         export_book_info exportBookInfo = new export_book_info();
 
-
-        void loadData(string sql)
+        public exportBook()
         {
-            data.AutoGenerateColumns = false;
+            InitializeComponent();
+            cn.getConnect();
+        }
 
-            adapter = new NpgsqlDataAdapter(sql, cn.conn);
-            adapter.Fill(datatable);
-            data.DataSource = datatable;
+        string sql;
 
-            data.Columns[0].DataPropertyName = "tenantID";
-            data.Columns[1].DataPropertyName = "firstname";
-            data.Columns[2].DataPropertyName = "lastname";
-            //data.Columns[3].DataPropertyName = "firstname";
-            data.Columns[4].DataPropertyName = "phoneNums";
-            data.Columns[5].DataPropertyName = "occupation";
+        public void displayTotalOfData(int index)
+        {
+            switch (index)
+            {
+                case 0:
+
+                    sql = "SELECT COUNT(*) FROM tb_payment WHERE payment_status='ຊຳລະແລ້ວ';";
+
+                    break;
+
+                case 1:
+
+                    sql = "SELECT COUNT(*) FROM \"tb_residentialBook\";";
+
+                    break;
+            }
+
+            cmd = new NpgsqlCommand(sql, cn.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                labelTotalRecords.Text = "ທັງໝົດ " + reader["count"] + " ລາຍການ";
+            }
+
+            reader.Close();
+        }
+
+        private void OpenChildForm(Form childForm, TabPage tabPage)
+        {
+            // Close the current active form if there is one
+            if (activeForm != null)
+            {
+                activeForm.Hide();
+            }
+
+            // Set the new form as the active form
+            activeForm = childForm;
+
+            // Configure the form to be displayed within the tab page
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Clear the tab page controls and add the new form
+            tabPage.Controls.Clear();
+            tabPage.Controls.Add(childForm);
+
+            // Bring the form to the front and show it
+            childForm.Show();
+            childForm.BringToFront();
         }
 
         private void statusControl_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             int selectedIndex = statusControl.SelectedIndex;
             string status;
-            object value = exportBookInfo.datatable.Clear();
+            
 
             switch (selectedIndex)
             {
                 case 0:
-                    table_.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
-                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
+
+                    tenant_confirmation cf = new tenant_confirmation();
+                    cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
+
+                    OpenChildForm(cf, statusControl.TabPages[selectedIndex]);
+
+                    displayTotalOfData(selectedIndex);
+
                     break;
+
                 case 1:
-                    displayTotalOfData("ລໍຖ້າຊຳລະ");
-                    table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
-                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
+
+                    export_book_info tb_exportbook = new export_book_info();
+                    tb_exportbook.loadData("SELECT * FROM \"tb_residentialBook\"");
+                    OpenChildForm(tb_exportbook, statusControl.TabPages[selectedIndex]);
+
+                    displayTotalOfData(selectedIndex);
+
                     break;
+
                 case 2:
                     OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
                     break;

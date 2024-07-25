@@ -33,8 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TenantID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +60,8 @@
             this.data.ColumnHeadersHeight = 18;
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TenantID,
-            this.citizenName,
+            this.bookID,
+            this.tenantName,
             this.Surname,
             this.VillageName,
             this.issueDate,
@@ -78,12 +78,13 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
+            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1280, 560);
+            this.data.Size = new System.Drawing.Size(960, 455);
             this.data.TabIndex = 21;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -117,21 +118,20 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 125;
             // 
-            // TenantID
+            // bookID
             // 
-            this.TenantID.HeaderText = "ລະຫັດປື້ມ";
-            this.TenantID.MinimumWidth = 6;
-            this.TenantID.Name = "TenantID";
-            this.TenantID.ReadOnly = true;
+            this.bookID.HeaderText = "ລະຫັດປື້ມ";
+            this.bookID.MinimumWidth = 6;
+            this.bookID.Name = "bookID";
+            this.bookID.ReadOnly = true;
             // 
-            // citizenName
+            // tenantName
             // 
-            this.citizenName.HeaderText = "ຊື່";
-            this.citizenName.MinimumWidth = 6;
-            this.citizenName.Name = "citizenName";
-            this.citizenName.ReadOnly = true;
+            this.tenantName.HeaderText = "ຊື່";
+            this.tenantName.MinimumWidth = 6;
+            this.tenantName.Name = "tenantName";
+            this.tenantName.ReadOnly = true;
             // 
             // Surname
             // 
@@ -171,15 +171,16 @@
             this.editButton.ReadOnly = true;
             this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 47;
+            this.editButton.Width = 46;
             // 
             // export_book_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 560);
+            this.ClientSize = new System.Drawing.Size(960, 455);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "export_book_info";
             this.Text = "export_book_info";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
@@ -191,8 +192,8 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView data;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenantID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenantName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
