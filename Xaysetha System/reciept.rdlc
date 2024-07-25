@@ -62,8 +62,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.13201in</Top>
-            <Left>2.71354in</Left>
+            <Top>1.60943in</Top>
+            <Left>2.79711in</Left>
             <Height>0.43181in</Height>
             <Width>1.23958in</Width>
             <ZIndex>1</ZIndex>
@@ -84,6 +84,23 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
+                    <Value>ເລກທີ:</Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Saysettha MX</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Brown</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
                     <Value>=Parameters!paymentID.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
@@ -96,115 +113,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>paymentID</rd:DefaultName>
-            <Top>1in</Top>
-            <Left>5.08854in</Left>
-            <Height>0.25in</Height>
-            <Width>1.19792in</Width>
+            <Top>0.85313in</Top>
+            <Left>4.76513in</Left>
+            <Height>0.30937in</Height>
+            <Width>1.75049in</Width>
             <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ເລກທີ: </Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1in</Top>
-            <Left>4.39409in</Left>
-            <Height>0.26514in</Height>
-            <Width>0.54167in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="tenantName">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!tenantName.Value</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>tenantName</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>1.0162in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.88125in</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ໄດ້ຈ່າຍເງິນຈຳນວນ:</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>2.94078in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.21042in</Width>
-            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -222,10 +135,52 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
+                    <Value>ໄດ້ຈ່າຍເງິນຈຳນວນ: </Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
                     <Value>=Parameters!price.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>ກີບ ຕໍ່ໄລຍະການພັກເຊົ່າ </Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!duration.Value</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>ເດືອນ.</Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -233,46 +188,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>price</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>4.22065in</Left>
+            <Top>2.8107in</Top>
+            <Left>0.41185in</Left>
             <Height>0.28125in</Height>
-            <Width>0.71511in</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox5">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ໃນການຈ່າຍຄ່າທຳນຽມອອກປຶ້ມທະບຽນພັກເຊົາໃນວັນທີ</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.23in</Top>
-            <Left>0.32851in</Left>
-            <Height>0.28125in</Height>
-            <Width>3.29167in</Width>
-            <ZIndex>7</ZIndex>
+            <Width>4.91627in</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -290,6 +210,21 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
+                    <Value>ວັນທີ:</Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
                     <Value>=Parameters!paymentDate.Value</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
@@ -301,114 +236,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>paymentDate</rd:DefaultName>
-            <Top>2.23in</Top>
-            <Left>3.68962in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.75417in</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox7">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ໄລຍະເວລາການພັກເຊົ່າແມ່ນ</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.61in</Top>
-            <Left>0.32851in</Left>
-            <Height>0.28125in</Height>
-            <Width>1.71132in</Width>
-            <ZIndex>9</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="duration">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!duration.Value</Value>
-                    <Style>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>duration</rd:DefaultName>
-            <Top>2.61in</Top>
-            <Left>2.10927in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.93799in</Width>
-            <ZIndex>10</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox8">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ເດືອນ.</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.61in</Top>
-            <Left>3.10282in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.51736in</Width>
-            <ZIndex>11</ZIndex>
+            <Top>1.21806in</Top>
+            <Left>3.41848in</Left>
+            <Height>0.32192in</Height>
+            <Width>3.09714in</Width>
+            <ZIndex>4</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -439,11 +271,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>3.79167in</Top>
+            <Top>3.36127in</Top>
             <Left>4.90847in</Left>
             <Height>0.28125in</Height>
             <Width>0.68701in</Width>
-            <ZIndex>12</ZIndex>
+            <ZIndex>5</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -468,32 +300,14 @@
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>userName</rd:DefaultName>
-            <Top>4.26958in</Top>
-            <Left>3.94618in</Left>
-            <Height>0.3125in</Height>
-            <Width>1.1875in</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="userLName">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
                   <TextRun>
                     <Value>=Parameters!userLName.Value</Value>
                     <Style>
@@ -506,12 +320,12 @@
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>userLName</rd:DefaultName>
+            <rd:DefaultName>userName</rd:DefaultName>
             <Top>4.26958in</Top>
-            <Left>5.20312in</Left>
+            <Left>3.98461in</Left>
             <Height>0.3125in</Height>
-            <Width>1.3125in</Width>
-            <ZIndex>14</ZIndex>
+            <Width>2.53101in</Width>
+            <ZIndex>6</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -522,76 +336,7 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="tenantLName">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!tenantLName.Value</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                      <FontWeight>Bold</FontWeight>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>tenantLName</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>1.9669in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.90444in</Width>
-            <ZIndex>15</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox10">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>ກີບ</Value>
-                    <Style>
-                      <FontFamily>Phetsarath OT</FontFamily>
-                      <FontSize>12pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>5.0052in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.26875in</Width>
-            <ZIndex>16</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="tenantGender">
+          <Textbox Name="Textbox11">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
@@ -605,16 +350,48 @@
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!tenantName.Value</Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=Parameters!tenantLName.Value</Value>
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
-            <rd:DefaultName>tenantGender</rd:DefaultName>
-            <Top>1.85in</Top>
-            <Left>0.32851in</Left>
-            <Height>0.28125in</Height>
-            <Width>0.56667in</Width>
-            <ZIndex>17</ZIndex>
+            <rd:DefaultName>Textbox11</rd:DefaultName>
+            <Top>2.45936in</Top>
+            <Left>0.41185in</Left>
+            <Height>0.29579in</Height>
+            <Width>4.25776in</Width>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>

@@ -71,7 +71,7 @@ namespace Xaysetha_System
             rp.Add(new ReportParameter("tenantName", tenantName));
             rp.Add(new ReportParameter("tenantLName", tenantLName));
             rp.Add(new ReportParameter("price", price.ToString()));
-            rp.Add(new ReportParameter("paymentDate", DateTime.Now.ToString("dd/MM/yyyy")));
+            rp.Add(new ReportParameter("paymentDate", DateTime.Now.ToString()));
             rp.Add(new ReportParameter("duration", duration.ToString()));
 
             reportViewer1.LocalReport.SetParameters(rp);

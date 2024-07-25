@@ -178,7 +178,7 @@ namespace Xaysetha_System
 
                 printing loadBill = new printing();
 
-                loadBill.loadDataToReport(paymentID, txtName.Text, txtSurname.Text, 0, 0, label_username.Text, title);
+                loadBill.loadDataToReport(paymentID, txtName.Text, txtSurname.Text, 1, 30000, label_username.Text, title);
 
                 loadBill.Show();
             }
