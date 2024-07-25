@@ -96,7 +96,7 @@
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(26, 39);
+            this.guna2Panel2.Location = new System.Drawing.Point(26, 20);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1370, 194);
             this.guna2Panel2.TabIndex = 1;
@@ -209,7 +209,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(26, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 39);
+            this.panel3.Size = new System.Drawing.Size(1370, 20);
             this.panel3.TabIndex = 8;
             // 
             // panel2
@@ -232,7 +232,7 @@
             // 
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(26, 233);
+            this.guna2Panel1.Location = new System.Drawing.Point(26, 214);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1370, 62);
             this.guna2Panel1.TabIndex = 9;
