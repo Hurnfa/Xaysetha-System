@@ -282,6 +282,12 @@
     <Compile Include="tenant_add.Designer.cs">
       <DependentUpon>tenant_add.cs</DependentUpon>
     </Compile>
+    <Compile Include="tenant_confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tenant_confirmation.Designer.cs">
+      <DependentUpon>tenant_confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_management.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tenant_add.resx">
       <DependentUpon>tenant_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tenant_confirmation.resx">
+      <DependentUpon>tenant_confirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_management.resx">
       <DependentUpon>user_management.cs</DependentUpon>

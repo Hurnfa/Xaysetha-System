@@ -1,6 +1,6 @@
 ﻿namespace Xaysetha_System
 {
-    partial class export_book_info
+    partial class tenant_confirmation
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.TenantID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +62,7 @@
             this.citizenName,
             this.Surname,
             this.VillageName,
-            this.issueDate,
-            this.expiryDate,
+            this.paymentStatus,
             this.editButton});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -84,7 +81,7 @@
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
             this.data.Size = new System.Drawing.Size(1280, 560);
-            this.data.TabIndex = 21;
+            this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -107,17 +104,6 @@
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "ພີມ";
-            this.dataGridViewImageColumn1.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 125;
             // 
             // TenantID
             // 
@@ -147,19 +133,12 @@
             this.VillageName.Name = "VillageName";
             this.VillageName.ReadOnly = true;
             // 
-            // issueDate
+            // paymentStatus
             // 
-            this.issueDate.HeaderText = "ມື້ອອກປື້ມ";
-            this.issueDate.MinimumWidth = 6;
-            this.issueDate.Name = "issueDate";
-            this.issueDate.ReadOnly = true;
-            // 
-            // expiryDate
-            // 
-            this.expiryDate.HeaderText = "ມື້ປື້ມໝົດອາຍຸ";
-            this.expiryDate.MinimumWidth = 6;
-            this.expiryDate.Name = "expiryDate";
-            this.expiryDate.ReadOnly = true;
+            this.paymentStatus.HeaderText = "ສະຖານະການຈ່າຍເງິນ";
+            this.paymentStatus.MinimumWidth = 6;
+            this.paymentStatus.Name = "paymentStatus";
+            this.paymentStatus.ReadOnly = true;
             // 
             // editButton
             // 
@@ -173,15 +152,15 @@
             this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.editButton.Width = 47;
             // 
-            // export_book_info
+            // tenant_confirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 560);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "export_book_info";
-            this.Text = "export_book_info";
+            this.Name = "tenant_confirmation";
+            this.Text = "tenant_confirmation";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
 
@@ -190,13 +169,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView data;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenantID;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expiryDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentStatus;
         private System.Windows.Forms.DataGridViewImageColumn editButton;
     }
 }
