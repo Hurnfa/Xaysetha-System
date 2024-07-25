@@ -19,14 +19,39 @@ namespace Xaysetha_System
             cn.getConnect();
         }
 
+        string title; 
+
         public void loadDataToReport(
             BigInteger paymentID,
             string tenantName,
             string tenantLName,
             float price,
             int duration,
-            string username)
+            string username,
+            string gender
+        )
         {
+            switch (gender)
+            {
+                case "ຊາຍ":
+
+                    title = "ທ້າວ";
+
+                break;
+
+                case "ຍິງ":
+
+                    title = "ຍິງ";
+
+                break;
+
+                default:
+
+                    title = "ທ່ານ";
+
+                break;
+            }
+
             cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userID", cn.conn); // Assuming 'connection' is your NpgsqlConnection
             cmd.Parameters.AddWithValue("@userID", username);
 
@@ -43,10 +68,11 @@ namespace Xaysetha_System
             reader.Close();
 
             rp.Add(new ReportParameter("paymentID", paymentID.ToString()));
+            rp.Add(new ReportParameter("tenantGender", title));
             rp.Add(new ReportParameter("tenantName", tenantName));
             rp.Add(new ReportParameter("tenantLName", tenantLName));
             rp.Add(new ReportParameter("price", price.ToString()));
-            rp.Add(new ReportParameter("paymentDate", DateTime.Now.ToString()));
+            rp.Add(new ReportParameter("paymentDate", DateTime.Now.ToString("dd/MM/yyyy")));
             rp.Add(new ReportParameter("duration", duration.ToString()));
 
             reportViewer1.LocalReport.SetParameters(rp);

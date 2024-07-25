@@ -139,10 +139,15 @@ namespace Xaysetha_System
 
             }
         }
+
+        string title;
+
         void sentDataToPayment(string sql, string messegeBox)
         {
             BigInteger tenantID = BigInteger.Parse(txtTenantID.Text),
                 paymentID = new Random().Next();
+
+
             try
             {
 
@@ -152,16 +157,28 @@ namespace Xaysetha_System
 
                 cmd.Parameters.AddWithValue("@paymentID", paymentID);
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
-                cmd.Parameters.AddWithValue("@duration", 0);
-                cmd.Parameters.AddWithValue("price", 0);
+                cmd.Parameters.AddWithValue("@duration", 1);
+                cmd.Parameters.AddWithValue("price", 30000);
                 cmd.Parameters.AddWithValue("@paymentStatus", "ລໍຖ້າຊຳລະ");
                 cmd.Parameters.AddWithValue("@userID", label_username.Text);
 
                 cmd.ExecuteNonQuery();
 
+                cmd = new NpgsqlCommand("SELECT gender FROM tb_tenant WHERE \"tenantID\"="+tenantID, cn.conn);
+                cmd.Parameters.AddWithValue("@tenantID", tenantID);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    title = reader["gender"].ToString();
+                }
+
+                reader.Close();
+
+
                 printing loadBill = new printing();
 
-                loadBill.loadDataToReport(paymentID, txtName.Text, txtSurname.Text, 0, 0, label_username.Text);
+                loadBill.loadDataToReport(paymentID, txtName.Text, txtSurname.Text, 0, 0, label_username.Text, title);
 
                 loadBill.Show();
             }
