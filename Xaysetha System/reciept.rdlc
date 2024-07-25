@@ -99,7 +99,7 @@
             <Top>1in</Top>
             <Left>5.08854in</Left>
             <Height>0.25in</Height>
-            <Width>1.09375in</Width>
+            <Width>1.19792in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -474,7 +474,7 @@
             </Paragraphs>
             <rd:DefaultName>userName</rd:DefaultName>
             <Top>4.26958in</Top>
-            <Left>4.14062in</Left>
+            <Left>3.94618in</Left>
             <Height>0.3125in</Height>
             <Width>1.1875in</Width>
             <ZIndex>13</ZIndex>
@@ -508,9 +508,9 @@
             </Paragraphs>
             <rd:DefaultName>userLName</rd:DefaultName>
             <Top>4.26958in</Top>
-            <Left>5.32812in</Left>
+            <Left>5.20312in</Left>
             <Height>0.3125in</Height>
-            <Width>1.1875in</Width>
+            <Width>1.3125in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>

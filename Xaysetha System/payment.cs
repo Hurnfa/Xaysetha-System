@@ -11,17 +11,49 @@ namespace Xaysetha_System
         payment_info table_payment = new payment_info();
         db_connect cn = new db_connect();
         NpgsqlDataAdapter adapter;
+        NpgsqlCommand cmd;
         DataTable dataTable = new DataTable();
 
         public payment()
         {
             InitializeComponent();
             cn.getConnect();
+            displayTotalOfData("");
             OpenChildForm(table_payment, statusControl.TabPages[0]);
             //table_payment.loadData("SELECT * FROM tb_payment;");
             //loadData("SELECT * from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
             table_payment.loadData("SELECT * from tb_payment INNER JOIN tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\";");
 
+        }
+
+        public void displayTotalOfData(string status)
+        {
+            string sql;
+
+            switch (status)
+            {
+                case "":
+
+                    sql = "SELECT COUNT(*) FROM tb_payment;";
+
+                break;
+
+                default:
+
+                    sql = "SELECT COUNT(*) FROM tb_payment WHERE payment_status='"+status+"'";
+
+                break;
+            }
+
+            cmd = new NpgsqlCommand(sql, cn.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                labelTotalRecords.Text = "ທັງໝົດ " + reader["count"] + " ລາຍການ";
+            }
+
+            reader.Close();
         }
 
         public void fetchDataFromMainPage(string userID)
@@ -63,15 +95,18 @@ namespace Xaysetha_System
         private void statusControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedIndex = statusControl.SelectedIndex;
+            string status;
             table_payment.dataTable.Clear();
 
             switch (selectedIndex)
             {
                 case 0:
+                    displayTotalOfData("ຊຳລະແລ້ວ");
                     table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
                     OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                  
                     break;
                 case 1:
+                    displayTotalOfData("ລໍຖ້າຊຳລະ");
                     table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
                     OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                    
                     break;

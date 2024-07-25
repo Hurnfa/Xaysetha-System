@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using Npgsql;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -8,8 +10,34 @@ namespace Xaysetha_System
         public exportBook()
         {
             InitializeComponent();
+            cn.getConnect();
             CustomizedGridView();
+            loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
         }
+
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+
+        void loadData(string sql)
+        {
+            data.AutoGenerateColumns = false;
+
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+            data.DataSource = datatable;
+
+            data.Columns[0].DataPropertyName = "tenantID";
+            data.Columns[1].DataPropertyName = "firstname";
+            data.Columns[2].DataPropertyName = "lastname";
+            //data.Columns[3].DataPropertyName = "firstname";
+            data.Columns[4].DataPropertyName = "phoneNums";
+            data.Columns[5].DataPropertyName = "occupation";
+        }
+
+
         public void CustomizedGridView()
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
