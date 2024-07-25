@@ -38,6 +38,7 @@
             this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issuePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
@@ -66,6 +67,7 @@
             this.duration,
             this.price,
             this.issuePerson,
+            this.printButton,
             this.Edit,
             this.Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -153,6 +155,16 @@
             this.issuePerson.Name = "issuePerson";
             this.issuePerson.ReadOnly = true;
             // 
+            // printButton
+            // 
+            this.printButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.printButton.HeaderText = "";
+            this.printButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
+            this.printButton.MinimumWidth = 6;
+            this.printButton.Name = "printButton";
+            this.printButton.ReadOnly = true;
+            this.printButton.Width = 23;
+            // 
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -162,7 +174,6 @@
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Edit.Width = 23;
             // 
             // Delete
@@ -201,6 +212,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn issuePerson;
+        private System.Windows.Forms.DataGridViewImageColumn printButton;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
