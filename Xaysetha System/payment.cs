@@ -36,13 +36,13 @@ namespace Xaysetha_System
 
                     sql = "SELECT COUNT(*) FROM tb_payment;";
 
-                break;
+                    break;
 
                 default:
 
-                    sql = "SELECT COUNT(*) FROM tb_payment WHERE payment_status='"+status+"'";
+                    sql = "SELECT COUNT(*) FROM tb_payment WHERE payment_status='" + status + "'";
 
-                break;
+                    break;
             }
 
             cmd = new NpgsqlCommand(sql, cn.conn);
@@ -103,12 +103,12 @@ namespace Xaysetha_System
                 case 0:
                     displayTotalOfData("ຊຳລະແລ້ວ");
                     table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
-                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                  
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
                     break;
                 case 1:
                     displayTotalOfData("ລໍຖ້າຊຳລະ");
                     table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
-                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);                    
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
                     break;
                 case 2:
                     OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);

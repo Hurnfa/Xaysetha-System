@@ -1,6 +1,5 @@
 ﻿using Npgsql;
 using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -11,7 +10,6 @@ namespace Xaysetha_System
         {
             InitializeComponent();
             cn.getConnect();
-            CustomizedGridView();
             loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
                 "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
         }
@@ -20,6 +18,8 @@ namespace Xaysetha_System
         NpgsqlDataAdapter adapter;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
+        export_book_info exportBookInfo = new export_book_info();
+
 
         void loadData(string sql)
         {
@@ -37,35 +37,29 @@ namespace Xaysetha_System
             data.Columns[5].DataPropertyName = "occupation";
         }
 
-
-        public void CustomizedGridView()
+        private void statusControl_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
-            data.ColumnHeadersHeight = 30;
-        }
+            int selectedIndex = statusControl.SelectedIndex;
+            string status;
+            object value = exportBookInfo.datatable.Clear();
 
-        private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex == -1 && e.ColumnIndex >= 0)
+            switch (selectedIndex)
             {
-                e.PaintBackground(e.CellBounds, true);
-
-                using (Brush brush = new SolidBrush(Color.FromArgb(144, 189, 214)))
-                {
-                    e.Graphics.FillRectangle(brush, e.CellBounds);
-                }
-
-                using (Pen pen = new Pen(data.GridColor))
-                {
-                    Rectangle rect = e.CellBounds;
-                    rect.Width -= 1;
-                    rect.Height -= 1;
-                    e.Graphics.DrawRectangle(pen, rect);
-                }
-
-                e.PaintContent(e.CellBounds);
-
-                e.Handled = true;
+                case 0:
+                    table_.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
+                    break;
+                case 1:
+                    displayTotalOfData("ລໍຖ້າຊຳລະ");
+                    table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
+                    OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
+                    break;
+                case 2:
+                    OpenChildForm(new payment_info(), statusControl.TabPages[selectedIndex]);
+                    break;
+                // Add more cases if you have more tabs
+                default:
+                    break;
             }
         }
     }
