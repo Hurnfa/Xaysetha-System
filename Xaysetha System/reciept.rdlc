@@ -114,9 +114,9 @@
             </Paragraphs>
             <rd:DefaultName>paymentID</rd:DefaultName>
             <Top>0.85313in</Top>
-            <Left>4.76513in</Left>
+            <Left>4.3568in</Left>
             <Height>0.30937in</Height>
-            <Width>1.75049in</Width>
+            <Width>1.84216in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -239,7 +239,7 @@
             <Top>1.21806in</Top>
             <Left>3.41848in</Left>
             <Height>0.32192in</Height>
-            <Width>3.09714in</Width>
+            <Width>2.78047in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -324,7 +324,7 @@
             <Top>4.26958in</Top>
             <Left>3.98461in</Left>
             <Height>0.3125in</Height>
-            <Width>2.53101in</Width>
+            <Width>2.21434in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -404,14 +404,16 @@
           </Textbox>
         </ReportItems>
         <Height>4.82292in</Height>
-        <Style />
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
       </Body>
       <Width>6.77951in</Width>
       <Page>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <InteractiveHeight>11in</InteractiveHeight>
+        <InteractiveWidth>8.5in</InteractiveWidth>
         <Style />
       </Page>
     </ReportSection>
@@ -507,6 +509,7 @@
       </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>da931a9c-4715-4ab3-9f09-6566ab4bb223</rd:ReportID>
 </Report>
