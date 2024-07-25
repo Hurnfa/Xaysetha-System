@@ -39,17 +39,17 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.TenantID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Job = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -125,6 +125,8 @@
             // 
             // data
             // 
+            this.data.AllowUserToResizeColumns = false;
+            this.data.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -157,6 +159,7 @@
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
             this.data.Name = "data";
+            this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
@@ -175,7 +178,7 @@
             this.data.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.data.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.ThemeStyle.HeaderStyle.Height = 18;
-            this.data.ThemeStyle.ReadOnly = false;
+            this.data.ThemeStyle.ReadOnly = true;
             this.data.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,76 +188,47 @@
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(24, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ຄົ້ນຫາ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(24, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 28);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "ທັງໝົດ 0 ລາຍການ";
-            // 
             // TenantID
             // 
             this.TenantID.HeaderText = "ລະຫັດບຸກຄົນ";
             this.TenantID.MinimumWidth = 6;
             this.TenantID.Name = "TenantID";
+            this.TenantID.ReadOnly = true;
             // 
             // citizenName
             // 
             this.citizenName.HeaderText = "ຊື່";
             this.citizenName.MinimumWidth = 6;
             this.citizenName.Name = "citizenName";
+            this.citizenName.ReadOnly = true;
             // 
             // Surname
             // 
             this.Surname.HeaderText = "ນາມສະກຸນ";
             this.Surname.MinimumWidth = 6;
             this.Surname.Name = "Surname";
+            this.Surname.ReadOnly = true;
             // 
             // VillageName
             // 
             this.VillageName.HeaderText = "ບ້ານ";
             this.VillageName.MinimumWidth = 6;
             this.VillageName.Name = "VillageName";
+            this.VillageName.ReadOnly = true;
             // 
             // Tel
             // 
             this.Tel.HeaderText = "ເບີໂທ";
             this.Tel.MinimumWidth = 6;
             this.Tel.Name = "Tel";
+            this.Tel.ReadOnly = true;
             // 
             // Job
             // 
             this.Job.HeaderText = "ອາຊີບ";
             this.Job.MinimumWidth = 6;
             this.Job.Name = "Job";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "ພີມ";
-            this.dataGridViewImageColumn1.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 47;
+            this.Job.ReadOnly = true;
             // 
             // editButton
             // 
@@ -263,6 +237,7 @@
             this.editButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
             this.editButton.MinimumWidth = 6;
             this.editButton.Name = "editButton";
+            this.editButton.ReadOnly = true;
             this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.editButton.Width = 47;
@@ -289,6 +264,41 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(336, 48);
             this.guna2TextBox1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(24, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 28);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ຄົ້ນຫາ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(24, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 28);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "ທັງໝົດ 0 ລາຍການ";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "ພີມ";
+            this.dataGridViewImageColumn1.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 125;
             // 
             // exportBook
             // 
