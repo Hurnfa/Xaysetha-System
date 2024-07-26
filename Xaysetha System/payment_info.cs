@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -126,7 +125,7 @@ namespace Xaysetha_System
 
                     loadBill.Show();
 
-                break;
+                    break;
 
 
                 case "Edit":

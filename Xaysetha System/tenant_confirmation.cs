@@ -2,7 +2,6 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace Xaysetha_System
 {
@@ -19,8 +18,8 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
             CustomizedGridView();
-/*            loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
-                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");*/
+            /*            loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                            "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");*/
         }
 
         public void loadData(string sql)
@@ -67,6 +66,23 @@ namespace Xaysetha_System
                 e.PaintContent(e.CellBounds);
 
                 e.Handled = true;
+            }
+        }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            switch (columnName)
+            {
+                case "printButton":
+
+                    PrintDialog print = new PrintDialog();
+                    print.ShowDialog();
+                    //new PrintDialog().Show();
+
+                    break;
             }
         }
     }

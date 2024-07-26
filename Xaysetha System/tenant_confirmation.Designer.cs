@@ -37,7 +37,7 @@
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.printButton = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             this.Surname,
             this.VillageName,
             this.paymentStatus,
-            this.editButton});
+            this.printButton});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,6 +103,7 @@
             this.data.ThemeStyle.RowsStyle.Height = 24;
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
             // 
             // TenantID
@@ -140,17 +141,17 @@
             this.paymentStatus.Name = "paymentStatus";
             this.paymentStatus.ReadOnly = true;
             // 
-            // editButton
+            // printButton
             // 
-            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.editButton.HeaderText = "ພີມ";
-            this.editButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.ReadOnly = true;
-            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 47;
+            this.printButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.printButton.HeaderText = "ພີມ";
+            this.printButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
+            this.printButton.MinimumWidth = 6;
+            this.printButton.Name = "printButton";
+            this.printButton.ReadOnly = true;
+            this.printButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.printButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.printButton.Width = 47;
             // 
             // tenant_confirmation
             // 
@@ -174,6 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentStatus;
-        private System.Windows.Forms.DataGridViewImageColumn editButton;
+        private System.Windows.Forms.DataGridViewImageColumn printButton;
     }
 }
