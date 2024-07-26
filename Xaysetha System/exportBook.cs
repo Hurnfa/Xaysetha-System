@@ -1,5 +1,6 @@
 ﻿using Npgsql;
 using System.Data;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -12,11 +13,19 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
         export_book_info exportBookInfo = new export_book_info();
+        tenant_confirmation cf = new tenant_confirmation();
 
         public exportBook()
         {
             InitializeComponent();
             cn.getConnect();
+
+            cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_payment.duration, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                    "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
+
+            OpenChildForm(cf, statusControl.TabPages[0]);
+            displayTotalOfData(0);
+
         }
 
         string sql;
@@ -84,7 +93,7 @@ namespace Xaysetha_System
             {
                 case 0:
 
-                    tenant_confirmation cf = new tenant_confirmation();
+                    //tenant_confirmation cf = new tenant_confirmation();
                     cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_payment.duration, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
                 "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
 
@@ -97,7 +106,7 @@ namespace Xaysetha_System
                 case 1:
 
                     export_book_info tb_exportbook = new export_book_info();
-                    tb_exportbook.loadData("SELECT * FROM \"tb_residentialBook\"");
+                    tb_exportbook.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\";");
                     OpenChildForm(tb_exportbook, statusControl.TabPages[selectedIndex]);
 
                     displayTotalOfData(selectedIndex);

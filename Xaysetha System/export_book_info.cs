@@ -30,7 +30,7 @@ namespace Xaysetha_System
             data.Columns[0].DataPropertyName = "resBookID";
             data.Columns[1].DataPropertyName = "firstname";
             data.Columns[2].DataPropertyName = "lastname";
-            //data.Columns[3].DataPropertyName = "firstname";
+            data.Columns[3].DataPropertyName = "placeName";
             data.Columns[4].DataPropertyName = "issueDate";
             data.Columns[5].DataPropertyName = "expDate";
         }
@@ -75,9 +75,7 @@ namespace Xaysetha_System
             {
                 case "btnPrint":
 
-                    PrintDialog print = new PrintDialog();
-                    print.ShowDialog();
-                    //new PrintDialog().Show();
+
 
                 break;
             }

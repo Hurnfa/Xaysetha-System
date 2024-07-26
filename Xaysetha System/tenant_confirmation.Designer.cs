@@ -130,7 +130,7 @@
             // 
             // duration
             // 
-            this.duration.HeaderText = "ໄລຍະເວລາ";
+            this.duration.HeaderText = "ໄລຍະເວລາ (ເດືອນ)";
             this.duration.MinimumWidth = 6;
             this.duration.Name = "duration";
             this.duration.ReadOnly = true;

@@ -24,8 +24,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.13333in</Top>
-            <Left>0.95001in</Left>
+            <Top>0.125in</Top>
+            <Left>0.98313in</Left>
             <Height>0.24167in</Height>
             <Width>1.33333in</Width>
             <Style>
@@ -61,8 +61,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantName</rd:DefaultName>
-            <Top>0.57372in</Top>
-            <Left>1.43778in</Left>
+            <Top>0.56539in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>1</ZIndex>
@@ -99,8 +99,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantSurname</rd:DefaultName>
-            <Top>0.89316in</Top>
-            <Left>1.43778in</Left>
+            <Top>0.88483in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.86458in</Width>
             <ZIndex>2</ZIndex>
@@ -135,8 +135,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantBirthday</rd:DefaultName>
-            <Top>1.22929in</Top>
-            <Left>1.43778in</Left>
+            <Top>1.22096in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>2.05208in</Width>
             <ZIndex>3</ZIndex>
@@ -173,8 +173,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantRace</rd:DefaultName>
-            <Top>1.54874in</Top>
-            <Left>1.43778in</Left>
+            <Top>1.54041in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.51333in</Width>
             <ZIndex>4</ZIndex>
@@ -211,8 +211,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantJobs</rd:DefaultName>
-            <Top>2.8104in</Top>
-            <Left>1.43778in</Left>
+            <Top>2.80207in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.32834in</Width>
             <ZIndex>5</ZIndex>
@@ -249,8 +249,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantReligion</rd:DefaultName>
-            <Top>2.49095in</Top>
-            <Left>1.43778in</Left>
+            <Top>2.48262in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.86792in</Width>
             <ZIndex>6</ZIndex>
@@ -287,8 +287,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantWorkplace</rd:DefaultName>
-            <Top>3.12984in</Top>
-            <Left>1.43778in</Left>
+            <Top>3.12151in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>2.05208in</Width>
             <ZIndex>7</ZIndex>
@@ -332,8 +332,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantID</rd:DefaultName>
-            <Top>2.22706in</Top>
-            <Left>0.18834in</Left>
+            <Top>2.21873in</Top>
+            <Left>0.06702in</Left>
             <Height>0.48611in</Height>
             <Width>1.18in</Width>
             <ZIndex>8</ZIndex>
@@ -370,8 +370,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantNationality</rd:DefaultName>
-            <Top>1.86818in</Top>
-            <Left>1.43778in</Left>
+            <Top>1.85985in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.7636in</Width>
             <ZIndex>9</ZIndex>
@@ -408,8 +408,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantEthnic</rd:DefaultName>
-            <Top>2.18763in</Top>
-            <Left>1.43778in</Left>
+            <Top>2.1793in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.46278in</Width>
             <ZIndex>10</ZIndex>
@@ -444,8 +444,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantFamBookID</rd:DefaultName>
-            <Top>3.44929in</Top>
-            <Left>1.43778in</Left>
+            <Top>3.44096in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>2.05208in</Width>
             <ZIndex>11</ZIndex>
@@ -480,8 +480,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>tenantFamBookIssueDate</rd:DefaultName>
-            <Top>3.79042in</Top>
-            <Left>1.43778in</Left>
+            <Top>3.78209in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>2.05208in</Width>
             <ZIndex>12</ZIndex>
@@ -518,8 +518,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>village</rd:DefaultName>
-            <Top>4.10986in</Top>
-            <Left>1.43778in</Left>
+            <Top>4.10153in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1in</Width>
             <ZIndex>13</ZIndex>
@@ -556,8 +556,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>district</rd:DefaultName>
-            <Top>4.42931in</Top>
-            <Left>1.43778in</Left>
+            <Top>4.42098in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>14</ZIndex>
@@ -594,8 +594,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>province</rd:DefaultName>
-            <Top>4.74875in</Top>
-            <Left>1.43778in</Left>
+            <Top>4.74042in</Top>
+            <Left>1.31646in</Left>
             <Height>0.25in</Height>
             <Width>1.19792in</Width>
             <ZIndex>15</ZIndex>
@@ -610,17 +610,11 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>5.12in</Height>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
+        <Height>5.07375in</Height>
+        <Style />
       </Body>
-      <Width>3.55in</Width>
+      <Width>3.52083in</Width>
       <Page>
-        <PageHeight>5.12in</PageHeight>
-        <PageWidth>3.54in</PageWidth>
         <Style />
       </Page>
     </ReportSection>
@@ -642,6 +636,14 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="tenantNationality">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="tenantEthnic">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
     <ReportParameter Name="tenantReligion">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
@@ -651,18 +653,6 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="tenantWorkplace">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="tenantID">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="tenantDadName">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="tenantMomName">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -686,19 +676,11 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="tenantNationality">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="tenantEthnic">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>5</NumberOfRows>
+      <NumberOfRows>4</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -723,71 +705,56 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>tenantReligion</ParameterName>
+          <ParameterName>tenantNationality</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>tenantEthnic</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>tenantReligion</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>tenantJobs</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>1</RowIndex>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
           <ParameterName>tenantWorkplace</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>1</RowIndex>
-          <ParameterName>tenantID</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>tenantDadName</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
-          <ParameterName>tenantMomName</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>tenantFamBookID</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
+          <ColumnIndex>2</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>tenantFamBookIssueDate</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>2</RowIndex>
           <ParameterName>village</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
+          <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>district</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
+          <ColumnIndex>1</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>province</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>3</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>tenantNationality</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>4</RowIndex>
-          <ParameterName>tenantEthnic</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>16e97cd8-999d-4a3a-b4fa-85417d58f704</rd:ReportID>
+  <rd:ReportID>428e9c00-eecc-4220-af49-e654739eab5c</rd:ReportID>
 </Report>

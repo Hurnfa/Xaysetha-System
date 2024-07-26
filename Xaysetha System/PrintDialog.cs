@@ -11,28 +11,21 @@ namespace Xaysetha_System
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
         NpgsqlDataAdapter adapter;
+        int duration;
+        book_printing printing = new book_printing();
 
-        public PrintDialog()
+        public PrintDialog(int duration)
         {
             InitializeComponent();
             cn.getConnect();
             comboboxPlaceLoad();
+            this.duration = duration;
+            
         }
 
 
         public void fetchDataFromMainPage(BigInteger paymentID, string name, string surname, int duration)
         {
-            /*            cmd = new NpgsqlCommand("SELECT duration FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
-                        cmd.Parameters.AddWithValue("@paymentID", paymentID);
-                        NpgsqlDataReader reader = cmd.ExecuteReader();
-
-                        while (reader.Read())
-                        {
-                            duration = int.Parse(reader["duration"].ToString());
-                        }
-
-                        reader.Close();*/
-
             DateTime issueDate = datePickerIssueDate.Value,
                 expDate = issueDate.AddMonths(duration);
 
@@ -85,9 +78,37 @@ namespace Xaysetha_System
         {
             DateTime selectedDate = datePickerIssueDate.Value;
 
-            DateTime expiryDate = selectedDate.AddMonths(1);
+            DateTime expiryDate = selectedDate.AddMonths(duration);
 
             datePickerExpDate.Value = expiryDate;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            cmd = new NpgsqlCommand("INSERT INTO \"tb_residentialBook\" VALUES (@resBookID, @tenantID, @placeID, @issueDate, @expDate)", cn.conn);
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@resBookID", BigInteger.Parse(txtBookID.Text));
+                cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
+                cmd.Parameters.AddWithValue("@placeID", comboboxPlace.SelectedValue);
+                cmd.Parameters.AddWithValue("@issueDate", datePickerIssueDate.Value);
+                cmd.Parameters.AddWithValue("@expDate", datePickerExpDate.Value);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("ບັນທຶກສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                printing.loadDataToReport(BigInteger.Parse(txtTenantID.Text));
+
+                printing.Show();
+
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

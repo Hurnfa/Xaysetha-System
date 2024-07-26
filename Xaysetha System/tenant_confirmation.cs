@@ -88,7 +88,7 @@ namespace Xaysetha_System
             {
                 case "printButton":
 
-                    PrintDialog print = new PrintDialog();
+                    PrintDialog print = new PrintDialog(duration);
                     print.fetchDataFromMainPage(paymentID, name, surname, duration);
                     print.ShowDialog();
 

@@ -35,7 +35,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenantLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expiryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +62,7 @@
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.bookID,
             this.tenantName,
-            this.Surname,
+            this.tenantLastName,
             this.VillageName,
             this.issueDate,
             this.expiryDate,
@@ -134,12 +134,11 @@
             this.tenantName.Name = "tenantName";
             this.tenantName.ReadOnly = true;
             // 
-            // Surname
+            // tenantLastName
             // 
-            this.Surname.HeaderText = "ນາມສະກຸນ";
-            this.Surname.MinimumWidth = 6;
-            this.Surname.Name = "Surname";
-            this.Surname.ReadOnly = true;
+            this.tenantLastName.HeaderText = "ນາມສະກຸນ";
+            this.tenantLastName.Name = "tenantLastName";
+            this.tenantLastName.ReadOnly = true;
             // 
             // VillageName
             // 
@@ -195,7 +194,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenantName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenantLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn expiryDate;

@@ -237,9 +237,9 @@
             </Paragraphs>
             <rd:DefaultName>paymentDate</rd:DefaultName>
             <Top>1.21806in</Top>
-            <Left>3.41848in</Left>
+            <Left>4.3568in</Left>
             <Height>0.32192in</Height>
-            <Width>2.78047in</Width>
+            <Width>1.84215in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -432,7 +432,7 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="paymentDate">
-      <DataType>DateTime</DataType>
+      <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="duration">
