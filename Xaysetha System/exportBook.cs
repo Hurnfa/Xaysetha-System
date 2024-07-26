@@ -85,7 +85,7 @@ namespace Xaysetha_System
                 case 0:
 
                     tenant_confirmation cf = new tenant_confirmation();
-                    cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
+                    cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_payment.duration, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
                 "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
 
                     OpenChildForm(cf, statusControl.TabPages[selectedIndex]);

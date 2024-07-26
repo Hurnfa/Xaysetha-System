@@ -35,7 +35,7 @@
             this.TenantID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.citizenName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paymentStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printButton = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
@@ -61,7 +61,7 @@
             this.TenantID,
             this.citizenName,
             this.Surname,
-            this.VillageName,
+            this.duration,
             this.paymentStatus,
             this.printButton});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -75,12 +75,13 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
+            this.data.Margin = new System.Windows.Forms.Padding(2);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1280, 560);
+            this.data.Size = new System.Drawing.Size(960, 455);
             this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -108,7 +109,7 @@
             // 
             // TenantID
             // 
-            this.TenantID.HeaderText = "ລະຫັດປື້ມ";
+            this.TenantID.HeaderText = "ລະຫັດບິນ";
             this.TenantID.MinimumWidth = 6;
             this.TenantID.Name = "TenantID";
             this.TenantID.ReadOnly = true;
@@ -127,12 +128,12 @@
             this.Surname.Name = "Surname";
             this.Surname.ReadOnly = true;
             // 
-            // VillageName
+            // duration
             // 
-            this.VillageName.HeaderText = "ທີ່ພັກອາໄສ";
-            this.VillageName.MinimumWidth = 6;
-            this.VillageName.Name = "VillageName";
-            this.VillageName.ReadOnly = true;
+            this.duration.HeaderText = "ໄລຍະເວລາ";
+            this.duration.MinimumWidth = 6;
+            this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
             // 
             // paymentStatus
             // 
@@ -151,15 +152,16 @@
             this.printButton.ReadOnly = true;
             this.printButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.printButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.printButton.Width = 47;
+            this.printButton.Width = 46;
             // 
             // tenant_confirmation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 560);
+            this.ClientSize = new System.Drawing.Size(960, 455);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tenant_confirmation";
             this.Text = "tenant_confirmation";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
@@ -173,7 +175,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenantID;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentStatus;
         private System.Windows.Forms.DataGridViewImageColumn printButton;
     }

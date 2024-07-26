@@ -1,6 +1,9 @@
 ﻿using Npgsql;
+using System;
+/*using Org.BouncyCastle.Math;*/
 using System.Data;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -33,7 +36,7 @@ namespace Xaysetha_System
             data.Columns[0].DataPropertyName = "tenantID";
             data.Columns[1].DataPropertyName = "firstname";
             data.Columns[2].DataPropertyName = "lastname";
-            //data.Columns[3].DataPropertyName = "firstname";
+            data.Columns[3].DataPropertyName = "duration";
             data.Columns[4].DataPropertyName = "payment_status";
         }
 
@@ -74,13 +77,20 @@ namespace Xaysetha_System
             string columnName = data.Columns[e.ColumnIndex].Name;
             DataGridViewRow row = data.Rows[e.RowIndex];
 
+            BigInteger paymentID = BigInteger.Parse(row.Cells[0].Value?.ToString());
+
+            string name = row.Cells[1].Value?.ToString(),
+                surname = row.Cells[2].Value?.ToString();
+
+            int duration = int.Parse(row.Cells[3].Value?.ToString());
+
             switch (columnName)
             {
                 case "printButton":
 
                     PrintDialog print = new PrintDialog();
+                    print.fetchDataFromMainPage(paymentID, name, surname, duration);
                     print.ShowDialog();
-                    //new PrintDialog().Show();
 
                     break;
             }
