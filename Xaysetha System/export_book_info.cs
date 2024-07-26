@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System.Data;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -70,12 +71,17 @@ namespace Xaysetha_System
         {
             string columnName = data.Columns[e.ColumnIndex].Name;
             DataGridViewRow row = data.Rows[e.RowIndex];
+            BigInteger bookID = BigInteger.Parse(row.Cells[0].Value?.ToString());
+            string name = row.Cells[1].Value?.ToString();
+
+            book_printing printing = new book_printing();
 
             switch (columnName)
             {
                 case "btnPrint":
 
-
+                    printing.loadDataToReport(0, name);
+                    printing.Show();
 
                 break;
             }

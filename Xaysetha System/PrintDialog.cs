@@ -99,7 +99,7 @@ namespace Xaysetha_System
 
                 MessageBox.Show("ບັນທຶກສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                printing.loadDataToReport(BigInteger.Parse(txtTenantID.Text));
+                printing.loadDataToReport(BigInteger.Parse(txtTenantID.Text), null);
 
                 printing.Show();
 
