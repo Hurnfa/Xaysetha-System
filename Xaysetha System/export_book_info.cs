@@ -65,5 +65,22 @@ namespace Xaysetha_System
                 e.Handled = true;
             }
         }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            switch (columnName)
+            {
+                case "btnPrint":
+
+                    PrintDialog print = new PrintDialog();
+                    print.ShowDialog();
+                    //new PrintDialog().Show();
+
+                break;
+            }
+        }
     }
 }

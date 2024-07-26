@@ -39,7 +39,7 @@
             this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.expiryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnPrint = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@
             this.VillageName,
             this.issueDate,
             this.expiryDate,
-            this.editButton});
+            this.btnPrint});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,7 +78,7 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
-            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.data.Margin = new System.Windows.Forms.Padding(2);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
@@ -107,6 +107,7 @@
             this.data.ThemeStyle.RowsStyle.Height = 24;
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
             // 
             // dataGridViewImageColumn1
@@ -161,17 +162,17 @@
             this.expiryDate.Name = "expiryDate";
             this.expiryDate.ReadOnly = true;
             // 
-            // editButton
+            // btnPrint
             // 
-            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.editButton.HeaderText = "ພີມ";
-            this.editButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.ReadOnly = true;
-            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 46;
+            this.btnPrint.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.btnPrint.HeaderText = "ພີມ";
+            this.btnPrint.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
+            this.btnPrint.MinimumWidth = 6;
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ReadOnly = true;
+            this.btnPrint.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnPrint.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnPrint.Width = 46;
             // 
             // export_book_info
             // 
@@ -180,7 +181,7 @@
             this.ClientSize = new System.Drawing.Size(960, 455);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "export_book_info";
             this.Text = "export_book_info";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
@@ -198,6 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
         private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn expiryDate;
-        private System.Windows.Forms.DataGridViewImageColumn editButton;
+        private System.Windows.Forms.DataGridViewImageColumn btnPrint;
     }
 }

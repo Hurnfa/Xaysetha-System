@@ -40,7 +40,7 @@ namespace Xaysetha_System
 
                 case "ຍິງ":
 
-                    title = "ຍິງ";
+                    title = "ນາງ";
 
                     break;
 

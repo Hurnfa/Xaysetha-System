@@ -38,7 +38,7 @@
             this.duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.issuePerson = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.printButton = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Print = new System.Windows.Forms.DataGridViewImageColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
@@ -67,7 +67,7 @@
             this.duration,
             this.price,
             this.issuePerson,
-            this.printButton,
+            this.Print,
             this.Edit,
             this.Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -81,13 +81,13 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
-            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1083, 498);
+            this.data.Size = new System.Drawing.Size(812, 405);
             this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -155,15 +155,15 @@
             this.issuePerson.Name = "issuePerson";
             this.issuePerson.ReadOnly = true;
             // 
-            // printButton
+            // Print
             // 
-            this.printButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.printButton.HeaderText = "";
-            this.printButton.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
-            this.printButton.MinimumWidth = 6;
-            this.printButton.Name = "printButton";
-            this.printButton.ReadOnly = true;
-            this.printButton.Width = 23;
+            this.Print.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Print.HeaderText = "";
+            this.Print.Image = global::Xaysetha_System.Properties.Resources.material_symbols_print;
+            this.Print.MinimumWidth = 6;
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
+            this.Print.Width = 20;
             // 
             // Edit
             // 
@@ -174,7 +174,7 @@
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.Width = 23;
+            this.Edit.Width = 20;
             // 
             // Delete
             // 
@@ -186,16 +186,16 @@
             this.Delete.ReadOnly = true;
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Delete.Width = 23;
+            this.Delete.Width = 20;
             // 
             // payment_info
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 498);
+            this.ClientSize = new System.Drawing.Size(812, 405);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "payment_info";
             this.Text = "payment_info";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
@@ -212,7 +212,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewTextBoxColumn issuePerson;
-        private System.Windows.Forms.DataGridViewImageColumn printButton;
+        private System.Windows.Forms.DataGridViewImageColumn Print;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }

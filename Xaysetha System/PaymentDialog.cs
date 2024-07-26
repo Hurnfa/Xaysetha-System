@@ -79,6 +79,8 @@ namespace Xaysetha_System
 
             txtPrice.Text = price.ToString();
 
+            txtUser.Text = userID;
+/*
             cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
 
             cmd.Parameters.AddWithValue("@userID", userID);
@@ -89,7 +91,7 @@ namespace Xaysetha_System
             {
                 txtUser.Text = reader["userName"].ToString() + " " + reader["userLName"].ToString();
             }
-            reader.Close();
+            reader.Close();*/
 
             cmd = new NpgsqlCommand("SELECT payment_status FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
 

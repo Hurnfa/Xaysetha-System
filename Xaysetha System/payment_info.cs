@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -87,6 +88,8 @@ namespace Xaysetha_System
             }
         }
 
+        string name, surname, gender;
+
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string columnName = data.Columns[e.ColumnIndex].Name;
@@ -100,6 +103,32 @@ namespace Xaysetha_System
 
             switch (columnName)
             {
+                case "Print":
+
+                    cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+
+                    cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenantID));
+
+                    NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        name = reader["firstname"].ToString();
+                        surname = reader["lastname"].ToString();
+                        gender = reader["gender"].ToString();
+                    }
+
+                    reader.Close();
+
+                    printing loadBill = new printing();
+
+                    loadBill.loadDataToReport(payment_id, name, surname, price, duration, userID, gender);
+
+                    loadBill.Show();
+
+                break;
+
+
                 case "Edit":
 
                     paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, duration, price, "ແກ້ໄຂ");
