@@ -44,6 +44,7 @@ namespace Xaysetha_System
             cmd.Parameters.AddWithValue("@firstname", name);
             NpgsqlDataReader reader = cmd.ExecuteReader();
 
+
             while (reader.Read())
             {
                 txtTenantID.Text = reader["tenantID"].ToString();
@@ -52,6 +53,9 @@ namespace Xaysetha_System
             reader.Close();
 
             txtBookID.Text = new Random().Next().ToString();
+
+            lblID.Text = $"ເລກທີ່: {txtBookID.Text}";
+            lblName.Text = $"ຂອງທ່ານ: {name} {surname}";
 
         }
 

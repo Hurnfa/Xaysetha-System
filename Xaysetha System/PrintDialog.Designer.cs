@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,21 +55,11 @@
             this.datePickerIssueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.datePickerExpDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comboboxPlace = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
+            this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -78,6 +78,109 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(333, 512);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.White;
+            this.guna2GradientPanel1.BorderRadius = 16;
+            this.guna2GradientPanel1.Controls.Add(this.lblName);
+            this.guna2GradientPanel1.Controls.Add(this.lblID);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 402);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(280, 81);
+            this.guna2GradientPanel1.TabIndex = 7;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Noto Sans Lao", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(12, 40);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(65, 25);
+            this.lblName.TabIndex = 9;
+            this.lblName.Text = "ຂອງທ່ານ:";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Noto Sans Lao", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(12, 15);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(49, 25);
+            this.lblID.TabIndex = 8;
+            this.lblID.Text = "ເລກທີ່:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(73, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 33);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "ສຳລັບພົນລະເມືອງລາວ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(60, 275);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 33);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "ປຶ້ມອະນຸຍາດພັກເຊົາຊົ່ວຄາວ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(51, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(230, 33);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "ກະຊວງປ້ອງກັນຄວາມສະຫງົບ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(47, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(230, 33);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "ກະຊວງປ້ອງກັນຄວາມສະຫງົບ";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::Xaysetha_System.Properties.Resources.image_removebg_preview__3__1;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(97, 74);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(140, 140);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(297, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "ສັນຕິພາບ ເອກະລາດ ປະຊາທິປະໄຕ ເອກະພາບ ວັດທະນາຖາວອນ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(62, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ";
             // 
             // label1
             // 
@@ -336,41 +439,10 @@
             this.comboboxPlace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboboxPlace.ItemHeight = 30;
             this.comboboxPlace.Location = new System.Drawing.Point(705, 544);
-            this.comboboxPlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboboxPlace.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxPlace.Name = "comboboxPlace";
             this.comboboxPlace.Size = new System.Drawing.Size(388, 36);
             this.comboboxPlace.TabIndex = 34;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(62, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(297, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "ສັນຕິພາບ ເອກະລາດ ປະຊາທິປະໄຕ ເອກະພາບ ວັດທະນາຖາວອນ";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::Xaysetha_System.Properties.Resources.image_removebg_preview__3__1;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(97, 74);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(140, 140);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // guna2PictureBox1
             // 
@@ -384,78 +456,6 @@
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(47, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 33);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "ກະຊວງປ້ອງກັນຄວາມສະຫງົບ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(51, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 33);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "ກະຊວງປ້ອງກັນຄວາມສະຫງົບ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(60, 275);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 33);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "ປຶ້ມອະນຸຍາດພັກເຊົາຊົ່ວຄາວ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Noto Serif Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(73, 308);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(179, 33);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "ສຳລັບພົນລະເມືອງລາວ";
-            // 
-            // guna2GradientPanel1
-            // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.BorderColor = System.Drawing.Color.White;
-            this.guna2GradientPanel1.BorderRadius = 16;
-            this.guna2GradientPanel1.Controls.Add(this.label9);
-            this.guna2GradientPanel1.Controls.Add(this.label8);
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(22, 402);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(280, 81);
-            this.guna2GradientPanel1.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "ເລກທີ່:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "ຂອງທ່ານ:";
             // 
             // PrintDialog
             // 
@@ -488,10 +488,10 @@
             this.Text = "PrintDialog";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,8 +521,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
