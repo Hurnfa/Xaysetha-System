@@ -465,6 +465,7 @@
     <None Include="Resources\fi_plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\image-removebg-preview %283%29 1.png" />
     <None Include="Resources\ic_round.png" />
     <None Include="Resources\ic_round-close.png" />
     <None Include="Resources\material-symbols_print.png" />

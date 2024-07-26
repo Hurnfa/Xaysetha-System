@@ -22,16 +22,16 @@ namespace Xaysetha_System
 
         public void fetchDataFromMainPage(BigInteger paymentID, string name, string surname, int duration)
         {
-/*            cmd = new NpgsqlCommand("SELECT duration FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
-            cmd.Parameters.AddWithValue("@paymentID", paymentID);
-            NpgsqlDataReader reader = cmd.ExecuteReader();
+            /*            cmd = new NpgsqlCommand("SELECT duration FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
+                        cmd.Parameters.AddWithValue("@paymentID", paymentID);
+                        NpgsqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read())
-            {
-                duration = int.Parse(reader["duration"].ToString());
-            }
+                        while (reader.Read())
+                        {
+                            duration = int.Parse(reader["duration"].ToString());
+                        }
 
-            reader.Close();*/
+                        reader.Close();*/
 
             DateTime issueDate = datePickerIssueDate.Value,
                 expDate = issueDate.AddMonths(duration);
@@ -79,7 +79,11 @@ namespace Xaysetha_System
 
         private void datePickerIssueDate_ValueChanged(object sender, EventArgs e)
         {
+            DateTime selectedDate = datePickerIssueDate.Value;
 
+            DateTime expiryDate = selectedDate.AddMonths(1);
+
+            datePickerExpDate.Value = expiryDate;
         }
     }
 }

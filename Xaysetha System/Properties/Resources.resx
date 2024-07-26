@@ -124,9 +124,6 @@
   <data name="fi_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fi_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="work-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\work-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +136,17 @@
   <data name="u_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\u_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 1675" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 1675.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ph_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ph_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ph_house" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ph_house.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="material-symbols_logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols_logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="border_color2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\border_color2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,14 +163,17 @@
   <data name="add-friend-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-friend-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="house-03-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\house-03-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="material-symbols_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="u_angle-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\u_angle-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="u_angle-left-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\u_angle-left-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +187,17 @@
   <data name="dashboard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="u_phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\u_phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_round-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_round-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="u_lock-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\u_lock-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group 16751" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 1675.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Upload Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Upload Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +208,11 @@
   <data name="Ellipse 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="book-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\book-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Group 20479219" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 20479219.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-symbols_logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols_logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="book-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\book-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,20 +220,17 @@
   <data name="globe-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-symbols_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols_print.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="work-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\work-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_round-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_round-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="house-03-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\house-03-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 1675" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 1675.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unfriend-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\unfriend-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="u_phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\u_phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hands-pray-svgrepo-com 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hands-pray-svgrepo-com 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,19 +241,19 @@
   <data name="mdi_location" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_location.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 16751" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 1675.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dashboard (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="u_angle-left-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\u_angle-left-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Group 16752" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 16751.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image-removebg-preview (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image-removebg-preview (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ic_round" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dashboard (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="image-removebg-preview (3) 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-removebg-preview (3) 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
