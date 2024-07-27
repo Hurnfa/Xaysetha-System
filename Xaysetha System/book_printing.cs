@@ -28,9 +28,9 @@ namespace Xaysetha_System
         {
             if (name == null)
             {
-                cmd = new NpgsqlCommand("select * from tb_tenant inner join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" where tb_tenant.\"tenantID\"=@tenantID;", cn.conn);
-                cmd = new NpgsqlCommand("select * from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" " +
-                                        "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_tenant.\"tenantID\"=@tenantID;", cn.conn);
+                //cmd = new NpgsqlCommand("select * from tb_tenant inner join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" where tb_tenant.\"tenantID\"=@tenantID;", cn.conn);
+                cmd = new NpgsqlCommand("select * from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_tenant.\"tenantID\" = @tenantID;", cn.conn);
+
 
                 try
                 {
@@ -91,7 +91,7 @@ namespace Xaysetha_System
                         }
                         else
                         {
-                            byte[] imageData = (byte[])reader["tenantpics"];
+                            byte[] imageData = (byte[])reader["tenantPics"];
                             string base64String = Convert.ToBase64String(imageData);
                             rp.Add(new ReportParameter("tenantPics", base64String));
                         }
@@ -191,20 +191,21 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
 
-                        /*                    if (reader["tenantpics"] == DBNull.Value)
-                                            {
-                                                *//*rp.Add(new ReportParameter("tenantPics", ));
-                                                profilePictureBox.Image = null;*//*
-                                            }
-                                            else
-                                            {
-                                                byte[] img = (byte[])reader["tenantpics"];
-                                                MemoryStream memory = new MemoryStream(img);
-                                                profilePictureBox.Image = Image.FromStream(memory);
-                                            }*/
                         rp.Add(new ReportParameter("duration", reader["duration"].ToString()));
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
+
+                        if (reader["tenantpics"] == DBNull.Value)
+                        {
+                            rp.Add(new ReportParameter("tenantPics", ""));
+
+                        }
+                        else
+                        {
+                            byte[] imageData = (byte[])reader["tenantpics"];
+                            string base64String = Convert.ToBase64String(imageData);
+                            rp.Add(new ReportParameter("tenantPics", base64String));
+                        }
                     }
 
                     reader.Close();
@@ -232,69 +233,68 @@ namespace Xaysetha_System
                 catch (Exception ex)
                 {
                     MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }           
+            }
 
-                //display place section
+            //display place section
 
 
-                rp.Add(new ReportParameter("placeName", place));
+            rp.Add(new ReportParameter("placeName", place));
 
-                cmd = new NpgsqlCommand("select * from tb_place inner join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" where \"placeName\"=@placeName", cn.conn);
+            cmd = new NpgsqlCommand("select * from tb_place inner join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" where \"placeName\"=@placeName", cn.conn);
 
-                try
+            try
+            {
+                cmd.Parameters.AddWithValue("@placeName", place);
+
+                NpgsqlDataReader reader1 = cmd.ExecuteReader();
+
+                while (reader1.Read())
                 {
-                    cmd.Parameters.AddWithValue("@placeName", place);
+                    rp.Add(new ReportParameter("houseNo", reader1["placeHouseNumber"].ToString()));
+                    rp.Add(new ReportParameter("houseUnit", reader1["placeHouseUnit"].ToString()));
+                    //village missing value
 
-                    NpgsqlDataReader reader1 = cmd.ExecuteReader();
-
-                    while (reader1.Read())
+                    switch (reader1["gender"].ToString())
                     {
-                        rp.Add(new ReportParameter("houseNo", reader1["placeHouseNumber"].ToString()));
-                        rp.Add(new ReportParameter("houseUnit", reader1["placeHouseUnit"].ToString()));
-                        //village missing value
+                        case "ຊາຍ":
 
-                        switch (reader1["gender"].ToString())
-                        {
-                            case "ຊາຍ":
+                            gender = "ທ້າວ";
 
-                                gender = "ທ້າວ";
+                            break;
 
-                                break;
+                        case "ຍິງ":
 
-                            case "ຍິງ":
+                            gender = "ນາງ";
 
-                                gender = "ນາງ";
+                            break;
 
-                                break;
+                        default:
 
-                            default:
+                            gender = "ທ່ານ";
 
-                                gender = "ທ່ານ";
-
-                                break;
-                        }
-
-                        rp.Add(new ReportParameter("citizenGender", gender));
-                        rp.Add(new ReportParameter("citizenName", reader1["name"].ToString()));
-                        rp.Add(new ReportParameter("citizenSurname", reader1["surname"].ToString()));
+                            break;
                     }
 
-                    reader1.Close();
-
-                    rp.Add(new ReportParameter("placeVillage", "ນາໄຊ"));
+                    rp.Add(new ReportParameter("citizenGender", gender));
+                    rp.Add(new ReportParameter("citizenName", reader1["name"].ToString()));
+                    rp.Add(new ReportParameter("citizenSurname", reader1["surname"].ToString()));
 
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
 
+                reader1.Close();
 
+                rp.Add(new ReportParameter("placeVillage", "ນາໄຊ"));
 
-
-                reportViewer1.LocalReport.SetParameters(rp);
-                reportViewer1.RefreshReport();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            reportViewer1.LocalReport.SetParameters(rp);
+            reportViewer1.RefreshReport();
         }
 
         public void loadPlace()
