@@ -199,7 +199,6 @@ namespace Xaysetha_System
                         if (reader["tenantpics"] == DBNull.Value)
                         {
                             rp.Add(new ReportParameter("tenantPics", ""));
-
                         }
                         else
                         {
