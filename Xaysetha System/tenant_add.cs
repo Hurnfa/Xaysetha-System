@@ -164,7 +164,7 @@ namespace Xaysetha_System
 
                 cmd.ExecuteNonQuery();
 
-                cmd = new NpgsqlCommand("SELECT gender FROM tb_tenant WHERE \"tenantID\"="+tenantID, cn.conn);
+                cmd = new NpgsqlCommand("SELECT gender FROM tb_tenant WHERE \"tenantID\"=" + tenantID, cn.conn);
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
                 NpgsqlDataReader reader = cmd.ExecuteReader();
 
@@ -272,10 +272,7 @@ namespace Xaysetha_System
 
         private void txtReligion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void txtJobs_KeyPress(object sender, KeyPressEventArgs e)

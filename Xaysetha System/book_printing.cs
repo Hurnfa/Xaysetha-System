@@ -2,15 +2,7 @@
 using Npgsql;
 /*using Org.BouncyCastle.Math;*/
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -24,6 +16,7 @@ namespace Xaysetha_System
         public book_printing()
         {
             InitializeComponent();
+            reportViewer1.LocalReport.EnableExternalImages = true;
             cn.getConnect();
         }
 
@@ -31,7 +24,6 @@ namespace Xaysetha_System
         ReportParameterCollection rp = new ReportParameterCollection();
 
         string gender;
-
         public void loadDataToReport(BigInteger tenantID, string name, string place)
         {
             if (name == null)
@@ -58,19 +50,19 @@ namespace Xaysetha_System
 
                                 gender = "ທ້າວ";
 
-                            break;
+                                break;
 
                             case "ຍິງ":
 
                                 gender = "ນາງ";
 
-                            break;
+                                break;
 
                             default:
 
                                 gender = "ທ່ານ";
 
-                            break;
+                                break;
                         }
 
                         rp.Add(new ReportParameter("tenantGender", gender));
@@ -92,17 +84,20 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
 
-                        /*                    if (reader["tenantpics"] == DBNull.Value)
-                                            {
-                                                *//*rp.Add(new ReportParameter("tenantPics", ));
-                                                profilePictureBox.Image = null;*//*
-                                            }
-                                            else
-                                            {
-                                                byte[] img = (byte[])reader["tenantpics"];
-                                                MemoryStream memory = new MemoryStream(img);
-                                                profilePictureBox.Image = Image.FromStream(memory);
-                                            }*/
+                        if (reader["tenantpics"] == DBNull.Value)
+                        {
+                            rp.Add(new ReportParameter("tenantPics", ""));
+
+                        }
+                        else
+                        {
+                            byte[] imageData = (byte[])reader["tenantpics"];
+                            string base64String = Convert.ToBase64String(imageData);
+                            rp.Add(new ReportParameter("tenantPics", base64String));
+                        }
+
+
+
 
                         rp.Add(new ReportParameter("duration", reader["duration"].ToString()));
                         expDate = DateTime.Parse(reader["expDate"].ToString());
@@ -121,15 +116,16 @@ namespace Xaysetha_System
                     //book section
 
                     rp.Add(new ReportParameter("tenantPurpose", "."));
-                    
 
-                    
+
+
 
                     rp.Add(new ReportParameter("expDate", expDate.ToString("dd/MM/yyyy")));
 
-                    
+
 
                     rp.Add(new ReportParameter("issueDate", issueDate.ToString("dd/MM/yyyy")));
+
 
                 }
                 catch (Exception ex)
@@ -228,7 +224,7 @@ namespace Xaysetha_System
 
                     rp.Add(new ReportParameter("expDate", expDate.ToString("dd/MM/yyyy")));
 
-                    
+
 
                     rp.Add(new ReportParameter("issueDate", issueDate.ToString("dd/MM/yyyy")));
 

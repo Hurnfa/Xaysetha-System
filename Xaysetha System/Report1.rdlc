@@ -1123,6 +1123,21 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Image Name="imagePics">
+            <Source>External</Source>
+            <Value>="data:image/png;base64," &amp; Parameters!tenantPics.Value</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>2.82652in</Top>
+            <Left>0.20222in</Left>
+            <Height>1.53334in</Height>
+            <Width>1.16612in</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
         </ReportItems>
         <Height>9.32in</Height>
         <Style>
@@ -1254,6 +1269,11 @@
     </ReportParameter>
     <ReportParameter Name="issueDate">
       <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="tenantPics">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
@@ -1406,6 +1426,11 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>7</RowIndex>
           <ParameterName>issueDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>7</RowIndex>
+          <ParameterName>tenantPics</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
