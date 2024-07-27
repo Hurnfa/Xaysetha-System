@@ -728,7 +728,9 @@
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!placeName.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -814,14 +816,12 @@
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!placeVillage.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>, </Value>
-                    <Style />
-                  </TextRun>
-                  <TextRun>
-                    <Value>ເມືອງ ໄຊເສດຖາ</Value>
+                    <Value>, ເມືອງ ໄຊເສດຖາ</Value>
                     <Style>
                       <FontFamily>Phetsarath OT</FontFamily>
                     </Style>
@@ -894,23 +894,33 @@
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!citizenGender.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value xml:space="preserve"> </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!citizenName.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value xml:space="preserve"> </Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!citizenSurname.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
@@ -946,7 +956,9 @@
                   </TextRun>
                   <TextRun>
                     <Value>=Parameters!tenantPurpose.Value</Value>
-                    <Style />
+                    <Style>
+                      <FontFamily>Phetsarath OT</FontFamily>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
