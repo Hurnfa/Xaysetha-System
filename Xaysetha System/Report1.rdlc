@@ -1125,7 +1125,7 @@
           </Textbox>
           <Image Name="imagePics">
             <Source>External</Source>
-            <Value>="data:image/png;base64," &amp; Parameters!tenantPics.Value</Value>
+            <Value>="data:image/jpeg;base64," &amp; Parameters!tenantPics.Value</Value>
             <Sizing>FitProportional</Sizing>
             <Top>2.82652in</Top>
             <Left>0.20222in</Left>
