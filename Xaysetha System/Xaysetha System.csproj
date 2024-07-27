@@ -270,6 +270,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="resident_add.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,7 +380,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="reciept.rdlc" />
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="resident_add.resx">
       <DependentUpon>resident_add.cs</DependentUpon>
     </EmbeddedResource>

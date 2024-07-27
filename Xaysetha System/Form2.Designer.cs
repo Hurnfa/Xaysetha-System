@@ -51,26 +51,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnMakeReport = new Guna.UI2.WinForms.Guna2Button();
-            this.cbVillageMakeReport = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbVillage5 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdoCitizen = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdoTenant = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label21 = new System.Windows.Forms.Label();
             this.datePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelDisplayVillage1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelDisplayVillage2 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal4 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.labelDisplayVillage4 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal3 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelDisplayVillage3 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -115,6 +115,7 @@
             this.cbVillage4.Name = "cbVillage4";
             this.cbVillage4.Size = new System.Drawing.Size(172, 36);
             this.cbVillage4.TabIndex = 24;
+            this.cbVillage4.SelectedIndexChanged += new System.EventHandler(this.cbVillage4_SelectedIndexChanged);
             // 
             // cbVillage2
             // 
@@ -146,6 +147,7 @@
             this.cbVillage3.Name = "cbVillage3";
             this.cbVillage3.Size = new System.Drawing.Size(172, 36);
             this.cbVillage3.TabIndex = 22;
+            this.cbVillage3.SelectedIndexChanged += new System.EventHandler(this.cbVillage3_SelectedIndexChanged);
             // 
             // cbVillage1
             // 
@@ -161,6 +163,7 @@
             this.cbVillage1.Name = "cbVillage1";
             this.cbVillage1.Size = new System.Drawing.Size(172, 36);
             this.cbVillage1.TabIndex = 21;
+            this.cbVillage1.SelectedIndexChanged += new System.EventHandler(this.cbVillage1_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -336,10 +339,10 @@
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 16;
             this.guna2CustomGradientPanel2.Controls.Add(this.btnMakeReport);
-            this.guna2CustomGradientPanel2.Controls.Add(this.cbVillageMakeReport);
+            this.guna2CustomGradientPanel2.Controls.Add(this.cbVillage5);
             this.guna2CustomGradientPanel2.Controls.Add(this.label22);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.guna2RadioButton1);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdoCitizen);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdoTenant);
             this.guna2CustomGradientPanel2.Controls.Add(this.label21);
             this.guna2CustomGradientPanel2.Controls.Add(this.datePicker2);
             this.guna2CustomGradientPanel2.Controls.Add(this.label20);
@@ -370,21 +373,22 @@
             this.btnMakeReport.Size = new System.Drawing.Size(210, 54);
             this.btnMakeReport.TabIndex = 20;
             this.btnMakeReport.Text = "ສ້າງລາຍງານ";
+            this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
-            // cbVillageMakeReport
+            // cbVillage5
             // 
-            this.cbVillageMakeReport.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillageMakeReport.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillageMakeReport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillageMakeReport.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillageMakeReport.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillageMakeReport.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbVillageMakeReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbVillageMakeReport.ItemHeight = 30;
-            this.cbVillageMakeReport.Location = new System.Drawing.Point(31, 389);
-            this.cbVillageMakeReport.Name = "cbVillageMakeReport";
-            this.cbVillageMakeReport.Size = new System.Drawing.Size(221, 36);
-            this.cbVillageMakeReport.TabIndex = 15;
+            this.cbVillage5.BackColor = System.Drawing.Color.Transparent;
+            this.cbVillage5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbVillage5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVillage5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbVillage5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbVillage5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbVillage5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbVillage5.ItemHeight = 30;
+            this.cbVillage5.Location = new System.Drawing.Point(31, 389);
+            this.cbVillage5.Name = "cbVillage5";
+            this.cbVillage5.Size = new System.Drawing.Size(221, 36);
+            this.cbVillage5.TabIndex = 15;
             // 
             // label22
             // 
@@ -398,47 +402,47 @@
             this.label22.TabIndex = 14;
             this.label22.Text = "ເລືອກບ້ານທີ່ຕ້ອງການ";
             // 
-            // guna2RadioButton2
+            // rdoCitizen
             // 
-            this.guna2RadioButton2.AutoSize = true;
-            this.guna2RadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton2.Location = new System.Drawing.Point(250, 278);
-            this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(152, 33);
-            this.guna2RadioButton2.TabIndex = 13;
-            this.guna2RadioButton2.Text = "ປະຊາກອນໃນເມືອງ";
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UseVisualStyleBackColor = false;
+            this.rdoCitizen.AutoSize = true;
+            this.rdoCitizen.BackColor = System.Drawing.Color.Transparent;
+            this.rdoCitizen.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCitizen.CheckedState.BorderThickness = 0;
+            this.rdoCitizen.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoCitizen.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoCitizen.CheckedState.InnerOffset = -4;
+            this.rdoCitizen.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoCitizen.Location = new System.Drawing.Point(250, 278);
+            this.rdoCitizen.Name = "rdoCitizen";
+            this.rdoCitizen.Size = new System.Drawing.Size(152, 33);
+            this.rdoCitizen.TabIndex = 13;
+            this.rdoCitizen.Text = "ປະຊາກອນໃນເມືອງ";
+            this.rdoCitizen.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoCitizen.UncheckedState.BorderThickness = 2;
+            this.rdoCitizen.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoCitizen.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoCitizen.UseVisualStyleBackColor = false;
             // 
-            // guna2RadioButton1
+            // rdoTenant
             // 
-            this.guna2RadioButton1.AutoSize = true;
-            this.guna2RadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2RadioButton1.Location = new System.Drawing.Point(31, 278);
-            this.guna2RadioButton1.Name = "guna2RadioButton1";
-            this.guna2RadioButton1.Size = new System.Drawing.Size(149, 33);
-            this.guna2RadioButton1.TabIndex = 12;
-            this.guna2RadioButton1.Text = "ຜູ້ພັກເຊົາຕ່າງແດນ";
-            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton1.UseVisualStyleBackColor = false;
+            this.rdoTenant.AutoSize = true;
+            this.rdoTenant.BackColor = System.Drawing.Color.Transparent;
+            this.rdoTenant.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoTenant.CheckedState.BorderThickness = 0;
+            this.rdoTenant.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdoTenant.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdoTenant.CheckedState.InnerOffset = -4;
+            this.rdoTenant.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTenant.Location = new System.Drawing.Point(31, 278);
+            this.rdoTenant.Name = "rdoTenant";
+            this.rdoTenant.Size = new System.Drawing.Size(149, 33);
+            this.rdoTenant.TabIndex = 12;
+            this.rdoTenant.Text = "ຜູ້ພັກເຊົາຕ່າງແດນ";
+            this.rdoTenant.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoTenant.UncheckedState.BorderThickness = 2;
+            this.rdoTenant.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdoTenant.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdoTenant.UseVisualStyleBackColor = false;
             // 
             // label21
             // 
@@ -494,7 +498,7 @@
             // 
             this.guna2CustomGradientPanel3.BorderRadius = 16;
             this.guna2CustomGradientPanel3.Controls.Add(this.labelTotal1);
-            this.guna2CustomGradientPanel3.Controls.Add(this.label8);
+            this.guna2CustomGradientPanel3.Controls.Add(this.labelDisplayVillage1);
             this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(47, 507);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(305, 200);
@@ -512,24 +516,24 @@
             this.labelTotal1.TabIndex = 6;
             this.labelTotal1.Text = "1,034";
             // 
-            // label8
+            // labelDisplayVillage1
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(72, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 28);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDisplayVillage1.AutoSize = true;
+            this.labelDisplayVillage1.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisplayVillage1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisplayVillage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelDisplayVillage1.Location = new System.Drawing.Point(72, 116);
+            this.labelDisplayVillage1.Name = "labelDisplayVillage1";
+            this.labelDisplayVillage1.Size = new System.Drawing.Size(166, 28);
+            this.labelDisplayVillage1.TabIndex = 5;
+            this.labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
+            this.labelDisplayVillage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel4
             // 
             this.guna2CustomGradientPanel4.BorderRadius = 16;
             this.guna2CustomGradientPanel4.Controls.Add(this.labelTotal2);
-            this.guna2CustomGradientPanel4.Controls.Add(this.label10);
+            this.guna2CustomGradientPanel4.Controls.Add(this.labelDisplayVillage2);
             this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(361, 507);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(305, 200);
@@ -547,24 +551,24 @@
             this.labelTotal2.TabIndex = 6;
             this.labelTotal2.Text = "2,294";
             // 
-            // label10
+            // labelDisplayVillage2
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label10.Location = new System.Drawing.Point(95, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 56);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDisplayVillage2.AutoSize = true;
+            this.labelDisplayVillage2.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisplayVillage2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisplayVillage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelDisplayVillage2.Location = new System.Drawing.Point(95, 116);
+            this.labelDisplayVillage2.Name = "labelDisplayVillage2";
+            this.labelDisplayVillage2.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage2.TabIndex = 5;
+            this.labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
+            this.labelDisplayVillage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel5
             // 
             this.guna2CustomGradientPanel5.BorderRadius = 16;
             this.guna2CustomGradientPanel5.Controls.Add(this.labelTotal4);
-            this.guna2CustomGradientPanel5.Controls.Add(this.label12);
+            this.guna2CustomGradientPanel5.Controls.Add(this.labelDisplayVillage4);
             this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(361, 716);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(305, 200);
@@ -582,24 +586,24 @@
             this.labelTotal4.TabIndex = 6;
             this.labelTotal4.Text = "19,183";
             // 
-            // label12
+            // labelDisplayVillage4
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label12.Location = new System.Drawing.Point(72, 116);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 56);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDisplayVillage4.AutoSize = true;
+            this.labelDisplayVillage4.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisplayVillage4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisplayVillage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelDisplayVillage4.Location = new System.Drawing.Point(72, 116);
+            this.labelDisplayVillage4.Name = "labelDisplayVillage4";
+            this.labelDisplayVillage4.Size = new System.Drawing.Size(166, 56);
+            this.labelDisplayVillage4.TabIndex = 5;
+            this.labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
+            this.labelDisplayVillage4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CustomGradientPanel6
             // 
             this.guna2CustomGradientPanel6.BorderRadius = 16;
             this.guna2CustomGradientPanel6.Controls.Add(this.labelTotal3);
-            this.guna2CustomGradientPanel6.Controls.Add(this.label14);
+            this.guna2CustomGradientPanel6.Controls.Add(this.labelDisplayVillage3);
             this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(47, 716);
             this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(305, 200);
@@ -617,18 +621,18 @@
             this.labelTotal3.TabIndex = 6;
             this.labelTotal3.Text = "7,634";
             // 
-            // label14
+            // labelDisplayVillage3
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label14.Location = new System.Drawing.Point(89, 116);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 56);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDisplayVillage3.AutoSize = true;
+            this.labelDisplayVillage3.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisplayVillage3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisplayVillage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelDisplayVillage3.Location = new System.Drawing.Point(89, 116);
+            this.labelDisplayVillage3.Name = "labelDisplayVillage3";
+            this.labelDisplayVillage3.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage3.TabIndex = 5;
+            this.labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
+            this.labelDisplayVillage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
@@ -688,16 +692,16 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private System.Windows.Forms.Label labelTotal1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelDisplayVillage1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private System.Windows.Forms.Label labelTotal2;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelDisplayVillage2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
         private System.Windows.Forms.Label labelTotal4;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label labelDisplayVillage4;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
         private System.Windows.Forms.Label labelTotal3;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelDisplayVillage3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -706,10 +710,10 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker datePicker2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillageMakeReport;
+        private Guna.UI2.WinForms.Guna2ComboBox cbVillage5;
         private System.Windows.Forms.Label label22;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2RadioButton rdoCitizen;
+        private Guna.UI2.WinForms.Guna2RadioButton rdoTenant;
         private Guna.UI2.WinForms.Guna2Button btnMakeReport;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage4;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage2;

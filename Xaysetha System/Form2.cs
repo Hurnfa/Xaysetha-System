@@ -22,6 +22,7 @@ namespace Xaysetha_System
             comboVillage2Load();
             comboVillage3Load();
             comboVillage4Load();
+            comboVillage5Load();
         }
 
         void loadTotalTenant()
@@ -94,6 +95,19 @@ namespace Xaysetha_System
             cbVillage4.ValueMember = "villageID";
         }
 
+        void comboVillage5Load()
+        {
+            DataSet ds5 = new DataSet();
+
+            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+            adapter.Fill(ds5);
+
+            cbVillage5.DataSource = ds5.Tables[0];
+
+            cbVillage5.DisplayMember = "villageName";
+            cbVillage5.ValueMember = "villageID";
+        }
+
         private void cbVillage2_SelectedIndexChanged(object sender, System.EventArgs e)
         {
 
@@ -123,6 +137,8 @@ namespace Xaysetha_System
 
             // Display the tenant count in the label
             labelTotal2.Text = tenantCount.ToString();
+
+            labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ "+cbVillage2.Text+")\r\n";
         }
 
         private int QueryInformation(string villageName)
@@ -161,6 +177,54 @@ namespace Xaysetha_System
 
 
             return tenantCount;
+        }
+
+        private void cbVillage3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = cbVillage3.Text;
+
+            // Query information based on the selected item
+            int tenantCount = QueryInformation(selectedItem);
+
+            // Display the tenant count in the label
+            labelTotal3.Text = tenantCount.ToString();
+
+            labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage3.Text + ")\r\n";
+        }
+
+        private void cbVillage4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = cbVillage4.Text;
+
+            // Query information based on the selected item
+            int tenantCount = QueryInformation(selectedItem);
+
+            // Display the tenant count in the label
+            labelTotal4.Text = tenantCount.ToString();
+
+            labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage4.Text + ")\r\n";
+        }
+
+        private void cbVillage1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedItem = cbVillage4.Text;
+
+            // Query information based on the selected item
+            int tenantCount = QueryInformation(selectedItem);
+
+            // Display the tenant count in the label
+            labelTotal1.Text = tenantCount.ToString();
+
+            labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage1.Text + ")\r\n";
+        }
+
+        private void btnMakeReport_Click(object sender, EventArgs e)
+        {
+            Report rp = new Report();
+
+            rp.loadDataToReport();
+
+            rp.Show();
         }
     }
 }

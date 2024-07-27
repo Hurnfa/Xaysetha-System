@@ -86,15 +86,15 @@ namespace Xaysetha_System
 
                         if (reader["tenantpics"] == DBNull.Value)
                         {
-                            rp.Add(new ReportParameter("tenantPics", ""));
+                            rp.Add(new ReportParameter("tenantPics", "0"));
 
                         }
                         else
                         {
                             byte[] imageData = (byte[])reader["tenantpics"];
-                            string base64String = Convert.ToBase64String(imageData);
-                            string imageDataUrl = $"data:image/jpeg;base64,{base64String}";
-                            rp.Add(new ReportParameter("tenantPics", imageDataUrl));
+                            /*string base64String = Convert.ToBase64String(imageData);
+                            string imageDataUrl = $"data:image/jpeg;base64,{base64String}";*/
+                            rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
                         }
 
 
@@ -203,8 +203,9 @@ namespace Xaysetha_System
                         else
                         {
                             byte[] imageData = (byte[])reader["tenantpics"];
-                            string base64String = Convert.ToBase64String(imageData);
-                            rp.Add(new ReportParameter("tenantPics", base64String));
+/*                            string base64String = Convert.ToBase64String(imageData);
+                            rp.Add(new ReportParameter("tenantPics", base64String));*/
+                            rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
                         }
                     }
 
