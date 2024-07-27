@@ -1,6 +1,6 @@
 ﻿using Npgsql;
+using System;
 using System.Data;
-using System.Numerics;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -96,24 +96,71 @@ namespace Xaysetha_System
 
         private void cbVillage2_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            cmd = new NpgsqlCommand("SELECT v.\"villageID\", v.\"villageName\", COUNT(rb.\"tenantID\") AS tenant_count FROM \"tb_residentialBook\" rb " +
-                "JOIN tb_place p ON rb.\"placeID\" = p.\"placeID\" JOIN tb_village v ON p.\"villageID\" = v.\"villageID\"" +
-                "WHERE v.\"villageID\" = @villageID GROUP BY v.\"villageID\", v.\"villageName\";", cn.conn);
 
-            /*cmd = new NpgsqlCommand("select count(*) from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\"" +
-                "join tb_place on \"tb_residentialBook\".\"placeID\" = tb_place.\"placeID\" " +
-                "join tb_village on tb_place.\"villageID\" = tb_village.\"villageID\" where tb_village.\"villageID\"=@villageID", cn.conn);*/
+            //cmd = new NpgsqlCommand("SELECT v.\"villageID\", v.\"villageName\", COUNT(rb.\"tenantID\") AS tenant_count FROM \"tb_residentialBook\" rb " +
+            //    "JOIN tb_place p ON rb.\"placeID\" = p.\"placeID\" JOIN tb_village v ON p.\"villageID\" = v.\"villageID\"" +
+            //    "WHERE v.\"villageID\" = @villageID GROUP BY v.\"villageID\", v.\"villageName\";", cn.conn);
 
-            cmd.Parameters.AddWithValue("@villageID", cbVillage2.ValueMember);
+            ///*cmd = new NpgsqlCommand("select count(*) from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\"" +
+            //    "join tb_place on \"tb_residentialBook\".\"placeID\" = tb_place.\"placeID\" " +
+            //    "join tb_village on tb_place.\"villageID\" = tb_village.\"villageID\" where tb_village.\"villageID\"=@villageID", cn.conn);*/
 
-            NpgsqlDataReader reader2 = cmd.ExecuteReader();
+            //cmd.Parameters.AddWithValue("@villageID", Convert.ToInt64(cbVillage2.ValueMember.ToString()));
 
-            while (reader2.Read())
+            //NpgsqlDataReader reader2 = cmd.ExecuteReader();
+
+            //while (reader2.Read())
+            //{
+            //    labelTotal2.Text = reader2["tenant_count"].ToString();
+            //}
+
+            //reader2.Close();
+
+            string selectedItem = cbVillage2.Text;
+
+            // Query information based on the selected item
+            int tenantCount = QueryInformation(selectedItem);
+
+            // Display the tenant count in the label
+            labelTotal2.Text = tenantCount.ToString();
+        }
+
+        private int QueryInformation(string villageName)
+        {
+            int tenantCount = 0;
+
+            // Example query (update with your actual query)
+            string query = "SELECT v.\"villageID\", v.\"villageName\", COUNT(rb.\"tenantID\") AS tenant_count " +
+                           "FROM \"tb_residentialBook\" rb " +
+                           "JOIN tb_place p ON rb.\"placeID\" = p.\"placeID\" " +
+                           "JOIN tb_village v ON p.\"villageID\" = v.\"villageID\" " +
+                           "WHERE v.\"villageName\" = @villageName " +
+                           "GROUP BY v.\"villageID\", v.\"villageName\";";
+
+            // Using NpgsqlConnection and NpgsqlCommand to query the database
+
+            NpgsqlCommand command = new NpgsqlCommand(query, cn.conn);
+            command.Parameters.AddWithValue("@villageName", villageName);
+
+            try
             {
-                labelTotal2.Text = reader2["tenant_count"].ToString();
+                NpgsqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    tenantCount = reader.GetInt32(reader.GetOrdinal("tenant_count"));
+                    //labelTotal2.Text = reader["tenant_count"].ToString();
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
 
-            reader2.Close();
+
+            return tenantCount;
         }
     }
 }
