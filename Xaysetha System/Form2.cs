@@ -220,18 +220,22 @@ namespace Xaysetha_System
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-
-
             Report rp = new Report();
 
-            rp.loadDataToReport(cbVillage5.SelectedValue.ToString(), datePicker1.Value, datePicker2.Value);
+            if (rdoTenant.Checked)
+            {
+                // Code to execute if radio button "1" is checked
 
-            rp.Show();
-        }
+                rp.loadDataToReport(cbVillage5.SelectedValue.ToString(), datePicker1.Value, datePicker2.Value);
+                rp.Show();
+            }
+            else if (rdoCitizen.Checked)
+            {
+                Form3 report = new Form3();
 
-        private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
+                report.loadDataCitizen();
+                report.Show();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)

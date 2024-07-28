@@ -304,13 +304,12 @@
             // 
             // label_total_tenant
             // 
-            this.label_total_tenant.AutoSize = true;
             this.label_total_tenant.BackColor = System.Drawing.Color.Transparent;
             this.label_total_tenant.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_total_tenant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.label_total_tenant.Location = new System.Drawing.Point(224, 99);
+            this.label_total_tenant.Location = new System.Drawing.Point(0, 99);
             this.label_total_tenant.Name = "label_total_tenant";
-            this.label_total_tenant.Size = new System.Drawing.Size(168, 71);
+            this.label_total_tenant.Size = new System.Drawing.Size(619, 71);
             this.label_total_tenant.TabIndex = 6;
             this.label_total_tenant.Text = "31,456";
             this.label_total_tenant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -33,7 +33,6 @@ namespace Xaysetha_System
                     reportViewer1.LocalReport.DataSources.Add(reportDataSource);
                     reportViewer1.RefreshReport();
                 }*/
-
         public void loadDataToReport(string village, DateTime start, DateTime stop)
         {
             cmd = new NpgsqlCommand("SELECT \"villageName\" FROM tb_village WHERE \"villageID\"=@villageID", cn.conn);

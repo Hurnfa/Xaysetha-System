@@ -222,7 +222,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox1.Image = global::Xaysetha_System.Properties.Resources.ph_city_light;
             this.pictureBox1.Location = new System.Drawing.Point(24, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +246,7 @@
             "ອາພັດເມັ້ນ",
             "ຫໍພັກ"});
             this.combobox_place_type.Location = new System.Drawing.Point(75, 32);
-            this.combobox_place_type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combobox_place_type.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_place_type.Name = "combobox_place_type";
             this.combobox_place_type.Size = new System.Drawing.Size(369, 36);
             this.combobox_place_type.TabIndex = 20;
@@ -325,7 +325,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox2.Image = global::Xaysetha_System.Properties.Resources.u_user;
             this.pictureBox2.Location = new System.Drawing.Point(24, 32);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,7 +355,7 @@
             this.combobox_citizen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.combobox_citizen.ItemHeight = 30;
             this.combobox_citizen.Location = new System.Drawing.Point(75, 32);
-            this.combobox_citizen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combobox_citizen.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_citizen.Name = "combobox_citizen";
             this.combobox_citizen.Size = new System.Drawing.Size(369, 36);
             this.combobox_citizen.TabIndex = 22;
@@ -378,7 +378,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pictureBox3.Image = global::Xaysetha_System.Properties.Resources.ph_house;
             this.pictureBox3.Location = new System.Drawing.Point(24, 25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(43, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -396,7 +396,7 @@
             this.combobox_village.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.combobox_village.ItemHeight = 30;
             this.combobox_village.Location = new System.Drawing.Point(75, 25);
-            this.combobox_village.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combobox_village.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_village.Name = "combobox_village";
             this.combobox_village.Size = new System.Drawing.Size(369, 36);
             this.combobox_village.TabIndex = 22;
@@ -492,7 +492,6 @@
             this.txtPlaceName.SelectedText = "";
             this.txtPlaceName.Size = new System.Drawing.Size(443, 48);
             this.txtPlaceName.TabIndex = 6;
-            this.txtPlaceName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaceName_KeyPress);
             // 
             // label5
             // 

@@ -1,6 +1,5 @@
 ﻿using Npgsql;
 using System.Data;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -87,7 +86,7 @@ namespace Xaysetha_System
         {
             int selectedIndex = statusControl.SelectedIndex;
             string status;
-            
+
 
             switch (selectedIndex)
             {
@@ -124,7 +123,7 @@ namespace Xaysetha_System
 
         private void datePickerIssueDate_ValueChanged(object sender, System.EventArgs e)
         {
-            exportBookInfo.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\" WHERE \"issueDate\"='" + datePickerIssueDate.Value+"'");
+            exportBookInfo.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\" WHERE \"issueDate\"='" + "datePickerIssueDate");
 
             OpenChildForm(exportBookInfo, statusControl.TabPages[1]);
 
