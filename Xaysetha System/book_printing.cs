@@ -84,18 +84,18 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
 
-                        if (reader["tenantpics"] == DBNull.Value)
-                        {
-                            rp.Add(new ReportParameter("tenantPics", "0"));
+                        //if (reader["tenantpics"] == DBNull.Value)
+                        //{
+                        //    rp.Add(new ReportParameter("tenantPics", "0"));
 
-                        }
-                        else
-                        {
-                            byte[] imageData = (byte[])reader["tenantpics"];
-                            /*string base64String = Convert.ToBase64String(imageData);
-                            string imageDataUrl = $"data:image/jpeg;base64,{base64String}";*/
-                            rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
-                        }
+                        //}
+                        //else
+                        //{
+                        //    byte[] imageData = (byte[])reader["tenantpics"];
+                        //    /*string base64String = Convert.ToBase64String(imageData);
+                        //    string imageDataUrl = $"data:image/jpeg;base64,{base64String}";*/
+                        //    rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
+                        //}
 
 
 
@@ -196,17 +196,17 @@ namespace Xaysetha_System
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
 
-                        if (reader["tenantpics"] == DBNull.Value)
-                        {
-                            rp.Add(new ReportParameter("tenantPics", ""));
-                        }
-                        else
-                        {
-                            byte[] imageData = (byte[])reader["tenantpics"];
-                            /*                            string base64String = Convert.ToBase64String(imageData);
-                                                        rp.Add(new ReportParameter("tenantPics", base64String));*/
-                            rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
-                        }
+                        //if (reader["tenantpics"] == DBNull.Value)
+                        //{
+                        //    rp.Add(new ReportParameter("tenantPics", ""));
+                        //}
+                        //else
+                        //{
+                        //    byte[] imageData = (byte[])reader["tenantpics"];
+                        //    /*                            string base64String = Convert.ToBase64String(imageData);
+                        //                                rp.Add(new ReportParameter("tenantPics", base64String));*/
+                        //    rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
+                        //}
                     }
 
                     reader.Close();
