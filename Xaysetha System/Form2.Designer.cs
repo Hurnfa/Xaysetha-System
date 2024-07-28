@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbVillage4 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbVillage2 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -63,13 +60,6 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.datePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.bookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.villageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMakeReport = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal1 = new System.Windows.Forms.Label();
@@ -89,7 +79,6 @@
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
             this.guna2CustomGradientPanel4.SuspendLayout();
             this.guna2CustomGradientPanel5.SuspendLayout();
@@ -263,11 +252,12 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label4.Location = new System.Drawing.Point(16, 15);
+            this.label4.Location = new System.Drawing.Point(16, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 28);
+            this.label4.Size = new System.Drawing.Size(252, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "ຕົວຊື້ບອກ ຜູ້ທີ່ຢູ່ອາໄຊໃນເມືອງໄຊເສດຖາ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel3
             // 
@@ -299,7 +289,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(26, 214);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1370, 48);
+            this.guna2Panel1.Size = new System.Drawing.Size(1370, 73);
             this.guna2Panel1.TabIndex = 9;
             // 
             // guna2CustomGradientPanel1
@@ -347,24 +337,23 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.cbVillage5);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel4);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel6);
-            this.guna2CustomGradientPanel2.Controls.Add(this.data);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnMakeReport);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(686, 260);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(686, 293);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(710, 656);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(710, 623);
             this.guna2CustomGradientPanel2.TabIndex = 11;
             // 
             // rdoCitizen
             // 
             this.rdoCitizen.AutoSize = true;
             this.rdoCitizen.BackColor = System.Drawing.Color.Transparent;
-            this.rdoCitizen.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoCitizen.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoCitizen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoCitizen.Location = new System.Drawing.Point(502, 124);
+            this.rdoCitizen.Location = new System.Drawing.Point(12, 377);
             this.rdoCitizen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoCitizen.Name = "rdoCitizen";
-            this.rdoCitizen.Size = new System.Drawing.Size(171, 32);
+            this.rdoCitizen.Size = new System.Drawing.Size(197, 37);
             this.rdoCitizen.TabIndex = 28;
             this.rdoCitizen.TabStop = true;
             this.rdoCitizen.Text = "ປະຊາກອນພາຍໃນເມືອງ";
@@ -374,12 +363,12 @@
             // 
             this.rdoTenant.AutoSize = true;
             this.rdoTenant.BackColor = System.Drawing.Color.Transparent;
-            this.rdoTenant.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTenant.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoTenant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoTenant.Location = new System.Drawing.Point(502, 98);
+            this.rdoTenant.Location = new System.Drawing.Point(12, 347);
             this.rdoTenant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoTenant.Name = "rdoTenant";
-            this.rdoTenant.Size = new System.Drawing.Size(88, 32);
+            this.rdoTenant.Size = new System.Drawing.Size(102, 37);
             this.rdoTenant.TabIndex = 27;
             this.rdoTenant.TabStop = true;
             this.rdoTenant.Text = "ຜູ້ພັກເຊົາ";
@@ -389,11 +378,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(497, 70);
+            this.label8.Location = new System.Drawing.Point(6, 312);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 28);
+            this.label8.Size = new System.Drawing.Size(174, 33);
             this.label8.TabIndex = 26;
             this.label8.Text = "ສະແດງປະເພດລາຍງານ";
             // 
@@ -401,11 +390,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(3, 178);
+            this.label7.Location = new System.Drawing.Point(5, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 25);
+            this.label7.Size = new System.Drawing.Size(172, 33);
             this.label7.TabIndex = 25;
             this.label7.Text = "ສະແດງບ້ານທີ່ຕ້ອງການ";
             // 
@@ -419,20 +408,21 @@
             this.cbVillage5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
             this.cbVillage5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbVillage5.ItemHeight = 30;
-            this.cbVillage5.Location = new System.Drawing.Point(6, 206);
+            this.cbVillage5.Location = new System.Drawing.Point(11, 231);
             this.cbVillage5.Name = "cbVillage5";
             this.cbVillage5.Size = new System.Drawing.Size(172, 36);
             this.cbVillage5.TabIndex = 25;
+            this.cbVillage5.SelectedIndexChanged += new System.EventHandler(this.cbVillage5_SelectedIndexChanged);
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.datePicker2);
             this.guna2Panel4.Controls.Add(this.label6);
-            this.guna2Panel4.Location = new System.Drawing.Point(243, 70);
+            this.guna2Panel4.Location = new System.Drawing.Point(354, 70);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(235, 84);
+            this.guna2Panel4.Size = new System.Drawing.Size(320, 84);
             this.guna2Panel4.TabIndex = 25;
             // 
             // datePicker2
@@ -448,7 +438,7 @@
             this.datePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datePicker2.Name = "datePicker2";
-            this.datePicker2.Size = new System.Drawing.Size(225, 48);
+            this.datePicker2.Size = new System.Drawing.Size(312, 48);
             this.datePicker2.TabIndex = 9;
             this.datePicker2.UseTransparentBackground = true;
             this.datePicker2.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -473,7 +463,7 @@
             this.guna2Panel6.Location = new System.Drawing.Point(3, 70);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(234, 84);
+            this.guna2Panel6.Size = new System.Drawing.Size(318, 84);
             this.guna2Panel6.TabIndex = 24;
             // 
             // datePicker1
@@ -489,7 +479,7 @@
             this.datePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datePicker1.Name = "datePicker1";
-            this.datePicker1.Size = new System.Drawing.Size(225, 48);
+            this.datePicker1.Size = new System.Drawing.Size(312, 48);
             this.datePicker1.TabIndex = 9;
             this.datePicker1.UseTransparentBackground = true;
             this.datePicker1.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -502,113 +492,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
+            this.label9.Size = new System.Drawing.Size(89, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
-            // 
-            // data
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.data.ColumnHeadersHeight = 18;
-            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bookID,
-            this.firstName,
-            this.lastName,
-            this.issueDate,
-            this.placeName,
-            this.villageName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data.DefaultCellStyle = dataGridViewCellStyle3;
-            this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.data.Location = new System.Drawing.Point(0, 264);
-            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.data.Name = "data";
-            this.data.ReadOnly = true;
-            this.data.RowHeadersVisible = false;
-            this.data.RowHeadersWidth = 51;
-            this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(710, 316);
-            this.data.TabIndex = 21;
-            this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.data.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.data.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.data.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.data.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.data.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.data.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.data.ThemeStyle.HeaderStyle.Height = 18;
-            this.data.ThemeStyle.ReadOnly = true;
-            this.data.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.data.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.data.ThemeStyle.RowsStyle.Height = 24;
-            this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.data.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.data_CellPainting);
-            // 
-            // bookID
-            // 
-            this.bookID.HeaderText = "ລະຫັດປື້ມ";
-            this.bookID.MinimumWidth = 6;
-            this.bookID.Name = "bookID";
-            this.bookID.ReadOnly = true;
-            // 
-            // firstName
-            // 
-            this.firstName.HeaderText = "ຊື່";
-            this.firstName.MinimumWidth = 6;
-            this.firstName.Name = "firstName";
-            this.firstName.ReadOnly = true;
-            // 
-            // lastName
-            // 
-            this.lastName.HeaderText = "ນາມສະກຸນ";
-            this.lastName.MinimumWidth = 6;
-            this.lastName.Name = "lastName";
-            this.lastName.ReadOnly = true;
-            // 
-            // issueDate
-            // 
-            this.issueDate.HeaderText = "ມື້ແຈ້ງເຂົ້າ";
-            this.issueDate.MinimumWidth = 6;
-            this.issueDate.Name = "issueDate";
-            this.issueDate.ReadOnly = true;
-            // 
-            // placeName
-            // 
-            this.placeName.HeaderText = "ທີ່ພັກ";
-            this.placeName.MinimumWidth = 6;
-            this.placeName.Name = "placeName";
-            this.placeName.ReadOnly = true;
-            // 
-            // villageName
-            // 
-            this.villageName.HeaderText = "ບ້ານ";
-            this.villageName.MinimumWidth = 6;
-            this.villageName.Name = "villageName";
-            this.villageName.ReadOnly = true;
             // 
             // btnMakeReport
             // 
@@ -624,7 +510,7 @@
             this.btnMakeReport.ForeColor = System.Drawing.Color.White;
             this.btnMakeReport.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMakeReport.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnMakeReport.Location = new System.Drawing.Point(484, 585);
+            this.btnMakeReport.Location = new System.Drawing.Point(480, 554);
             this.btnMakeReport.Name = "btnMakeReport";
             this.btnMakeReport.Size = new System.Drawing.Size(210, 54);
             this.btnMakeReport.TabIndex = 20;
@@ -661,7 +547,7 @@
             this.labelDisplayVillage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage1.Location = new System.Drawing.Point(72, 116);
             this.labelDisplayVillage1.Name = "labelDisplayVillage1";
-            this.labelDisplayVillage1.Size = new System.Drawing.Size(166, 28);
+            this.labelDisplayVillage1.Size = new System.Drawing.Size(165, 28);
             this.labelDisplayVillage1.TabIndex = 5;
             this.labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
             this.labelDisplayVillage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -696,7 +582,7 @@
             this.labelDisplayVillage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage2.Location = new System.Drawing.Point(95, 116);
             this.labelDisplayVillage2.Name = "labelDisplayVillage2";
-            this.labelDisplayVillage2.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage2.Size = new System.Drawing.Size(112, 56);
             this.labelDisplayVillage2.TabIndex = 5;
             this.labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
             this.labelDisplayVillage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -731,7 +617,7 @@
             this.labelDisplayVillage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage4.Location = new System.Drawing.Point(72, 116);
             this.labelDisplayVillage4.Name = "labelDisplayVillage4";
-            this.labelDisplayVillage4.Size = new System.Drawing.Size(166, 56);
+            this.labelDisplayVillage4.Size = new System.Drawing.Size(165, 56);
             this.labelDisplayVillage4.TabIndex = 5;
             this.labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
             this.labelDisplayVillage4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -766,7 +652,7 @@
             this.labelDisplayVillage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage3.Location = new System.Drawing.Point(89, 116);
             this.labelDisplayVillage3.Name = "labelDisplayVillage3";
-            this.labelDisplayVillage3.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage3.Size = new System.Drawing.Size(112, 56);
             this.labelDisplayVillage3.TabIndex = 5;
             this.labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
             this.labelDisplayVillage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -804,7 +690,6 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
             this.guna2CustomGradientPanel4.ResumeLayout(false);
@@ -852,13 +737,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage2;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage3;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage1;
-        private Guna.UI2.WinForms.Guna2DataGridView data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn issueDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placeName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn villageName;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

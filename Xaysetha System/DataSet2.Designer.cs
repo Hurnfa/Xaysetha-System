@@ -20,17 +20,17 @@ namespace Xaysetha_System {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSet1 : global::System.Data.DataSet {
+    public partial class DataSet2 : global::System.Data.DataSet {
         
-        private reportTotalDataTable tablereportTotal;
+        private gatherpicsDataTable tablegatherpics;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataSet1() {
+        public DataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Xaysetha_System {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Xaysetha_System {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["reportTotal"] != null)) {
-                    base.Tables.Add(new reportTotalDataTable(ds.Tables["reportTotal"]));
+                if ((ds.Tables["gatherpics"] != null)) {
+                    base.Tables.Add(new gatherpicsDataTable(ds.Tables["gatherpics"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Xaysetha_System {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public reportTotalDataTable reportTotal {
+        public gatherpicsDataTable gatherpics {
             get {
-                return this.tablereportTotal;
+                return this.tablegatherpics;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Xaysetha_System {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSet1 cln = ((DataSet1)(base.Clone()));
+            DataSet2 cln = ((DataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Xaysetha_System {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["reportTotal"] != null)) {
-                    base.Tables.Add(new reportTotalDataTable(ds.Tables["reportTotal"]));
+                if ((ds.Tables["gatherpics"] != null)) {
+                    base.Tables.Add(new gatherpicsDataTable(ds.Tables["gatherpics"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Xaysetha_System {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablereportTotal = ((reportTotalDataTable)(base.Tables["reportTotal"]));
+            this.tablegatherpics = ((gatherpicsDataTable)(base.Tables["gatherpics"]));
             if ((initTable == true)) {
-                if ((this.tablereportTotal != null)) {
-                    this.tablereportTotal.InitVars();
+                if ((this.tablegatherpics != null)) {
+                    this.tablegatherpics.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Xaysetha_System {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSet1";
+            this.DataSetName = "DataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSet1.xsd";
+            this.Namespace = "http://tempuri.org/DataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablereportTotal = new reportTotalDataTable();
-            base.Tables.Add(this.tablereportTotal);
+            this.tablegatherpics = new gatherpicsDataTable();
+            base.Tables.Add(this.tablegatherpics);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializereportTotal() {
+        private bool ShouldSerializegatherpics() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Xaysetha_System {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSet1 ds = new DataSet1();
+            DataSet2 ds = new DataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,23 @@ namespace Xaysetha_System {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void reportTotalRowChangeEventHandler(object sender, reportTotalRowChangeEvent e);
+        public delegate void gatherpicsRowChangeEventHandler(object sender, gatherpicsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class reportTotalDataTable : global::System.Data.TypedTableBase<reportTotalRow> {
+        public partial class gatherpicsDataTable : global::System.Data.TypedTableBase<gatherpicsRow> {
             
             private global::System.Data.DataColumn columnresBookID;
             
-            private global::System.Data.DataColumn columnfirstname;
-            
-            private global::System.Data.DataColumn columnlastname;
-            
-            private global::System.Data.DataColumn columngender;
-            
-            private global::System.Data.DataColumn columnissueDate;
-            
-            private global::System.Data.DataColumn columnexpDate;
-            
-            private global::System.Data.DataColumn columnplaceName;
-            
-            private global::System.Data.DataColumn columnvillageName;
+            private global::System.Data.DataColumn columntenantpics;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalDataTable() {
-                this.TableName = "reportTotal";
+            public gatherpicsDataTable() {
+                this.TableName = "gatherpics";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +294,7 @@ namespace Xaysetha_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal reportTotalDataTable(global::System.Data.DataTable table) {
+            internal gatherpicsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +311,7 @@ namespace Xaysetha_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected reportTotalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected gatherpicsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -338,57 +326,9 @@ namespace Xaysetha_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn firstnameColumn {
+            public global::System.Data.DataColumn tenantpicsColumn {
                 get {
-                    return this.columnfirstname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn lastnameColumn {
-                get {
-                    return this.columnlastname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn genderColumn {
-                get {
-                    return this.columngender;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn issueDateColumn {
-                get {
-                    return this.columnissueDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn expDateColumn {
-                get {
-                    return this.columnexpDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn placeNameColumn {
-                get {
-                    return this.columnplaceName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn villageNameColumn {
-                get {
-                    return this.columnvillageName;
+                    return this.columntenantpics;
                 }
             }
             
@@ -403,59 +343,53 @@ namespace Xaysetha_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRow this[int index] {
+            public gatherpicsRow this[int index] {
                 get {
-                    return ((reportTotalRow)(this.Rows[index]));
+                    return ((gatherpicsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event reportTotalRowChangeEventHandler reportTotalRowChanging;
+            public event gatherpicsRowChangeEventHandler gatherpicsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event reportTotalRowChangeEventHandler reportTotalRowChanged;
+            public event gatherpicsRowChangeEventHandler gatherpicsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event reportTotalRowChangeEventHandler reportTotalRowDeleting;
+            public event gatherpicsRowChangeEventHandler gatherpicsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event reportTotalRowChangeEventHandler reportTotalRowDeleted;
+            public event gatherpicsRowChangeEventHandler gatherpicsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddreportTotalRow(reportTotalRow row) {
+            public void AddgatherpicsRow(gatherpicsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRow AddreportTotalRow(long resBookID, string firstname, string lastname, string gender, System.DateTime issueDate, System.DateTime expDate, string placeName, string villageName) {
-                reportTotalRow rowreportTotalRow = ((reportTotalRow)(this.NewRow()));
+            public gatherpicsRow AddgatherpicsRow(long resBookID, byte[] tenantpics) {
+                gatherpicsRow rowgatherpicsRow = ((gatherpicsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         resBookID,
-                        firstname,
-                        lastname,
-                        gender,
-                        issueDate,
-                        expDate,
-                        placeName,
-                        villageName};
-                rowreportTotalRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowreportTotalRow);
-                return rowreportTotalRow;
+                        tenantpics};
+                rowgatherpicsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowgatherpicsRow);
+                return rowgatherpicsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRow FindByresBookID(long resBookID) {
-                return ((reportTotalRow)(this.Rows.Find(new object[] {
+            public gatherpicsRow FindByresBookID(long resBookID) {
+                return ((gatherpicsRow)(this.Rows.Find(new object[] {
                             resBookID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                reportTotalDataTable cln = ((reportTotalDataTable)(base.Clone()));
+                gatherpicsDataTable cln = ((gatherpicsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,20 +397,14 @@ namespace Xaysetha_System {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new reportTotalDataTable();
+                return new gatherpicsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnresBookID = base.Columns["resBookID"];
-                this.columnfirstname = base.Columns["firstname"];
-                this.columnlastname = base.Columns["lastname"];
-                this.columngender = base.Columns["gender"];
-                this.columnissueDate = base.Columns["issueDate"];
-                this.columnexpDate = base.Columns["expDate"];
-                this.columnplaceName = base.Columns["placeName"];
-                this.columnvillageName = base.Columns["villageName"];
+                this.columntenantpics = base.Columns["tenantpics"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,58 +412,38 @@ namespace Xaysetha_System {
             private void InitClass() {
                 this.columnresBookID = new global::System.Data.DataColumn("resBookID", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresBookID);
-                this.columnfirstname = new global::System.Data.DataColumn("firstname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfirstname);
-                this.columnlastname = new global::System.Data.DataColumn("lastname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlastname);
-                this.columngender = new global::System.Data.DataColumn("gender", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngender);
-                this.columnissueDate = new global::System.Data.DataColumn("issueDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnissueDate);
-                this.columnexpDate = new global::System.Data.DataColumn("expDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnexpDate);
-                this.columnplaceName = new global::System.Data.DataColumn("placeName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplaceName);
-                this.columnvillageName = new global::System.Data.DataColumn("villageName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnvillageName);
+                this.columntenantpics = new global::System.Data.DataColumn("tenantpics", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntenantpics);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnresBookID}, true));
                 this.columnresBookID.AllowDBNull = false;
                 this.columnresBookID.Unique = true;
-                this.columnfirstname.AllowDBNull = false;
-                this.columnfirstname.MaxLength = 255;
-                this.columnlastname.MaxLength = 255;
-                this.columngender.AllowDBNull = false;
-                this.columngender.MaxLength = 255;
-                this.columnplaceName.MaxLength = 255;
-                this.columnvillageName.AllowDBNull = false;
-                this.columnvillageName.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRow NewreportTotalRow() {
-                return ((reportTotalRow)(this.NewRow()));
+            public gatherpicsRow NewgatherpicsRow() {
+                return ((gatherpicsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new reportTotalRow(builder);
+                return new gatherpicsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(reportTotalRow);
+                return typeof(gatherpicsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.reportTotalRowChanged != null)) {
-                    this.reportTotalRowChanged(this, new reportTotalRowChangeEvent(((reportTotalRow)(e.Row)), e.Action));
+                if ((this.gatherpicsRowChanged != null)) {
+                    this.gatherpicsRowChanged(this, new gatherpicsRowChangeEvent(((gatherpicsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -543,8 +451,8 @@ namespace Xaysetha_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.reportTotalRowChanging != null)) {
-                    this.reportTotalRowChanging(this, new reportTotalRowChangeEvent(((reportTotalRow)(e.Row)), e.Action));
+                if ((this.gatherpicsRowChanging != null)) {
+                    this.gatherpicsRowChanging(this, new gatherpicsRowChangeEvent(((gatherpicsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +460,8 @@ namespace Xaysetha_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.reportTotalRowDeleted != null)) {
-                    this.reportTotalRowDeleted(this, new reportTotalRowChangeEvent(((reportTotalRow)(e.Row)), e.Action));
+                if ((this.gatherpicsRowDeleted != null)) {
+                    this.gatherpicsRowDeleted(this, new gatherpicsRowChangeEvent(((gatherpicsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,14 +469,14 @@ namespace Xaysetha_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.reportTotalRowDeleting != null)) {
-                    this.reportTotalRowDeleting(this, new reportTotalRowChangeEvent(((reportTotalRow)(e.Row)), e.Action));
+                if ((this.gatherpicsRowDeleting != null)) {
+                    this.gatherpicsRowDeleting(this, new gatherpicsRowChangeEvent(((gatherpicsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovereportTotalRow(reportTotalRow row) {
+            public void RemovegatherpicsRow(gatherpicsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -577,7 +485,7 @@ namespace Xaysetha_System {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSet1 ds = new DataSet1();
+                DataSet2 ds = new DataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -595,7 +503,7 @@ namespace Xaysetha_System {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "reportTotalDataTable";
+                attribute2.FixedValue = "gatherpicsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -639,171 +547,54 @@ namespace Xaysetha_System {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class reportTotalRow : global::System.Data.DataRow {
+        public partial class gatherpicsRow : global::System.Data.DataRow {
             
-            private reportTotalDataTable tablereportTotal;
+            private gatherpicsDataTable tablegatherpics;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal reportTotalRow(global::System.Data.DataRowBuilder rb) : 
+            internal gatherpicsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablereportTotal = ((reportTotalDataTable)(this.Table));
+                this.tablegatherpics = ((gatherpicsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public long resBookID {
                 get {
-                    return ((long)(this[this.tablereportTotal.resBookIDColumn]));
+                    return ((long)(this[this.tablegatherpics.resBookIDColumn]));
                 }
                 set {
-                    this[this.tablereportTotal.resBookIDColumn] = value;
+                    this[this.tablegatherpics.resBookIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string firstname {
-                get {
-                    return ((string)(this[this.tablereportTotal.firstnameColumn]));
-                }
-                set {
-                    this[this.tablereportTotal.firstnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string lastname {
+            public byte[] tenantpics {
                 get {
                     try {
-                        return ((string)(this[this.tablereportTotal.lastnameColumn]));
+                        return ((byte[])(this[this.tablegatherpics.tenantpicsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lastname\' in table \'reportTotal\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tenantpics\' in table \'gatherpics\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablereportTotal.lastnameColumn] = value;
+                    this[this.tablegatherpics.tenantpicsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string gender {
-                get {
-                    return ((string)(this[this.tablereportTotal.genderColumn]));
-                }
-                set {
-                    this[this.tablereportTotal.genderColumn] = value;
-                }
+            public bool IstenantpicsNull() {
+                return this.IsNull(this.tablegatherpics.tenantpicsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime issueDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablereportTotal.issueDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'issueDate\' in table \'reportTotal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablereportTotal.issueDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime expDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablereportTotal.expDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'expDate\' in table \'reportTotal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablereportTotal.expDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string placeName {
-                get {
-                    try {
-                        return ((string)(this[this.tablereportTotal.placeNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'placeName\' in table \'reportTotal\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablereportTotal.placeNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string villageName {
-                get {
-                    return ((string)(this[this.tablereportTotal.villageNameColumn]));
-                }
-                set {
-                    this[this.tablereportTotal.villageNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IslastnameNull() {
-                return this.IsNull(this.tablereportTotal.lastnameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetlastnameNull() {
-                this[this.tablereportTotal.lastnameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsissueDateNull() {
-                return this.IsNull(this.tablereportTotal.issueDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetissueDateNull() {
-                this[this.tablereportTotal.issueDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsexpDateNull() {
-                return this.IsNull(this.tablereportTotal.expDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetexpDateNull() {
-                this[this.tablereportTotal.expDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsplaceNameNull() {
-                return this.IsNull(this.tablereportTotal.placeNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetplaceNameNull() {
-                this[this.tablereportTotal.placeNameColumn] = global::System.Convert.DBNull;
+            public void SettenantpicsNull() {
+                this[this.tablegatherpics.tenantpicsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -811,22 +602,22 @@ namespace Xaysetha_System {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class reportTotalRowChangeEvent : global::System.EventArgs {
+        public class gatherpicsRowChangeEvent : global::System.EventArgs {
             
-            private reportTotalRow eventRow;
+            private gatherpicsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRowChangeEvent(reportTotalRow row, global::System.Data.DataRowAction action) {
+            public gatherpicsRowChangeEvent(gatherpicsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public reportTotalRow Row {
+            public gatherpicsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -842,7 +633,7 @@ namespace Xaysetha_System {
         }
     }
 }
-namespace Xaysetha_System.DataSet1TableAdapters {
+namespace Xaysetha_System.DataSet2TableAdapters {
     
     
     /// <summary>
@@ -854,7 +645,7 @@ namespace Xaysetha_System.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class reportTotalTableAdapter : global::System.ComponentModel.Component {
+    public partial class gatherpicsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -868,7 +659,7 @@ namespace Xaysetha_System.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public reportTotalTableAdapter() {
+        public gatherpicsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -965,15 +756,9 @@ namespace Xaysetha_System.DataSet1TableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "reportTotal";
+            tableMapping.DataSetTable = "gatherpics";
             tableMapping.ColumnMappings.Add("resBookID", "resBookID");
-            tableMapping.ColumnMappings.Add("firstname", "firstname");
-            tableMapping.ColumnMappings.Add("lastname", "lastname");
-            tableMapping.ColumnMappings.Add("gender", "gender");
-            tableMapping.ColumnMappings.Add("issueDate", "issueDate");
-            tableMapping.ColumnMappings.Add("expDate", "expDate");
-            tableMapping.ColumnMappings.Add("placeName", "placeName");
-            tableMapping.ColumnMappings.Add("villageName", "villageName");
+            tableMapping.ColumnMappings.Add("tenantpics", "tenantpics");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -990,10 +775,9 @@ namespace Xaysetha_System.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ""public"".""tb_residentialBook"".""resBookID"", ""public"".tb_tenant.firstname, ""public"".tb_tenant.lastname, ""public"".tb_tenant.gender, ""public"".""tb_residentialBook"".""issueDate"", ""public"".""tb_residentialBook"".""expDate"", ""public"".tb_place.""placeName"", 
-                  ""public"".tb_village.""villageName""
-FROM     ""public"".""tb_residentialBook"", ""public"".tb_tenant, ""public"".tb_place, ""public"".tb_village
-WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""tenantID"" AND ""public"".""tb_residentialBook"".""placeID"" = ""public"".tb_place.""placeID"" AND ""public"".tb_place.""villageID"" = ""public"".tb_village.""villageID""";
+            this._commandCollection[0].CommandText = "SELECT \"public\".\"tb_residentialBook\".\"resBookID\", \"public\".tb_tenant.tenantpics\r\n" +
+                "FROM     \"public\".\"tb_residentialBook\", \"public\".tb_tenant\r\nWHERE  \"public\".\"tb_" +
+                "residentialBook\".\"tenantID\" = \"public\".tb_tenant.\"tenantID\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1001,7 +785,7 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.reportTotalDataTable dataTable) {
+        public virtual int Fill(DataSet2.gatherpicsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1014,9 +798,9 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.reportTotalDataTable GetData() {
+        public virtual DataSet2.gatherpicsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.reportTotalDataTable dataTable = new DataSet1.reportTotalDataTable();
+            DataSet2.gatherpicsDataTable dataTable = new DataSet2.gatherpicsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1090,7 +874,7 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1100,7 +884,7 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1110,7 +894,7 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1144,7 +928,7 @@ WHERE  ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""t
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DataSet1 dataSet) {
+        public virtual int UpdateAll(DataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

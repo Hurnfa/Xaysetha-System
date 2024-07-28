@@ -1,8 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
-using System.Drawing;
-using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -25,14 +23,6 @@ namespace Xaysetha_System
             comboVillage3Load();
             comboVillage4Load();
             comboVillage5Load();
-            CustomizedGridView();
-        }
-
-        public void CustomizedGridView()
-        {
-            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
-            data.ColumnHeadersHeight = 30;
-
         }
 
         void loadTotalTenant()
@@ -230,14 +220,24 @@ namespace Xaysetha_System
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-/*            Report rp = new Report();
+            Report rp = new Report();
 
             rp.loadDataToReport();
 
-            rp.Show();*/
+            rp.Show();
         }
 
         private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbVillage5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

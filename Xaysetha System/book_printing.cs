@@ -203,8 +203,8 @@ namespace Xaysetha_System
                         else
                         {
                             byte[] imageData = (byte[])reader["tenantpics"];
-/*                            string base64String = Convert.ToBase64String(imageData);
-                            rp.Add(new ReportParameter("tenantPics", base64String));*/
+                            /*                            string base64String = Convert.ToBase64String(imageData);
+                                                        rp.Add(new ReportParameter("tenantPics", base64String));*/
                             rp.Add(new ReportParameter("tenantPics", imageData.ToString()));
                         }
                     }

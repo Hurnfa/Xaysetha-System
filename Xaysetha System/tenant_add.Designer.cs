@@ -371,7 +371,6 @@
             this.txtSurname.SelectedText = "";
             this.txtSurname.Size = new System.Drawing.Size(443, 48);
             this.txtSurname.TabIndex = 6;
-            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // label6
             // 
@@ -418,7 +417,6 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(443, 48);
             this.txtName.TabIndex = 6;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label5
             // 
@@ -478,7 +476,6 @@
             this.txtNationality.SelectedText = "";
             this.txtNationality.Size = new System.Drawing.Size(443, 48);
             this.txtNationality.TabIndex = 6;
-            this.txtNationality.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNationality_KeyPress);
             // 
             // label11
             // 
@@ -526,7 +523,6 @@
             this.txtJobs.SelectedText = "";
             this.txtJobs.Size = new System.Drawing.Size(443, 48);
             this.txtJobs.TabIndex = 6;
-            this.txtJobs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtJobs_KeyPress);
             // 
             // label12
             // 
@@ -673,7 +669,6 @@
             this.txtVillage.SelectedText = "";
             this.txtVillage.Size = new System.Drawing.Size(443, 48);
             this.txtVillage.TabIndex = 6;
-            this.txtVillage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVillage_KeyPress);
             // 
             // label23
             // 
@@ -720,7 +715,6 @@
             this.txtDistrict.SelectedText = "";
             this.txtDistrict.Size = new System.Drawing.Size(443, 48);
             this.txtDistrict.TabIndex = 6;
-            this.txtDistrict.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDistrict_KeyPress);
             // 
             // label1
             // 
@@ -768,7 +762,6 @@
             this.txtReligion.SelectedText = "";
             this.txtReligion.Size = new System.Drawing.Size(443, 48);
             this.txtReligion.TabIndex = 6;
-            this.txtReligion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReligion_KeyPress);
             // 
             // label7
             // 
@@ -863,7 +856,6 @@
             this.txtEthnic.SelectedText = "";
             this.txtEthnic.Size = new System.Drawing.Size(443, 48);
             this.txtEthnic.TabIndex = 6;
-            this.txtEthnic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEthnic_KeyPress);
             // 
             // label24
             // 
@@ -910,7 +902,6 @@
             this.txtTenantID.SelectedText = "";
             this.txtTenantID.Size = new System.Drawing.Size(443, 48);
             this.txtTenantID.TabIndex = 6;
-            this.txtTenantID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenantID_KeyPress);
             // 
             // label_username
             // 

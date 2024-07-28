@@ -174,7 +174,7 @@
             this.chkShowPassword.AutoSize = true;
             this.chkShowPassword.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPassword.Location = new System.Drawing.Point(25, 84);
-            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(4);
             this.chkShowPassword.Name = "chkShowPassword";
             this.chkShowPassword.Size = new System.Drawing.Size(90, 32);
             this.chkShowPassword.TabIndex = 9;
@@ -252,7 +252,6 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(443, 48);
             this.txtUsername.TabIndex = 6;
-            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // label11
             // 
@@ -428,7 +427,6 @@
             this.txtRole.SelectedText = "";
             this.txtRole.Size = new System.Drawing.Size(443, 48);
             this.txtRole.TabIndex = 6;
-            this.txtRole.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRole_KeyPress);
             // 
             // label7
             // 
@@ -475,7 +473,6 @@
             this.txtSurname.SelectedText = "";
             this.txtSurname.Size = new System.Drawing.Size(443, 48);
             this.txtSurname.TabIndex = 6;
-            this.txtSurname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurname_KeyPress);
             // 
             // label6
             // 
@@ -522,7 +519,6 @@
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(443, 48);
             this.txtName.TabIndex = 6;
-            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // label5
             // 

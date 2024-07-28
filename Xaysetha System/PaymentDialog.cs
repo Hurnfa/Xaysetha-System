@@ -1,16 +1,8 @@
 ﻿/*using Org.BouncyCastle.Math;*/
 using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -80,18 +72,18 @@ namespace Xaysetha_System
             txtPrice.Text = price.ToString();
 
             txtUser.Text = userID;
-/*
-            cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
+            /*
+                        cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
 
-            cmd.Parameters.AddWithValue("@userID", userID);
+                        cmd.Parameters.AddWithValue("@userID", userID);
 
-            NpgsqlDataReader reader = cmd.ExecuteReader();
+                        NpgsqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read())
-            {
-                txtUser.Text = reader["userName"].ToString() + " " + reader["userLName"].ToString();
-            }
-            reader.Close();*/
+                        while (reader.Read())
+                        {
+                            txtUser.Text = reader["userName"].ToString() + " " + reader["userLName"].ToString();
+                        }
+                        reader.Close();*/
 
             cmd = new NpgsqlCommand("SELECT payment_status FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
 
@@ -175,7 +167,7 @@ namespace Xaysetha_System
                         new Random().Next()
                     );
 
-                break;
+                    break;
 
                 case "ແກ້ໄຂການຊຳລະ":
 
@@ -229,7 +221,7 @@ namespace Xaysetha_System
                     rdoSixMonths.Checked = false;
                     txtPrice.Clear();
 
-                break;
+                    break;
             }
         }
 
@@ -250,7 +242,7 @@ namespace Xaysetha_System
 
                     reader.Close();
 
-                break;
+                    break;
             }
         }
     }

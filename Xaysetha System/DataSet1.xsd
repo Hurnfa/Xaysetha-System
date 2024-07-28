@@ -3,15 +3,93 @@
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-        <Connections />
-        <Tables />
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Xaysetha_System.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reportTotalTableAdapter" GeneratorDataComponentClassName="reportTotalTableAdapter" Name="reportTotal" UserDataComponentName="reportTotalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "public"."tb_residentialBook"."resBookID", "public".tb_tenant.firstname, "public".tb_tenant.lastname, "public".tb_tenant.gender, "public"."tb_residentialBook"."issueDate", "public"."tb_residentialBook"."expDate", "public".tb_place."placeName", 
+                  "public".tb_village."villageName"
+FROM     "public"."tb_residentialBook", "public".tb_tenant, "public".tb_place, "public".tb_village
+WHERE  "public"."tb_residentialBook"."tenantID" = "public".tb_tenant."tenantID" AND "public"."tb_residentialBook"."placeID" = "public".tb_place."placeID" AND "public".tb_place."villageID" = "public".tb_village."villageID"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="resBookID" DataSetColumn="resBookID" />
+              <Mapping SourceColumn="firstname" DataSetColumn="firstname" />
+              <Mapping SourceColumn="lastname" DataSetColumn="lastname" />
+              <Mapping SourceColumn="gender" DataSetColumn="gender" />
+              <Mapping SourceColumn="issueDate" DataSetColumn="issueDate" />
+              <Mapping SourceColumn="expDate" DataSetColumn="expDate" />
+              <Mapping SourceColumn="placeName" DataSetColumn="placeName" />
+              <Mapping SourceColumn="villageName" DataSetColumn="villageName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="reportTotal" msprop:Generator_RowClassName="reportTotalRow" msprop:Generator_RowEvHandlerName="reportTotalRowChangeEventHandler" msprop:Generator_RowDeletedName="reportTotalRowDeleted" msprop:Generator_RowDeletingName="reportTotalRowDeleting" msprop:Generator_RowEvArgName="reportTotalRowChangeEvent" msprop:Generator_TablePropName="reportTotal" msprop:Generator_RowChangedName="reportTotalRowChanged" msprop:Generator_UserTableName="reportTotal" msprop:Generator_RowChangingName="reportTotalRowChanging" msprop:Generator_TableClassName="reportTotalDataTable" msprop:Generator_TableVarName="tablereportTotal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="resBookID" msprop:Generator_UserColumnName="resBookID" msprop:Generator_ColumnPropNameInTable="resBookIDColumn" msprop:Generator_ColumnPropNameInRow="resBookID" msprop:Generator_ColumnVarNameInTable="columnresBookID" type="xs:long" />
+              <xs:element name="firstname" msprop:Generator_UserColumnName="firstname" msprop:Generator_ColumnPropNameInTable="firstnameColumn" msprop:Generator_ColumnPropNameInRow="firstname" msprop:Generator_ColumnVarNameInTable="columnfirstname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lastname" msprop:Generator_UserColumnName="lastname" msprop:Generator_ColumnPropNameInTable="lastnameColumn" msprop:Generator_ColumnPropNameInRow="lastname" msprop:Generator_ColumnVarNameInTable="columnlastname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gender" msprop:Generator_UserColumnName="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnVarNameInTable="columngender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="issueDate" msprop:Generator_UserColumnName="issueDate" msprop:Generator_ColumnPropNameInTable="issueDateColumn" msprop:Generator_ColumnPropNameInRow="issueDate" msprop:Generator_ColumnVarNameInTable="columnissueDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="expDate" msprop:Generator_UserColumnName="expDate" msprop:Generator_ColumnPropNameInTable="expDateColumn" msprop:Generator_ColumnPropNameInRow="expDate" msprop:Generator_ColumnVarNameInTable="columnexpDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="placeName" msprop:Generator_UserColumnName="placeName" msprop:Generator_ColumnPropNameInTable="placeNameColumn" msprop:Generator_ColumnPropNameInRow="placeName" msprop:Generator_ColumnVarNameInTable="columnplaceName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="villageName" msprop:Generator_UserColumnName="villageName" msprop:Generator_ColumnPropNameInTable="villageNameColumn" msprop:Generator_ColumnPropNameInRow="villageName" msprop:Generator_ColumnVarNameInTable="columnvillageName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:reportTotal" />
+      <xs:field xpath="mstns:resBookID" />
+    </xs:unique>
   </xs:element>
 </xs:schema>
