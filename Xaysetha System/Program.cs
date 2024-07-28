@@ -19,6 +19,7 @@ namespace Xaysetha_System
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Dashboard());
             Application.Run(new Login());
+            //Application.Run(new Database_Config());
         }
         // Test
 

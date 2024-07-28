@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Drawing;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -111,7 +112,10 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
             adapter.Fill(ds5);
 
+            cbVillage5.DataSource = ds5.Tables[0];
 
+            cbVillage5.DisplayMember = "villageName";
+            cbVillage5.ValueMember = "villageID";
         }
 
         private void cbVillage2_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -226,11 +230,11 @@ namespace Xaysetha_System
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
-            Report rp = new Report();
+/*            Report rp = new Report();
 
             rp.loadDataToReport();
 
-            rp.Show();
+            rp.Show();*/
         }
 
         private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
