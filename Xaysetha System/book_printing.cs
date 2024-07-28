@@ -3,6 +3,7 @@ using Npgsql;
 /*using Org.BouncyCastle.Math;*/
 using System;
 using System.Numerics;
+using System.Runtime.InteropServices.ComTypes;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -100,14 +101,16 @@ namespace Xaysetha_System
 
 
 
-                        rp.Add(new ReportParameter("duration", reader["duration"].ToString()));
+                        
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
-
-                    }
+                    }                  
 
                     reader.Close();
 
+                    int duration = ((expDate.Year - issueDate.Year) * 12) + expDate.Month - issueDate.Month;
+
+                    rp.Add(new ReportParameter("duration", duration.ToString()));
                     rp.Add(new ReportParameter("tenantID", tenantID.ToString()));
                     rp.Add(new ReportParameter("tenantDadName", "N/A"));
                     rp.Add(new ReportParameter("tenantMomName", "N/A"));
@@ -192,7 +195,6 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
 
-                        rp.Add(new ReportParameter("duration", reader["duration"].ToString()));
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
 
@@ -210,6 +212,11 @@ namespace Xaysetha_System
                     }
 
                     reader.Close();
+
+
+                    int duration = ((expDate.Year - issueDate.Year) * 12) + expDate.Month - issueDate.Month;
+
+                    rp.Add(new ReportParameter("duration", duration.ToString()));
 
                     rp.Add(new ReportParameter("tenantName", name));
                     rp.Add(new ReportParameter("tenantDadName", "N/A"));

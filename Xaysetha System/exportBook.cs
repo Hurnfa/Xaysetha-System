@@ -121,5 +121,14 @@ namespace Xaysetha_System
                     break;
             }
         }
+
+        private void datePickerIssueDate_ValueChanged(object sender, System.EventArgs e)
+        {
+            exportBookInfo.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\" WHERE \"issueDate\"='" + datePickerIssueDate.Value+"'");
+
+            OpenChildForm(exportBookInfo, statusControl.TabPages[1]);
+
+            displayTotalOfData(1);
+        }
     }
 }

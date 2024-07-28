@@ -37,12 +37,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label_user = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,13 +50,9 @@
             this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.labelTotal = new System.Windows.Forms.Label();
-            this.label_user = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
@@ -120,8 +112,6 @@
             this.guna2CustomGradientPanel1.BorderThickness = 1;
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddUser);
             this.guna2CustomGradientPanel1.Controls.Add(this.label_user);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel4);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel6);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtSearch);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
@@ -133,87 +123,38 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1367, 832);
             this.guna2CustomGradientPanel1.TabIndex = 18;
             // 
-            // guna2Panel4
+            // btnAddUser
             // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.Controls.Add(this.guna2DateTimePicker2);
-            this.guna2Panel4.Controls.Add(this.label3);
-            this.guna2Panel4.Location = new System.Drawing.Point(701, 28);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(285, 84);
-            this.guna2Panel4.TabIndex = 23;
+            this.btnAddUser.BorderRadius = 4;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            this.btnAddUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
+            this.btnAddUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddUser.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnAddUser.Location = new System.Drawing.Point(1111, 60);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(211, 48);
+            this.btnAddUser.TabIndex = 18;
+            this.btnAddUser.Text = "ເພີ່ມຂໍ້ມູນຜູ້ພັກເຊົາ";
+            this.btnAddUser.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
-            // guna2DateTimePicker2
+            // label_user
             // 
-            this.guna2DateTimePicker2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2DateTimePicker2.BorderRadius = 4;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(3, 31);
-            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(275, 48);
-            this.guna2DateTimePicker2.TabIndex = 9;
-            this.guna2DateTimePicker2.UseTransparentBackground = true;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 28);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "ຫາວັນທີ່";
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel6.Controls.Add(this.guna2DateTimePicker1);
-            this.guna2Panel6.Controls.Add(this.label9);
-            this.guna2Panel6.Location = new System.Drawing.Point(385, 28);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(285, 84);
-            this.guna2Panel6.TabIndex = 22;
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2DateTimePicker1.BorderRadius = 4;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(3, 31);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(275, 48);
-            this.guna2DateTimePicker1.TabIndex = 9;
-            this.guna2DateTimePicker1.UseTransparentBackground = true;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
+            this.label_user.AutoSize = true;
+            this.label_user.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label_user.Location = new System.Drawing.Point(1160, 60);
+            this.label_user.Name = "label_user";
+            this.label_user.Size = new System.Drawing.Size(144, 28);
+            this.label_user.TabIndex = 7;
+            this.label_user.Text = "ຈັດການຂໍ້ມູນຜູ້ພັກເຊົາ";
             // 
             // guna2Panel3
             // 
@@ -386,28 +327,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "ຄົ້ນຫາ";
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.BorderRadius = 4;
-            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
-            this.btnAddUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddUser.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnAddUser.Location = new System.Drawing.Point(1111, 60);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(211, 48);
-            this.btnAddUser.TabIndex = 18;
-            this.btnAddUser.Text = "ເພີ່ມຂໍ້ມູນຜູ້ພັກເຊົາ";
-            this.btnAddUser.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
@@ -419,17 +338,6 @@
             this.labelTotal.Size = new System.Drawing.Size(129, 28);
             this.labelTotal.TabIndex = 19;
             this.labelTotal.Text = "ທັງໝົດ 3 ລາຍການ";
-            // 
-            // label_user
-            // 
-            this.label_user.AutoSize = true;
-            this.label_user.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_user.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label_user.Location = new System.Drawing.Point(1160, 60);
-            this.label_user.Name = "label_user";
-            this.label_user.Size = new System.Drawing.Size(144, 28);
-            this.label_user.TabIndex = 7;
-            this.label_user.Text = "ຈັດການຂໍ້ມູນຜູ້ພັກເຊົາ";
             // 
             // entrance_management
             // 
@@ -450,10 +358,6 @@
             this.guna2Panel1.PerformLayout();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel6.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.ResumeLayout(false);
@@ -473,12 +377,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelTotal;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView data;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn residentName;

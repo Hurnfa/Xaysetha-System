@@ -220,9 +220,11 @@ namespace Xaysetha_System
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {
+
+
             Report rp = new Report();
 
-            rp.loadDataToReport();
+            rp.loadDataToReport(cbVillage5.SelectedValue.ToString(), datePicker1.Value, datePicker2.Value);
 
             rp.Show();
         }
