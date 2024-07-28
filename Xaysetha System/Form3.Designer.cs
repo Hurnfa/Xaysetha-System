@@ -34,7 +34,7 @@
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Xaysetha_System.Report3.rdlc";
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Xaysetha_System.Report4.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 0);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;

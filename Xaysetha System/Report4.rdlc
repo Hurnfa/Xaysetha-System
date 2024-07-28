@@ -776,7 +776,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Advice\source\repos\Xaysetha System - Copy\Xaysetha System\DataSet2.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Bozzadyy\Source\Repos\Xaysetha-System\Xaysetha System\DataSet2.xsd</rd:SchemaPath>
         <rd:TableName>totalCitizen</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
