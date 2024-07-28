@@ -207,7 +207,7 @@ namespace Xaysetha_System
 
         private void cbVillage1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedItem = cbVillage4.Text;
+            string selectedItem = cbVillage1.Text;
 
             // Query information based on the selected item
             int tenantCount = QueryInformation(selectedItem);
