@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -23,6 +24,14 @@ namespace Xaysetha_System
             comboVillage3Load();
             comboVillage4Load();
             comboVillage5Load();
+            CustomizedGridView();
+        }
+
+        public void CustomizedGridView()
+        {
+            data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
+            data.ColumnHeadersHeight = 30;
+
         }
 
         void loadTotalTenant()
@@ -102,10 +111,7 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
             adapter.Fill(ds5);
 
-            cbVillage5.DataSource = ds5.Tables[0];
 
-            cbVillage5.DisplayMember = "villageName";
-            cbVillage5.ValueMember = "villageID";
         }
 
         private void cbVillage2_SelectedIndexChanged(object sender, System.EventArgs e)
@@ -138,7 +144,7 @@ namespace Xaysetha_System
             // Display the tenant count in the label
             labelTotal2.Text = tenantCount.ToString();
 
-            labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ "+cbVillage2.Text+")\r\n";
+            labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage2.Text + ")\r\n";
         }
 
         private int QueryInformation(string villageName)
@@ -225,6 +231,11 @@ namespace Xaysetha_System
             rp.loadDataToReport();
 
             rp.Show();
+        }
+
+        private void data_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+
         }
     }
 }
