@@ -2,14 +2,14 @@
 <xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Xaysetha_System.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="totalCitizenTableAdapter" GeneratorDataComponentClassName="totalCitizenTableAdapter" Name="totalCitizen" UserDataComponentName="totalCitizenTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT "citizenID", name, surname, gender, dob, religion, family_book, "phoneNums", addr
@@ -33,49 +33,59 @@ FROM     "public".tb_citizen</CommandText>
             <Sources />
           </TableAdapter>
         </Tables>
-        <Sources />
+        <Sources>
+          <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="totalQuery" MethodsParameterType="CLR" Modifier="Public" Name="totalQuery" QueryType="Scalar" ScalarCallRetval="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="totalQuery">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>SELECT "citizenID", name, surname, gender, dob, religion, family_book, "phoneNums", addr
+FROM     "public".tb_citizen</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet2" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="totalCitizen" msprop:Generator_RowEvHandlerName="totalCitizenRowChangeEventHandler" msprop:Generator_RowDeletedName="totalCitizenRowDeleted" msprop:Generator_RowDeletingName="totalCitizenRowDeleting" msprop:Generator_RowEvArgName="totalCitizenRowChangeEvent" msprop:Generator_TablePropName="totalCitizen" msprop:Generator_RowChangedName="totalCitizenRowChanged" msprop:Generator_RowChangingName="totalCitizenRowChanging" msprop:Generator_TableClassName="totalCitizenDataTable" msprop:Generator_RowClassName="totalCitizenRow" msprop:Generator_TableVarName="tabletotalCitizen" msprop:Generator_UserTableName="totalCitizen">
+        <xs:element name="totalCitizen" msprop:Generator_RowClassName="totalCitizenRow" msprop:Generator_RowEvHandlerName="totalCitizenRowChangeEventHandler" msprop:Generator_RowDeletedName="totalCitizenRowDeleted" msprop:Generator_RowDeletingName="totalCitizenRowDeleting" msprop:Generator_RowEvArgName="totalCitizenRowChangeEvent" msprop:Generator_TablePropName="totalCitizen" msprop:Generator_RowChangedName="totalCitizenRowChanged" msprop:Generator_UserTableName="totalCitizen" msprop:Generator_RowChangingName="totalCitizenRowChanging" msprop:Generator_TableClassName="totalCitizenDataTable" msprop:Generator_TableVarName="tabletotalCitizen">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="citizenID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="citizenID" msprop:Generator_ColumnPropNameInTable="citizenIDColumn" msprop:Generator_ColumnVarNameInTable="columncitizenID" msprop:Generator_UserColumnName="citizenID" type="xs:long" />
-              <xs:element name="name" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_UserColumnName="name">
+              <xs:element name="citizenID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="citizenID" msprop:Generator_ColumnPropNameInTable="citizenIDColumn" msprop:Generator_ColumnPropNameInRow="citizenID" msprop:Generator_ColumnVarNameInTable="columncitizenID" type="xs:long" />
+              <xs:element name="name" msprop:Generator_UserColumnName="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnVarNameInTable="columnname">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="surname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_UserColumnName="surname" minOccurs="0">
+              <xs:element name="surname" msprop:Generator_UserColumnName="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="gender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_UserColumnName="gender">
+              <xs:element name="gender" msprop:Generator_UserColumnName="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnVarNameInTable="columngender">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="dob" msprop:Generator_ColumnPropNameInRow="dob" msprop:Generator_ColumnPropNameInTable="dobColumn" msprop:Generator_ColumnVarNameInTable="columndob" msprop:Generator_UserColumnName="dob" type="xs:dateTime" />
-              <xs:element name="religion" msprop:Generator_ColumnPropNameInRow="religion" msprop:Generator_ColumnPropNameInTable="religionColumn" msprop:Generator_ColumnVarNameInTable="columnreligion" msprop:Generator_UserColumnName="religion" minOccurs="0">
+              <xs:element name="dob" msprop:Generator_UserColumnName="dob" msprop:Generator_ColumnPropNameInTable="dobColumn" msprop:Generator_ColumnPropNameInRow="dob" msprop:Generator_ColumnVarNameInTable="columndob" type="xs:dateTime" />
+              <xs:element name="religion" msprop:Generator_UserColumnName="religion" msprop:Generator_ColumnPropNameInTable="religionColumn" msprop:Generator_ColumnPropNameInRow="religion" msprop:Generator_ColumnVarNameInTable="columnreligion" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="family_book" msprop:Generator_ColumnPropNameInRow="family_book" msprop:Generator_ColumnPropNameInTable="family_bookColumn" msprop:Generator_ColumnVarNameInTable="columnfamily_book" msprop:Generator_UserColumnName="family_book" type="xs:long" minOccurs="0" />
-              <xs:element name="phoneNums" msprop:Generator_ColumnPropNameInRow="phoneNums" msprop:Generator_ColumnPropNameInTable="phoneNumsColumn" msprop:Generator_ColumnVarNameInTable="columnphoneNums" msprop:Generator_UserColumnName="phoneNums" type="xs:long" />
-              <xs:element name="addr" msprop:Generator_ColumnPropNameInRow="addr" msprop:Generator_ColumnPropNameInTable="addrColumn" msprop:Generator_ColumnVarNameInTable="columnaddr" msprop:Generator_UserColumnName="addr" minOccurs="0">
+              <xs:element name="family_book" msprop:Generator_UserColumnName="family_book" msprop:Generator_ColumnPropNameInTable="family_bookColumn" msprop:Generator_ColumnPropNameInRow="family_book" msprop:Generator_ColumnVarNameInTable="columnfamily_book" type="xs:long" minOccurs="0" />
+              <xs:element name="phoneNums" msprop:Generator_UserColumnName="phoneNums" msprop:Generator_ColumnPropNameInTable="phoneNumsColumn" msprop:Generator_ColumnPropNameInRow="phoneNums" msprop:Generator_ColumnVarNameInTable="columnphoneNums" type="xs:long" />
+              <xs:element name="addr" msprop:Generator_UserColumnName="addr" msprop:Generator_ColumnPropNameInTable="addrColumn" msprop:Generator_ColumnPropNameInRow="addr" msprop:Generator_ColumnVarNameInTable="columnaddr" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
