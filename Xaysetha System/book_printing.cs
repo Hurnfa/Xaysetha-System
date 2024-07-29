@@ -70,7 +70,7 @@ namespace Xaysetha_System
 
                         birthDay = DateTime.Parse(reader["dob"].ToString());
 
-                        rp.Add(new ReportParameter("tenantRace", "N/A"));
+                        rp.Add(new ReportParameter("tenantRace", "ລາວ"));
                         rp.Add(new ReportParameter("tenantReligion", reader["religion"].ToString()));
                         rp.Add(new ReportParameter("tenantJobs", reader["occupation"].ToString()));
                         rp.Add(new ReportParameter("tenantWorkplace", "N/A"));
@@ -84,6 +84,7 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("province", "N/A"));
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
+                        rp.Add(new ReportParameter("tenantPurpose", reader["purpose"].ToString()));
 
                         //if (reader["tenantpics"] == DBNull.Value)
                         //{
@@ -101,7 +102,7 @@ namespace Xaysetha_System
 
 
 
-                        
+
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
                     }                  
@@ -119,7 +120,7 @@ namespace Xaysetha_System
 
                     //book section
 
-                    rp.Add(new ReportParameter("tenantPurpose", "."));
+                    //rp.Add(new ReportParameter("tenantPurpose", "."));
 
 
 
@@ -180,7 +181,7 @@ namespace Xaysetha_System
 
                         birthDay = DateTime.Parse(reader["dob"].ToString());
 
-                        rp.Add(new ReportParameter("tenantRace", "N/A"));
+                        rp.Add(new ReportParameter("tenantRace", "ລາວ"));
                         rp.Add(new ReportParameter("tenantReligion", reader["religion"].ToString()));
                         rp.Add(new ReportParameter("tenantJobs", reader["occupation"].ToString()));
                         rp.Add(new ReportParameter("tenantWorkplace", "N/A"));
@@ -194,6 +195,7 @@ namespace Xaysetha_System
                         rp.Add(new ReportParameter("province", "N/A"));
                         rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
+                        rp.Add(new ReportParameter("tenantPurpose", reader["purpose"].ToString()));
 
                         expDate = DateTime.Parse(reader["expDate"].ToString());
                         issueDate = DateTime.Parse(reader["issueDate"].ToString());
@@ -226,7 +228,7 @@ namespace Xaysetha_System
 
                     //book section
 
-                    rp.Add(new ReportParameter("tenantPurpose", "."));
+                    //rp.Add(new ReportParameter("tenantPurpose", "."));
 
 
 

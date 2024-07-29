@@ -196,7 +196,7 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%" + txtNameSearch.Text + "%';");
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (addr) LIKE '%" + cbVillage.Text + "%';");
         }
 
         private void cbGender_SelectedIndexChanged(object sender, EventArgs e)

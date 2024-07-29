@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnResident = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.numberPickerAge = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbJobs = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.cbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.cbVillage = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -64,7 +60,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numberPickerAge)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -96,10 +91,6 @@
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.numberPickerAge);
-            this.guna2CustomGradientPanel1.Controls.Add(this.cbJobs);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label18);
-            this.guna2CustomGradientPanel1.Controls.Add(this.label17);
             this.guna2CustomGradientPanel1.Controls.Add(this.cbGender);
             this.guna2CustomGradientPanel1.Controls.Add(this.label16);
             this.guna2CustomGradientPanel1.Controls.Add(this.cbVillage);
@@ -115,62 +106,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1367, 832);
             this.guna2CustomGradientPanel1.TabIndex = 23;
-            // 
-            // numberPickerAge
-            // 
-            this.numberPickerAge.BackColor = System.Drawing.Color.Transparent;
-            this.numberPickerAge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numberPickerAge.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numberPickerAge.Location = new System.Drawing.Point(861, 59);
-            this.numberPickerAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numberPickerAge.Name = "numberPickerAge";
-            this.numberPickerAge.Size = new System.Drawing.Size(140, 44);
-            this.numberPickerAge.TabIndex = 33;
-            this.numberPickerAge.ValueChanged += new System.EventHandler(this.numberPickerAge_ValueChanged);
-            // 
-            // cbJobs
-            // 
-            this.cbJobs.BackColor = System.Drawing.Color.Transparent;
-            this.cbJobs.BorderRadius = 4;
-            this.cbJobs.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbJobs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbJobs.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbJobs.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbJobs.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbJobs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.cbJobs.ItemHeight = 30;
-            this.cbJobs.Items.AddRange(new object[] {
-            "ບ້ານທັງໝົດ"});
-            this.cbJobs.Location = new System.Drawing.Point(29, 160);
-            this.cbJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbJobs.Name = "cbJobs";
-            this.cbJobs.Size = new System.Drawing.Size(336, 36);
-            this.cbJobs.TabIndex = 29;
-            this.cbJobs.SelectedIndexChanged += new System.EventHandler(this.cbJobs_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.White;
-            this.label18.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label18.Location = new System.Drawing.Point(24, 129);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 28);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "ອາຊີບ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.White;
-            this.label17.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label17.Location = new System.Drawing.Point(856, 28);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(38, 28);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "ອາຍຸ";
             // 
             // cbGender
             // 
@@ -250,16 +185,16 @@
             // 
             // data
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.data.ColumnHeadersHeight = 18;
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -273,14 +208,14 @@
             this.Job,
             this.editButton,
             this.delButton});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.data.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.data.DefaultCellStyle = dataGridViewCellStyle6;
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
@@ -522,7 +457,6 @@
             this.Text = "resident_management";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numberPickerAge)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
@@ -547,14 +481,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2ComboBox cbGender;
         private System.Windows.Forms.Label label16;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage;
         private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2ComboBox cbJobs;
-        private System.Windows.Forms.Label label18;
-        private Guna.UI2.WinForms.Guna2NumericUpDown numberPickerAge;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenID;
         private System.Windows.Forms.DataGridViewTextBoxColumn citizenName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;

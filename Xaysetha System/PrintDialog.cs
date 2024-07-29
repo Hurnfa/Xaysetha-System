@@ -85,7 +85,7 @@ namespace Xaysetha_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            cmd = new NpgsqlCommand("INSERT INTO \"tb_residentialBook\" VALUES (@resBookID, @tenantID, @placeID, @issueDate, @expDate)", cn.conn);
+            cmd = new NpgsqlCommand("INSERT INTO \"tb_residentialBook\" VALUES (@resBookID, @tenantID, @placeID, @issueDate, @expDate, @purpose)", cn.conn);
 
             try
             {
@@ -94,6 +94,7 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@placeID", comboboxPlace.SelectedValue);
                 cmd.Parameters.AddWithValue("@issueDate", datePickerIssueDate.Value);
                 cmd.Parameters.AddWithValue("@expDate", datePickerExpDate.Value);
+                cmd.Parameters.AddWithValue("@purpose", txtPurpose.Text);
 
                 cmd.ExecuteNonQuery();
 

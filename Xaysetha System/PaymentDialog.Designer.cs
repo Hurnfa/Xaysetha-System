@@ -122,6 +122,7 @@
             this.txtTenantID.SelectedText = "";
             this.txtTenantID.Size = new System.Drawing.Size(443, 48);
             this.txtTenantID.TabIndex = 6;
+            this.txtTenantID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTenantID_KeyPress);
             // 
             // label_payment_id
             // 

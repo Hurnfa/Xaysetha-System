@@ -53,6 +53,8 @@ namespace Xaysetha_System
             rp.Add(new ReportParameter("endDate", stop.ToString("dd/MM/yyyy")));
             rp.Add(new ReportParameter("village", villageName));
 
+            rp.Add(new ReportParameter("issueDate", DateTime.Now.ToString("dd/MM/yyyy")));
+
             reportViewer1.LocalReport.SetParameters(rp);
 
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);

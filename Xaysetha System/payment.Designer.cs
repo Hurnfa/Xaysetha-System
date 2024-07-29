@@ -40,7 +40,7 @@
             this.Entrance = new System.Windows.Forms.TabPage();
             this.Pending = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelTotalRecords = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
@@ -105,7 +105,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.label_userid);
             this.guna2CustomGradientPanel1.Controls.Add(this.statusControl);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2Panel3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.txtSearch);
             this.guna2CustomGradientPanel1.Controls.Add(this.label2);
             this.guna2CustomGradientPanel1.Controls.Add(this.labelTotalRecords);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -210,28 +210,29 @@
             this.guna2Panel3.Size = new System.Drawing.Size(1301, 594);
             this.guna2Panel3.TabIndex = 21;
             // 
-            // guna2TextBox1
+            // txtSearch
             // 
-            this.guna2TextBox1.BorderRadius = 4;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(29, 60);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງ...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(317, 48);
-            this.guna2TextBox1.TabIndex = 5;
+            this.txtSearch.BorderRadius = 4;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtSearch.Location = new System.Drawing.Point(29, 60);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "ປ້ອນລະຫັດ ຫຼື ຊື່ເຈົ້າຂອງ...";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(317, 48);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label2
             // 
@@ -294,7 +295,7 @@
         private System.Windows.Forms.TabPage Entrance;
         private System.Windows.Forms.TabPage Pending;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnPayUser;
         private System.Windows.Forms.Label labelTotalRecords;

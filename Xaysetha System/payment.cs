@@ -125,5 +125,12 @@ namespace Xaysetha_System
             payment.fetchDataFromMainPage(label_userid.Text);
             payment.Show();
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            table_payment.dataTable.Clear();
+
+            table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where CONCAT (payment_id, firstname) LIKE '%"+txtSearch.Text+"%'");
+        }
     }
 }

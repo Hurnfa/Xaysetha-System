@@ -210,6 +210,27 @@ namespace Xaysetha_System
             comboboxPaymentStatus.Text = "ຊຳລະແລ້ວ";
         }
 
+        private void txtTenantID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case (char)Keys.Enter:
+
+                    cmd = new NpgsqlCommand("SELECT firstname, lastname FROM tb_tenant WHERE \"tenantID\"="+txtTenantID.Text, cn.conn);
+
+                    NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        txtTenantName.Text = reader["firstname"].ToString()+" "+reader["lastname"].ToString();
+                    }
+
+                    reader.Close();
+
+                    break;
+            }
+        }
+
         private void comboboxPaymentStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboboxPaymentStatus.Text)
