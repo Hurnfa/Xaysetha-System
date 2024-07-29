@@ -31,10 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLableForgetPassword = new System.Windows.Forms.LinkLabel();
             this.btnLogIn = new Guna.UI2.WinForms.Guna2Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPwd = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserID = new Guna.UI2.WinForms.Guna2TextBox();
@@ -75,19 +72,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "ລະຫັດຜ່ານ";
             // 
-            // linkLableForgetPassword
-            // 
-            this.linkLableForgetPassword.AutoSize = true;
-            this.linkLableForgetPassword.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLableForgetPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
-            this.linkLableForgetPassword.Location = new System.Drawing.Point(491, 532);
-            this.linkLableForgetPassword.Name = "linkLableForgetPassword";
-            this.linkLableForgetPassword.Size = new System.Drawing.Size(135, 33);
-            this.linkLableForgetPassword.TabIndex = 6;
-            this.linkLableForgetPassword.TabStop = true;
-            this.linkLableForgetPassword.Text = "ລືມລະຫັດຜ່ານ ?";
-            this.linkLableForgetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLableForgetPassword_LinkClicked);
-            // 
             // btnLogIn
             // 
             this.btnLogIn.BorderRadius = 6;
@@ -105,30 +89,6 @@
             this.btnLogIn.TabIndex = 7;
             this.btnLogIn.Text = "ເຂົ້າສູ່ລະບົບ";
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
-            this.label4.Location = new System.Drawing.Point(245, 812);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ທ່ານຍັງບໍ່ມີບັນຊີ?";
-            // 
-            // linkLabelRegister
-            // 
-            this.linkLabelRegister.AutoSize = true;
-            this.linkLabelRegister.Font = new System.Drawing.Font("Noto Sans Lao", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelRegister.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(255)))));
-            this.linkLabelRegister.Location = new System.Drawing.Point(363, 812);
-            this.linkLabelRegister.Name = "linkLabelRegister";
-            this.linkLabelRegister.Size = new System.Drawing.Size(83, 29);
-            this.linkLabelRegister.TabIndex = 9;
-            this.linkLabelRegister.TabStop = true;
-            this.linkLabelRegister.Text = "ລົງທະບຽນ";
-            this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
             // 
             // guna2PictureBox1
             // 
@@ -218,10 +178,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1440, 903);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.linkLabelRegister);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLogIn);
-            this.Controls.Add(this.linkLableForgetPassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.label2);
@@ -249,10 +206,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtPwd;
-        private System.Windows.Forms.LinkLabel linkLableForgetPassword;
         private Guna.UI2.WinForms.Guna2Button btnLogIn;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabelRegister;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

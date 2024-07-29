@@ -1026,7 +1026,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(48, 28);
+            this.label12.Size = new System.Drawing.Size(49, 28);
             this.label12.TabIndex = 8;
             this.label12.Text = "ອາຊີບ";
             // 
@@ -1147,7 +1147,7 @@
             this.datePickerBirthday.Location = new System.Drawing.Point(3, 31);
             this.datePickerBirthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.datePickerBirthday.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
-            this.datePickerBirthday.MinDate = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.datePickerBirthday.MinDate = new System.DateTime(1900, 2, 7, 0, 0, 0, 0);
             this.datePickerBirthday.Name = "datePickerBirthday";
             this.datePickerBirthday.Size = new System.Drawing.Size(443, 48);
             this.datePickerBirthday.TabIndex = 9;

@@ -95,60 +95,83 @@ namespace Xaysetha_System
             btnSave.Text = header;
         }
 
+        byte[] img;
+
         public void dataChange(string sql, string messageBox)
         {
-            BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
-
-            string gender = "ບໍ່ລະບຸ";
-
-            if (rdoMale.Checked)
-            {
-                gender = "ຊາຍ";
-            }
-            else if (rdoFemale.Checked)
-            {
-                gender = "ຍິງ";
-            }
-
-            DateTime birthDay = datePickerBirthday.Value,
-                famBookIssuedDate = datePickerFamBookIssuedDate.Value;
-
             MemoryStream memoryStream = new MemoryStream();
-
-            profilePictureBox.Image.Save(memoryStream, profilePictureBox.Image.RawFormat);
-
-            cmd = new NpgsqlCommand(sql, cn.conn);
+            
 
             try
             {
-                /*1st missing field*/
-                cmd.Parameters.AddWithValue("@citizenID", citizenID);
-                cmd.Parameters.AddWithValue("@name", txtName.Text);
-                cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
-                cmd.Parameters.AddWithValue("@gender", gender);
-                cmd.Parameters.AddWithValue("@dob", birthDay);
-                /*2nd missing field*/
-                cmd.Parameters.AddWithValue("@race", txtRace.Text);
-                cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
-                /*3rd missing field*/
-                cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
-                cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
-                cmd.Parameters.AddWithValue("@dad_name", txtDadName.Text);
-                cmd.Parameters.AddWithValue("@mom_name", txtAddr.Text);
-                cmd.Parameters.AddWithValue("@family_book", BigInteger.Parse(txtFamBookNums.Text));
-                /*4th missing field*/
-                cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
-                cmd.Parameters.AddWithValue("@citizenPics", memoryStream.ToArray());
-                cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
-                cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
-                cmd.Parameters.AddWithValue("@phoneNums", int.Parse(txtPhoneNums.Text));
 
-                cmd.ExecuteNonQuery();
+                BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
 
-                MessageBox.Show(messageBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string gender = "ບໍ່ລະບຸ";
 
-                new open_child_form().OpenChildForm(new resident_management());
+                if (rdoMale.Checked)
+                {
+                    gender = "ຊາຍ";
+                }
+                else if (rdoFemale.Checked)
+                {
+                    gender = "ຍິງ";
+                }
 
+                DateTime birthDay = datePickerBirthday.Value,
+                    famBookIssuedDate = datePickerFamBookIssuedDate.Value;
+
+                if (profilePictureBox.Image == null)
+                {
+                    MessageBox.Show("ຂໍອະໄພ, ກະລຸນາໃສ່ຮູບກ່ອນ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {             
+                    profilePictureBox.Image.Save(memoryStream, profilePictureBox.Image.RawFormat);
+
+                    img = memoryStream.ToArray();
+                }
+
+
+ 
+                cmd = new NpgsqlCommand(sql, cn.conn);
+
+                try
+                {
+                    /*1st missing field*/
+                    cmd.Parameters.AddWithValue("@citizenID", citizenID);
+                    cmd.Parameters.AddWithValue("@name", txtName.Text);
+                    cmd.Parameters.AddWithValue("@surname", txtSurname.Text);
+                    cmd.Parameters.AddWithValue("@gender", gender);
+                    cmd.Parameters.AddWithValue("@dob", birthDay);
+                    /*2nd missing field*/
+                    cmd.Parameters.AddWithValue("@race", txtRace.Text);
+                    cmd.Parameters.AddWithValue("@nationality", txtNationality.Text);
+                    /*3rd missing field*/
+                    cmd.Parameters.AddWithValue("@ethnic", txtEthnic.Text);
+                    cmd.Parameters.AddWithValue("@religion", txtReligious.Text);
+                    cmd.Parameters.AddWithValue("@dad_name", txtDadName.Text);
+                    cmd.Parameters.AddWithValue("@mom_name", txtAddr.Text);
+                    cmd.Parameters.AddWithValue("@family_book", BigInteger.Parse(txtFamBookNums.Text));
+                    /*4th missing field*/
+                    cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
+                    cmd.Parameters.AddWithValue("@citizenPics", img);
+                    cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
+                    cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
+                    cmd.Parameters.AddWithValue("@phoneNums", txtPhoneNums.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show(messageBox + "ຜູ້ໃຊ້ງານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    new open_child_form().OpenChildForm(new resident_management());
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
             catch (Exception ex)
             {
@@ -259,7 +282,14 @@ namespace Xaysetha_System
 
         private void txtFamBookNums_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+      (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
             }

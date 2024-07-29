@@ -38,7 +38,7 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
-            loadData("SELECT * from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
+            loadData("SELECT * from tb_place JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
 
         }
         public void CustomizedGridView()
