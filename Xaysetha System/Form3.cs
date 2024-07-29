@@ -23,6 +23,10 @@ namespace Xaysetha_System
         }
         public void loadDataCitizen()
         {
+            ReportParameterCollection rp = new ReportParameterCollection();
+            rp.Add(new ReportParameter("issueDate", DateTime.Now.ToString("dd/MM/yyyy")));
+            reportViewer2.LocalReport.SetParameters(rp);
+
 
             cmd = new NpgsqlCommand("SELECT \"citizenID\", name, surname, gender, dob, religion, family_book, \"phoneNums\", addr FROM \"public\".tb_citizen", cn.conn);
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);

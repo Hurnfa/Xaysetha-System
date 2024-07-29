@@ -15,7 +15,7 @@ namespace Xaysetha_System
         {
             InitializeComponent();
             cn.getConnect();
-            datePickerBirthday.MaxDate = DateTime.Now.AddYears(-18);
+            //datePickerBirthday.MaxDate = DateTime.Now.AddYears(-18);
             datePickerFamBookIssueDate.MaxDate = DateTime.Now.AddDays(-7);
             label_username.Text = username;
         }

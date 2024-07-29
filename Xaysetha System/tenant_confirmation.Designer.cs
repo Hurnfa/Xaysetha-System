@@ -75,13 +75,13 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
-            this.data.Margin = new System.Windows.Forms.Padding(2);
+            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(960, 455);
+            this.data.Size = new System.Drawing.Size(1280, 560);
             this.data.TabIndex = 22;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -109,7 +109,7 @@
             // 
             // TenantID
             // 
-            this.TenantID.HeaderText = "ລະຫັດບິນ";
+            this.TenantID.HeaderText = "ລະຫັດຜູ້ພັກເຊົາ";
             this.TenantID.MinimumWidth = 6;
             this.TenantID.Name = "TenantID";
             this.TenantID.ReadOnly = true;
@@ -152,16 +152,16 @@
             this.printButton.ReadOnly = true;
             this.printButton.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.printButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.printButton.Width = 46;
+            this.printButton.Width = 47;
             // 
             // tenant_confirmation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 455);
+            this.ClientSize = new System.Drawing.Size(1280, 560);
             this.Controls.Add(this.data);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tenant_confirmation";
             this.Text = "tenant_confirmation";
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
