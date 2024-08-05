@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
@@ -15,14 +16,31 @@ namespace Xaysetha_System
         {
             InitializeComponent();
             cn.getConnect();
+            cbDistrictLoad();
             datePickerBirthday.MaxDate = DateTime.Now.AddYears(-18);
             datePickerFamBookIssueDate.MaxDate = DateTime.Now.AddDays(-7);
             label_username.Text = username;
+
+            //labelSelectedValue.Text = comboboxProvince.SelectedValue.ToString();
+            //labelValueMember.Text = comboboxProvince.ValueMember;
         }
 
         NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
         db_connect cn = new db_connect();
         DataTable datatable = new DataTable();
+
+        void cbDistrictLoad()
+        {
+            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_province;", cn.conn);
+            DataSet dsProvince = new DataSet();
+            adapter.Fill(dsProvince);
+
+            comboboxProvince.DataSource = dsProvince.Tables[0];
+
+            comboboxProvince.DisplayMember = "province_name";
+            comboboxProvince.ValueMember = "province_id";
+        }
 
         public void fetchDataFromMainPage(
             string tenant_id,
@@ -58,10 +76,11 @@ namespace Xaysetha_System
                 txtReligion.Text = reader["religion"].ToString();
                 txtFamBookID.Text = reader["fambookID"].ToString();
                 datePickerFamBookIssueDate.Value = (DateTime)reader["famBookIssueDate"];
-                txtDistrict.Text = reader["district"].ToString();
+                comboboxDistrict.Text = reader["district"].ToString();
                 txtPhoneNums.Text = reader["phoneNums"].ToString();
                 txtJobs.Text = reader["occupation"].ToString();
                 txtVillage.Text = reader["village"].ToString();
+                comboboxProvince.Text = reader["province"].ToString();
 
                 if (reader["tenantpics"] == DBNull.Value)
                 {
@@ -122,8 +141,9 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@description", "");
                 cmd.Parameters.AddWithValue("@famBookIssueDate", datePickerFamBookIssueDate.Value);
                 cmd.Parameters.AddWithValue("@village", txtVillage.Text);
-                cmd.Parameters.AddWithValue("@district", txtDistrict.Text);
+                cmd.Parameters.AddWithValue("@district", comboboxDistrict.Text);
                 cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
+                cmd.Parameters.AddWithValue("@province", comboboxProvince.Text);
 
                 cmd.ExecuteNonQuery();
 
@@ -214,7 +234,7 @@ namespace Xaysetha_System
                 case "ບັນທຶກ":
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics);", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics, @province);", "ເພີ່ມ");
                     sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, duration, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @duration, @price, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
@@ -224,7 +244,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_tenant set firstname=@firstname, lastname=@lastname, gender=@gender, dob=@dob, nationality=@nationality, occupation=@occupation, village=@village, district=@district, \"fambookID\"=@fambookID, description=@description, \"famBookIssueDate\"=@famBookIssueDate, tenantpics=@tenantpics, religion=@religion, \"phoneNums\"=@phoneNums, ethnics=@ethnics WHERE \"tenantID\"=@tenantID", "ແກ້ໄຂ");
+                        dataChange("UPDATE tb_tenant set firstname=@firstname, lastname=@lastname, gender=@gender, dob=@dob, nationality=@nationality, occupation=@occupation, village=@village, district=@district, \"fambookID\"=@fambookID, description=@description, \"famBookIssueDate\"=@famBookIssueDate, tenantpics=@tenantpics, religion=@religion, \"phoneNums\"=@phoneNums, ethnics=@ethnics, province=@province WHERE \"tenantID\"=@tenantID", "ແກ້ໄຂ");
                     }
 
                     break;
@@ -299,6 +319,29 @@ namespace Xaysetha_System
         private void txtDistrict_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void comboboxProvince_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Detach event
+            comboboxProvince.SelectedIndexChanged -= comboboxProvince_SelectedIndexChanged;
+
+            DataSet dsDistrict = new DataSet();
+
+
+
+            adapter = new NpgsqlDataAdapter("select * from tb_district where province_id=" +(comboboxProvince.SelectedIndex+1), cn.conn);
+
+            adapter.Fill(dsDistrict);
+
+
+            comboboxDistrict.DataSource = dsDistrict.Tables[0];
+
+            comboboxDistrict.DisplayMember = "district_name";
+            comboboxDistrict.ValueMember = "district_id";
+
+            //Attach event again
+            comboboxProvince.SelectedIndexChanged += comboboxProvince_SelectedIndexChanged;
         }
     }
 }
