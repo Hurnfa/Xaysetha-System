@@ -144,6 +144,7 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@district", comboboxDistrict.Text);
                 cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@province", comboboxProvince.Text);
+                cmd.Parameters.AddWithValue("@tenantStatus", "ຍັງບໍ່ໄດ້ອະນຸມັດ");
 
                 cmd.ExecuteNonQuery();
 
@@ -234,7 +235,7 @@ namespace Xaysetha_System
                 case "ບັນທຶກ":
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics, @province);", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics, @province, @tenantStatus);", "ເພີ່ມ");
                     sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, duration, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @duration, @price, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
@@ -244,7 +245,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_tenant set firstname=@firstname, lastname=@lastname, gender=@gender, dob=@dob, nationality=@nationality, occupation=@occupation, village=@village, district=@district, \"fambookID\"=@fambookID, description=@description, \"famBookIssueDate\"=@famBookIssueDate, tenantpics=@tenantpics, religion=@religion, \"phoneNums\"=@phoneNums, ethnics=@ethnics, province=@province WHERE \"tenantID\"=@tenantID", "ແກ້ໄຂ");
+                        dataChange("UPDATE tb_tenant set firstname=@firstname, lastname=@lastname, gender=@gender, dob=@dob, nationality=@nationality, occupation=@occupation, village=@village, district=@district, \"fambookID\"=@fambookID, description=@description, \"famBookIssueDate\"=@famBookIssueDate, tenantpics=@tenantpics, religion=@religion, \"phoneNums\"=@phoneNums, ethnics=@ethnics, province=@province, tenant_status=@tenantStatus WHERE \"tenantID\"=@tenantID", "ແກ້ໄຂ");
                     }
 
                     break;
