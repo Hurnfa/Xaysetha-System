@@ -73,6 +73,8 @@
             this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.labelTotal3 = new System.Windows.Forms.Label();
             this.labelDisplayVillage3 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -254,7 +256,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label4.Location = new System.Drawing.Point(16, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 28);
+            this.label4.Size = new System.Drawing.Size(252, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "ຕົວຊື້ບອກ ຜູ້ທີ່ຢູ່ອາໄຊໃນເມືອງໄຊເສດຖາ";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -329,6 +331,8 @@
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 16;
+            this.guna2CustomGradientPanel2.Controls.Add(this.radioButton2);
+            this.guna2CustomGradientPanel2.Controls.Add(this.radioButton1);
             this.guna2CustomGradientPanel2.Controls.Add(this.rdoCitizen);
             this.guna2CustomGradientPanel2.Controls.Add(this.rdoTenant);
             this.guna2CustomGradientPanel2.Controls.Add(this.label8);
@@ -491,7 +495,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
+            this.label9.Size = new System.Drawing.Size(89, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -546,7 +550,7 @@
             this.labelDisplayVillage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage1.Location = new System.Drawing.Point(72, 116);
             this.labelDisplayVillage1.Name = "labelDisplayVillage1";
-            this.labelDisplayVillage1.Size = new System.Drawing.Size(166, 28);
+            this.labelDisplayVillage1.Size = new System.Drawing.Size(165, 28);
             this.labelDisplayVillage1.TabIndex = 5;
             this.labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
             this.labelDisplayVillage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -581,7 +585,7 @@
             this.labelDisplayVillage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage2.Location = new System.Drawing.Point(95, 116);
             this.labelDisplayVillage2.Name = "labelDisplayVillage2";
-            this.labelDisplayVillage2.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage2.Size = new System.Drawing.Size(112, 56);
             this.labelDisplayVillage2.TabIndex = 5;
             this.labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
             this.labelDisplayVillage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -616,7 +620,7 @@
             this.labelDisplayVillage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage4.Location = new System.Drawing.Point(72, 116);
             this.labelDisplayVillage4.Name = "labelDisplayVillage4";
-            this.labelDisplayVillage4.Size = new System.Drawing.Size(166, 56);
+            this.labelDisplayVillage4.Size = new System.Drawing.Size(165, 56);
             this.labelDisplayVillage4.TabIndex = 5;
             this.labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
             this.labelDisplayVillage4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -651,10 +655,40 @@
             this.labelDisplayVillage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.labelDisplayVillage3.Location = new System.Drawing.Point(89, 116);
             this.labelDisplayVillage3.Name = "labelDisplayVillage3";
-            this.labelDisplayVillage3.Size = new System.Drawing.Size(113, 56);
+            this.labelDisplayVillage3.Size = new System.Drawing.Size(112, 56);
             this.labelDisplayVillage3.TabIndex = 5;
             this.labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
             this.labelDisplayVillage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButton1.Location = new System.Drawing.Point(12, 408);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(211, 37);
+            this.radioButton1.TabIndex = 29;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "ຜູ້ພັກເຊົາທີ່ໃກ້ໝົດກຳນົດ";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButton2.Location = new System.Drawing.Point(12, 440);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(202, 37);
+            this.radioButton2.TabIndex = 30;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "ຜູ້ພັກເຊົາທີ່ຍັງບໍ່ອານຸມັດ";
+            this.radioButton2.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
@@ -747,5 +781,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rdoCitizen;
         private System.Windows.Forms.RadioButton rdoTenant;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

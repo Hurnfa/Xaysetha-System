@@ -2,7 +2,6 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -211,6 +210,23 @@ namespace Xaysetha_System
         private void labelRole_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCity_Click(object sender, EventArgs e)
+        {
+            //ChangeButtonAppearance(btnVilManagement);
+            //labelHeader.Text = btnVilManagement.Text;
+            OpenChildForm(new city_management());
+        }
+
+        private void btnProvince_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new provice_management());
+        }
+
+        private void feeManagement_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new fee_management());
         }
     }
 }

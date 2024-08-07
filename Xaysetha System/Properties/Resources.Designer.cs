@@ -363,9 +363,29 @@ namespace Xaysetha_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mdi_money {
+            get {
+                object obj = ResourceManager.GetObject("mdi_money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mingcute_close_line {
             get {
                 object obj = ResourceManager.GetObject("mingcute_close-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mingcute_time_line {
+            get {
+                object obj = ResourceManager.GetObject("mingcute_time-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

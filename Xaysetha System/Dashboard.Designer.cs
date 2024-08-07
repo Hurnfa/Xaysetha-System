@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.sideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrinting = new Guna.UI2.WinForms.Guna2Button();
             this.btnLeave = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntry = new Guna.UI2.WinForms.Guna2Button();
             this.infoSubMenu = new System.Windows.Forms.Panel();
-            this.btnHomeManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.feeManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnTenantManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHomeManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProvince = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCity = new Guna.UI2.WinForms.Guna2Button();
             this.btnVilManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnInfo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.report = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,13 +65,13 @@
             // sideBar
             // 
             this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(112)))), ((int)(((byte)(188)))));
+            this.sideBar.Controls.Add(this.btnDashboard);
             this.sideBar.Controls.Add(this.btnLogout);
             this.sideBar.Controls.Add(this.btnPrinting);
             this.sideBar.Controls.Add(this.btnLeave);
             this.sideBar.Controls.Add(this.btnEntry);
             this.sideBar.Controls.Add(this.infoSubMenu);
             this.sideBar.Controls.Add(this.btnInfo);
-            this.sideBar.Controls.Add(this.btnDashboard);
             this.sideBar.Controls.Add(this.report);
             this.sideBar.Controls.Add(this.guna2Panel1);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -77,6 +80,30 @@
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(425, 1024);
             this.sideBar.TabIndex = 0;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Image = global::Xaysetha_System.Properties.Resources.dashboard__1_;
+            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnDashboard.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 841);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(425, 60);
+            this.btnDashboard.TabIndex = 3;
+            this.btnDashboard.Text = "ລາຍງານ";
+            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnLogout
             // 
@@ -116,7 +143,7 @@
             this.btnPrinting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPrinting.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnPrinting.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPrinting.Location = new System.Drawing.Point(0, 671);
+            this.btnPrinting.Location = new System.Drawing.Point(0, 781);
             this.btnPrinting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrinting.Name = "btnPrinting";
             this.btnPrinting.Size = new System.Drawing.Size(425, 60);
@@ -140,7 +167,7 @@
             this.btnLeave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLeave.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnLeave.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLeave.Location = new System.Drawing.Point(0, 611);
+            this.btnLeave.Location = new System.Drawing.Point(0, 721);
             this.btnLeave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLeave.Name = "btnLeave";
             this.btnLeave.Size = new System.Drawing.Size(425, 60);
@@ -166,7 +193,7 @@
             this.btnEntry.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEntry.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnEntry.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEntry.Location = new System.Drawing.Point(0, 551);
+            this.btnEntry.Location = new System.Drawing.Point(0, 661);
             this.btnEntry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEntry.Name = "btnEntry";
             this.btnEntry.Size = new System.Drawing.Size(425, 60);
@@ -178,41 +205,44 @@
             // 
             // infoSubMenu
             // 
-            this.infoSubMenu.Controls.Add(this.btnHomeManagement);
+            this.infoSubMenu.Controls.Add(this.feeManagement);
             this.infoSubMenu.Controls.Add(this.btnTenantManagement);
+            this.infoSubMenu.Controls.Add(this.btnHomeManagement);
+            this.infoSubMenu.Controls.Add(this.btnProvince);
+            this.infoSubMenu.Controls.Add(this.btnCity);
             this.infoSubMenu.Controls.Add(this.btnVilManagement);
             this.infoSubMenu.Controls.Add(this.btnUserManagement);
             this.infoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.infoSubMenu.Location = new System.Drawing.Point(0, 291);
+            this.infoSubMenu.Location = new System.Drawing.Point(0, 231);
             this.infoSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoSubMenu.Name = "infoSubMenu";
-            this.infoSubMenu.Size = new System.Drawing.Size(425, 260);
+            this.infoSubMenu.Size = new System.Drawing.Size(425, 430);
             this.infoSubMenu.TabIndex = 5;
             // 
-            // btnHomeManagement
+            // feeManagement
             // 
-            this.btnHomeManagement.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnHomeManagement.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHomeManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHomeManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHomeManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHomeManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHomeManagement.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHomeManagement.FillColor = System.Drawing.Color.Transparent;
-            this.btnHomeManagement.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomeManagement.ForeColor = System.Drawing.Color.White;
-            this.btnHomeManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHomeManagement.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnHomeManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHomeManagement.Location = new System.Drawing.Point(0, 180);
-            this.btnHomeManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHomeManagement.Name = "btnHomeManagement";
-            this.btnHomeManagement.Size = new System.Drawing.Size(425, 60);
-            this.btnHomeManagement.TabIndex = 9;
-            this.btnHomeManagement.Text = "ຂໍ້ມູນສະຖານທີ່ພັກເຊົ່າ";
-            this.btnHomeManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHomeManagement.TextOffset = new System.Drawing.Point(32, 0);
-            this.btnHomeManagement.Click += new System.EventHandler(this.btnHomeManagement_Click);
+            this.feeManagement.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.feeManagement.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.feeManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.feeManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.feeManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.feeManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.feeManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.feeManagement.FillColor = System.Drawing.Color.Transparent;
+            this.feeManagement.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.feeManagement.ForeColor = System.Drawing.Color.White;
+            this.feeManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.feeManagement.ImageOffset = new System.Drawing.Point(20, 0);
+            this.feeManagement.ImageSize = new System.Drawing.Size(30, 30);
+            this.feeManagement.Location = new System.Drawing.Point(0, 360);
+            this.feeManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.feeManagement.Name = "feeManagement";
+            this.feeManagement.Size = new System.Drawing.Size(425, 60);
+            this.feeManagement.TabIndex = 12;
+            this.feeManagement.Text = "ຈັດການຄ່າທຳນຽມ";
+            this.feeManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.feeManagement.TextOffset = new System.Drawing.Point(32, 0);
+            this.feeManagement.Click += new System.EventHandler(this.feeManagement_Click);
             // 
             // btnTenantManagement
             // 
@@ -229,7 +259,7 @@
             this.btnTenantManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTenantManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnTenantManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTenantManagement.Location = new System.Drawing.Point(0, 120);
+            this.btnTenantManagement.Location = new System.Drawing.Point(0, 300);
             this.btnTenantManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTenantManagement.Name = "btnTenantManagement";
             this.btnTenantManagement.Size = new System.Drawing.Size(425, 60);
@@ -238,6 +268,81 @@
             this.btnTenantManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTenantManagement.TextOffset = new System.Drawing.Point(32, 0);
             this.btnTenantManagement.Click += new System.EventHandler(this.btnTenantManagement_Click);
+            // 
+            // btnHomeManagement
+            // 
+            this.btnHomeManagement.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnHomeManagement.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHomeManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHomeManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHomeManagement.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHomeManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHomeManagement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHomeManagement.FillColor = System.Drawing.Color.Transparent;
+            this.btnHomeManagement.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomeManagement.ForeColor = System.Drawing.Color.White;
+            this.btnHomeManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHomeManagement.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnHomeManagement.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHomeManagement.Location = new System.Drawing.Point(0, 240);
+            this.btnHomeManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHomeManagement.Name = "btnHomeManagement";
+            this.btnHomeManagement.Size = new System.Drawing.Size(425, 60);
+            this.btnHomeManagement.TabIndex = 9;
+            this.btnHomeManagement.Text = "ຂໍ້ມູນສະຖານທີ່ພັກເຊົ່າ";
+            this.btnHomeManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHomeManagement.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnHomeManagement.Click += new System.EventHandler(this.btnHomeManagement_Click);
+            // 
+            // btnProvince
+            // 
+            this.btnProvince.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnProvince.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnProvince.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnProvince.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnProvince.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnProvince.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnProvince.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProvince.FillColor = System.Drawing.Color.Transparent;
+            this.btnProvince.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvince.ForeColor = System.Drawing.Color.White;
+            this.btnProvince.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProvince.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnProvince.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnProvince.Location = new System.Drawing.Point(0, 180);
+            this.btnProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProvince.Name = "btnProvince";
+            this.btnProvince.Size = new System.Drawing.Size(425, 60);
+            this.btnProvince.TabIndex = 11;
+            this.btnProvince.Text = "ຂໍ້ມູນແຂວງ";
+            this.btnProvince.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnProvince.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnProvince.Click += new System.EventHandler(this.btnProvince_Click);
+            // 
+            // btnCity
+            // 
+            this.btnCity.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCity.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCity.FillColor = System.Drawing.Color.Transparent;
+            this.btnCity.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCity.ForeColor = System.Drawing.Color.White;
+            this.btnCity.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCity.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnCity.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCity.Location = new System.Drawing.Point(0, 120);
+            this.btnCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCity.Name = "btnCity";
+            this.btnCity.Size = new System.Drawing.Size(425, 60);
+            this.btnCity.TabIndex = 10;
+            this.btnCity.Text = "ຂໍ້ມູນເມືອງ";
+            this.btnCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCity.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnCity.Click += new System.EventHandler(this.btnCity_Click);
             // 
             // btnVilManagement
             // 
@@ -307,7 +412,7 @@
             this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInfo.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnInfo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnInfo.Location = new System.Drawing.Point(0, 231);
+            this.btnInfo.Location = new System.Drawing.Point(0, 171);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(425, 60);
@@ -316,30 +421,6 @@
             this.btnInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInfo.TextOffset = new System.Drawing.Point(32, 0);
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Image = global::Xaysetha_System.Properties.Resources.dashboard__1_;
-            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnDashboard.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDashboard.Location = new System.Drawing.Point(0, 171);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(425, 60);
-            this.btnDashboard.TabIndex = 3;
-            this.btnDashboard.Text = "ລາຍງານ";
-            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.TextOffset = new System.Drawing.Point(32, 0);
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // report
             // 
@@ -543,5 +624,8 @@
         private Guna.UI2.WinForms.Guna2Panel panelContainer;
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Label label_username;
+        private Guna.UI2.WinForms.Guna2Button btnProvince;
+        private Guna.UI2.WinForms.Guna2Button btnCity;
+        private Guna.UI2.WinForms.Guna2Button feeManagement;
     }
 }
