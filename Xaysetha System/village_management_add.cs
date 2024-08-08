@@ -8,8 +8,6 @@ namespace Xaysetha_System
     {
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
-        //Before pushing
-        //DataTable datatable = new DataTable();
         public int id;
 
         public void dataChange(string sql, string messageBox)
@@ -57,13 +55,8 @@ namespace Xaysetha_System
 
                     MessageBox.Show(messageBox + "ບ້ານສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    /*                new village_management().Show();
-
-                                    Hide();*/
-
                     txtVillage.Clear();
 
-                    //OpenChildForm(new user_management());
                 }
                 catch (Exception ex)
                 {
@@ -72,13 +65,6 @@ namespace Xaysetha_System
             }
 
         }
-
-        /*        public village_management_add(string cellData)
-                {
-                    InitializeComponent();
-                    cn.getConnect();
-                    txtVillage.Text = cellData;
-                }*/
 
         public void changeInsertToUpdate(string header, string button, string cellData, int vilID)
         {
@@ -94,25 +80,6 @@ namespace Xaysetha_System
             cn.getConnect();
             //getID();
         }
-
-        /*        void getID()
-                {
-                    if (txtVillage.TextLength != 0 && btnSave.Text == "ແກ້ໄຂ")
-                    {
-                        cmd = new NpgsqlCommand("SELECT \"villageID\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
-
-                        cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
-
-                        NpgsqlDataReader reader = cmd.ExecuteReader();
-
-                        while (reader.Read())
-                        {
-                            label_id.Text = reader["villageID"].ToString();
-                        }
-
-                        reader.Close();
-                    }
-                }*/
 
         private void btnSave_Click(object sender, EventArgs e)
         {

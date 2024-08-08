@@ -1,16 +1,47 @@
-﻿using System.Drawing;
+﻿using Npgsql;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
 {
     public partial class city_management : Form
     {
+        NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
+        //NpgsqlConnection conn;
+        db_connect cn = new db_connect();
+        DataTable datatable = new DataTable();
+        city_management_add cityAdd = new city_management_add();
+
         public city_management()
         {
             InitializeComponent();
             CustomizedGridView();
-
+            cn.getConnect();
+            loadData("SELECT * FROM tb_district");
+            displayTotal();
         }
+
+        void displayTotal()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_district", cn.conn);
+            labelTotalVillage.Text = "ທັງໝົດ " + cmd.ExecuteScalar() + " ລາຍການ";
+        }
+
+        void loadData(string sql)
+        {
+            data.AutoGenerateColumns = false;
+            adapter = new NpgsqlDataAdapter(sql, cn.conn);
+            adapter.Fill(datatable);
+
+            data.DataSource = datatable;
+            data.Columns[0].DataPropertyName = "district_id";
+            data.Columns[1].DataPropertyName = "district_name";
+        }
+
+
+
         public void CustomizedGridView()
         {
             data.ColumnHeadersDefaultCellStyle.Font = new Font("Noto Sans Lao", 10, FontStyle.Regular);
@@ -44,9 +75,32 @@ namespace Xaysetha_System
         }
 
         private void btnAddVillage_Click(object sender, System.EventArgs e)
-        {
-            city_management_add cityAdd = new city_management_add();
+        { 
             cityAdd.Show();
+        }
+
+        private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string columnName = data.Columns[e.ColumnIndex].Name;
+
+            switch(columnName)
+            {
+                case "btnEdit":
+
+                break;
+
+                case "btnDel":
+
+                break;
+            }
+
+        }
+
+        private void txtSearch_TextChanged(object sender, System.EventArgs e)
+        {
+            datatable.Clear();
+
+            loadData("SELECT * FROM tb_district WHERE CONCAT (district_name, district_name_en) LIKE '%"+txtSearch.Text+"%'");
         }
     }
 }

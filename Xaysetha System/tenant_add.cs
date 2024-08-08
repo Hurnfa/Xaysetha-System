@@ -21,8 +21,8 @@ namespace Xaysetha_System
             datePickerFamBookIssueDate.MaxDate = DateTime.Now.AddDays(-7);
             label_username.Text = username;
 
-            //labelSelectedValue.Text = comboboxProvince.SelectedValue.ToString();
-            //labelValueMember.Text = comboboxProvince.ValueMember;
+            labelSelectedValue.Text = comboboxProvince.SelectedValue.ToString();
+            labelValueMember.Text = comboboxProvince.ValueMember;
         }
 
         NpgsqlCommand cmd;
@@ -322,27 +322,87 @@ namespace Xaysetha_System
 
         }
 
+        BigInteger provinceID;
+
         private void comboboxProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Detach event
             comboboxProvince.SelectedIndexChanged -= comboboxProvince_SelectedIndexChanged;
 
-            DataSet dsDistrict = new DataSet();
+            //DataSet dsDistrict = new DataSet();
+
+            DataTable dt = new DataTable();
 
 
+            //adapter = new NpgsqlDataAdapter("select * from tb_district INNER JOIN tb_province ON tb_district.province_id = tb_province.province_id where tb_province.province_name=" +comboboxProvince.Text, cn.conn);
 
-            adapter = new NpgsqlDataAdapter("select * from tb_district where province_id=" +(comboboxProvince.SelectedIndex+1), cn.conn);
-
-            adapter.Fill(dsDistrict);
+            cmd = new NpgsqlCommand("SELECT * FROM tb_district WHERE province_id=@province_id", cn.conn);
 
 
-            comboboxDistrict.DataSource = dsDistrict.Tables[0];
+            if (BigInteger.TryParse(comboboxProvince.ValueMember, out provinceID))
+            {
+                cmd.Parameters.AddWithValue("@province_id", comboboxProvince.ValueMember);
+            }
+
+
+            adapter = new NpgsqlDataAdapter(cmd);
+
+            adapter.Fill(dt);
+
+
+            comboboxDistrict.DataSource = dt;
 
             comboboxDistrict.DisplayMember = "district_name";
             comboboxDistrict.ValueMember = "district_id";
 
             //Attach event again
             comboboxProvince.SelectedIndexChanged += comboboxProvince_SelectedIndexChanged;
+        }
+
+        private void comboboxProvince_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //Detach event
+            comboboxProvince.SelectedIndexChanged -= comboboxProvince_SelectedIndexChanged;
+
+/*            labelSelectedValue.Text = comboboxProvince.SelectedValue.ToString();
+            labelValueMember.Text = comboboxProvince.ValueMember;*/
+
+
+            //Attach event again
+            comboboxProvince.SelectedIndexChanged += comboboxProvince_SelectedIndexChanged;
+        }
+
+        private void comboboxDistrict_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabelProvinceChoose_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DataTable dt = new DataTable();
+
+
+            //adapter = new NpgsqlDataAdapter("select * from tb_district INNER JOIN tb_province ON tb_district.province_id = tb_province.province_id where tb_province.province_name=" +comboboxProvince.Text, cn.conn);
+
+            cmd = new NpgsqlCommand("SELECT * FROM tb_district WHERE province_id = @province_id;", cn.conn);
+
+
+            /*            if (BigInteger.TryParse(comboboxProvince.ValueMember, out provinceID))
+                        {
+                            cmd.Parameters.AddWithValue("@province_id", comboboxProvince.ValueMember);
+                        }*/
+
+            cmd.Parameters.AddWithValue("@province_id", comboboxProvince.ValueMember);
+
+            adapter = new NpgsqlDataAdapter(cmd);
+
+            adapter.Fill(dt);
+
+
+            comboboxDistrict.DataSource = dt;
+
+            comboboxDistrict.DisplayMember = "district_name";
+            comboboxDistrict.ValueMember = "district_id";
         }
     }
 }
