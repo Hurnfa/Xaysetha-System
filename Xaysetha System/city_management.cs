@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -82,14 +83,47 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            int districtID = int.Parse(row.Cells[0].Value?.ToString());
+            string districtName = row.Cells[1].Value?.ToString();
 
             switch(columnName)
             {
                 case "btnEdit":
 
+                    cityAdd.fetchDataFromMainPage(districtID, districtName, "ແກ້ໄຂ");
+                    cityAdd.ShowDialog();
+
                 break;
 
                 case "btnDel":
+
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        cmd = new NpgsqlCommand("DELETE FROM tb_district WHERE district_id=@districtID", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@districtID", districtID);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("ລຶບຂໍ້ມູນສຳເລັດ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            datatable.Clear();
+
+                            displayTotal();
+
+                            loadData("SELECT * FROM tb_district");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                    }
 
                 break;
             }

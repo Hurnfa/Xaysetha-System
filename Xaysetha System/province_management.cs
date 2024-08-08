@@ -79,6 +79,8 @@ namespace Xaysetha_System
 
                             datatable.Clear();
 
+                            countTotal();
+
                             loadData("SELECT * FROM tb_province");
                         }
                         catch (Exception ex)
@@ -87,7 +89,7 @@ namespace Xaysetha_System
                         }
                     }
 
-                 break;
+                break;
             }
 
 
