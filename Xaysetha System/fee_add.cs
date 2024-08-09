@@ -12,7 +12,12 @@ namespace Xaysetha_System
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Hide();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

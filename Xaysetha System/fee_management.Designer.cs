@@ -39,17 +39,18 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.data = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.labelTotalVillage = new System.Windows.Forms.Label();
+            this.txtFindVillage = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.feeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddVillage = new Guna.UI2.WinForms.Guna2Button();
+            this.labelTotalVillage = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.editButton = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delButton = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtFindVillage = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddVillage = new Guna.UI2.WinForms.Guna2Button();
+            this.feeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pkgName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VillageName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.feePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -59,10 +60,10 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(27, 886);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(20, 720);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1367, 57);
+            this.guna2Panel2.Size = new System.Drawing.Size(1026, 46);
             this.guna2Panel2.TabIndex = 21;
             // 
             // guna2Panel1
@@ -70,10 +71,10 @@
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(27, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(20, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1367, 54);
+            this.guna2Panel1.Size = new System.Drawing.Size(1026, 44);
             this.guna2Panel1.TabIndex = 20;
             // 
             // label4
@@ -81,9 +82,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label4.Location = new System.Drawing.Point(24, 26);
+            this.label4.Location = new System.Drawing.Point(18, 21);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 28);
+            this.label4.Size = new System.Drawing.Size(92, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "ຂໍ້ມູນຄ່າທຳນຽມ";
             // 
@@ -91,18 +93,18 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(27, 943);
+            this.panel1.Size = new System.Drawing.Size(20, 766);
             this.panel1.TabIndex = 18;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1394, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(1046, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(27, 943);
+            this.panel2.Size = new System.Drawing.Size(20, 766);
             this.panel2.TabIndex = 19;
             // 
             // guna2CustomGradientPanel1
@@ -115,19 +117,19 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.btnAddVillage);
             this.guna2CustomGradientPanel1.Controls.Add(this.labelTotalVillage);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(27, 54);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(20, 44);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1367, 832);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1026, 676);
             this.guna2CustomGradientPanel1.TabIndex = 22;
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.data);
-            this.guna2Panel3.Location = new System.Drawing.Point(29, 162);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(22, 132);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(1301, 594);
+            this.guna2Panel3.Size = new System.Drawing.Size(976, 483);
             this.guna2Panel3.TabIndex = 21;
             // 
             // data
@@ -146,10 +148,11 @@
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.feeID,
+            this.pkgName,
             this.VillageName,
             this.feePrice,
-            this.editButton,
-            this.delButton});
+            this.btnEdit,
+            this.btnDel});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,12 +164,12 @@
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.Location = new System.Drawing.Point(0, 0);
-            this.data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.data.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.data.Name = "data";
             this.data.RowHeadersVisible = false;
             this.data.RowHeadersWidth = 51;
             this.data.RowTemplate.Height = 24;
-            this.data.Size = new System.Drawing.Size(1301, 594);
+            this.data.Size = new System.Drawing.Size(976, 483);
             this.data.TabIndex = 20;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.data.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -189,95 +192,7 @@
             this.data.ThemeStyle.RowsStyle.Height = 24;
             this.data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // labelTotalVillage
-            // 
-            this.labelTotalVillage.AutoSize = true;
-            this.labelTotalVillage.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotalVillage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalVillage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelTotalVillage.Location = new System.Drawing.Point(24, 130);
-            this.labelTotalVillage.Name = "labelTotalVillage";
-            this.labelTotalVillage.Size = new System.Drawing.Size(129, 28);
-            this.labelTotalVillage.TabIndex = 19;
-            this.labelTotalVillage.Text = "ທັງໝົດ 0 ລາຍການ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(24, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 28);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ຄົ້ນຫາ";
-            // 
-            // feeID
-            // 
-            this.feeID.HeaderText = "ລະຫັດຄ່າທຳນຽມ";
-            this.feeID.MinimumWidth = 6;
-            this.feeID.Name = "feeID";
-            this.feeID.ReadOnly = true;
-            this.feeID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // VillageName
-            // 
-            this.VillageName.HeaderText = "ໄລຍະເວລາໃນການພັກເຊົາ";
-            this.VillageName.MinimumWidth = 6;
-            this.VillageName.Name = "VillageName";
-            this.VillageName.ReadOnly = true;
-            // 
-            // feePrice
-            // 
-            this.feePrice.HeaderText = "ຄ່າທຳນຽມ";
-            this.feePrice.MinimumWidth = 6;
-            this.feePrice.Name = "feePrice";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "ຈັດການ";
-            this.dataGridViewImageColumn1.Image = global::Xaysetha_System.Properties.Resources.border_color2;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 62;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "ລົບ";
-            this.dataGridViewImageColumn2.Image = global::Xaysetha_System.Properties.Resources.Group;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn2.Width = 46;
-            // 
-            // editButton
-            // 
-            this.editButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.editButton.HeaderText = "ຈັດການ";
-            this.editButton.Image = global::Xaysetha_System.Properties.Resources.border_color2;
-            this.editButton.MinimumWidth = 6;
-            this.editButton.Name = "editButton";
-            this.editButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.editButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editButton.Width = 62;
-            // 
-            // delButton
-            // 
-            this.delButton.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.delButton.HeaderText = "ລົບ";
-            this.delButton.Image = global::Xaysetha_System.Properties.Resources.Group;
-            this.delButton.MinimumWidth = 6;
-            this.delButton.Name = "delButton";
-            this.delButton.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.delButton.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.delButton.Width = 46;
+            this.data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CellContentClick);
             // 
             // txtFindVillage
             // 
@@ -293,14 +208,28 @@
             this.txtFindVillage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFindVillage.IconLeft = global::Xaysetha_System.Properties.Resources.Search;
             this.txtFindVillage.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtFindVillage.Location = new System.Drawing.Point(29, 60);
-            this.txtFindVillage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFindVillage.Location = new System.Drawing.Point(22, 49);
+            this.txtFindVillage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFindVillage.Name = "txtFindVillage";
             this.txtFindVillage.PasswordChar = '\0';
             this.txtFindVillage.PlaceholderText = "ປ້ອນຄ່າທຳນຽມ...";
             this.txtFindVillage.SelectedText = "";
-            this.txtFindVillage.Size = new System.Drawing.Size(317, 48);
+            this.txtFindVillage.Size = new System.Drawing.Size(238, 39);
             this.txtFindVillage.TabIndex = 5;
+            this.txtFindVillage.TextChanged += new System.EventHandler(this.txtFindVillage_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(18, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 23);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "ຄົ້ນຫາ";
             // 
             // btnAddVillage
             // 
@@ -315,26 +244,109 @@
             this.btnAddVillage.Image = global::Xaysetha_System.Properties.Resources.fi_plus;
             this.btnAddVillage.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddVillage.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnAddVillage.Location = new System.Drawing.Point(1111, 60);
-            this.btnAddVillage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddVillage.Location = new System.Drawing.Point(833, 49);
+            this.btnAddVillage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddVillage.Name = "btnAddVillage";
-            this.btnAddVillage.Size = new System.Drawing.Size(211, 48);
+            this.btnAddVillage.Size = new System.Drawing.Size(158, 39);
             this.btnAddVillage.TabIndex = 18;
             this.btnAddVillage.Text = "ເພີ່ມຄ່າທຳນຽມ";
             this.btnAddVillage.TextOffset = new System.Drawing.Point(10, 0);
             this.btnAddVillage.Click += new System.EventHandler(this.btnAddVillage_Click);
             // 
+            // labelTotalVillage
+            // 
+            this.labelTotalVillage.AutoSize = true;
+            this.labelTotalVillage.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotalVillage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalVillage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.labelTotalVillage.Location = new System.Drawing.Point(18, 106);
+            this.labelTotalVillage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotalVillage.Name = "labelTotalVillage";
+            this.labelTotalVillage.Size = new System.Drawing.Size(110, 23);
+            this.labelTotalVillage.TabIndex = 19;
+            this.labelTotalVillage.Text = "ທັງໝົດ 0 ລາຍການ";
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "ຈັດການ";
+            this.dataGridViewImageColumn1.Image = global::Xaysetha_System.Properties.Resources.border_color2;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "ລົບ";
+            this.dataGridViewImageColumn2.Image = global::Xaysetha_System.Properties.Resources.Group;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // feeID
+            // 
+            this.feeID.HeaderText = "ລະຫັດຄ່າທຳນຽມ";
+            this.feeID.MinimumWidth = 6;
+            this.feeID.Name = "feeID";
+            this.feeID.ReadOnly = true;
+            this.feeID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // pkgName
+            // 
+            this.pkgName.HeaderText = "ຊື່";
+            this.pkgName.Name = "pkgName";
+            this.pkgName.ReadOnly = true;
+            // 
+            // VillageName
+            // 
+            this.VillageName.HeaderText = "ໄລຍະເວລາໃນການພັກເຊົາ";
+            this.VillageName.MinimumWidth = 6;
+            this.VillageName.Name = "VillageName";
+            this.VillageName.ReadOnly = true;
+            // 
+            // feePrice
+            // 
+            this.feePrice.HeaderText = "ຄ່າທຳນຽມ";
+            this.feePrice.MinimumWidth = 6;
+            this.feePrice.Name = "feePrice";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.btnEdit.HeaderText = "ຈັດການ";
+            this.btnEdit.Image = global::Xaysetha_System.Properties.Resources.border_color2;
+            this.btnEdit.MinimumWidth = 6;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnEdit.Width = 64;
+            // 
+            // btnDel
+            // 
+            this.btnDel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.btnDel.HeaderText = "ລົບ";
+            this.btnDel.Image = global::Xaysetha_System.Properties.Resources.Group;
+            this.btnDel.MinimumWidth = 6;
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btnDel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnDel.Width = 44;
+            // 
             // fee_management
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1421, 943);
+            this.ClientSize = new System.Drawing.Size(1066, 766);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fee_management";
             this.Text = "fee_management";
             this.guna2Panel1.ResumeLayout(false);
@@ -357,16 +369,17 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Guna.UI2.WinForms.Guna2DataGridView data;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feePrice;
-        private System.Windows.Forms.DataGridViewImageColumn editButton;
-        private System.Windows.Forms.DataGridViewImageColumn delButton;
         private Guna.UI2.WinForms.Guna2TextBox txtFindVillage;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btnAddVillage;
         private System.Windows.Forms.Label labelTotalVillage;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pkgName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VillageName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feePrice;
+        private System.Windows.Forms.DataGridViewImageColumn btnEdit;
+        private System.Windows.Forms.DataGridViewImageColumn btnDel;
     }
 }
