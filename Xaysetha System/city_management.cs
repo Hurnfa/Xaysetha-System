@@ -21,7 +21,6 @@ namespace Xaysetha_System
             CustomizedGridView();
             cn.getConnect();
             loadData("SELECT * FROM tb_district");
-            displayTotal();
         }
 
         void displayTotal()
@@ -32,6 +31,8 @@ namespace Xaysetha_System
 
         void loadData(string sql)
         {
+            displayTotal();
+
             data.AutoGenerateColumns = false;
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
@@ -77,7 +78,7 @@ namespace Xaysetha_System
 
         private void btnAddVillage_Click(object sender, System.EventArgs e)
         { 
-            cityAdd.Show();
+            new city_management_add().ShowDialog();
         }
 
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)

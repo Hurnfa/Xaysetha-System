@@ -1,7 +1,9 @@
 ﻿using Npgsql;
 using System;
 using System.Data;
+using System.Web.UI;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -20,8 +22,15 @@ namespace Xaysetha_System
             loadData("SELECT * FROM tb_package");
         }
 
+        void displayTotal()
+        {
+            cmd = new NpgsqlCommand("SELECT COUNT(*) FROM tb_package", cn.conn);
+            labelTotalVillage.Text = "ທັງໝົດ " + cmd.ExecuteScalar() + " ລາຍການ";
+        }
+
         void loadData(string sql)
         {
+            displayTotal();
             data.AutoGenerateColumns = false;
 
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
@@ -36,8 +45,7 @@ namespace Xaysetha_System
 
         private void btnAddVillage_Click(object sender, EventArgs e)
         {
-            
-            
+            new fee_add().ShowDialog();        
         }
 
         private void txtFindVillage_TextChanged(object sender, EventArgs e)
@@ -50,11 +58,19 @@ namespace Xaysetha_System
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             String columnName = data.Columns[e.ColumnIndex].Name;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+            int id = int.Parse(row.Cells[0].Value?.ToString()),
+                duration = int.Parse(row.Cells[2].Value?.ToString());
+
+            string pkgName = row.Cells[1].Value?.ToString(),
+                price = row.Cells[3].Value?.ToString();
+
 
             switch (columnName)
             {
                 case "btnEdit":
 
+                    feeAdd.fetchDataFromMainPage(id, pkgName, duration, price, "ແກ້ໄຂ");
                     feeAdd.ShowDialog();
 
                 break;
@@ -65,10 +81,28 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        //village.dataChange("DELETE FROM tb_village WHERE \"villageID\"=" + village_id + "", "ລຶບ");
+                        cmd = new NpgsqlCommand("DELETE FROM tb_package WHERE pkg_id=@pkgID", cn.conn);
+
+                        try
+                        {
+                            cmd.Parameters.AddWithValue("@pkgID", id);
+
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("ລຶບຄ່າທຳນຽມສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            datatable.Clear();
+
+                            loadData("SELECT * FROM tb_package");
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
                     }
 
-                 break;
+                break;
             }
         }
     }

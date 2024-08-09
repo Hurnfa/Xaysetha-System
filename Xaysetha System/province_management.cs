@@ -19,7 +19,6 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
             loadData("SELECT * FROM tb_province");
-            countTotal();
         }
 
         void countTotal()
@@ -30,6 +29,8 @@ namespace Xaysetha_System
 
         void loadData(string sql)
         {
+            countTotal();
+
             data.AutoGenerateColumns = false;
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
@@ -41,7 +42,7 @@ namespace Xaysetha_System
 
         private void btnAddProvince_Click(object sender, EventArgs e)
         {
-            provinceAdd.Show();
+            new province_management_add().ShowDialog();
         }
 
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
