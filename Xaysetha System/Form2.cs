@@ -18,10 +18,10 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
             loadTotalTenant();
-            comboVillage1Load();
-            comboVillage2Load();
-            comboVillage3Load();
-            comboVillage4Load();
+            //comboVillage1Load();
+            //comboVillage2Load();
+            //comboVillage3Load();
+            //comboVillage4Load();
             comboVillage5Load();
         }
 
@@ -32,68 +32,68 @@ namespace Xaysetha_System
             label_total_tenant.Text = cmd.ExecuteScalar().ToString();
         }
 
-        void comboVillageLoad()
-        {
-            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
-            adapter.Fill(dataSetVillage);
+        //void comboVillageLoad()
+        //{
+        //    adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+        //    adapter.Fill(dataSetVillage);
 
-            cbVillage1.DataSource = cbVillage2.DataSource = cbVillage3.DataSource = cbVillage4.DataSource = dataSetVillage.Tables[0];
+        //    cbVillage1.DataSource = cbVillage2.DataSource = cbVillage3.DataSource = cbVillage4.DataSource = dataSetVillage.Tables[0];
 
-            cbVillage1.DisplayMember = cbVillage2.DisplayMember = cbVillage3.DisplayMember = cbVillage4.DisplayMember = "villageName";
-            cbVillage1.ValueMember = cbVillage2.ValueMember = cbVillage3.ValueMember = cbVillage4.ValueMember = "villageID";
-        }
+        //    cbVillage1.DisplayMember = cbVillage2.DisplayMember = cbVillage3.DisplayMember = cbVillage4.DisplayMember = "villageName";
+        //    cbVillage1.ValueMember = cbVillage2.ValueMember = cbVillage3.ValueMember = cbVillage4.ValueMember = "villageID";
+        //}
 
-        void comboVillage1Load()
-        {
-            DataSet ds1 = new DataSet();
+        //void comboVillage1Load()
+        //{
+        //    DataSet ds1 = new DataSet();
 
-            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
-            adapter.Fill(ds1);
+        //    adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+        //    adapter.Fill(ds1);
 
-            cbVillage1.DataSource = ds1.Tables[0];
+        //    cbVillage1.DataSource = ds1.Tables[0];
 
-            cbVillage1.DisplayMember = "villageName";
-            cbVillage1.ValueMember = "villageID";
-        }
+        //    cbVillage1.DisplayMember = "villageName";
+        //    cbVillage1.ValueMember = "villageID";
+        //}
 
-        void comboVillage2Load()
-        {
-            DataSet ds2 = new DataSet();
+        //void comboVillage2Load()
+        //{
+        //    DataSet ds2 = new DataSet();
 
-            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
-            adapter.Fill(ds2);
+        //    adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+        //    adapter.Fill(ds2);
 
-            cbVillage2.DataSource = ds2.Tables[0];
+        //    cbVillage2.DataSource = ds2.Tables[0];
 
-            cbVillage2.DisplayMember = "villageName";
-            cbVillage2.ValueMember = "villageID";
-        }
+        //    cbVillage2.DisplayMember = "villageName";
+        //    cbVillage2.ValueMember = "villageID";
+        //}
 
-        void comboVillage3Load()
-        {
-            DataSet ds3 = new DataSet();
+        //void comboVillage3Load()
+        //{
+        //    DataSet ds3 = new DataSet();
 
-            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
-            adapter.Fill(ds3);
+        //    adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+        //    adapter.Fill(ds3);
 
-            cbVillage3.DataSource = ds3.Tables[0];
+        //    cbVillage3.DataSource = ds3.Tables[0];
 
-            cbVillage3.DisplayMember = "villageName";
-            cbVillage3.ValueMember = "villageID";
-        }
+        //    cbVillage3.DisplayMember = "villageName";
+        //    cbVillage3.ValueMember = "villageID";
+        //}
 
-        void comboVillage4Load()
-        {
-            DataSet ds4 = new DataSet();
+        //void comboVillage4Load()
+        //{
+        //    DataSet ds4 = new DataSet();
 
-            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
-            adapter.Fill(ds4);
+        //    adapter = new NpgsqlDataAdapter("SELECT * FROM tb_village;", cn.conn);
+        //    adapter.Fill(ds4);
 
-            cbVillage4.DataSource = ds4.Tables[0];
+        //    cbVillage4.DataSource = ds4.Tables[0];
 
-            cbVillage4.DisplayMember = "villageName";
-            cbVillage4.ValueMember = "villageID";
-        }
+        //    cbVillage4.DisplayMember = "villageName";
+        //    cbVillage4.ValueMember = "villageID";
+        //}
 
         void comboVillage5Load()
         {
@@ -130,15 +130,15 @@ namespace Xaysetha_System
 
             //reader2.Close();
 
-            string selectedItem = cbVillage2.Text;
+            //string selectedItem = cbVillage2.Text;
 
-            // Query information based on the selected item
-            int tenantCount = QueryInformation(selectedItem);
+            //// Query information based on the selected item
+            //int tenantCount = QueryInformation(selectedItem);
 
-            // Display the tenant count in the label
-            labelTotal2.Text = tenantCount.ToString();
+            //// Display the tenant count in the label
+            //labelTotal2.Text = tenantCount.ToString();
 
-            labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage2.Text + ")\r\n";
+            //labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage2.Text + ")\r\n";
         }
 
         private int QueryInformation(string villageName)
@@ -179,44 +179,44 @@ namespace Xaysetha_System
             return tenantCount;
         }
 
-        private void cbVillage3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedItem = cbVillage3.Text;
+        //private void cbVillage3_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selectedItem = cbVillage3.Text;
 
-            // Query information based on the selected item
-            int tenantCount = QueryInformation(selectedItem);
+        //    // Query information based on the selected item
+        //    int tenantCount = QueryInformation(selectedItem);
 
-            // Display the tenant count in the label
-            labelTotal3.Text = tenantCount.ToString();
+        //    // Display the tenant count in the label
+        //    labelTotal3.Text = tenantCount.ToString();
 
-            labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage3.Text + ")\r\n";
-        }
+        //    labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage3.Text + ")\r\n";
+        //}
 
-        private void cbVillage4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedItem = cbVillage4.Text;
+        //private void cbVillage4_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selectedItem = cbVillage4.Text;
 
-            // Query information based on the selected item
-            int tenantCount = QueryInformation(selectedItem);
+        //    // Query information based on the selected item
+        //    int tenantCount = QueryInformation(selectedItem);
 
-            // Display the tenant count in the label
-            labelTotal4.Text = tenantCount.ToString();
+        //    // Display the tenant count in the label
+        //    labelTotal4.Text = tenantCount.ToString();
 
-            labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage4.Text + ")\r\n";
-        }
+        //    labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage4.Text + ")\r\n";
+        //}
 
-        private void cbVillage1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedItem = cbVillage1.Text;
+        //private void cbVillage1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selectedItem = cbVillage1.Text;
 
-            // Query information based on the selected item
-            int tenantCount = QueryInformation(selectedItem);
+        //    // Query information based on the selected item
+        //    int tenantCount = QueryInformation(selectedItem);
 
-            // Display the tenant count in the label
-            labelTotal1.Text = tenantCount.ToString();
+        //    // Display the tenant count in the label
+        //    labelTotal1.Text = tenantCount.ToString();
 
-            labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage1.Text + ")\r\n";
-        }
+        //    labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ " + cbVillage1.Text + ")\r\n";
+        //}
 
         private void btnMakeReport_Click(object sender, EventArgs e)
         {

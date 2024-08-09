@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cbVillage4 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbVillage2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbVillage3 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbVillage1 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,179 +56,27 @@
             this.datePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnMakeReport = new Guna.UI2.WinForms.Guna2Button();
-            this.labelDisplayVillage3 = new System.Windows.Forms.Label();
-            this.labelTotal3 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.labelDisplayVillage1 = new System.Windows.Forms.Label();
-            this.labelTotal1 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.labelDisplayVillage4 = new System.Windows.Forms.Label();
-            this.labelTotal4 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.labelDisplayVillage2 = new System.Windows.Forms.Label();
-            this.labelTotal2 = new System.Windows.Forms.Label();
-            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            this.guna2CustomGradientPanel6.SuspendLayout();
-            this.guna2CustomGradientPanel3.SuspendLayout();
-            this.guna2CustomGradientPanel5.SuspendLayout();
-            this.guna2CustomGradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.cbVillage4);
-            this.guna2Panel2.Controls.Add(this.cbVillage2);
-            this.guna2Panel2.Controls.Add(this.cbVillage3);
-            this.guna2Panel2.Controls.Add(this.cbVillage1);
-            this.guna2Panel2.Controls.Add(this.label18);
-            this.guna2Panel2.Controls.Add(this.label17);
-            this.guna2Panel2.Controls.Add(this.label16);
-            this.guna2Panel2.Controls.Add(this.label15);
-            this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(26, 20);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1370, 194);
             this.guna2Panel2.TabIndex = 1;
-            // 
-            // cbVillage4
-            // 
-            this.cbVillage4.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVillage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbVillage4.ItemHeight = 30;
-            this.cbVillage4.Location = new System.Drawing.Point(1162, 142);
-            this.cbVillage4.Name = "cbVillage4";
-            this.cbVillage4.Size = new System.Drawing.Size(172, 36);
-            this.cbVillage4.TabIndex = 24;
-            this.cbVillage4.SelectedIndexChanged += new System.EventHandler(this.cbVillage4_SelectedIndexChanged);
-            // 
-            // cbVillage2
-            // 
-            this.cbVillage2.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVillage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbVillage2.ItemHeight = 30;
-            this.cbVillage2.Location = new System.Drawing.Point(1162, 49);
-            this.cbVillage2.Name = "cbVillage2";
-            this.cbVillage2.Size = new System.Drawing.Size(172, 36);
-            this.cbVillage2.TabIndex = 23;
-            this.cbVillage2.SelectedIndexChanged += new System.EventHandler(this.cbVillage2_SelectedIndexChanged);
-            // 
-            // cbVillage3
-            // 
-            this.cbVillage3.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbVillage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbVillage3.ItemHeight = 30;
-            this.cbVillage3.Location = new System.Drawing.Point(853, 142);
-            this.cbVillage3.Name = "cbVillage3";
-            this.cbVillage3.Size = new System.Drawing.Size(172, 36);
-            this.cbVillage3.TabIndex = 22;
-            this.cbVillage3.SelectedIndexChanged += new System.EventHandler(this.cbVillage3_SelectedIndexChanged);
-            // 
-            // cbVillage1
-            // 
-            this.cbVillage1.BackColor = System.Drawing.Color.Transparent;
-            this.cbVillage1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbVillage1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVillage1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbVillage1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
-            this.cbVillage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbVillage1.ItemHeight = 30;
-            this.cbVillage1.Location = new System.Drawing.Point(853, 49);
-            this.cbVillage1.Name = "cbVillage1";
-            this.cbVillage1.Size = new System.Drawing.Size(172, 36);
-            this.cbVillage1.TabIndex = 21;
-            this.cbVillage1.SelectedIndexChanged += new System.EventHandler(this.cbVillage1_SelectedIndexChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label18.Location = new System.Drawing.Point(1157, 18);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(64, 28);
-            this.label18.TabIndex = 7;
-            this.label18.Text = "ບ້ານທີ່ 2";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label17.Location = new System.Drawing.Point(848, 111);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(64, 28);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "ບ້ານທີ່ 3";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label16.Location = new System.Drawing.Point(1157, 111);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 28);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "ບ້ານທີ່ 4";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label15.Location = new System.Drawing.Point(848, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 28);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "ບ້ານທີ່ 1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(630, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 33);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "ສະແດງບ້ານທີ່ຕ້ອງການ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(14, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ລາຍງານສະຖິຕິພາບລວມຂອງລະບົບ";
             // 
             // label3
             // 
@@ -550,145 +391,32 @@
             this.btnMakeReport.Text = "ສ້າງລາຍງານ";
             this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
-            // labelDisplayVillage3
+            // label1
             // 
-            this.labelDisplayVillage3.AutoSize = true;
-            this.labelDisplayVillage3.BackColor = System.Drawing.Color.Transparent;
-            this.labelDisplayVillage3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayVillage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelDisplayVillage3.Location = new System.Drawing.Point(89, 116);
-            this.labelDisplayVillage3.Name = "labelDisplayVillage3";
-            this.labelDisplayVillage3.Size = new System.Drawing.Size(112, 56);
-            this.labelDisplayVillage3.TabIndex = 5;
-            this.labelDisplayVillage3.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ວຽງຄຳ)\r\n";
-            this.labelDisplayVillage3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(14, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ລາຍງານສະຖິຕິພາບລວມຂອງລະບົບ";
             // 
-            // labelTotal3
+            // chart2
             // 
-            this.labelTotal3.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal3.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelTotal3.Location = new System.Drawing.Point(0, 45);
-            this.labelTotal3.Name = "labelTotal3";
-            this.labelTotal3.Size = new System.Drawing.Size(305, 71);
-            this.labelTotal3.TabIndex = 6;
-            this.labelTotal3.Text = "7,634";
-            this.labelTotal3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2CustomGradientPanel6
-            // 
-            this.guna2CustomGradientPanel6.BorderRadius = 16;
-            this.guna2CustomGradientPanel6.Controls.Add(this.labelTotal3);
-            this.guna2CustomGradientPanel6.Controls.Add(this.labelDisplayVillage3);
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(47, 716);
-            this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
-            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(305, 200);
-            this.guna2CustomGradientPanel6.TabIndex = 14;
-            // 
-            // labelDisplayVillage1
-            // 
-            this.labelDisplayVillage1.AutoSize = true;
-            this.labelDisplayVillage1.BackColor = System.Drawing.Color.Transparent;
-            this.labelDisplayVillage1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayVillage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelDisplayVillage1.Location = new System.Drawing.Point(72, 116);
-            this.labelDisplayVillage1.Name = "labelDisplayVillage1";
-            this.labelDisplayVillage1.Size = new System.Drawing.Size(165, 28);
-            this.labelDisplayVillage1.TabIndex = 5;
-            this.labelDisplayVillage1.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ";
-            this.labelDisplayVillage1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTotal1
-            // 
-            this.labelTotal1.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal1.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelTotal1.Location = new System.Drawing.Point(0, 45);
-            this.labelTotal1.Name = "labelTotal1";
-            this.labelTotal1.Size = new System.Drawing.Size(305, 71);
-            this.labelTotal1.TabIndex = 6;
-            this.labelTotal1.Text = "1,034";
-            this.labelTotal1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2CustomGradientPanel3
-            // 
-            this.guna2CustomGradientPanel3.BorderRadius = 16;
-            this.guna2CustomGradientPanel3.Controls.Add(this.labelTotal1);
-            this.guna2CustomGradientPanel3.Controls.Add(this.labelDisplayVillage1);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(47, 507);
-            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(305, 200);
-            this.guna2CustomGradientPanel3.TabIndex = 11;
-            // 
-            // labelDisplayVillage4
-            // 
-            this.labelDisplayVillage4.AutoSize = true;
-            this.labelDisplayVillage4.BackColor = System.Drawing.Color.Transparent;
-            this.labelDisplayVillage4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayVillage4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelDisplayVillage4.Location = new System.Drawing.Point(72, 116);
-            this.labelDisplayVillage4.Name = "labelDisplayVillage4";
-            this.labelDisplayVillage4.Size = new System.Drawing.Size(165, 56);
-            this.labelDisplayVillage4.TabIndex = 5;
-            this.labelDisplayVillage4.Text = "ຈຳນວນຜູ້ພັກເຊົາຕ່າງແດນ\r\n(ອາຍຸ 19 - 25)\r\n";
-            this.labelDisplayVillage4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTotal4
-            // 
-            this.labelTotal4.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal4.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelTotal4.Location = new System.Drawing.Point(0, 45);
-            this.labelTotal4.Name = "labelTotal4";
-            this.labelTotal4.Size = new System.Drawing.Size(305, 71);
-            this.labelTotal4.TabIndex = 6;
-            this.labelTotal4.Text = "19,183";
-            this.labelTotal4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2CustomGradientPanel5
-            // 
-            this.guna2CustomGradientPanel5.BorderRadius = 16;
-            this.guna2CustomGradientPanel5.Controls.Add(this.labelTotal4);
-            this.guna2CustomGradientPanel5.Controls.Add(this.labelDisplayVillage4);
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(361, 716);
-            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(305, 200);
-            this.guna2CustomGradientPanel5.TabIndex = 13;
-            // 
-            // labelDisplayVillage2
-            // 
-            this.labelDisplayVillage2.AutoSize = true;
-            this.labelDisplayVillage2.BackColor = System.Drawing.Color.Transparent;
-            this.labelDisplayVillage2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisplayVillage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelDisplayVillage2.Location = new System.Drawing.Point(95, 116);
-            this.labelDisplayVillage2.Name = "labelDisplayVillage2";
-            this.labelDisplayVillage2.Size = new System.Drawing.Size(112, 56);
-            this.labelDisplayVillage2.TabIndex = 5;
-            this.labelDisplayVillage2.Text = "ຈຳນວນຜູ້ພັກເຊົາ\r\n(ບ້ານ ຄຳຮຸ່ງ)\r\n";
-            this.labelDisplayVillage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTotal2
-            // 
-            this.labelTotal2.BackColor = System.Drawing.Color.Transparent;
-            this.labelTotal2.Font = new System.Drawing.Font("Noto Sans Lao", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelTotal2.Location = new System.Drawing.Point(0, 45);
-            this.labelTotal2.Name = "labelTotal2";
-            this.labelTotal2.Size = new System.Drawing.Size(305, 71);
-            this.labelTotal2.TabIndex = 6;
-            this.labelTotal2.Text = "2,294";
-            this.labelTotal2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2CustomGradientPanel4
-            // 
-            this.guna2CustomGradientPanel4.BorderRadius = 16;
-            this.guna2CustomGradientPanel4.Controls.Add(this.labelTotal2);
-            this.guna2CustomGradientPanel4.Controls.Add(this.labelDisplayVillage2);
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(361, 507);
-            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(305, 200);
-            this.guna2CustomGradientPanel4.TabIndex = 12;
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(47, 499);
+            this.chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(619, 417);
+            this.chart2.TabIndex = 13;
+            this.chart2.Text = "chart2";
             // 
             // Form2
             // 
@@ -696,10 +424,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1422, 943);
-            this.Controls.Add(this.guna2CustomGradientPanel6);
-            this.Controls.Add(this.guna2CustomGradientPanel5);
-            this.Controls.Add(this.guna2CustomGradientPanel4);
-            this.Controls.Add(this.guna2CustomGradientPanel3);
+            this.Controls.Add(this.chart2);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
@@ -723,14 +448,7 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            this.guna2CustomGradientPanel6.ResumeLayout(false);
-            this.guna2CustomGradientPanel6.PerformLayout();
-            this.guna2CustomGradientPanel3.ResumeLayout(false);
-            this.guna2CustomGradientPanel3.PerformLayout();
-            this.guna2CustomGradientPanel5.ResumeLayout(false);
-            this.guna2CustomGradientPanel5.PerformLayout();
-            this.guna2CustomGradientPanel4.ResumeLayout(false);
-            this.guna2CustomGradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -738,8 +456,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
@@ -749,15 +465,7 @@
         private System.Windows.Forms.Label label_total_tenant;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2Button btnMakeReport;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillage4;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillage2;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillage3;
-        private Guna.UI2.WinForms.Guna2ComboBox cbVillage1;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbVillage5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
@@ -771,17 +479,7 @@
         private System.Windows.Forms.RadioButton rdoTenant;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label labelDisplayVillage3;
-        private System.Windows.Forms.Label labelTotal3;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
-        private System.Windows.Forms.Label labelDisplayVillage1;
-        private System.Windows.Forms.Label labelTotal1;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
-        private System.Windows.Forms.Label labelDisplayVillage4;
-        private System.Windows.Forms.Label labelTotal4;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
-        private System.Windows.Forms.Label labelDisplayVillage2;
-        private System.Windows.Forms.Label labelTotal2;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }
