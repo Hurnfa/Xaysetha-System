@@ -1,6 +1,7 @@
 ﻿/*using Org.BouncyCastle.Math;*/
 using Npgsql;
 using System;
+using System.Data;
 using System.Numerics;
 using System.Windows.Forms;
 
@@ -10,12 +11,28 @@ namespace Xaysetha_System
     {
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
+        NpgsqlDataAdapter adapter;
         int duration;
+        public string userID;
 
         public PaymentDialog()
         {
             InitializeComponent();
             cn.getConnect();
+            cbPkgLoad();
+        }
+
+        void cbPkgLoad()
+        {
+            adapter = new NpgsqlDataAdapter("SELECT * FROM tb_package", cn.conn);
+            
+            DataSet dsPkg = new DataSet();
+
+            adapter.Fill(dsPkg);
+
+            cbPackage.DataSource = dsPkg.Tables[0];
+            cbPackage.DisplayMember = "pkg_name";
+            cbPackage.ValueMember = "pkg_id";
         }
 
         public void fetchDataFromMainPage(string userID)
@@ -27,8 +44,6 @@ namespace Xaysetha_System
             BigInteger paymentID,
             string tenantID,
             string userID,
-            int duration,
-            float price,
             string header
         )
         {
@@ -48,42 +63,23 @@ namespace Xaysetha_System
 
             reader1.Close();
 
-            switch (duration)
-            {
-                case 1:
-
-                    rdoOneMonth.Checked = true;
-
-                    break;
-
-                case 3:
-
-                    rdoThreeMonths.Checked = true;
-
-                    break;
-
-                case 6:
-
-                    rdoSixMonths.Checked = true;
-
-                    break;
-            }
-
-            txtPrice.Text = price.ToString();
+            //txtPrice.Text = price.ToString();
 
             txtUser.Text = userID;
-            /*
-                        cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
 
-                        cmd.Parameters.AddWithValue("@userID", userID);
+            cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
 
-                        NpgsqlDataReader reader = cmd.ExecuteReader();
+            this.userID = userID;
 
-                        while (reader.Read())
-                        {
-                            txtUser.Text = reader["userName"].ToString() + " " + reader["userLName"].ToString();
-                        }
-                        reader.Close();*/
+            cmd.Parameters.AddWithValue("@userID", userID);
+
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                txtUser.Text = $"{reader["userName"]} {reader["userLName"]}";
+            }
+            reader.Close();
 
             cmd = new NpgsqlCommand("SELECT payment_status FROM tb_payment WHERE payment_id=@paymentID", cn.conn);
 
@@ -109,22 +105,34 @@ namespace Xaysetha_System
         {
             cmd = new NpgsqlCommand(sql, cn.conn);
 
+            if (int.TryParse(cbPackage.SelectedValue?.ToString(), out int pkgID))
+            {
+                try
+                {
+                    cmd.Parameters.AddWithValue("@paymentID", paymentID);
+                    cmd.Parameters.AddWithValue("@tenant_id", BigInteger.Parse(txtTenantID.Text));
+                    cmd.Parameters.AddWithValue("@description", des);
+                    cmd.Parameters.AddWithValue("@price", float.Parse(txtPrice.Text));
+                    cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
+                    cmd.Parameters.AddWithValue("@pkgID", pkgID);
+
+                    cmd.Parameters.AddWithValue("@user_id", txtUser.Text);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("ຊຳລະເງິນສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
             try
             {
-                cmd.Parameters.AddWithValue("@paymentID", paymentID);
-                cmd.Parameters.AddWithValue("@tenant_id", BigInteger.Parse(txtTenantID.Text));
-                cmd.Parameters.AddWithValue("@description", des);
-                cmd.Parameters.AddWithValue("@duration", duration);
-                cmd.Parameters.AddWithValue("@price", float.Parse(txtPrice.Text));
-                cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
-                cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
-                cmd.Parameters.AddWithValue("@user_id", txtUser.Text);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("ຊຳລະເງິນສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+                //cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+                cmd = new NpgsqlCommand("select * from tb_payment join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" join tb_package on tb_payment.pkg_id = tb_package.pkg_id where tenant_id=@tenantID", cn.conn);
 
                 cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
 
@@ -135,13 +143,30 @@ namespace Xaysetha_System
                     name = reader["firstname"].ToString();
                     surname = reader["lastname"].ToString();
                     gender = reader["gender"].ToString();
+                    duration = int.Parse(reader["pkg_duration"].ToString());
                 }
 
                 reader.Close();
 
                 printing loadBill = new printing();
 
-                loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, txtUser.Text, gender);
+                switch (btnSave.Text)
+                {
+                    case "ຊຳລະ":
+
+                        loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, txtUser.Text, gender);
+
+                    break;
+
+                    case "ແກ້ໄຂການຊຳລະ":
+
+                        loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, this.userID, gender);
+
+                    break;
+                }
+
+
+                //loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, txtUser.Text, gender);
 
                 loadBill.Show();
 
@@ -156,13 +181,30 @@ namespace Xaysetha_System
             }
         }
 
+        void updateTenantStatus()
+        {
+            cmd = new NpgsqlCommand("UPDATE tb_tenant SET tenant_status='ອະນຸມັດແລ້ວ' WHERE \"tenantID\"=@tenantID", cn.conn);
+
+            try
+            {
+                cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
+
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             switch (btnSave.Text)
             {
                 case "ຊຳລະ":
 
-                    dataChange("INSERT INTO tb_payment VALUES(@paymentID, @tenant_id, @description, @duration, @price, @paymentDate, @paymentStatus, @user_id);",
+                    dataChange("INSERT INTO tb_payment VALUES(@paymentID, @tenant_id, @description, @paymentDate, @paymentStatus, @user_id, @pkgID, @price);",
                         "ຕໍ່ອາຍຸພັກເຊົ່າ",
                         new Random().Next()
                     );
@@ -175,10 +217,11 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_payment SET duration=@duration, price=@price, payment_date=@paymentDate, payment_status=@paymentStatus WHERE payment_id=@paymentID",
+                        dataChange("UPDATE tb_payment SET payment_date=@paymentDate, payment_status=@paymentStatus, pkg_id=@pkgID, price=@price WHERE payment_id=@paymentID",
                             "ຈ່າຍຄ່າລົງທະບຽນພັກເຊົ່າ",
                             BigInteger.Parse(label_payment_id.Text)
                         );
+                        updateTenantStatus();
                     }
 
                     break;
@@ -231,15 +274,38 @@ namespace Xaysetha_System
             }
         }
 
+        string price;
+
+        private void cbPackage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbPackage.SelectedIndexChanged -= cbPackage_SelectedIndexChanged;
+
+            if (int.TryParse(cbPackage.SelectedValue?.ToString(), out int provinceID))
+            {
+                using (var cmd = new NpgsqlCommand("SELECT pkg_price FROM tb_package WHERE pkg_id=@pkgID", cn.conn))
+                {
+                    cmd.Parameters.AddWithValue("@pkgID", provinceID);
+                    price = cmd.ExecuteScalar().ToString();
+                }
+            }
+            else
+            {
+                // Handle the case where parsing fails, e.g., by clearing the combobox or showing an error
+                
+            }
+
+            txtPrice.Text = price;
+            //Attach event again
+            cbPackage.SelectedIndexChanged += cbPackage_SelectedIndexChanged;
+        }
+
         private void comboboxPaymentStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboboxPaymentStatus.Text)
             {
                 case " ":
 
-                    rdoOneMonth.Checked = false;
-                    rdoThreeMonths.Checked = false;
-                    rdoSixMonths.Checked = false;
+
                     txtPrice.Clear();
 
                     break;

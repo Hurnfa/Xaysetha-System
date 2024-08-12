@@ -41,7 +41,29 @@ namespace Xaysetha_System
 
             string villageName = cmd.ExecuteScalar().ToString();
 
-            cmd = new NpgsqlCommand("SELECT \"public\".\"tb_residentialBook\".\"resBookID\", \"public\".tb_tenant.firstname, \"public\".tb_tenant.lastname, \"public\".tb_tenant.gender, \"public\".\"tb_residentialBook\".\"issueDate\", \"public\".\"tb_residentialBook\".\"expDate\", \"public\".tb_place.\"placeName\", \"public\".tb_village.\"villageName\" FROM \"public\".\"tb_residentialBook\", \"public\".tb_tenant, \"public\".tb_place, \"public\".tb_village WHERE  \"public\".\"tb_residentialBook\".\"tenantID\" = \"public\".tb_tenant.\"tenantID\" AND \"public\".\"tb_residentialBook\".\"placeID\" = \"public\".tb_place.\"placeID\" AND \"public\".tb_place.\"villageID\" = @villageID and public.\"tb_residentialBook\".\"issueDate\" BETWEEN @startDate AND @stopDate", cn.conn);
+            cmd = new NpgsqlCommand(@"SELECT public.""tb_residentialBook"".""resBookID"",
+                                    ""public"".tb_tenant.firstname,
+                                    ""public"".tb_tenant.lastname, 
+                                    ""public"".tb_tenant.gender,
+                                    ""public"".""tb_residentialBook"".""issueDate"", 
+                                    ""public"".""tb_residentialBook"".""expDate"", 
+                                    ""public"".tb_place.""placeName"",
+                                    ""public"".tb_village.""villageName"" 
+                                    FROM
+                                        ""public"".""tb_residentialBook"",
+                                        ""public"".tb_tenant, 
+                                        ""public"".tb_place,
+                                        ""public"".tb_village 
+                                    WHERE  
+                                        ""public"".""tb_residentialBook"".""tenantID"" = ""public"".tb_tenant.""tenantID"" 
+                                    AND 
+                                        ""public"".""tb_residentialBook"".""placeID"" = ""public"".tb_place.""placeID"" 
+                                    AND 
+                                        ""public"".tb_place.""villageID"" = @villageID
+                                    and
+                                        public.""tb_residentialBook"".""issueDate""
+                                    BETWEEN 
+                                        @startDate AND @stopDate", cn.conn);
 
             cmd.Parameters.AddWithValue("@villageID", BigInteger.Parse(village));
             cmd.Parameters.AddWithValue("@startDate", start);

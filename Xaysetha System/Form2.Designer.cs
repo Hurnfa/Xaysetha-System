@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,8 +42,8 @@
             this.label_total_tenant = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoNotApprove = new System.Windows.Forms.RadioButton();
+            this.rdoExpire = new System.Windows.Forms.RadioButton();
             this.rdoCitizen = new System.Windows.Forms.RadioButton();
             this.rdoTenant = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,7 +56,6 @@
             this.datePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnMakeReport = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -78,6 +77,17 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1370, 194);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.label1.Location = new System.Drawing.Point(14, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ລາຍງານສະຖິຕິພາບລວມຂອງລະບົບ";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -97,10 +107,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label4.Location = new System.Drawing.Point(16, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(252, 28);
+            this.label4.Size = new System.Drawing.Size(253, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "ຕົວຊື້ບອກ ຜູ້ທີ່ຢູ່ອາໄຊໃນເມືອງໄຊເສດຖາ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel3
             // 
@@ -172,8 +181,8 @@
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 16;
-            this.guna2CustomGradientPanel2.Controls.Add(this.radioButton2);
-            this.guna2CustomGradientPanel2.Controls.Add(this.radioButton1);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdoNotApprove);
+            this.guna2CustomGradientPanel2.Controls.Add(this.rdoExpire);
             this.guna2CustomGradientPanel2.Controls.Add(this.rdoCitizen);
             this.guna2CustomGradientPanel2.Controls.Add(this.rdoTenant);
             this.guna2CustomGradientPanel2.Controls.Add(this.label8);
@@ -188,35 +197,37 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(710, 623);
             this.guna2CustomGradientPanel2.TabIndex = 11;
             // 
-            // radioButton2
+            // rdoNotApprove
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioButton2.Location = new System.Drawing.Point(12, 440);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(202, 37);
-            this.radioButton2.TabIndex = 30;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ຜູ້ພັກເຊົາທີ່ຍັງບໍ່ອານຸມັດ";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.rdoNotApprove.AutoSize = true;
+            this.rdoNotApprove.BackColor = System.Drawing.Color.Transparent;
+            this.rdoNotApprove.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoNotApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoNotApprove.Location = new System.Drawing.Point(12, 440);
+            this.rdoNotApprove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoNotApprove.Name = "rdoNotApprove";
+            this.rdoNotApprove.Size = new System.Drawing.Size(203, 37);
+            this.rdoNotApprove.TabIndex = 30;
+            this.rdoNotApprove.TabStop = true;
+            this.rdoNotApprove.Text = "ຜູ້ພັກເຊົາທີ່ຍັງບໍ່ອານຸມັດ";
+            this.rdoNotApprove.UseVisualStyleBackColor = false;
+            this.rdoNotApprove.CheckedChanged += new System.EventHandler(this.rdoNotApprove_CheckedChanged);
             // 
-            // radioButton1
+            // rdoExpire
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioButton1.Location = new System.Drawing.Point(12, 408);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(211, 37);
-            this.radioButton1.TabIndex = 29;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ຜູ້ພັກເຊົາທີ່ໃກ້ໝົດກຳນົດ";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.rdoExpire.AutoSize = true;
+            this.rdoExpire.BackColor = System.Drawing.Color.Transparent;
+            this.rdoExpire.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoExpire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdoExpire.Location = new System.Drawing.Point(12, 408);
+            this.rdoExpire.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoExpire.Name = "rdoExpire";
+            this.rdoExpire.Size = new System.Drawing.Size(211, 37);
+            this.rdoExpire.TabIndex = 29;
+            this.rdoExpire.TabStop = true;
+            this.rdoExpire.Text = "ຜູ້ພັກເຊົາທີ່ໃກ້ໝົດກຳນົດ";
+            this.rdoExpire.UseVisualStyleBackColor = false;
+            this.rdoExpire.CheckedChanged += new System.EventHandler(this.rdoExpire_CheckedChanged);
             // 
             // rdoCitizen
             // 
@@ -232,6 +243,7 @@
             this.rdoCitizen.TabStop = true;
             this.rdoCitizen.Text = "ປະຊາກອນພາຍໃນເມືອງ";
             this.rdoCitizen.UseVisualStyleBackColor = false;
+            this.rdoCitizen.CheckedChanged += new System.EventHandler(this.rdoCitizen_CheckedChanged);
             // 
             // rdoTenant
             // 
@@ -247,6 +259,7 @@
             this.rdoTenant.TabStop = true;
             this.rdoTenant.Text = "ຜູ້ພັກເຊົາ";
             this.rdoTenant.UseVisualStyleBackColor = false;
+            this.rdoTenant.CheckedChanged += new System.EventHandler(this.rdoTenant_CheckedChanged);
             // 
             // label8
             // 
@@ -286,7 +299,6 @@
             this.cbVillage5.Name = "cbVillage5";
             this.cbVillage5.Size = new System.Drawing.Size(172, 36);
             this.cbVillage5.TabIndex = 25;
-            this.cbVillage5.SelectedIndexChanged += new System.EventHandler(this.cbVillage5_SelectedIndexChanged);
             // 
             // guna2Panel4
             // 
@@ -366,7 +378,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 28);
+            this.label9.Size = new System.Drawing.Size(90, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -391,29 +403,14 @@
             this.btnMakeReport.Text = "ສ້າງລາຍງານ";
             this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label1.Location = new System.Drawing.Point(14, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ລາຍງານສະຖິຕິພາບລວມຂອງລະບົບ";
-            // 
             // chart2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart2.Legends.Add(legend6);
             this.chart2.Location = new System.Drawing.Point(47, 499);
             this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(619, 417);
             this.chart2.TabIndex = 13;
             this.chart2.Text = "chart2";
@@ -477,8 +474,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RadioButton rdoCitizen;
         private System.Windows.Forms.RadioButton rdoTenant;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoNotApprove;
+        private System.Windows.Forms.RadioButton rdoExpire;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }

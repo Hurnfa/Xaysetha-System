@@ -10,23 +10,26 @@ namespace Xaysetha_System
     {
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
-        ReportParameterCollection rp = new ReportParameterCollection();
+        
         public Form3()
         {
             InitializeComponent();
             cn.getConnect();
+            loadDataCitizen();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
             this.reportViewer2.RefreshReport();
         }
+
+        DateTime dateTime = DateTime.Now;
+
         public void loadDataCitizen()
         {
             ReportParameterCollection rp = new ReportParameterCollection();
-            rp.Add(new ReportParameter("issueDate", DateTime.Now.ToString("dd/MM/yyyy")));
+            rp.Add(new ReportParameter("issueDate", dateTime.ToString("dd/MM/yyyy")));
             reportViewer2.LocalReport.SetParameters(rp);
-
 
             cmd = new NpgsqlCommand("SELECT \"citizenID\", name, surname, gender, dob, religion, family_book, \"phoneNums\", addr FROM \"public\".tb_citizen", cn.conn);
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);
@@ -36,7 +39,6 @@ namespace Xaysetha_System
             ReportDataSource reportDataSource2 = new ReportDataSource("DataSet2", dt2);
             reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             reportViewer2.RefreshReport();
-
         }
     }
 }

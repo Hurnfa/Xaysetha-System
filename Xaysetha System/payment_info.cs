@@ -37,7 +37,7 @@ namespace Xaysetha_System
                 data.Columns[0].DataPropertyName = "payment_id";
                 data.Columns[1].DataPropertyName = "tenant_id";
                 data.Columns[2].DataPropertyName = "firstname";
-                data.Columns[3].DataPropertyName = "duration";
+                data.Columns[3].DataPropertyName = "pkg_duration";
                 data.Columns[4].DataPropertyName = "price";
                 data.Columns[5].DataPropertyName = "user_id";
             }
@@ -104,6 +104,7 @@ namespace Xaysetha_System
             {
                 case "Print":
 
+                    //cmd = new NpgsqlCommand("select * from tb_payment join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" join tb_package on tb_payment.pkg_id = tb_package.pkg_id where tenant_id=@tenantID", cn.conn);
                     cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
 
                     cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenantID));
@@ -121,6 +122,8 @@ namespace Xaysetha_System
 
                     printing loadBill = new printing();
 
+                    //loadBill.loadDataToReport(paymentID, name, surname, float.Parse(txtPrice.Text), duration, txtUser.Text, gender);
+
                     loadBill.loadDataToReport(payment_id, name, surname, price, duration, userID, gender);
 
                     loadBill.Show();
@@ -130,7 +133,7 @@ namespace Xaysetha_System
 
                 case "Edit":
 
-                    paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, duration, price, "ແກ້ໄຂ");
+                    paymentDialog.fetchDataFromTable(payment_id, tenantID, userID, "ແກ້ໄຂ");
                     paymentDialog.ShowDialog();
 
                     break;

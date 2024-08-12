@@ -39,9 +39,6 @@
             this.txtTenantName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.rdoSixMonths = new System.Windows.Forms.RadioButton();
-            this.rdoThreeMonths = new System.Windows.Forms.RadioButton();
-            this.rdoOneMonth = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.comboboxPaymentStatus = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -54,6 +51,7 @@
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbPackage = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.guna2Panel20.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -210,60 +208,13 @@
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel5.Controls.Add(this.rdoSixMonths);
-            this.guna2Panel5.Controls.Add(this.rdoThreeMonths);
-            this.guna2Panel5.Controls.Add(this.rdoOneMonth);
+            this.guna2Panel5.Controls.Add(this.cbPackage);
             this.guna2Panel5.Controls.Add(this.label8);
             this.guna2Panel5.Location = new System.Drawing.Point(87, 284);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(477, 84);
             this.guna2Panel5.TabIndex = 14;
-            // 
-            // rdoSixMonths
-            // 
-            this.rdoSixMonths.AutoSize = true;
-            this.rdoSixMonths.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoSixMonths.ForeColor = System.Drawing.Color.White;
-            this.rdoSixMonths.Location = new System.Drawing.Point(225, 48);
-            this.rdoSixMonths.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdoSixMonths.Name = "rdoSixMonths";
-            this.rdoSixMonths.Size = new System.Drawing.Size(84, 32);
-            this.rdoSixMonths.TabIndex = 11;
-            this.rdoSixMonths.TabStop = true;
-            this.rdoSixMonths.Text = "6 ເດືອນ";
-            this.rdoSixMonths.UseVisualStyleBackColor = true;
-            this.rdoSixMonths.CheckedChanged += new System.EventHandler(this.rdoSixMonths_CheckedChanged);
-            // 
-            // rdoThreeMonths
-            // 
-            this.rdoThreeMonths.AutoSize = true;
-            this.rdoThreeMonths.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoThreeMonths.ForeColor = System.Drawing.Color.White;
-            this.rdoThreeMonths.Location = new System.Drawing.Point(112, 49);
-            this.rdoThreeMonths.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdoThreeMonths.Name = "rdoThreeMonths";
-            this.rdoThreeMonths.Size = new System.Drawing.Size(84, 32);
-            this.rdoThreeMonths.TabIndex = 10;
-            this.rdoThreeMonths.TabStop = true;
-            this.rdoThreeMonths.Text = "3 ເດືອນ";
-            this.rdoThreeMonths.UseVisualStyleBackColor = true;
-            this.rdoThreeMonths.CheckedChanged += new System.EventHandler(this.rdoThreeMonths_CheckedChanged);
-            // 
-            // rdoOneMonth
-            // 
-            this.rdoOneMonth.AutoSize = true;
-            this.rdoOneMonth.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoOneMonth.ForeColor = System.Drawing.Color.White;
-            this.rdoOneMonth.Location = new System.Drawing.Point(3, 48);
-            this.rdoOneMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rdoOneMonth.Name = "rdoOneMonth";
-            this.rdoOneMonth.Size = new System.Drawing.Size(84, 32);
-            this.rdoOneMonth.TabIndex = 9;
-            this.rdoOneMonth.TabStop = true;
-            this.rdoOneMonth.Text = "1 ເດືອນ";
-            this.rdoOneMonth.UseVisualStyleBackColor = true;
-            this.rdoOneMonth.CheckedChanged += new System.EventHandler(this.rdoOneMonth_CheckedChanged);
             // 
             // label8
             // 
@@ -273,9 +224,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 28);
+            this.label8.Size = new System.Drawing.Size(65, 28);
             this.label8.TabIndex = 8;
-            this.label8.Text = "ກຳໜົດເວລາພັກເຊົາ";
+            this.label8.Text = "ລາຍການ";
             // 
             // guna2Panel4
             // 
@@ -454,6 +405,28 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "ຜູ້ຮັບເງິນ";
             // 
+            // cbPackage
+            // 
+            this.cbPackage.BackColor = System.Drawing.Color.Transparent;
+            this.cbPackage.BorderRadius = 4;
+            this.cbPackage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPackage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPackage.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPackage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPackage.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
+            this.cbPackage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
+            this.cbPackage.ItemHeight = 30;
+            this.cbPackage.Items.AddRange(new object[] {
+            " ",
+            "ລໍຖ້າຊຳລະ",
+            "ຊຳລະແລ້ວ"});
+            this.cbPackage.Location = new System.Drawing.Point(5, 30);
+            this.cbPackage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbPackage.Name = "cbPackage";
+            this.cbPackage.Size = new System.Drawing.Size(441, 36);
+            this.cbPackage.TabIndex = 25;
+            this.cbPackage.SelectedIndexChanged += new System.EventHandler(this.cbPackage_SelectedIndexChanged);
+            // 
             // PaymentDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -501,9 +474,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenantName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.RadioButton rdoSixMonths;
-        private System.Windows.Forms.RadioButton rdoThreeMonths;
-        private System.Windows.Forms.RadioButton rdoOneMonth;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label label6;
@@ -517,5 +487,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label_payment_id;
+        private Guna.UI2.WinForms.Guna2ComboBox cbPackage;
     }
 }
