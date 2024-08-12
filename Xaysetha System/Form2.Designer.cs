@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,14 +57,16 @@
             this.datePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnMakeReport = new Guna.UI2.WinForms.Guna2Button();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2RadioButton1 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotal)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -107,7 +110,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label4.Location = new System.Drawing.Point(16, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 28);
+            this.label4.Size = new System.Drawing.Size(252, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "ຕົວຊື້ບອກ ຜູ້ທີ່ຢູ່ອາໄຊໃນເມືອງໄຊເສດຖາ";
             // 
@@ -206,7 +209,7 @@
             this.rdoNotApprove.Location = new System.Drawing.Point(12, 440);
             this.rdoNotApprove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoNotApprove.Name = "rdoNotApprove";
-            this.rdoNotApprove.Size = new System.Drawing.Size(203, 37);
+            this.rdoNotApprove.Size = new System.Drawing.Size(202, 37);
             this.rdoNotApprove.TabIndex = 30;
             this.rdoNotApprove.TabStop = true;
             this.rdoNotApprove.Text = "ຜູ້ພັກເຊົາທີ່ຍັງບໍ່ອານຸມັດ";
@@ -378,7 +381,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 28);
+            this.label9.Size = new System.Drawing.Size(89, 28);
             this.label9.TabIndex = 8;
             this.label9.Text = "ແຈ້ງເຂົ້າວັນທີ່";
             // 
@@ -403,17 +406,64 @@
             this.btnMakeReport.Text = "ສ້າງລາຍງານ";
             this.btnMakeReport.Click += new System.EventHandler(this.btnMakeReport_Click);
             // 
-            // chart2
+            // chartTotal
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart2.Legends.Add(legend6);
-            this.chart2.Location = new System.Drawing.Point(47, 499);
-            this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(619, 417);
-            this.chart2.TabIndex = 13;
-            this.chart2.Text = "chart2";
+            chartArea3.Name = "ChartArea1";
+            this.chartTotal.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartTotal.Legends.Add(legend3);
+            this.chartTotal.Location = new System.Drawing.Point(47, 499);
+            this.chartTotal.Name = "chartTotal";
+            series3.ChartArea = "ChartArea1";
+            series3.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.Legend = "Legend1";
+            series3.Name = "villageTotal";
+            this.chartTotal.Series.Add(series3);
+            this.chartTotal.Size = new System.Drawing.Size(619, 417);
+            this.chartTotal.TabIndex = 13;
+            this.chartTotal.Text = "chart2";
+            // 
+            // guna2RadioButton1
+            // 
+            this.guna2RadioButton1.AutoSize = true;
+            this.guna2RadioButton1.BackColor = System.Drawing.Color.White;
+            this.guna2RadioButton1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2RadioButton1.CheckedState.BorderThickness = 0;
+            this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2RadioButton1.CheckedState.InnerOffset = -4;
+            this.guna2RadioButton1.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2RadioButton1.Location = new System.Drawing.Point(505, 567);
+            this.guna2RadioButton1.Name = "guna2RadioButton1";
+            this.guna2RadioButton1.Size = new System.Drawing.Size(152, 32);
+            this.guna2RadioButton1.TabIndex = 14;
+            this.guna2RadioButton1.Text = "ບ້ານທີ່ຄົນຢູ່ຫຼາຍສຸດ";
+            this.guna2RadioButton1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2RadioButton1.UncheckedState.BorderThickness = 2;
+            this.guna2RadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton1.UseVisualStyleBackColor = false;
+            // 
+            // guna2RadioButton2
+            // 
+            this.guna2RadioButton2.AutoSize = true;
+            this.guna2RadioButton2.BackColor = System.Drawing.Color.White;
+            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2RadioButton2.CheckedState.BorderThickness = 0;
+            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
+            this.guna2RadioButton2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2RadioButton2.Location = new System.Drawing.Point(505, 605);
+            this.guna2RadioButton2.Name = "guna2RadioButton2";
+            this.guna2RadioButton2.Size = new System.Drawing.Size(161, 32);
+            this.guna2RadioButton2.TabIndex = 15;
+            this.guna2RadioButton2.Text = "ບ້ານທີ່ຄົນຢູ່ໜ້ອຍສຸດ";
+            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
+            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.guna2RadioButton2.UseVisualStyleBackColor = false;
             // 
             // Form2
             // 
@@ -421,7 +471,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1422, 943);
-            this.Controls.Add(this.chart2);
+            this.Controls.Add(this.guna2RadioButton2);
+            this.Controls.Add(this.guna2RadioButton1);
+            this.Controls.Add(this.chartTotal);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2Panel1);
@@ -445,8 +497,9 @@
             this.guna2Panel4.PerformLayout();
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotal)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -477,6 +530,8 @@
         private System.Windows.Forms.RadioButton rdoNotApprove;
         private System.Windows.Forms.RadioButton rdoExpire;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotal;
+        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton1;
+        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
     }
 }

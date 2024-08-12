@@ -10,7 +10,7 @@ namespace Xaysetha_System
     {
         db_connect cn = new db_connect();
         NpgsqlCommand cmd;
-        
+
         public Form3()
         {
             InitializeComponent();

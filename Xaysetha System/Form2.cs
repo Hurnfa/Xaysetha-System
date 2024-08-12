@@ -1,13 +1,9 @@
-﻿using Mysqlx.Crud;
-using Npgsql;
+﻿using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using TheArtOfDevHtmlRenderer.Adapters;
 
 namespace Xaysetha_System
 {
@@ -27,12 +23,12 @@ namespace Xaysetha_System
             loadTotalTenant();
             comboVillage1Load();
             DisplayChart();
-            
             //comboVillage2Load();
             //comboVillage3Load();
             //comboVillage4Load();
             //comboVillage5Load();
         }
+
 
         void loadTotalTenant()
         {
@@ -76,7 +72,7 @@ namespace Xaysetha_System
             }
 
             ChartArea chartArea = new ChartArea();
-            chart2.ChartAreas.Add(chartArea);
+            chartTotal.ChartAreas.Add(chartArea);
 
             Series series = new Series
             {
@@ -85,14 +81,14 @@ namespace Xaysetha_System
                 ChartType = SeriesChartType.Column
             };
 
-            chart2.Series.Add(series);
+            chartTotal.Series.Add(series);
 
             foreach (var item in data)
             {
                 series.Points.AddXY(item.VillageId, item.Population);
             }
 
-            chart2.Invalidate();
+            chartTotal.Invalidate();
         }
 
         void comboVillage1Load()
@@ -125,6 +121,10 @@ namespace Xaysetha_System
                 Report loadTenant = new Report();
                 loadTenant.loadDataToReport(cbVillage5.SelectedValue.ToString(), datePicker1.Value, datePicker2.Value);
                 loadTenant.Show();
+            }
+            else if (rdoNotApprove.Checked)
+            {
+                new NotApprove().Show();
             }
 
         }
