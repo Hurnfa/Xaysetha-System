@@ -23,6 +23,8 @@ namespace Xaysetha_System
         public void loadData()
         {
             ReportParameterCollection rp = new ReportParameterCollection();
+            rp.Add(new ReportParameter("issueDate", DateTime.Now.ToString("dd/MM/yyyy")));
+            reportViewer2.LocalReport.SetParameters(rp);
 
             cmd = new NpgsqlCommand(@"SELECT ""tenantID"", firstname, tenant_status FROM ""public"".tb_tenant where tenant_status IS NULL OR tenant_status = 'ຍັງບໍ່ໄດ້ອະນຸມັດ'", cn.conn);
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);

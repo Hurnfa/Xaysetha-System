@@ -36,6 +36,7 @@
             this.txtPwd = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserID = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,11 +45,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(193, 128);
+            this.label1.Location = new System.Drawing.Point(272, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 65);
+            this.label1.Size = new System.Drawing.Size(192, 65);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ລົງທະບຽນຜູ້ໃຊ້";
+            this.label1.Text = "ເຂົ້່່າສູ່ລະບົບ";
             // 
             // label2
             // 
@@ -171,12 +172,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(95)))), ((int)(((byte)(113)))));
+            this.label4.Location = new System.Drawing.Point(123, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(511, 38);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "ລະບົບເກັບກຳ ແລະ ຈັດການຜູ້ພັກເຊົາຕ່າງແດນ ເມືອງ ໄຊເສດຖາ";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1440, 903);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.label3);
@@ -208,6 +221,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPwd;
         private Guna.UI2.WinForms.Guna2Button btnLogIn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
