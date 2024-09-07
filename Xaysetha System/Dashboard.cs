@@ -228,5 +228,10 @@ namespace Xaysetha_System
         {
             OpenChildForm(new fee_management());
         }
+
+        private void btnJobs_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new jobs_management());
+        }
     }
 }
