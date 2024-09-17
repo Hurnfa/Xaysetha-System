@@ -122,6 +122,7 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -164,6 +165,7 @@
             this.Controls.Add(this.label_id);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "jobs_add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "jobs_add";
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

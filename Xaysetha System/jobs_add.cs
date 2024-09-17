@@ -15,16 +15,30 @@ namespace Xaysetha_System
     {
         NpgsqlCommand cmd;
         db_connect cn = new db_connect();
+        int jobs_id;
 
         public jobs_add()
         {
             InitializeComponent();
+            cn.getConnect();
+        }
 
+        public void getDataFromMainPage(int id, string name, string task)
+        {
+            labelHeader.Text = $"{task}ອາຊີບ";
+            jobs_id = id;
+            txtVillage.Text = name;
+            btnSave.Text = task;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

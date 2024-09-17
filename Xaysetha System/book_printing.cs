@@ -251,7 +251,8 @@ namespace Xaysetha_System
 
             rp.Add(new ReportParameter("placeName", place));
 
-            cmd = new NpgsqlCommand("select * from tb_place inner join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" where \"placeName\"=@placeName", cn.conn);
+            //cmd = new NpgsqlCommand("select * from tb_place inner join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" where \"placeName\"=@placeName", cn.conn);
+            cmd = new NpgsqlCommand("select * from tb_place join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" JOIN tb_village ON tb_place.\"villageID\" = tb_village.\"villageID\" where \"placeName\"=@placeName", cn.conn);
 
             try
             {
@@ -263,6 +264,7 @@ namespace Xaysetha_System
                 {
                     rp.Add(new ReportParameter("houseNo", reader1["placeHouseNumber"].ToString()));
                     rp.Add(new ReportParameter("houseUnit", reader1["placeHouseUnit"].ToString()));
+                    rp.Add(new ReportParameter("placeVillage", reader["villageName"].ToString()));
                     //village missing value
 
                     switch (reader1["gender"].ToString())
@@ -294,7 +296,7 @@ namespace Xaysetha_System
 
                 reader1.Close();
 
-                rp.Add(new ReportParameter("placeVillage", "ນາໄຊ"));
+                //rp.Add(new ReportParameter("placeVillage", "ນາໄຊ"));
 
             }
             catch (Exception ex)

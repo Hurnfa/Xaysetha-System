@@ -3,6 +3,7 @@ using Npgsql;
 using System;
 using System.Data;
 using System.Numerics;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Xaysetha_System
@@ -116,6 +117,7 @@ namespace Xaysetha_System
                     cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
                     cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
                     cmd.Parameters.AddWithValue("@pkgID", pkgID);
+                    cmd.Parameters.AddWithValue("@duration", pkg_duration);
 
                     cmd.Parameters.AddWithValue("@user_id", txtUser.Text);
 
@@ -217,7 +219,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_payment SET payment_date=@paymentDate, payment_status=@paymentStatus, pkg_id=@pkgID, price=@price WHERE payment_id=@paymentID",
+                        dataChange("UPDATE tb_payment SET payment_date=@paymentDate, payment_status=@paymentStatus, pkg_id=@pkgID, price=@price, duration=@duration WHERE payment_id=@paymentID",
                             "ຈ່າຍຄ່າລົງທະບຽນພັກເຊົ່າ",
                             BigInteger.Parse(label_payment_id.Text)
                         );
@@ -275,6 +277,7 @@ namespace Xaysetha_System
         }
 
         string price;
+        int pkg_duration;
 
         private void cbPackage_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -282,10 +285,21 @@ namespace Xaysetha_System
 
             if (int.TryParse(cbPackage.SelectedValue?.ToString(), out int provinceID))
             {
-                using (var cmd = new NpgsqlCommand("SELECT pkg_price FROM tb_package WHERE pkg_id=@pkgID", cn.conn))
+                using (var cmd = new NpgsqlCommand("SELECT * FROM tb_package WHERE pkg_id=@pkgID", cn.conn))
                 {
                     cmd.Parameters.AddWithValue("@pkgID", provinceID);
-                    price = cmd.ExecuteScalar().ToString();
+
+                    NpgsqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        price = reader["pkg_price"].ToString();
+                        pkg_duration = int.Parse(reader["pkg_duration"].ToString());
+                    }
+
+                    reader.Close();
+
+                    //price = cmd.ExecuteScalar().ToString();
                 }
             }
             else
