@@ -22,8 +22,8 @@ namespace Xaysetha_System
             OpenChildForm(table_payment, statusControl.TabPages[0]);
             //table_payment.loadData("SELECT * FROM tb_payment;");
             //loadData("SELECT * from tb_place INNER JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" INNER JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
-            //table_payment.loadData("SELECT * from tb_payment INNER JOIN tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\";");
-            table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\"");
+            //table_payment.loadData("SELECT * from tb_payment INNER JOIN tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id;");
+            table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id");
 
         }
 
@@ -105,14 +105,14 @@ namespace Xaysetha_System
             {
                 case 0:
                     displayTotalOfData("ຊຳລະແລ້ວ");
-                    //table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
-                    table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ຊຳລະແລ້ວ';");
+                    //table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id where payment_status = 'ຊຳລະແລ້ວ';");
+                    table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id where payment_status = 'ຊຳລະແລ້ວ';");
                     OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
                     break;
                 case 1:
                     displayTotalOfData("ລໍຖ້າຊຳລະ");
-                    //table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
-                    table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where payment_status = 'ລໍຖ້າຊຳລະ';");
+                    //table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id where payment_status = 'ລໍຖ້າຊຳລະ';");
+                    table_payment.loadData("select * from tb_payment join tb_package on tb_payment.pkg_id = tb_package.pkg_id join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id where payment_status = 'ລໍຖ້າຊຳລະ';");
                     OpenChildForm(table_payment, statusControl.TabPages[selectedIndex]);
                     break;
                 case 2:
@@ -135,7 +135,7 @@ namespace Xaysetha_System
         {
             table_payment.dataTable.Clear();
 
-            table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" where CONCAT (payment_id, firstname) LIKE '%"+txtSearch.Text+"%'");
+            table_payment.loadData("select * from tb_payment inner join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id where CONCAT (payment_id, tenant_name) LIKE '%"+txtSearch.Text+"%'");
         }
     }
 }

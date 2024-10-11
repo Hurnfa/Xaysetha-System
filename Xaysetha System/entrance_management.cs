@@ -49,10 +49,10 @@ namespace Xaysetha_System
             adapter.Fill(datatable);
             data.DataSource = datatable;
 
-            data.Columns[0].DataPropertyName = "tenantID";
-            data.Columns[1].DataPropertyName = "firstname";
-            data.Columns[2].DataPropertyName = "lastname";
-            data.Columns[3].DataPropertyName = "gender";
+            data.Columns[0].DataPropertyName = "tenant_id";
+            data.Columns[1].DataPropertyName = "tenant_name";
+            data.Columns[2].DataPropertyName = "tenant_lastname";
+            data.Columns[3].DataPropertyName = "tenant_gender";
             data.Columns[4].DataPropertyName = "village";
         }
 
@@ -98,7 +98,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        cmd = new NpgsqlCommand("DELETE FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+                        cmd = new NpgsqlCommand("DELETE FROM tb_tenant WHERE tenant_id=@tenantID", cn.conn);
 
                         try
                         {
@@ -151,7 +151,8 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_tenant WHERE CONCAT(\"tenantID\", firstname, lastname) LIKE '%"+txtSearch.Text+"%'");
+            //loadData("SELECT * FROM tb_tenant WHERE CONCAT(\"tenantID\", firstname, lastname) LIKE '%"+txtSearch.Text+"%'");
+            loadData($"SELECT * FROM tb_tenant WHERE CONCAT(tenant_id, tenant_name, tenant_lastname) LIKE '{txtSearch.Text}%'");
         }
     }
 }

@@ -2,10 +2,12 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Xaysetha_System
 {
@@ -59,7 +61,7 @@ namespace Xaysetha_System
             //txtJobs.Text = occupation;
 
 
-            cmd = new NpgsqlCommand("SELECT * FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+            cmd = new NpgsqlCommand("SELECT * FROM tb_tenant WHERE tenant_id=@tenantID", cn.conn);
 
             cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenant_id));
 
@@ -67,19 +69,19 @@ namespace Xaysetha_System
 
             while (reader.Read())
             {
-                datePickerBirthday.Value = (DateTime)reader["dob"];
-                txtNationality.Text = reader["nationality"].ToString();
+                datePickerBirthday.Value = (DateTime)reader["tenant_dob"];
+                txtNationality.Text = reader["tenant_nationality"].ToString();
                 txtEthnic.Text = reader["ethnics"].ToString();
                 txtReligion.Text = reader["religion"].ToString();
-                txtFamBookID.Text = reader["fambookID"].ToString();
-                datePickerFamBookIssueDate.Value = (DateTime)reader["famBookIssueDate"];
+                txtFamBookID.Text = reader["fambook_nums"].ToString();
+                datePickerFamBookIssueDate.Value = (DateTime)reader["fambook_date"];
                 comboboxDistrict.Text = reader["district"].ToString();
-                txtPhoneNums.Text = reader["phoneNums"].ToString();
-                txtJobs.Text = reader["occupation"].ToString();
+                txtPhoneNums.Text = reader["tels"].ToString();
+                txtJobs.Text = reader["jobs"].ToString();
                 txtVillage.Text = reader["village"].ToString();
                 comboboxProvince.Text = reader["province"].ToString();
 
-                if (reader["tenantpics"] == DBNull.Value)
+/*                if (reader["tenantpics"] == DBNull.Value)
                 {
                     profilePictureBox.Image = null;
                 }
@@ -88,7 +90,7 @@ namespace Xaysetha_System
                     byte[] img = (byte[])reader["tenantpics"];
                     MemoryStream memory = new MemoryStream(img);
                     profilePictureBox.Image = Image.FromStream(memory);
-                }
+                }*/
             }
 
             reader.Close();
@@ -99,9 +101,16 @@ namespace Xaysetha_System
             btnSave.Text = header;
         }
 
+        public BigInteger tenantID;
+
         void dataChange(string sql, string messegeBox)
         {
-            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text);
+            //BigInteger tenantID;
+
+            if (txtTenantID.Text != "")
+            {
+                tenantID = BigInteger.Parse(txtTenantID.Text);
+            }            
 
             string gender = "ບໍ່ລະບຸ";
 
@@ -116,10 +125,10 @@ namespace Xaysetha_System
 
             DateTime birthDay = datePickerBirthday.Value;
 
-            MemoryStream memoryStream = new MemoryStream();
+/*            MemoryStream memoryStream = new MemoryStream();
 
             profilePictureBox.Image.Save(memoryStream, profilePictureBox.Image.RawFormat);
-
+*/
             cmd = new NpgsqlCommand(sql, cn.conn);
 
             try
@@ -139,7 +148,7 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@famBookIssueDate", datePickerFamBookIssueDate.Value);
                 cmd.Parameters.AddWithValue("@village", txtVillage.Text);
                 cmd.Parameters.AddWithValue("@district", comboboxDistrict.Text);
-                cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
+                //cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@province", comboboxProvince.Text);
                 cmd.Parameters.AddWithValue("@tenantStatus", "ຍັງບໍ່ໄດ້ອະນຸມັດ");
 
@@ -162,8 +171,10 @@ namespace Xaysetha_System
 
         void sentDataToPayment(string sql, string messegeBox)
         {
-            BigInteger tenantID = BigInteger.Parse(txtTenantID.Text),
-                paymentID = new Random().Next();
+            cmd = new NpgsqlCommand("SELECT tenant_id FROM tb_tenant ORDER BY tenant_id DESC LIMIT 1", cn.conn);
+            tenantID = BigInteger.Parse(cmd.ExecuteScalar().ToString());
+;
+            BigInteger paymentID = new Random().Next();
 
 
             try
@@ -182,13 +193,13 @@ namespace Xaysetha_System
 
                 cmd.ExecuteNonQuery();
 
-                cmd = new NpgsqlCommand("SELECT gender FROM tb_tenant WHERE \"tenantID\"=" + tenantID, cn.conn);
+                cmd = new NpgsqlCommand("SELECT tenant_gender FROM tb_tenant WHERE tenant_id=" + tenantID, cn.conn);
                 cmd.Parameters.AddWithValue("@tenantID", tenantID);
                 NpgsqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    title = reader["gender"].ToString();
+                    title = reader["tenant_gender"].ToString();
                 }
 
                 reader.Close();
@@ -230,10 +241,14 @@ namespace Xaysetha_System
             switch (btnSave.Text)
             {
                 case "ບັນທຶກ":
+                    dataChange(@"INSERT INTO public.tb_tenant(
+	                    tenant_name, tenant_lastname, tenant_gender, tenant_dob, tenant_nationality, religion, ethnics, jobs, village, district, province, fambook_nums, fambook_date, tels, tenant_status)
+	                    VALUES (@firstname, @lastname, @gender, @dob, @nationality, @religion, @ethnics, @occupation, @village, @district, @province, @fambookID, @famBookIssueDate, @phoneNums, @tenantStatus);", "ເພີ່ມ");
 
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
-                    dataChange("INSERT INTO tb_tenant VALUES (@tenantID, @firstname, @lastname, @gender, @dob, @nationality, @occupation, @village, @district, @fambookID, @description, @famBookIssueDate, @tenantpics, @religion, @phoneNums, @ethnics, @province, @tenantStatus);", "ເພີ່ມ");
-                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, payment_status, user_id, pkg_id, price) VALUES (@paymentID, @tenantID, @paymentStatus, @userID, @pkgID, @price)", "ເພີ່ມ");
+                    //dataChange("INSERT INTO tb_tenant VALUES (@firstname, @lastname, @gender, @dob, @nationality, @religion, @ethnics, @occupation, @village, @district, @province, @fambookID, @famBookIssueDate, @phoneNums, @tenantStatus);", "ເພີ່ມ");
+
+                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, pkg_id, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @pkgID, @price, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":

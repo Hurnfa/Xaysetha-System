@@ -36,7 +36,7 @@ namespace Xaysetha_System
 
                 data.Columns[0].DataPropertyName = "payment_id";
                 data.Columns[1].DataPropertyName = "tenant_id";
-                data.Columns[2].DataPropertyName = "firstname";
+                data.Columns[2].DataPropertyName = "tenant_name";
                 data.Columns[3].DataPropertyName = "pkg_duration";
                 data.Columns[4].DataPropertyName = "price";
                 data.Columns[5].DataPropertyName = "user_id";
@@ -104,8 +104,8 @@ namespace Xaysetha_System
             {
                 case "Print":
 
-                    //cmd = new NpgsqlCommand("select * from tb_payment join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" join tb_package on tb_payment.pkg_id = tb_package.pkg_id where tenant_id=@tenantID", cn.conn);
-                    cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+                    //cmd = new NpgsqlCommand("select * from tb_payment join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id join tb_package on tb_payment.pkg_id = tb_package.pkg_id where tenant_id=@tenantID", cn.conn);
+                    cmd = new NpgsqlCommand("SELECT tenant_name, tenant_lastname, tenant_gender FROM tb_tenant WHERE tenant_id=@tenantID", cn.conn);
 
                     cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenantID));
 
@@ -113,9 +113,9 @@ namespace Xaysetha_System
 
                     while (reader.Read())
                     {
-                        name = reader["firstname"].ToString();
-                        surname = reader["lastname"].ToString();
-                        gender = reader["gender"].ToString();
+                        name = reader["tenant_name"].ToString();
+                        surname = reader["tenant_lastname"].ToString();
+                        gender = reader["tenant_gender"].ToString();
                     }
 
                     reader.Close();

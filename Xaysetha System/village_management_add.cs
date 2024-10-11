@@ -12,7 +12,7 @@ namespace Xaysetha_System
 
         public void dataChange(string sql, string messageBox)
         {
-            cmd = new NpgsqlCommand("SELECT \"villageName\" FROM tb_village WHERE \"villageName\"=@villageName;", cn.conn);
+            cmd = new NpgsqlCommand("SELECT village_name FROM tb_village WHERE village_name=@villageName;", cn.conn);
 
             cmd.Parameters.AddWithValue("@villageName", txtVillage.Text);
 
@@ -30,13 +30,13 @@ namespace Xaysetha_System
                 {
                     case "ເພີ່ມ":
 
-                        cmd = new NpgsqlCommand("select \"villageID\" from tb_village order by \"villageID\" desc limit 1;", cn.conn);
+                        cmd = new NpgsqlCommand("select village_id from tb_village order by village_id desc limit 1;", cn.conn);
 
                         reader = cmd.ExecuteReader();
 
                         while (reader.Read())
                         {
-                            id = Convert.ToInt32(reader["villageID"]) + 1;
+                            id = Convert.ToInt32(reader["village_id"]) + 1;
                         }
 
                         reader.Close();
@@ -89,7 +89,7 @@ namespace Xaysetha_System
                 {
                     case "ເພີ່ມ":
 
-                        dataChange("INSERT INTO tb_village (\"villageID\", \"villageName\") VALUES (@villageID, @villageName);", "ເພີ່ມ");
+                        dataChange("INSERT INTO tb_village (village_id, village_name) VALUES (@villageID, @villageName);", "ເພີ່ມ");
 
                         break;
 
@@ -99,7 +99,7 @@ namespace Xaysetha_System
 
                         if (result == DialogResult.Yes)
                         {
-                            dataChange("UPDATE tb_village SET \"villageName\"=@villageName WHERE \"villageID\"=" + label_id.Text + ";", "ແກ້ໄຂ");
+                            dataChange($"UPDATE tb_village SET village_name=@villageName WHERE village_id={label_id.Text}", "ແກ້ໄຂ");
                         }
 
                         break;

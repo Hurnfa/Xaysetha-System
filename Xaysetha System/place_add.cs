@@ -30,8 +30,8 @@ namespace Xaysetha_System
             adapter.Fill(dataSetVillage);
             combobox_village.DataSource = dataSetVillage.Tables[0];
 
-            combobox_village.DisplayMember = "villageName";
-            combobox_village.ValueMember = "villageID";
+            combobox_village.DisplayMember = "village_name";
+            combobox_village.ValueMember = "village_id";
 
             //Attach event again
             combobox_village.SelectedIndexChanged += combobox_village_SelectedIndexChanged;
@@ -47,8 +47,8 @@ namespace Xaysetha_System
             adapter.Fill(dataSetCitizen);
             combobox_citizen.DataSource = dataSetCitizen.Tables[0];
 
-            combobox_citizen.DisplayMember = "name";
-            combobox_citizen.ValueMember = "citizenID";
+            combobox_citizen.DisplayMember = "citizen_name";
+            combobox_citizen.ValueMember = "citizen_id";
 
             //Attach event again
             combobox_citizen.SelectedIndexChanged += combobox_citizen_SelectedIndexChanged;
@@ -65,8 +65,8 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@citizenID", combobox_citizen.SelectedValue);
                 cmd.Parameters.AddWithValue("@villageID", combobox_village.SelectedValue);
                 cmd.Parameters.AddWithValue("@placeName", txtPlaceName.Text);
-                cmd.Parameters.AddWithValue("@placeHouseUnit", txtHouseUnit.Text);
-                cmd.Parameters.AddWithValue("@placeHouseNumber", txtHouseNums.Text);
+                cmd.Parameters.AddWithValue("@placeHouseUnit", int.Parse(txtHouseUnit.Text));
+                cmd.Parameters.AddWithValue("@placeHouseNumber", int.Parse(txtHouseNums.Text));
 
                 cmd.ExecuteNonQuery();
 
@@ -142,7 +142,8 @@ namespace Xaysetha_System
             {
                 case "ບັນທຶກ":
 
-                    dataChange("INSERT INTO tb_place VALUES (@placeID, @citizenID, @villageID, @placeName, @placeHouseUnit, @placeHouseNumber, @placeType)", "ເພີ່ມ");
+                    //dataChange("INSERT INTO tb_place VALUES (@placeID, @citizenID, @villageID, @placeName, @placeHouseUnit, @placeHouseNumber, @placeType)", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_place VALUES (@placeID, @placeName, @placeType, @placeHouseUnit, @placeHouseNumber, @villageID, @citizenID)", "ເພີ່ມ");
 
                     break;
 
@@ -152,7 +153,14 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_place SET \"citizentID\"=@citizenID, \"villageID\"=@villageID, \"placeName\"=@placeName, \"placeHouseUnit\"=@placeHouseUnit, \"placeHouseNumber\"=@placeHouseNumber, \"placeType\"=@placeType WHERE \"placeID\"=@placeID", "ແກ້ໄຂ");
+                        //dataChange("UPDATE tb_place SET \"citizentID\"=@citizenID, \"villageID\"=@villageID, \"placeName\"=@placeName, \"placeHouseUnit\"=@placeHouseUnit, \"placeHouseNumber\"=@placeHouseNumber, \"placeType\"=@placeType WHERE \"placeID\"=@placeID", "ແກ້ໄຂ");
+                        dataChange("UPDATE tb_place SET " +
+                            "place_name=@placeName, " +
+                            "place_type=@placeType, " +
+                            "house_unit=@placeHouseUnit, " +
+                            "house_number=@placeHouseNumber, " +
+                            "village_id=@villageID, " +
+                            "citizen_id=@citizenID WHERE place_id=@placeID", "ແກ້ໄຂ");
                     }
 
                     break;

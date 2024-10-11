@@ -51,7 +51,7 @@ namespace Xaysetha_System
                     break;
             }
 
-            cmd = new NpgsqlCommand("SELECT \"userName\", \"userLName\" FROM tb_user WHERE \"userID\"=@userID", cn.conn); // Assuming 'connection' is your NpgsqlConnection
+            cmd = new NpgsqlCommand("SELECT user_name, user_lastname FROM tb_user WHERE user_id=@userID", cn.conn); // Assuming 'connection' is your NpgsqlConnection
             cmd.Parameters.AddWithValue("@userID", username);
 
             NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -60,8 +60,8 @@ namespace Xaysetha_System
 
             while (reader.Read())
             {
-                rp.Add(new ReportParameter("userName", reader["userName"].ToString()));
-                rp.Add(new ReportParameter("userLName", reader["userLName"].ToString()));
+                rp.Add(new ReportParameter("userName", reader["user_name"].ToString()));
+                rp.Add(new ReportParameter("userLName", reader["user_lastname"].ToString()));
             }
 
             reader.Close();

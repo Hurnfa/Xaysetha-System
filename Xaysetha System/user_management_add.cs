@@ -193,7 +193,7 @@ namespace Xaysetha_System
 
                         if (result == DialogResult.Yes)
                         {
-                            dataChange("UPDATE tb_user SET \"userName\"=@userName, \"userLName\"=@userLName, \"phoneNums\"=@phoneNums, \"userPassword\"=@userPassword, gender=@gender, role=@role WHERE \"userID\"=@userID;", "ແກ້ໄຂ");
+                            dataChange("UPDATE tb_user SET user_name=@userName, user_lastname=@userLName, user_gender=@gender, user_role=@role, user_tel=@phoneNums, user_password=@userPassword WHERE user_id=@userID;", "ແກ້ໄຂ");
                         }
 
                         break;

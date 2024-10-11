@@ -42,7 +42,8 @@ namespace Xaysetha_System
         {
             if (txtUserID.Text != "" && txtPwd.Text != "")
             {
-                cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID AND \"userPassword\"=@userPassword", cn.conn);
+                //cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID AND \"userPassword\"=@userPassword", cn.conn);
+                cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE user_id=@userID AND user_password=@userPassword", cn.conn);
 
                 try
                 {
@@ -67,7 +68,7 @@ namespace Xaysetha_System
                         {
                             //MessageBox.Show("ສະບາຍດີທ່ານ " + reader["userName"].ToString() +" "+ reader["userLName"].ToString(), "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            dashboard.showUserName(reader["userName"].ToString(), reader["userLName"].ToString(), reader["role"].ToString(), txtUserID.Text);
+                            dashboard.showUserName(reader["user_name"].ToString(), reader["user_lastname"].ToString(), reader["user_role"].ToString(), txtUserID.Text);
                         }
 
                         /*SqlDataReader rd = cmd.ExecuteReader();

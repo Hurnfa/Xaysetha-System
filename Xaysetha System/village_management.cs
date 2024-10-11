@@ -22,8 +22,8 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
-            data.Columns["villageID"].DataPropertyName = "villageID";
-            data.Columns["VillageName"].DataPropertyName = "villageName";
+            data.Columns["villageID"].DataPropertyName = "village_id";
+            data.Columns["VillageName"].DataPropertyName = "village_name";
         }
 
 
@@ -92,7 +92,8 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_village WHERE CONCAT(\"villageID\", \"villageName\", \"villageEngName\") LIKE '%" + txtFindVillage.Text + "%';");
+            //loadData("SELECT * FROM tb_village WHERE CONCAT(\"villageID\", \"villageName\", \"villageEngName\") LIKE '%" + txtFindVillage.Text + "%';");
+            loadData($"SELECT * FROM tb_village WHERE CONCAT(village_id, village_name, village_eng_name) LIKE '%{txtFindVillage.Text}%';");
         }
 
         private void data_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -119,11 +120,12 @@ namespace Xaysetha_System
 
                 case "delButton":
 
-                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("ທ່ານຕ້ອງການລຶບຂໍ້ມູນນີ້ບໍ?", "ແຈ້ງເຕືອນ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
-                        village.dataChange("DELETE FROM tb_village WHERE \"villageID\"="+village_id+"", "ລຶບ");
+                        //village.dataChange("DELETE FROM tb_village WHERE \"villageID\"="+village_id+"", "ລຶບ");
+                        village.dataChange($"DELETE FROM tb_village WHERE village_id={village_id}", "ລຶບ");
                     }
 
                     break;

@@ -13,9 +13,8 @@ namespace Xaysetha_System
     public class db_connect
     {
         //public MySqlConnection conn = new MySqlConnection();
-        public NpgsqlConnection conn = new NpgsqlConnection();
         //public string path = "server=localhost; username=root; database=db_picture; port=3306; password=";
-        public string path = "User Id=postgres.vikiezgjlynnublheair;Password=Huawei@123+2023;Server=aws-0-ap-southeast-1.pooler.supabase.com;Port=6543;Database=postgres;";
+        //public string path = "User Id=postgres.vikiezgjlynnublheair;Password=Huawei@123+2023;Server=aws-0-ap-southeast-1.pooler.supabase.com;Port=6543;Database=postgres;";
         //string pwd = "Risd8446+-";
 
         public string userName { get; set; }
@@ -23,12 +22,15 @@ namespace Xaysetha_System
         //private string path;
 
 
-/*        public string GetConnectionString()
-        {
-            string pathString = "server=35.220.141.128; username=" + userName + "; database=simple_db; port=3306; password=" + password +"";
+        /*        public string GetConnectionString()
+                {
+                    string pathString = "server=35.220.141.128; username=" + userName + "; database=simple_db; port=3306; password=" + password +"";
 
-            return path = pathString;
-        }*/
+                    return path = pathString;
+                }*/
+
+        public NpgsqlConnection conn = new NpgsqlConnection();
+        public string path = "Server=127.0.0.1;Port=5432;Database=xaysetha_system;User Id=postgres;Password=025863;";
 
         public void getConnect()
         {

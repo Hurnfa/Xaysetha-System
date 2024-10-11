@@ -23,13 +23,13 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
-            data.Columns["userID"].DataPropertyName = "userID";
-            data.Columns["userName"].DataPropertyName = "userName";
-            data.Columns["Surname"].DataPropertyName = "userLName";
-            data.Columns["Gender"].DataPropertyName = "gender";
-            data.Columns["role"].DataPropertyName = "role";
-            data.Columns["Tel"].DataPropertyName = "phoneNums";
-            data.Columns["password"].DataPropertyName = "userPassword";
+            data.Columns["userID"].DataPropertyName = "user_id";
+            data.Columns["userName"].DataPropertyName = "user_name";
+            data.Columns["Surname"].DataPropertyName = "user_lastname";
+            data.Columns["Gender"].DataPropertyName = "user_gender";
+            data.Columns["role"].DataPropertyName = "user_role";
+            data.Columns["Tel"].DataPropertyName = "user_tel";
+            data.Columns["password"].DataPropertyName = "user_password";
         }
 
         public void displayTotalOfUser()
@@ -149,7 +149,7 @@ namespace Xaysetha_System
                     {
                         /*addUser.dataChange("DELETE FROM tb_user WHERE \"userID\"='" + userID + "'", "ລຶບ");*/
 
-                        cmd = new NpgsqlCommand("DELETE FROM tb_user WHERE \"userID\"=@userID;", cn.conn);
+                        cmd = new NpgsqlCommand("DELETE FROM tb_user WHERE user_id=@userID;", cn.conn);
 
                         try
                         {
@@ -162,6 +162,8 @@ namespace Xaysetha_System
                             datatable.Clear();
 
                             loadData("SELECT * FROM tb_user;");
+
+                            displayTotalOfUser();
                         }
                         catch (Exception ex)
                         {
@@ -178,7 +180,8 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_user WHERE CONCAT(\"userID\", \"userName\", \"userLName\", gender, role, \"phoneNums\", \"userPassword\") LIKE '%" + txtUserSearch.Text + "%';");
+            loadData($"SELECT * FROM tb_user WHERE CONCAT(user_id, user_name, user_lastname, user_gender, user_role, user_tel, user_password) LIKE '%{txtUserSearch.Text}%';");
+            //loadData("SELECT * FROM tb_user WHERE CONCAT(\"userID\", \"userName\", \"userLName\", gender, role, \"phoneNums\", \"userPassword\") LIKE '%" + txtUserSearch.Text + "%';");
         }
     }
 }

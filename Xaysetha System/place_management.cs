@@ -24,13 +24,13 @@ namespace Xaysetha_System
             adapter.Fill(datatable);
             data.DataSource = datatable;
 
-            data.Columns["placeID"].DataPropertyName = "placeID";
-            data.Columns["placeName"].DataPropertyName = "placeName";
-            data.Columns["placeType"].DataPropertyName = "placeType";
-            data.Columns["villageName"].DataPropertyName = "villageName";
-            data.Columns["houseUnit"].DataPropertyName = "placeHouseUnit";
-            data.Columns["houseNumber"].DataPropertyName = "placeHouseNumber";
-            data.Columns["ownerName"].DataPropertyName = "name";
+            data.Columns["placeID"].DataPropertyName = "place_id";
+            data.Columns["placeName"].DataPropertyName = "place_name";
+            data.Columns["placeType"].DataPropertyName = "place_type";
+            data.Columns["villageName"].DataPropertyName = "village_name";
+            data.Columns["houseUnit"].DataPropertyName = "house_unit";
+            data.Columns["houseNumber"].DataPropertyName = "house_number";
+            data.Columns["ownerName"].DataPropertyName = "citizen_name";
         }
 
         public place_management()
@@ -38,7 +38,7 @@ namespace Xaysetha_System
             InitializeComponent();
             CustomizedGridView();
             cn.getConnect();
-            loadData("SELECT * from tb_place JOIN tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" JOIN tb_village on tb_place.\"villageID\" = tb_village.\"villageID\";");
+            loadData("SELECT * from tb_place JOIN tb_citizen on tb_place.citizen_id = tb_citizen.citizen_id JOIN tb_village on tb_place.village_id = tb_village.village_id;");
 
         }
         public void CustomizedGridView()
@@ -129,7 +129,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        cmd = new NpgsqlCommand("DELETE FROM tb_place WHERE \"placeID\"=@placeID;", cn.conn);
+                        cmd = new NpgsqlCommand("DELETE FROM tb_place WHERE place_id=@placeID;", cn.conn);
 
                         try
                         {
@@ -157,7 +157,8 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_place WHERE CONCAT (\"placeID\", \"citizentID\", \"villageID\", \"placeName\",\"placeHouseUnit\", \"placeHouseNumber\", \"placeType\") LIKE '%" + txtSearch.Text + "%'");
+            //loadData("SELECT * FROM tb_place WHERE CONCAT (\"placeID\", \"citizentID\", \"villageID\", \"placeName\",\"placeHouseUnit\", \"placeHouseNumber\", \"placeType\") LIKE '%" + txtSearch.Text + "%'");
+            loadData($"SELECT * FROM tb_place WHERE CONCAT (place_id, citizen_id, village_id, place_name, house_unit, house_number, place_type) LIKE '%{txtSearch.Text}%'");
         }
     }
 }

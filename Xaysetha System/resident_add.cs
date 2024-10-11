@@ -45,7 +45,7 @@ namespace Xaysetha_System
             txtJobs.Text = occupation;
             txtAddr.Text = addr;
 
-            cmd = new NpgsqlCommand("SELECT * FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+            cmd = new NpgsqlCommand("SELECT * FROM tb_citizen WHERE citizen_id=@citizenID", cn.conn);
 
             cmd.Parameters.AddWithValue("@citizenID", BigInteger.Parse(citizen_id));
 
@@ -53,18 +53,18 @@ namespace Xaysetha_System
 
             while (reader.Read())
             {
-                datePickerBirthday.Value = (DateTime)reader["dob"];
-                txtRace.Text = reader["race"].ToString();
-                txtNationality.Text = reader["nationality"].ToString();
-                txtEthnic.Text = reader["ethnic"].ToString();
-                txtReligious.Text = reader["religion"].ToString();
+                datePickerBirthday.Value = (DateTime)reader["citizen_dob"];
+                txtRace.Text = reader["citizen_race"].ToString();
+                txtNationality.Text = reader["citizen_nationality"].ToString();
+                txtEthnic.Text = reader["citizen_ethnic"].ToString();
+                txtReligious.Text = reader["citizen_religion"].ToString();
                 txtDadName.Text = reader["dad_name"].ToString();
                 txtMomName.Text = reader["mom_name"].ToString();
-                txtFamBookNums.Text = reader["family_book"].ToString();
+                txtFamBookNums.Text = reader["fambook_nums"].ToString();
                 txtWorkplace.Text = reader["workplace"].ToString();
-                txtPhoneNums.Text = reader["phoneNums"].ToString();
+                txtPhoneNums.Text = reader["tels"].ToString();
 
-                if (reader["citizenPics"] == DBNull.Value)
+/*                if (reader["citizenPics"] == DBNull.Value)
                 {
                     profilePictureBox.Image = null;
                 }
@@ -73,7 +73,7 @@ namespace Xaysetha_System
                     byte[] img = (byte[])reader["citizenPics"];
                     MemoryStream memory = new MemoryStream(img);
                     profilePictureBox.Image = Image.FromStream(memory);
-                }
+                }*/
             }
 
             reader.Close();
@@ -101,10 +101,8 @@ namespace Xaysetha_System
         {
             MemoryStream memoryStream = new MemoryStream();
             
-
             try
             {
-
                 BigInteger citizenID = BigInteger.Parse(txtCitizenID.Text);
 
                 string gender = "ບໍ່ລະບຸ";
@@ -121,7 +119,7 @@ namespace Xaysetha_System
                 DateTime birthDay = datePickerBirthday.Value,
                     famBookIssuedDate = datePickerFamBookIssuedDate.Value;
 
-                if (profilePictureBox.Image == null)
+/*                if (profilePictureBox.Image == null)
                 {
                     MessageBox.Show("ຂໍອະໄພ, ກະລຸນາໃສ່ຮູບກ່ອນ", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -130,7 +128,7 @@ namespace Xaysetha_System
                     profilePictureBox.Image.Save(memoryStream, profilePictureBox.Image.RawFormat);
 
                     img = memoryStream.ToArray();
-                }
+                }*/
 
 
  
@@ -155,8 +153,8 @@ namespace Xaysetha_System
                     cmd.Parameters.AddWithValue("@family_book", BigInteger.Parse(txtFamBookNums.Text));
                     /*4th missing field*/
                     cmd.Parameters.AddWithValue("@workplace", txtWorkplace.Text);
-                    cmd.Parameters.AddWithValue("@citizenPics", img);
-                    cmd.Parameters.AddWithValue("@occupation", txtJobs.Text);
+                    //cmd.Parameters.AddWithValue("@citizenPics", img);
+                    cmd.Parameters.AddWithValue("@jobs", txtJobs.Text);
                     cmd.Parameters.AddWithValue("@addr", txtAddr.Text);
                     cmd.Parameters.AddWithValue("@phoneNums", txtPhoneNums.Text);
 
@@ -208,7 +206,7 @@ namespace Xaysetha_System
             {
                 case "ບັນທຶກ":
 
-                    dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
+                    dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @nationality, @race,  @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @addr, @phoneNums, @jobs);", "ເພີ່ມ");
 
                     break;
 
@@ -218,7 +216,22 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_citizen set name=@name, surname=@surname, gender=@gender, dob=@dob, race=@race, nationality=@nationality, ethnic=@ethnic, religion=@religion, dad_name=@dad_name, mom_name=@mom_name, family_book=@family_book, workplace=@workplace, \"citizenPics\"=@citizenPics, occupation=@occupation, addr=@addr, \"phoneNums\"=@phoneNums WHERE \"citizenID\"=@citizenID;", "ແກ້ໄຂ");
+                        dataChange("UPDATE tb_citizen set " +
+                            "citizen_name=@name, " +
+                            "citizen_lastname=@surname, " +
+                            "citizen_gender=@gender, " +
+                            "citizen_dob=@dob, " +
+                            "citizen_nationality=@nationality, " +
+                            "citizen_race=@race, " +
+                            "citizen_ethnic=@ethnic, " +
+                            "citizen_religion=@religion, " +
+                            "citizen_dad=@dad_name, " +
+                            "citizen_mom=@mom_name, " +
+                            "fambook_nums=@family_book, " +
+                            "workplace=@workplace, " +
+                            "addrs=@addr, " +
+                            "tel=@phoneNums," +
+                            "jobs=@jobs WHERE citizen_id=@citizenID;", "ແກ້ໄຂ");
                     }
 
                     break;

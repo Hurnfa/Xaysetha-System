@@ -26,14 +26,14 @@ namespace Xaysetha_System
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
-            data.Columns["citizenID"].DataPropertyName = "citizenID";
-            data.Columns["citizenName"].DataPropertyName = "name";
-            data.Columns["Surname"].DataPropertyName = "surname";
-            data.Columns["villageName"].DataPropertyName = "addr";
-            data.Columns["Tel"].DataPropertyName = "phoneNums";
-            data.Columns["Gender"].DataPropertyName = "gender";
-            data.Columns["Religious"].DataPropertyName = "religion";
-            data.Columns["Job"].DataPropertyName = "occupation";
+            data.Columns["citizenID"].DataPropertyName = "citizen_id";
+            data.Columns["citizenName"].DataPropertyName = "citizen_name";
+            data.Columns["Surname"].DataPropertyName = "citizen_lastname";
+            data.Columns["villageName"].DataPropertyName = "addrs";
+            data.Columns["Tel"].DataPropertyName = "tel";
+            data.Columns["Gender"].DataPropertyName = "citizen_gender";
+            data.Columns["Religious"].DataPropertyName = "citizen_religion";
+            //data.Columns["Job"].DataPropertyName = "occupation";
         }
 
         void cbVillageLoad()
@@ -43,8 +43,8 @@ namespace Xaysetha_System
             adapter.Fill(dataSetVillage);
             cbVillage.DataSource = dataSetVillage.Tables[0];
 
-            cbVillage.DisplayMember = "villageName";
-            cbVillage.ValueMember = "villageName";
+            cbVillage.DisplayMember = "village_name";
+            cbVillage.ValueMember = "village_name";
         }
 
         public void dataChange(string sql, string messageBox)
@@ -159,7 +159,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE \"citizenID\"=@citizenID", cn.conn);
+                        cmd = new NpgsqlCommand("DELETE FROM tb_citizen WHERE citizen_id=@citizenID", cn.conn);
 
                         try
                         {
@@ -189,14 +189,14 @@ namespace Xaysetha_System
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_citizen WHERE CONCAT (name) LIKE '%" + txtNameSearch.Text + "%';");
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (citizen_name) LIKE '%" + txtNameSearch.Text + "%';");
         }
 
         private void cbVillage_SelectedIndexChanged(object sender, EventArgs e)
         {
             datatable.Clear();
 
-            loadData("SELECT * FROM tb_citizen WHERE CONCAT (addr) LIKE '%" + cbVillage.Text + "%';");
+            loadData("SELECT * FROM tb_citizen WHERE CONCAT (addrs) LIKE '%" + cbVillage.Text + "%';");
         }
 
         private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,7 +211,7 @@ namespace Xaysetha_System
 
                 default:
 
-                    loadData("SELECT * FROM tb_citizen WHERE CONCAT (gender) LIKE '%" + cbGender.Text + "%';");
+                    loadData("SELECT * FROM tb_citizen WHERE CONCAT (citizen_gender) LIKE '%" + cbGender.Text + "%';");
 
                     break;
             }
