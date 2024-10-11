@@ -650,7 +650,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(135, 31);
             this.label22.TabIndex = 20;
-            this.label22.Text = "ຂໍ້ມູນທີ່ຢູ່ປັດຈຸບັນ";
+            this.label22.Text = "ຂໍ້ມູນພູມລຳເນົາ";
             // 
             // guna2Panel17
             // 
@@ -697,7 +697,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(152, 23);
             this.label23.TabIndex = 8;
-            this.label23.Text = "ທີ່ຢູ່ປັດຈຸບັນ(ຫນ່ວຍ, ບ້ານ) ";
+            this.label23.Text = "ບ້ານ ";
             // 
             // guna2Panel1
             // 
@@ -738,7 +738,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 8;
-            this.label1.Text = "ທີ່ຢູ່ປັດຈຸບັນ (ເມືອງ) ";
+            this.label1.Text = "ເມືອງ";
             // 
             // guna2Panel9
             // 
@@ -1012,7 +1012,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 23);
             this.label4.TabIndex = 8;
-            this.label4.Text = "ທີ່ຢູ່ປັດຈຸບັນ (ແຂວງ) ";
+            this.label4.Text = "ແຂວງ";
             // 
             // tenant_add
             // 
