@@ -150,7 +150,7 @@ namespace Xaysetha_System
                 cmd.Parameters.AddWithValue("@district", comboboxDistrict.Text);
                 //cmd.Parameters.AddWithValue("@tenantpics", memoryStream.ToArray());
                 cmd.Parameters.AddWithValue("@province", comboboxProvince.Text);
-                cmd.Parameters.AddWithValue("@tenantStatus", "ຍັງບໍ່ໄດ້ອະນຸມັດ");
+                cmd.Parameters.AddWithValue("@tenantStatus", "");
 
                 cmd.ExecuteNonQuery();
 
@@ -236,6 +236,8 @@ namespace Xaysetha_System
             }
         }
 
+        PaymentDialog paymentDialog = new PaymentDialog();
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             switch (btnSave.Text)
@@ -245,10 +247,15 @@ namespace Xaysetha_System
 	                    tenant_name, tenant_lastname, tenant_gender, tenant_dob, tenant_nationality, religion, ethnics, jobs, village, district, province, fambook_nums, fambook_date, tels, tenant_status)
 	                    VALUES (@firstname, @lastname, @gender, @dob, @nationality, @religion, @ethnics, @occupation, @village, @district, @province, @fambookID, @famBookIssueDate, @phoneNums, @tenantStatus);", "ເພີ່ມ");
 
+                    cmd = new NpgsqlCommand($"SELECT tenant_id FROM tb_tenant WHERE tenant_name='{txtName.Text}'", cn.conn);
+
+                    paymentDialog.fetchDataFromAddTenent(cmd.ExecuteScalar().ToString(), $"{txtName.Text} {txtSurname.Text}", label_username.Text);
+                    paymentDialog.ShowDialog();
+
                     //dataChange("INSERT INTO tb_citizen VALUES (@citizenID, @name, @surname, @gender, @dob, @race, @nationality, @ethnic, @religion, @dad_name, @mom_name, @family_book, @workplace, @citizenPics, @occupation, @addr, @phoneNums);", "ເພີ່ມ");
                     //dataChange("INSERT INTO tb_tenant VALUES (@firstname, @lastname, @gender, @dob, @nationality, @religion, @ethnics, @occupation, @village, @district, @province, @fambookID, @famBookIssueDate, @phoneNums, @tenantStatus);", "ເພີ່ມ");
 
-                    sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, pkg_id, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @pkgID, @price, @paymentStatus, @userID)", "ເພີ່ມ");
+                    //sentDataToPayment("INSERT INTO tb_payment (payment_id, tenant_id, pkg_id, price, payment_status, user_id) VALUES (@paymentID, @tenantID, @pkgID, @price, @paymentStatus, @userID)", "ເພີ່ມ");
                     break;
 
                 case "ແກ້ໄຂ":

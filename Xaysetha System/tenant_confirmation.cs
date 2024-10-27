@@ -27,15 +27,17 @@ namespace Xaysetha_System
 
         public void loadData(string sql)
         {
+            datatable.Clear();
+
             data.AutoGenerateColumns = false;
 
             adapter = new NpgsqlDataAdapter(sql, cn.conn);
             adapter.Fill(datatable);
             data.DataSource = datatable;
 
-            data.Columns[0].DataPropertyName = "tenantID";
-            data.Columns[1].DataPropertyName = "firstname";
-            data.Columns[2].DataPropertyName = "lastname";
+            data.Columns[0].DataPropertyName = "tenant_id";
+            data.Columns[1].DataPropertyName = "tenant_name";
+            data.Columns[2].DataPropertyName = "tenant_lastname";
             data.Columns[3].DataPropertyName = "duration";
             data.Columns[4].DataPropertyName = "payment_status";
         }

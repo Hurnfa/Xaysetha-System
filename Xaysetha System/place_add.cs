@@ -201,5 +201,13 @@ namespace Xaysetha_System
                 e.Handled = true;
             }
         }
+
+        resident_add residentAdd = new resident_add();
+
+        private void linkLabelShowCitizenAdd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            residentAdd.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            residentAdd.ShowDialog();
+        }
     }
 }

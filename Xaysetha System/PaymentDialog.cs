@@ -36,6 +36,13 @@ namespace Xaysetha_System
             cbPackage.ValueMember = "pkg_id";
         }
 
+        public void fetchDataFromAddTenent(string tenantID, string tenantName, string userID)
+        {
+            txtTenantID.Text = tenantID;
+            txtTenantName.Text = tenantName;
+            txtUser.Text = userID;
+        }
+
         public void fetchDataFromMainPage(string userID)
         {
             txtUser.Text = userID;
@@ -51,7 +58,7 @@ namespace Xaysetha_System
             label_payment_id.Text = paymentID.ToString();
             txtTenantID.Text = tenantID;
 
-            cmd = new NpgsqlCommand("SELECT firstname, lastname FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
+            cmd = new NpgsqlCommand("SELECT tenant_name, tenant_lastname FROM tb_tenant WHERE tenant_id=@tenantID", cn.conn);
 
             cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(tenantID));
 
@@ -59,7 +66,7 @@ namespace Xaysetha_System
 
             while (reader1.Read())
             {
-                txtTenantName.Text = reader1["firstname"].ToString() + " " + reader1["lastname"].ToString();
+                txtTenantName.Text = reader1["tenant_name"].ToString() + " " + reader1["tenant_lastname"].ToString();
             }
 
             reader1.Close();
@@ -68,7 +75,7 @@ namespace Xaysetha_System
 
             txtUser.Text = userID;
 
-            cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE \"userID\"=@userID", cn.conn);
+            cmd = new NpgsqlCommand("SELECT * FROM tb_user WHERE user_id=@userID", cn.conn);
 
             this.userID = userID;
 
@@ -78,7 +85,7 @@ namespace Xaysetha_System
 
             while (reader.Read())
             {
-                txtUser.Text = $"{reader["userName"]} {reader["userLName"]}";
+                txtUser.Text = $"{reader["user_name"]} {reader["user_lastname"]}";
             }
             reader.Close();
 
@@ -111,15 +118,15 @@ namespace Xaysetha_System
                 try
                 {
                     cmd.Parameters.AddWithValue("@paymentID", paymentID);
-                    cmd.Parameters.AddWithValue("@tenant_id", BigInteger.Parse(txtTenantID.Text));
-                    cmd.Parameters.AddWithValue("@description", des);
+                    cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
+                    //cmd.Parameters.AddWithValue("@description", des);
                     cmd.Parameters.AddWithValue("@price", float.Parse(txtPrice.Text));
                     cmd.Parameters.AddWithValue("@paymentDate", DateTime.Now);
                     cmd.Parameters.AddWithValue("@paymentStatus", comboboxPaymentStatus.Text);
                     cmd.Parameters.AddWithValue("@pkgID", pkgID);
                     cmd.Parameters.AddWithValue("@duration", pkg_duration);
 
-                    cmd.Parameters.AddWithValue("@user_id", txtUser.Text);
+                    cmd.Parameters.AddWithValue("@userID", txtUser.Text);
 
                     cmd.ExecuteNonQuery();
 
@@ -131,10 +138,15 @@ namespace Xaysetha_System
                 }
             }
 
+            //printing section
+
             try
             {
-                //cmd = new NpgsqlCommand("SELECT firstname, lastname, gender FROM tb_tenant WHERE \"tenantID\"=@tenantID", cn.conn);
-                cmd = new NpgsqlCommand("select * from tb_payment join tb_tenant on tb_payment.tenant_id = tb_tenant.\"tenantID\" join tb_package on tb_payment.pkg_id = tb_package.pkg_id where tenant_id=@tenantID", cn.conn);
+                //cmd = new NpgsqlCommand("SELECT tenant_name, tenant_lastname, gender FROM tb_tenant WHERE tenant_id=@tenantID", cn.conn);
+                cmd = new NpgsqlCommand(@"select * from tb_payment 
+                    join tb_tenant on tb_payment.tenant_id = tb_tenant.tenant_id 
+                    join tb_package on tb_payment.pkg_id = tb_package.pkg_id 
+                    where tb_payment.tenant_id=@tenantID", cn.conn);
 
                 cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
 
@@ -142,9 +154,9 @@ namespace Xaysetha_System
 
                 while (reader.Read())
                 {
-                    name = reader["firstname"].ToString();
-                    surname = reader["lastname"].ToString();
-                    gender = reader["gender"].ToString();
+                    name = reader["tenant_name"].ToString();
+                    surname = reader["tenant_lastname"].ToString();
+                    gender = reader["tenant_gender"].ToString();
                     duration = int.Parse(reader["pkg_duration"].ToString());
                 }
 
@@ -185,7 +197,7 @@ namespace Xaysetha_System
 
         void updateTenantStatus()
         {
-            cmd = new NpgsqlCommand("UPDATE tb_tenant SET tenant_status='ອະນຸມັດແລ້ວ' WHERE \"tenantID\"=@tenantID", cn.conn);
+            cmd = new NpgsqlCommand("UPDATE tb_tenant SET tenant_status='ອະນຸມັດແລ້ວ' WHERE tenant_id=@tenantID", cn.conn);
 
             try
             {
@@ -206,8 +218,10 @@ namespace Xaysetha_System
             {
                 case "ຊຳລະ":
 
-                    dataChange("INSERT INTO tb_payment VALUES(@paymentID, @tenant_id, @description, @paymentDate, @paymentStatus, @user_id, @pkgID, @price);",
-                        "ຕໍ່ອາຍຸພັກເຊົ່າ",
+                    dataChange(@"INSERT INTO public.tb_payment(
+	                    payment_id, tenant_id, pkg_id, price, payment_status, user_id, duration)
+	                    VALUES (@paymentID, @tenantID, @pkgID, @price, @paymentStatus, @userID, @duration);",
+                        "ຈ່າຍຄ່າລົງທະບຽນພັກເຊົ່າ",
                         new Random().Next()
                     );
 
@@ -219,7 +233,7 @@ namespace Xaysetha_System
 
                     if (result == DialogResult.Yes)
                     {
-                        dataChange("UPDATE tb_payment SET payment_date=@paymentDate, payment_status=@paymentStatus, pkg_id=@pkgID, price=@price, duration=@duration WHERE payment_id=@paymentID",
+                        dataChange("UPDATE tb_payment SET pkg_id=@pkgID, price=@price, payment_status=@paymentStatus, payment_date=@paymentDate, duration=@duration WHERE payment_id=@paymentID",
                             "ຈ່າຍຄ່າລົງທະບຽນພັກເຊົ່າ",
                             BigInteger.Parse(label_payment_id.Text)
                         );
@@ -261,13 +275,13 @@ namespace Xaysetha_System
             {
                 case (char)Keys.Enter:
 
-                    cmd = new NpgsqlCommand("SELECT firstname, lastname FROM tb_tenant WHERE \"tenantID\"="+txtTenantID.Text, cn.conn);
+                    cmd = new NpgsqlCommand("SELECT tenant_name, tenant_lastname FROM tb_tenant WHERE tenant_id="+txtTenantID.Text, cn.conn);
 
                     NpgsqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        txtTenantName.Text = reader["firstname"].ToString()+" "+reader["lastname"].ToString();
+                        txtTenantName.Text = reader["tenant_name"].ToString()+" "+reader["tenant_lastname"].ToString();
                     }
 
                     reader.Close();
@@ -332,13 +346,13 @@ namespace Xaysetha_System
             {
                 case (char)Keys.Enter:
 
-                    cmd = new NpgsqlCommand("SELECT \"tenantID\" FROM tb_tenant WHERE firstname='" + txtTenantName.Text + "'", cn.conn);
+                    cmd = new NpgsqlCommand("SELECT tenant_id FROM tb_tenant WHERE tenant_name='" + txtTenantName.Text + "'", cn.conn);
 
                     NpgsqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        txtTenantID.Text = reader["tenantID"].ToString();
+                        txtTenantID.Text = reader["tenant_id"].ToString();
                     }
 
                     reader.Close();

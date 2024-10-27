@@ -30,7 +30,10 @@ namespace Xaysetha_System
             if (name == null)
             {
                 //cmd = new NpgsqlCommand("select * from tb_tenant inner join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" where tb_tenant.\"tenantID\"=@tenantID;", cn.conn);
-                cmd = new NpgsqlCommand("select * from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_tenant.\"tenantID\" = @tenantID;", cn.conn);
+                cmd = new NpgsqlCommand(@"select * from tb_tenant 
+                    join tb_book on tb_tenant.tenant_id = tb_book.tenant_id 
+                    join tb_payment on tb_tenant.tenant_id = tb_payment.tenant_id 
+                where tb_tenant.tenant_id = @tenantID;", cn.conn);
 
 
                 try
@@ -42,10 +45,10 @@ namespace Xaysetha_System
 
                     while (reader.Read())
                     {
-                        rp.Add(new ReportParameter("tenantName", reader["firstname"].ToString()));
-                        rp.Add(new ReportParameter("tenantSurname", reader["lastname"].ToString()));
+                        rp.Add(new ReportParameter("tenantName", reader["tenant_name"].ToString()));
+                        rp.Add(new ReportParameter("tenantSurname", reader["tenant_lastname"].ToString()));
 
-                        switch (reader["gender"].ToString())
+                        switch (reader["tenant_gender"].ToString())
                         {
                             case "ຊາຍ":
 
@@ -66,23 +69,26 @@ namespace Xaysetha_System
                                 break;
                         }
 
+/*                        rp.Add(new ReportParameter("tenantName", "Thaksin"));
+                        rp.Add(new ReportParameter("tenantSurname", "Thongkham"));*/
+
                         rp.Add(new ReportParameter("tenantGender", gender));
 
-                        birthDay = DateTime.Parse(reader["dob"].ToString());
+                        birthDay = DateTime.Parse(reader["tenant_dob"].ToString());
 
                         rp.Add(new ReportParameter("tenantRace", "ລາວ"));
                         rp.Add(new ReportParameter("tenantReligion", reader["religion"].ToString()));
-                        rp.Add(new ReportParameter("tenantJobs", reader["occupation"].ToString()));
+                        rp.Add(new ReportParameter("tenantJobs", reader["jobs"].ToString()));
                         rp.Add(new ReportParameter("tenantWorkplace", "N/A"));
 
-                        famBookIssueDate = DateTime.Parse(reader["famBookIssueDate"].ToString());
+                        famBookIssueDate = DateTime.Parse(reader["fambook_date"].ToString());
 
-                        rp.Add(new ReportParameter("tenantFamBookID", reader["fambookID"].ToString()));
+                        rp.Add(new ReportParameter("tenantFamBookID", reader["fambook_nums"].ToString()));
 
                         rp.Add(new ReportParameter("village", reader["village"].ToString()));
                         rp.Add(new ReportParameter("district", reader["district"].ToString()));
-                        rp.Add(new ReportParameter("province", "N/A"));
-                        rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
+                        rp.Add(new ReportParameter("province", reader["province"].ToString()));
+                        rp.Add(new ReportParameter("tenantNationality", reader["tenant_nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
                         rp.Add(new ReportParameter("tenantPurpose", reader["purpose"].ToString()));
 
@@ -103,8 +109,8 @@ namespace Xaysetha_System
 
 
 
-                        expDate = DateTime.Parse(reader["expDate"].ToString());
-                        issueDate = DateTime.Parse(reader["issueDate"].ToString());
+                        expDate = DateTime.Parse(reader["exp_date"].ToString());
+                        issueDate = DateTime.Parse(reader["issue_date"].ToString());
                     }                  
 
                     reader.Close();
@@ -140,8 +146,10 @@ namespace Xaysetha_System
             }
             else if (tenantID == 0)
             {
-                cmd = new NpgsqlCommand("select * from tb_tenant join \"tb_residentialBook\" on tb_tenant.\"tenantID\" = \"tb_residentialBook\".\"tenantID\" " +
-                    "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_tenant.firstname = @firstname;", cn.conn);
+                cmd = new NpgsqlCommand(@"select * from tb_tenant 
+                    join tb_book on tb_tenant.tenant_id = tb_book.tenant_id 
+                    join tb_payment on tb_tenant.tenant_id = tb_payment.tenant_id 
+                where tb_tenant.tenant_name = @firstname;", cn.conn);
 
                 try
                 {
@@ -152,11 +160,11 @@ namespace Xaysetha_System
 
                     while (reader.Read())
                     {
-                        rp.Add(new ReportParameter("tenantID", reader["tenantID"].ToString()));
+                        rp.Add(new ReportParameter("tenantID", reader["tenant_id"].ToString()));
                         //rp.Add(new ReportParameter("tenantName", reader["firstname"].ToString()));
-                        rp.Add(new ReportParameter("tenantSurname", reader["lastname"].ToString()));
+                        rp.Add(new ReportParameter("tenantSurname", reader["tenant_lastname"].ToString()));
 
-                        switch (reader["gender"].ToString())
+                        switch (reader["tenant_gender"].ToString())
                         {
                             case "ຊາຍ":
 
@@ -179,26 +187,26 @@ namespace Xaysetha_System
 
                         rp.Add(new ReportParameter("tenantGender", gender));
 
-                        birthDay = DateTime.Parse(reader["dob"].ToString());
+                        birthDay = DateTime.Parse(reader["tenant_dob"].ToString());
 
                         rp.Add(new ReportParameter("tenantRace", "ລາວ"));
                         rp.Add(new ReportParameter("tenantReligion", reader["religion"].ToString()));
-                        rp.Add(new ReportParameter("tenantJobs", reader["occupation"].ToString()));
+                        rp.Add(new ReportParameter("tenantJobs", reader["jobs"].ToString()));
                         rp.Add(new ReportParameter("tenantWorkplace", "N/A"));
 
-                        famBookIssueDate = DateTime.Parse(reader["famBookIssueDate"].ToString());
+                        famBookIssueDate = DateTime.Parse(reader["fambook_date"].ToString());
 
-                        rp.Add(new ReportParameter("tenantFamBookID", reader["fambookID"].ToString()));
+                        rp.Add(new ReportParameter("tenantFamBookID", reader["fambook_nums"].ToString()));
 
                         rp.Add(new ReportParameter("village", reader["village"].ToString()));
                         rp.Add(new ReportParameter("district", reader["district"].ToString()));
-                        rp.Add(new ReportParameter("province", "N/A"));
-                        rp.Add(new ReportParameter("tenantNationality", reader["nationality"].ToString()));
+                        rp.Add(new ReportParameter("province", reader["province"].ToString()));
+                        rp.Add(new ReportParameter("tenantNationality", reader["tenant_nationality"].ToString()));
                         rp.Add(new ReportParameter("tenantEthnic", reader["ethnics"].ToString()));
                         rp.Add(new ReportParameter("tenantPurpose", reader["purpose"].ToString()));
 
-                        expDate = DateTime.Parse(reader["expDate"].ToString());
-                        issueDate = DateTime.Parse(reader["issueDate"].ToString());
+                        expDate = DateTime.Parse(reader["exp_date"].ToString());
+                        issueDate = DateTime.Parse(reader["issue_date"].ToString());
 
                         //if (reader["tenantpics"] == DBNull.Value)
                         //{
@@ -252,7 +260,10 @@ namespace Xaysetha_System
             rp.Add(new ReportParameter("placeName", place));
 
             //cmd = new NpgsqlCommand("select * from tb_place inner join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" where \"placeName\"=@placeName", cn.conn);
-            cmd = new NpgsqlCommand("select * from tb_place join tb_citizen on tb_place.\"citizentID\" = tb_citizen.\"citizenID\" JOIN tb_village ON tb_place.\"villageID\" = tb_village.\"villageID\" where \"placeName\"=@placeName", cn.conn);
+            cmd = new NpgsqlCommand(@"select * from tb_place 
+                join tb_citizen on tb_place.citizen_id = tb_citizen.citizen_id 
+                JOIN tb_village ON tb_place.village_id = tb_village.village_id 
+            where tb_place.place_name=@placeName", cn.conn);
 
             try
             {
@@ -262,12 +273,12 @@ namespace Xaysetha_System
 
                 while (reader1.Read())
                 {
-                    rp.Add(new ReportParameter("houseNo", reader1["placeHouseNumber"].ToString()));
-                    rp.Add(new ReportParameter("houseUnit", reader1["placeHouseUnit"].ToString()));
-                    rp.Add(new ReportParameter("placeVillage", reader["villageName"].ToString()));
+                    rp.Add(new ReportParameter("houseNo", reader1["house_number"].ToString()));
+                    rp.Add(new ReportParameter("houseUnit", reader1["house_unit"].ToString()));
+                    rp.Add(new ReportParameter("placeVillage", reader["village_name"].ToString()));
                     //village missing value
 
-                    switch (reader1["gender"].ToString())
+                    switch (reader1["citizen_gender"].ToString())
                     {
                         case "ຊາຍ":
 
@@ -289,8 +300,8 @@ namespace Xaysetha_System
                     }
 
                     rp.Add(new ReportParameter("citizenGender", gender));
-                    rp.Add(new ReportParameter("citizenName", reader1["name"].ToString()));
-                    rp.Add(new ReportParameter("citizenSurname", reader1["surname"].ToString()));
+                    rp.Add(new ReportParameter("citizenName", reader1["citizen_name"].ToString()));
+                    rp.Add(new ReportParameter("citizenSurname", reader1["citizen_lastname"].ToString()));
 
                 }
 

@@ -31,12 +31,14 @@ namespace Xaysetha_System
             rp.Add(new ReportParameter("issueDate", dateTime.ToString("dd/MM/yyyy")));
             reportViewer2.LocalReport.SetParameters(rp);
 
-            cmd = new NpgsqlCommand("SELECT \"citizenID\", name, surname, gender, dob, religion, family_book, \"phoneNums\", addr FROM \"public\".tb_citizen", cn.conn);
+            //cmd = new NpgsqlCommand("SELECT \"citizenID\", name, surname, gender, dob, religion, family_book, \"phoneNums\", addr FROM \"public\".tb_citizen", cn.conn);
+            cmd = new NpgsqlCommand(@"SELECT citizen_id, citizen_name, citizen_lastname, citizen_gender, citizen_dob, citizen_religion, fambook_nums, tel, addrs FROM public.tb_citizen", cn.conn);
+
             NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(cmd);
             DataTable dt2 = new DataTable();
             adapter.Fill(dt2);
             reportViewer2.LocalReport.DataSources.Clear();
-            ReportDataSource reportDataSource2 = new ReportDataSource("DataSet2", dt2);
+            ReportDataSource reportDataSource2 = new ReportDataSource("DataSet1", dt2);
             reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             reportViewer2.RefreshReport();
         }

@@ -33,14 +33,14 @@ namespace Xaysetha_System
 
             txtTenantName.Text = name + " " + surname;
 
-            cmd = new NpgsqlCommand("SELECT \"tenantID\" FROM tb_tenant WHERE firstname=@firstname", cn.conn);
+            cmd = new NpgsqlCommand("SELECT tenant_id FROM tb_tenant WHERE tenant_name=@firstname", cn.conn);
             cmd.Parameters.AddWithValue("@firstname", name);
             NpgsqlDataReader reader = cmd.ExecuteReader();
 
 
             while (reader.Read())
             {
-                txtTenantID.Text = reader["tenantID"].ToString();
+                txtTenantID.Text = reader["tenant_id"].ToString();
             }
 
             reader.Close();
@@ -59,8 +59,8 @@ namespace Xaysetha_System
             adapter.Fill(dataSetPlace);
             comboboxPlace.DataSource = dataSetPlace.Tables[0];
 
-            comboboxPlace.DisplayMember = "placeName";
-            comboboxPlace.ValueMember = "placeID";
+            comboboxPlace.DisplayMember = "place_name";
+            comboboxPlace.ValueMember = "place_id";
 
         }
 
@@ -85,7 +85,7 @@ namespace Xaysetha_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            cmd = new NpgsqlCommand("INSERT INTO \"tb_residentialBook\" VALUES (@resBookID, @tenantID, @placeID, @issueDate, @expDate, @purpose)", cn.conn);
+            cmd = new NpgsqlCommand("INSERT INTO tb_book VALUES (@resBookID, @tenantID, @placeID, @issueDate, @expDate, @purpose)", cn.conn);
 
             try
             {
@@ -110,6 +110,14 @@ namespace Xaysetha_System
             {
                 MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        place_add placeAdd = new place_add();
+
+        private void linkLabelShowPlaceAdd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            placeAdd.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            placeAdd.ShowDialog();
         }
     }
 }

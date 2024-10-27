@@ -30,7 +30,7 @@ namespace Xaysetha_System
                 }*/
 
         public NpgsqlConnection conn = new NpgsqlConnection();
-        public string path = "Server=127.0.0.1;Port=5432;Database=xaysetha_system;User Id=postgres;Password=025863;";
+        public string path = "Server=127.0.0.1;Port=5432;Database=xaysetha_system;User Id=postgres;Password=11052002;";
 
         public void getConnect()
         {

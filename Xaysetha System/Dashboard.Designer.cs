@@ -35,6 +35,7 @@
             this.btnLeave = new Guna.UI2.WinForms.Guna2Button();
             this.btnEntry = new Guna.UI2.WinForms.Guna2Button();
             this.infoSubMenu = new System.Windows.Forms.Panel();
+            this.btnJobs = new Guna.UI2.WinForms.Guna2Button();
             this.feeManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnTenantManagement = new Guna.UI2.WinForms.Guna2Button();
             this.btnHomeManagement = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +55,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelHeader = new System.Windows.Forms.Label();
             this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnJobs = new Guna.UI2.WinForms.Guna2Button();
             this.sideBar.SuspendLayout();
             this.infoSubMenu.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -221,6 +221,31 @@
             this.infoSubMenu.Size = new System.Drawing.Size(478, 595);
             this.infoSubMenu.TabIndex = 5;
             // 
+            // btnJobs
+            // 
+            this.btnJobs.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnJobs.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnJobs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnJobs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnJobs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnJobs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJobs.FillColor = System.Drawing.Color.Transparent;
+            this.btnJobs.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJobs.ForeColor = System.Drawing.Color.White;
+            this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJobs.ImageOffset = new System.Drawing.Point(20, 0);
+            this.btnJobs.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnJobs.Location = new System.Drawing.Point(0, 375);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJobs.Name = "btnJobs";
+            this.btnJobs.Size = new System.Drawing.Size(478, 75);
+            this.btnJobs.TabIndex = 13;
+            this.btnJobs.Text = "ຂໍ້ມູນອາຊີບ";
+            this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnJobs.TextOffset = new System.Drawing.Point(32, 0);
+            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
+            // 
             // feeManagement
             // 
             this.feeManagement.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
@@ -265,7 +290,7 @@
             this.btnTenantManagement.Name = "btnTenantManagement";
             this.btnTenantManagement.Size = new System.Drawing.Size(478, 75);
             this.btnTenantManagement.TabIndex = 8;
-            this.btnTenantManagement.Text = "ຂໍ້ມູນປະຊາກອນພາຍໃນເມືອງ";
+            this.btnTenantManagement.Text = "ຂໍ້ມູນເຈົ້າຂອງບ້ານ";
             this.btnTenantManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTenantManagement.TextOffset = new System.Drawing.Point(32, 0);
             this.btnTenantManagement.Click += new System.EventHandler(this.btnTenantManagement_Click);
@@ -573,31 +598,6 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1600, 1146);
             this.panelContainer.TabIndex = 2;
-            // 
-            // btnJobs
-            // 
-            this.btnJobs.CustomImages.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnJobs.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnJobs.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnJobs.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnJobs.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnJobs.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnJobs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnJobs.FillColor = System.Drawing.Color.Transparent;
-            this.btnJobs.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJobs.ForeColor = System.Drawing.Color.White;
-            this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobs.ImageOffset = new System.Drawing.Point(20, 0);
-            this.btnJobs.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnJobs.Location = new System.Drawing.Point(0, 375);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(478, 75);
-            this.btnJobs.TabIndex = 13;
-            this.btnJobs.Text = "ຂໍ້ມູນອາຊີບ";
-            this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnJobs.TextOffset = new System.Drawing.Point(32, 0);
-            this.btnJobs.Click += new System.EventHandler(this.btnJobs_Click);
             // 
             // Dashboard
             // 

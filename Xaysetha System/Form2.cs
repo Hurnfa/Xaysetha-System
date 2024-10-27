@@ -40,11 +40,11 @@ namespace Xaysetha_System
         private void DisplayChart()
         {
             // SQL query
-            string query = @"SELECT v.""villageName"", COUNT(rb.""tenantID"") AS Population
-                            FROM ""tb_residentialBook"" rb
-                            JOIN tb_place p ON rb.""placeID"" = p.""placeID""
-                            JOIN tb_village v ON p.""villageID"" = v.""villageID""
-                            GROUP BY v.""villageID"", v.""villageName""
+            string query = @"SELECT v.village_name, COUNT(rb.tenant_id) AS Population
+                            FROM tb_book rb
+                            JOIN tb_place p ON rb.place_id = p.place_id
+                            JOIN tb_village v ON p.village_id = v.village_id
+                            GROUP BY v.village_id, v.village_name
                             ORDER BY Population DESC
                             LIMIT 5;";
 
@@ -61,7 +61,7 @@ namespace Xaysetha_System
                 {
                     data.Add(new VillagePopulation
                     {
-                        VillageId = reader["villageName"].ToString(),
+                        VillageId = reader["village_name"].ToString(),
                         Population = Convert.ToInt32(reader["Population"])
                     });
                 }
@@ -100,8 +100,8 @@ namespace Xaysetha_System
 
             cbVillage5.DataSource = ds1.Tables[0];
 
-            cbVillage5.DisplayMember = "villageName";
-            cbVillage5.ValueMember = "villageID";
+            cbVillage5.DisplayMember = "village_name";
+            cbVillage5.ValueMember = "village_id";
         }
 
         public class VillagePopulation

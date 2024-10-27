@@ -19,8 +19,8 @@ namespace Xaysetha_System
             InitializeComponent();
             cn.getConnect();
 
-            cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_payment.duration, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
-                    "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
+            cf.loadData("SELECT tb_tenant.tenant_id, tb_tenant.tenant_name, tb_tenant.tenant_lastname, tb_tenant.jobs, tb_payment.duration, tb_tenant.tels, tb_payment.payment_status from tb_tenant " +
+                    "join tb_payment on tb_tenant.tenant_id = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
 
             OpenChildForm(cf, statusControl.TabPages[0]);
             displayTotalOfData(0);
@@ -41,7 +41,7 @@ namespace Xaysetha_System
 
                 case 1:
 
-                    sql = "SELECT COUNT(*) FROM \"tb_residentialBook\";";
+                    sql = "SELECT COUNT(*) FROM tb_book;";
 
                     break;
             }
@@ -93,8 +93,8 @@ namespace Xaysetha_System
                 case 0:
 
                     //tenant_confirmation cf = new tenant_confirmation();
-                    cf.loadData("SELECT tb_tenant.\"tenantID\", tb_tenant.firstname,tb_tenant.lastname, tb_tenant.occupation, tb_payment.duration, tb_tenant.\"phoneNums\", tb_payment.payment_status from tb_tenant " +
-                "join tb_payment on tb_tenant.\"tenantID\" = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
+                    cf.loadData("SELECT tb_tenant.tenant_id, tb_tenant.tenant_name,tb_tenant.tenant_lastname, tb_tenant.jobs, tb_payment.duration, tb_tenant.tels, tb_payment.payment_status from tb_tenant " +
+                "join tb_payment on tb_tenant.tenant_id = tb_payment.tenant_id where tb_payment.payment_status = 'ຊຳລະແລ້ວ';");
 
                     OpenChildForm(cf, statusControl.TabPages[selectedIndex]);
 
@@ -105,7 +105,15 @@ namespace Xaysetha_System
                 case 1:
 
                     export_book_info tb_exportbook = new export_book_info();
-                    tb_exportbook.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\";");
+                    tb_exportbook.loadData(@"SELECT tb_book.book_id,
+                        tb_tenant.tenant_name, 
+                        tb_tenant.tenant_lastname, 
+                        tb_place.place_name, 
+                        tb_book.issue_date, 
+                        tb_book.exp_date 
+                    FROM tb_book 
+                        JOIN tb_tenant ON tb_book.tenant_id = tb_tenant.tenant_id 
+                        JOIN tb_place ON tb_book.place_id = tb_place.place_id;");
                     OpenChildForm(tb_exportbook, statusControl.TabPages[selectedIndex]);
 
                     displayTotalOfData(selectedIndex);
@@ -123,7 +131,18 @@ namespace Xaysetha_System
 
         private void datePickerIssueDate_ValueChanged(object sender, System.EventArgs e)
         {
-            exportBookInfo.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.firstname, tb_tenant.lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".\"tenantID\" = tb_tenant.\"tenantID\" JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\" WHERE \"issueDate\"='" + "datePickerIssueDate");
+            //exportBookInfo.loadData("SELECT \"tb_residentialBook\".\"resBookID\", tb_tenant.tenant_name, tb_tenant.tenant_lastname, \"tb_place\".\"placeName\", \"tb_residentialBook\".\"issueDate\", \"tb_residentialBook\".\"expDate\" FROM \"tb_residentialBook\" JOIN tb_tenant ON \"tb_residentialBook\".tenant_id = tb_tenant.tenant_id JOIN \"tb_place\" ON \"tb_residentialBook\".\"placeID\" = \"tb_place\".\"placeID\" WHERE \"issueDate\"='" + "datePickerIssueDate");
+
+/*            exportBookInfo.loadData(@"SELECT tb_book.book_id, 
+                tb_tenant.tenant_name, 
+                tb_tenant.tenant_lastname, 
+                tb_place.place_name,
+                tb_book.issue_date,
+                tb_book.exp_date 
+            FROM tb_book 
+                JOIN tb_tenant ON tb_book.tenant_id = tb_tenant.tenant_id 
+                JOIN tb_place ON tb_book.place_id = tb_place.place_id 
+            WHERE issue_date='"+ datePickerIssueDate);*/
 
             OpenChildForm(exportBookInfo, statusControl.TabPages[1]);
 

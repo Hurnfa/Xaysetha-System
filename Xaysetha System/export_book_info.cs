@@ -28,12 +28,12 @@ namespace Xaysetha_System
             adapter.Fill(datatable);
             data.DataSource = datatable;
 
-            data.Columns[0].DataPropertyName = "resBookID";
-            data.Columns[1].DataPropertyName = "firstname";
-            data.Columns[2].DataPropertyName = "lastname";
-            data.Columns[3].DataPropertyName = "placeName";
-            data.Columns[4].DataPropertyName = "issueDate";
-            data.Columns[5].DataPropertyName = "expDate";
+            data.Columns[0].DataPropertyName = "book_id";
+            data.Columns[1].DataPropertyName = "tenant_name";
+            data.Columns[2].DataPropertyName = "tenant_lastname";
+            data.Columns[3].DataPropertyName = "place_name";
+            data.Columns[4].DataPropertyName = "issue_date";
+            data.Columns[5].DataPropertyName = "exp_date";
         }
 
         public void CustomizedGridView()
