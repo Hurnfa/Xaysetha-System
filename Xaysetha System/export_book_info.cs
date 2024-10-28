@@ -71,7 +71,7 @@ namespace Xaysetha_System
         {
             string columnName = data.Columns[e.ColumnIndex].Name;
             DataGridViewRow row = data.Rows[e.RowIndex];
-            BigInteger bookID = BigInteger.Parse(row.Cells[0].Value?.ToString());
+            string bookID = row.Cells[0].Value?.ToString();
             string name = row.Cells[1].Value?.ToString(),
                 placeName = row.Cells[3].Value?.ToString();
 
@@ -81,7 +81,7 @@ namespace Xaysetha_System
             {
                 case "btnPrint":
 
-                    printing.loadDataToReport(0, name, placeName);
+                    printing.loadDataToReport("", name, placeName);
                     printing.Show();
 
                 break;

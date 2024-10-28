@@ -45,9 +45,9 @@ namespace Xaysetha_System
 
             reader.Close();
 
-            txtBookID.Text = new Random().Next().ToString();
+            txtBookID.Text = $"{txtTenantID.Text}/ປກສ.ກ3";
 
-            lblID.Text = $"ເລກທີ່: {txtBookID.Text}";
+            lblID.Text = $"ເລກທີ່: {txtTenantID.Text}/ປກສ.ກ3";
             lblName.Text = $"ຂອງທ່ານ: {name} {surname}";
 
         }
@@ -89,7 +89,7 @@ namespace Xaysetha_System
 
             try
             {
-                cmd.Parameters.AddWithValue("@resBookID", BigInteger.Parse(txtBookID.Text));
+                cmd.Parameters.AddWithValue("@resBookID", txtBookID.Text);
                 cmd.Parameters.AddWithValue("@tenantID", BigInteger.Parse(txtTenantID.Text));
                 cmd.Parameters.AddWithValue("@placeID", comboboxPlace.SelectedValue);
                 cmd.Parameters.AddWithValue("@issueDate", datePickerIssueDate.Value);
@@ -100,7 +100,7 @@ namespace Xaysetha_System
 
                 MessageBox.Show("ບັນທຶກສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                printing.loadDataToReport(BigInteger.Parse(txtTenantID.Text), null, comboboxPlace.Text);
+                printing.loadDataToReport(txtTenantID.Text, null, comboboxPlace.Text);
 
                 printing.Show();
 

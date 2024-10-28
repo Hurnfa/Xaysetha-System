@@ -136,9 +136,10 @@
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1521, 106);
+            this.panel2.Location = new System.Drawing.Point(1014, 69);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(78, 895);
+            this.panel2.Size = new System.Drawing.Size(52, 531);
             this.panel2.TabIndex = 15;
             // 
             // btnSave
@@ -153,9 +154,10 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSave.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnSave.Location = new System.Drawing.Point(524, 48);
+            this.btnSave.Location = new System.Drawing.Point(349, 31);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(470, 60);
+            this.btnSave.Size = new System.Drawing.Size(313, 39);
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "ບັນທຶກ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -166,9 +168,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(225, 18);
+            this.label3.Location = new System.Drawing.Point(150, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 46);
+            this.label3.Size = new System.Drawing.Size(93, 31);
             this.label3.TabIndex = 1;
             this.label3.Text = "ຂໍ້ມູນທົ່ວໄປ";
             // 
@@ -178,9 +181,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Location = new System.Drawing.Point(2, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 35);
+            this.label5.Size = new System.Drawing.Size(36, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "ຊື່ແທ້";
             // 
@@ -189,9 +193,10 @@
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.Controls.Add(this.txtName);
             this.guna2Panel2.Controls.Add(this.label5);
-            this.guna2Panel2.Location = new System.Drawing.Point(225, 194);
+            this.guna2Panel2.Location = new System.Drawing.Point(150, 126);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel2.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel2.TabIndex = 2;
             // 
             // txtName
@@ -208,13 +213,13 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(3, 40);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtName.Location = new System.Drawing.Point(2, 26);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຂອງທ່ານ...";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(498, 60);
+            this.txtName.Size = new System.Drawing.Size(332, 39);
             this.txtName.TabIndex = 6;
             // 
             // label6
@@ -223,9 +228,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Location = new System.Drawing.Point(2, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 35);
+            this.label6.Size = new System.Drawing.Size(65, 23);
             this.label6.TabIndex = 8;
             this.label6.Text = "ນາມສະກຸນ";
             // 
@@ -234,9 +240,10 @@
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.Controls.Add(this.txtSurname);
             this.guna2Panel3.Controls.Add(this.label6);
-            this.guna2Panel3.Location = new System.Drawing.Point(225, 312);
+            this.guna2Panel3.Location = new System.Drawing.Point(150, 203);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel3.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel3.TabIndex = 9;
             // 
             // txtSurname
@@ -253,13 +260,13 @@
             this.txtSurname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSurname.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtSurname.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSurname.Location = new System.Drawing.Point(3, 40);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtSurname.Location = new System.Drawing.Point(2, 26);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.PasswordChar = '\0';
             this.txtSurname.PlaceholderText = "ກະລຸນາປ້ອນນາມສະກຸນຂອງທ່ານ...";
             this.txtSurname.SelectedText = "";
-            this.txtSurname.Size = new System.Drawing.Size(498, 60);
+            this.txtSurname.Size = new System.Drawing.Size(332, 39);
             this.txtSurname.TabIndex = 6;
             // 
             // label7
@@ -268,9 +275,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Location = new System.Drawing.Point(2, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 35);
+            this.label7.Size = new System.Drawing.Size(57, 23);
             this.label7.TabIndex = 8;
             this.label7.Text = "ສາສະໜາ";
             // 
@@ -279,9 +287,10 @@
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.Controls.Add(this.txtReligious);
             this.guna2Panel4.Controls.Add(this.label7);
-            this.guna2Panel4.Location = new System.Drawing.Point(225, 551);
+            this.guna2Panel4.Location = new System.Drawing.Point(150, 358);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel4.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel4.TabIndex = 10;
             // 
             // txtReligious
@@ -299,22 +308,23 @@
             this.txtReligious.IconLeft = global::Xaysetha_System.Properties.Resources.hands_pray_svgrepo_com_1;
             this.txtReligious.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtReligious.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtReligious.Location = new System.Drawing.Point(3, 40);
-            this.txtReligious.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtReligious.Location = new System.Drawing.Point(2, 26);
+            this.txtReligious.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtReligious.Name = "txtReligious";
             this.txtReligious.PasswordChar = '\0';
             this.txtReligious.PlaceholderText = "ກະລຸນາປ້ອນສາສະໜາຂອງທ່ານ...";
             this.txtReligious.SelectedText = "";
-            this.txtReligious.Size = new System.Drawing.Size(498, 60);
+            this.txtReligious.Size = new System.Drawing.Size(332, 39);
             this.txtReligious.TabIndex = 6;
             // 
             // guna2Panel9
             // 
             this.guna2Panel9.Controls.Add(this.btnSave);
             this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel9.Location = new System.Drawing.Point(78, 1001);
+            this.guna2Panel9.Location = new System.Drawing.Point(52, 600);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(1521, 177);
+            this.guna2Panel9.Size = new System.Drawing.Size(1014, 115);
             this.guna2Panel9.TabIndex = 18;
             // 
             // guna2Panel5
@@ -324,9 +334,10 @@
             this.guna2Panel5.Controls.Add(this.rdoFemale);
             this.guna2Panel5.Controls.Add(this.rdoMale);
             this.guna2Panel5.Controls.Add(this.label8);
-            this.guna2Panel5.Location = new System.Drawing.Point(225, 431);
+            this.guna2Panel5.Location = new System.Drawing.Point(150, 280);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel5.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel5.TabIndex = 11;
             // 
             // rdoOthers
@@ -334,9 +345,10 @@
             this.rdoOthers.AutoSize = true;
             this.rdoOthers.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoOthers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoOthers.Location = new System.Drawing.Point(172, 62);
+            this.rdoOthers.Location = new System.Drawing.Point(115, 40);
+            this.rdoOthers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoOthers.Name = "rdoOthers";
-            this.rdoOthers.Size = new System.Drawing.Size(87, 39);
+            this.rdoOthers.Size = new System.Drawing.Size(60, 27);
             this.rdoOthers.TabIndex = 11;
             this.rdoOthers.TabStop = true;
             this.rdoOthers.Text = "ບໍ່ລະບຸ";
@@ -347,9 +359,10 @@
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoFemale.Location = new System.Drawing.Point(90, 62);
+            this.rdoFemale.Location = new System.Drawing.Point(60, 40);
+            this.rdoFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoFemale.Name = "rdoFemale";
-            this.rdoFemale.Size = new System.Drawing.Size(61, 39);
+            this.rdoFemale.Size = new System.Drawing.Size(42, 27);
             this.rdoFemale.TabIndex = 10;
             this.rdoFemale.TabStop = true;
             this.rdoFemale.Text = "ຍິງ";
@@ -360,9 +373,10 @@
             this.rdoMale.AutoSize = true;
             this.rdoMale.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdoMale.Location = new System.Drawing.Point(3, 60);
+            this.rdoMale.Location = new System.Drawing.Point(2, 39);
+            this.rdoMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoMale.Name = "rdoMale";
-            this.rdoMale.Size = new System.Drawing.Size(73, 39);
+            this.rdoMale.Size = new System.Drawing.Size(51, 27);
             this.rdoMale.TabIndex = 9;
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "ຊາຍ";
@@ -374,9 +388,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Location = new System.Drawing.Point(2, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 35);
+            this.label8.Size = new System.Drawing.Size(33, 23);
             this.label8.TabIndex = 8;
             this.label8.Text = "ເພດ";
             // 
@@ -394,8 +409,9 @@
             this.panelUser.FillColor3 = System.Drawing.SystemColors.Control;
             this.panelUser.FillColor4 = System.Drawing.SystemColors.Control;
             this.panelUser.Location = new System.Drawing.Point(0, 0);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(1599, 1178);
+            this.panelUser.Size = new System.Drawing.Size(1066, 715);
             this.panelUser.TabIndex = 17;
             // 
             // guna2CustomGradientPanel2
@@ -426,9 +442,10 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel4);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel5);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2Panel6);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(464, 34);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(309, 22);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(927, 1500);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(618, 975);
             this.guna2CustomGradientPanel2.TabIndex = 15;
             // 
             // guna2Panel21
@@ -436,9 +453,10 @@
             this.guna2Panel21.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel21.Controls.Add(this.guna2TextBox1);
             this.guna2Panel21.Controls.Add(this.label26);
-            this.guna2Panel21.Location = new System.Drawing.Point(225, 2325);
+            this.guna2Panel21.Location = new System.Drawing.Point(150, 1511);
+            this.guna2Panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel21.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel21.TabIndex = 20;
             // 
             // guna2TextBox1
@@ -455,13 +473,13 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.guna2TextBox1.Location = new System.Drawing.Point(3, 40);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(2, 26);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "ກະລຸນາປ້ອນຊື່ແຂວງຂອງທ່ານ..";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(498, 60);
+            this.guna2TextBox1.Size = new System.Drawing.Size(332, 39);
             this.guna2TextBox1.TabIndex = 6;
             // 
             // label26
@@ -470,9 +488,10 @@
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label26.Location = new System.Drawing.Point(3, 0);
+            this.label26.Location = new System.Drawing.Point(2, 0);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(59, 35);
+            this.label26.Size = new System.Drawing.Size(39, 23);
             this.label26.TabIndex = 8;
             this.label26.Text = "ແຂວງ";
             // 
@@ -481,9 +500,10 @@
             this.guna2Panel20.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel20.Controls.Add(this.txtCitizenID);
             this.guna2Panel20.Controls.Add(this.label25);
-            this.guna2Panel20.Location = new System.Drawing.Point(225, 75);
+            this.guna2Panel20.Location = new System.Drawing.Point(150, 49);
+            this.guna2Panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel20.Name = "guna2Panel20";
-            this.guna2Panel20.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel20.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel20.TabIndex = 9;
             // 
             // txtCitizenID
@@ -499,13 +519,13 @@
             this.txtCitizenID.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitizenID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCitizenID.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtCitizenID.Location = new System.Drawing.Point(3, 40);
-            this.txtCitizenID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtCitizenID.Location = new System.Drawing.Point(2, 26);
+            this.txtCitizenID.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCitizenID.Name = "txtCitizenID";
             this.txtCitizenID.PasswordChar = '\0';
             this.txtCitizenID.PlaceholderText = "ກະລຸນາປ້ອນລະຫັດບຸກຄົນຂອງທ່ານ...";
             this.txtCitizenID.SelectedText = "";
-            this.txtCitizenID.Size = new System.Drawing.Size(498, 60);
+            this.txtCitizenID.Size = new System.Drawing.Size(332, 39);
             this.txtCitizenID.TabIndex = 6;
             // 
             // label25
@@ -514,9 +534,10 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label25.Location = new System.Drawing.Point(3, 0);
+            this.label25.Location = new System.Drawing.Point(2, 0);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(145, 35);
+            this.label25.Size = new System.Drawing.Size(97, 23);
             this.label25.TabIndex = 8;
             this.label25.Text = "ລະຫັດລະບຸໂຕຕົນ";
             // 
@@ -525,9 +546,10 @@
             this.guna2Panel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel19.Controls.Add(this.txtEthnic);
             this.guna2Panel19.Controls.Add(this.label24);
-            this.guna2Panel19.Location = new System.Drawing.Point(225, 1143);
+            this.guna2Panel19.Location = new System.Drawing.Point(150, 743);
+            this.guna2Panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel19.Name = "guna2Panel19";
-            this.guna2Panel19.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel19.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel19.TabIndex = 15;
             // 
             // txtEthnic
@@ -544,13 +566,13 @@
             this.txtEthnic.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEthnic.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtEthnic.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtEthnic.Location = new System.Drawing.Point(3, 40);
-            this.txtEthnic.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtEthnic.Location = new System.Drawing.Point(2, 26);
+            this.txtEthnic.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEthnic.Name = "txtEthnic";
             this.txtEthnic.PasswordChar = '\0';
             this.txtEthnic.PlaceholderText = "ກະລຸນາປ້ອນຊົນເຜົ່າຂອງທ່ານ..";
             this.txtEthnic.SelectedText = "";
-            this.txtEthnic.Size = new System.Drawing.Size(498, 60);
+            this.txtEthnic.Size = new System.Drawing.Size(332, 39);
             this.txtEthnic.TabIndex = 6;
             // 
             // label24
@@ -559,9 +581,10 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label24.Location = new System.Drawing.Point(3, 0);
+            this.label24.Location = new System.Drawing.Point(2, 0);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 35);
+            this.label24.Size = new System.Drawing.Size(47, 23);
             this.label24.TabIndex = 8;
             this.label24.Text = "ຊົນເຜົ່າ";
             // 
@@ -570,9 +593,10 @@
             this.guna2Panel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel18.Controls.Add(this.txtRace);
             this.guna2Panel18.Controls.Add(this.label4);
-            this.guna2Panel18.Location = new System.Drawing.Point(225, 1025);
+            this.guna2Panel18.Location = new System.Drawing.Point(150, 666);
+            this.guna2Panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel18.Name = "guna2Panel18";
-            this.guna2Panel18.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel18.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel18.TabIndex = 14;
             // 
             // txtRace
@@ -590,13 +614,13 @@
             this.txtRace.IconLeft = global::Xaysetha_System.Properties.Resources.globe_svgrepo_com_1;
             this.txtRace.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtRace.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtRace.Location = new System.Drawing.Point(3, 40);
-            this.txtRace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtRace.Location = new System.Drawing.Point(2, 26);
+            this.txtRace.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRace.Name = "txtRace";
             this.txtRace.PasswordChar = '\0';
             this.txtRace.PlaceholderText = "ກະລຸນາປ້ອນສັນຊາດຂອງທ່ານ..";
             this.txtRace.SelectedText = "";
-            this.txtRace.Size = new System.Drawing.Size(498, 60);
+            this.txtRace.Size = new System.Drawing.Size(332, 39);
             this.txtRace.TabIndex = 6;
             // 
             // label4
@@ -605,9 +629,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Location = new System.Drawing.Point(2, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 35);
+            this.label4.Size = new System.Drawing.Size(55, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "ເຊື້ອຊາດ";
             // 
@@ -616,9 +641,10 @@
             this.guna2Panel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel17.Controls.Add(this.txtWorkplace);
             this.guna2Panel17.Controls.Add(this.label23);
-            this.guna2Panel17.Location = new System.Drawing.Point(225, 2525);
+            this.guna2Panel17.Location = new System.Drawing.Point(150, 1641);
+            this.guna2Panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel17.Name = "guna2Panel17";
-            this.guna2Panel17.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel17.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel17.TabIndex = 21;
             // 
             // txtWorkplace
@@ -635,13 +661,13 @@
             this.txtWorkplace.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtWorkplace.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtWorkplace.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtWorkplace.Location = new System.Drawing.Point(3, 40);
-            this.txtWorkplace.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtWorkplace.Location = new System.Drawing.Point(2, 26);
+            this.txtWorkplace.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtWorkplace.Name = "txtWorkplace";
             this.txtWorkplace.PasswordChar = '\0';
             this.txtWorkplace.PlaceholderText = "ກະລຸນາປ້ອນທີ່ຢູ່ບ່ອນເຮັດວຽກຂອງທ່ານ..";
             this.txtWorkplace.SelectedText = "";
-            this.txtWorkplace.Size = new System.Drawing.Size(498, 60);
+            this.txtWorkplace.Size = new System.Drawing.Size(332, 39);
             this.txtWorkplace.TabIndex = 6;
             // 
             // label23
@@ -650,9 +676,10 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label23.Location = new System.Drawing.Point(3, 0);
+            this.label23.Location = new System.Drawing.Point(2, 0);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(304, 35);
+            this.label23.Size = new System.Drawing.Size(207, 23);
             this.label23.TabIndex = 8;
             this.label23.Text = "ທີ່ຕັ້ງສະຖານທີ່ເຮັດວຽກ(ຫນ່ວຍ, ບ້ານ) ";
             // 
@@ -662,9 +689,10 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label22.Location = new System.Drawing.Point(225, 2443);
+            this.label22.Location = new System.Drawing.Point(150, 1588);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(214, 46);
+            this.label22.Size = new System.Drawing.Size(149, 31);
             this.label22.TabIndex = 20;
             this.label22.Text = "ຂໍ້ມູນບ່ອນເຮັດວຽກ";
             // 
@@ -673,9 +701,10 @@
             this.guna2Panel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel16.Controls.Add(this.txtDistrict);
             this.guna2Panel16.Controls.Add(this.label21);
-            this.guna2Panel16.Location = new System.Drawing.Point(225, 2206);
+            this.guna2Panel16.Location = new System.Drawing.Point(150, 1434);
+            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel16.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel16.TabIndex = 19;
             // 
             // txtDistrict
@@ -692,13 +721,13 @@
             this.txtDistrict.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDistrict.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtDistrict.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtDistrict.Location = new System.Drawing.Point(3, 40);
-            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtDistrict.Location = new System.Drawing.Point(2, 26);
+            this.txtDistrict.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDistrict.Name = "txtDistrict";
             this.txtDistrict.PasswordChar = '\0';
             this.txtDistrict.PlaceholderText = "ກະລຸນາປ້ອນຊື່ເມືອງຂອງທ່ານ..";
             this.txtDistrict.SelectedText = "";
-            this.txtDistrict.Size = new System.Drawing.Size(498, 60);
+            this.txtDistrict.Size = new System.Drawing.Size(332, 39);
             this.txtDistrict.TabIndex = 6;
             // 
             // label21
@@ -707,9 +736,10 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label21.Location = new System.Drawing.Point(3, 0);
+            this.label21.Location = new System.Drawing.Point(2, 0);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 35);
+            this.label21.Size = new System.Drawing.Size(37, 23);
             this.label21.TabIndex = 8;
             this.label21.Text = "ເມືອງ";
             // 
@@ -718,9 +748,10 @@
             this.guna2Panel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel15.Controls.Add(this.txtAddr);
             this.guna2Panel15.Controls.Add(this.label20);
-            this.guna2Panel15.Location = new System.Drawing.Point(225, 2088);
+            this.guna2Panel15.Location = new System.Drawing.Point(150, 1357);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel15.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel15.TabIndex = 18;
             // 
             // txtAddr
@@ -737,13 +768,13 @@
             this.txtAddr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddr.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAddr.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtAddr.Location = new System.Drawing.Point(3, 40);
-            this.txtAddr.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtAddr.Location = new System.Drawing.Point(2, 26);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAddr.Name = "txtAddr";
             this.txtAddr.PasswordChar = '\0';
             this.txtAddr.PlaceholderText = "ກະລຸນາປ້ອນຊື່ບ້ານຂອງທ່ານ...";
             this.txtAddr.SelectedText = "";
-            this.txtAddr.Size = new System.Drawing.Size(498, 60);
+            this.txtAddr.Size = new System.Drawing.Size(332, 39);
             this.txtAddr.TabIndex = 6;
             // 
             // label20
@@ -752,9 +783,10 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Location = new System.Drawing.Point(2, 0);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 35);
+            this.label20.Size = new System.Drawing.Size(33, 23);
             this.label20.TabIndex = 8;
             this.label20.Text = "ບ້ານ";
             // 
@@ -763,9 +795,10 @@
             this.guna2Panel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel14.Controls.Add(this.txtMomName);
             this.guna2Panel14.Controls.Add(this.label19);
-            this.guna2Panel14.Location = new System.Drawing.Point(225, 1969);
+            this.guna2Panel14.Location = new System.Drawing.Point(150, 1280);
+            this.guna2Panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel14.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel14.TabIndex = 18;
             // 
             // txtMomName
@@ -783,13 +816,13 @@
             this.txtMomName.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtMomName.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtMomName.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtMomName.Location = new System.Drawing.Point(3, 40);
-            this.txtMomName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtMomName.Location = new System.Drawing.Point(2, 26);
+            this.txtMomName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMomName.Name = "txtMomName";
             this.txtMomName.PasswordChar = '\0';
             this.txtMomName.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຂອງແມ່...";
             this.txtMomName.SelectedText = "";
-            this.txtMomName.Size = new System.Drawing.Size(498, 60);
+            this.txtMomName.Size = new System.Drawing.Size(332, 39);
             this.txtMomName.TabIndex = 6;
             // 
             // label19
@@ -798,9 +831,10 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Location = new System.Drawing.Point(2, 0);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 35);
+            this.label19.Size = new System.Drawing.Size(35, 23);
             this.label19.TabIndex = 8;
             this.label19.Text = "ຊື່ແມ່";
             // 
@@ -809,9 +843,10 @@
             this.guna2Panel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel13.Controls.Add(this.txtDadName);
             this.guna2Panel13.Controls.Add(this.label18);
-            this.guna2Panel13.Location = new System.Drawing.Point(225, 1849);
+            this.guna2Panel13.Location = new System.Drawing.Point(150, 1202);
+            this.guna2Panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel13.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel13.TabIndex = 17;
             // 
             // txtDadName
@@ -829,13 +864,13 @@
             this.txtDadName.IconLeft = global::Xaysetha_System.Properties.Resources.u_user;
             this.txtDadName.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtDadName.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtDadName.Location = new System.Drawing.Point(3, 40);
-            this.txtDadName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtDadName.Location = new System.Drawing.Point(2, 26);
+            this.txtDadName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDadName.Name = "txtDadName";
             this.txtDadName.PasswordChar = '\0';
             this.txtDadName.PlaceholderText = "ກະລຸນາປ້ອນຊື່ຂອງພໍ່...";
             this.txtDadName.SelectedText = "";
-            this.txtDadName.Size = new System.Drawing.Size(498, 60);
+            this.txtDadName.Size = new System.Drawing.Size(332, 39);
             this.txtDadName.TabIndex = 6;
             // 
             // label18
@@ -844,9 +879,10 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Location = new System.Drawing.Point(2, 0);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 35);
+            this.label18.Size = new System.Drawing.Size(29, 23);
             this.label18.TabIndex = 8;
             this.label18.Text = "ຊື່ພໍ່";
             // 
@@ -856,9 +892,10 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label17.Location = new System.Drawing.Point(225, 1788);
+            this.label17.Location = new System.Drawing.Point(150, 1162);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(203, 46);
+            this.label17.Size = new System.Drawing.Size(141, 31);
             this.label17.TabIndex = 16;
             this.label17.Text = "ຂໍ້ມູນຜູ້ສຳມະໂນຄົວ";
             // 
@@ -867,9 +904,10 @@
             this.guna2Panel12.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel12.Controls.Add(this.datePickerFamBookIssuedDate);
             this.guna2Panel12.Controls.Add(this.label16);
-            this.guna2Panel12.Location = new System.Drawing.Point(225, 1618);
+            this.guna2Panel12.Location = new System.Drawing.Point(150, 1052);
+            this.guna2Panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel12.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel12.TabIndex = 15;
             // 
             // datePickerFamBookIssuedDate
@@ -880,11 +918,12 @@
             this.datePickerFamBookIssuedDate.FillColor = System.Drawing.Color.White;
             this.datePickerFamBookIssuedDate.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
             this.datePickerFamBookIssuedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datePickerFamBookIssuedDate.Location = new System.Drawing.Point(3, 38);
+            this.datePickerFamBookIssuedDate.Location = new System.Drawing.Point(2, 25);
+            this.datePickerFamBookIssuedDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datePickerFamBookIssuedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datePickerFamBookIssuedDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datePickerFamBookIssuedDate.Name = "datePickerFamBookIssuedDate";
-            this.datePickerFamBookIssuedDate.Size = new System.Drawing.Size(498, 60);
+            this.datePickerFamBookIssuedDate.Size = new System.Drawing.Size(332, 39);
             this.datePickerFamBookIssuedDate.TabIndex = 10;
             this.datePickerFamBookIssuedDate.UseTransparentBackground = true;
             this.datePickerFamBookIssuedDate.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -895,9 +934,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Location = new System.Drawing.Point(2, 0);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(205, 35);
+            this.label16.Size = new System.Drawing.Size(140, 23);
             this.label16.TabIndex = 8;
             this.label16.Text = "ວັນທີ່ອອກປື້ມສຳມະໂນຄົວ";
             // 
@@ -906,9 +946,10 @@
             this.guna2Panel11.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel11.Controls.Add(this.txtFamBookNums);
             this.guna2Panel11.Controls.Add(this.label15);
-            this.guna2Panel11.Location = new System.Drawing.Point(225, 1500);
+            this.guna2Panel11.Location = new System.Drawing.Point(150, 975);
+            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel11.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel11.TabIndex = 15;
             // 
             // txtFamBookNums
@@ -925,13 +966,13 @@
             this.txtFamBookNums.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFamBookNums.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtFamBookNums.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtFamBookNums.Location = new System.Drawing.Point(3, 40);
-            this.txtFamBookNums.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtFamBookNums.Location = new System.Drawing.Point(2, 26);
+            this.txtFamBookNums.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFamBookNums.Name = "txtFamBookNums";
             this.txtFamBookNums.PasswordChar = '\0';
             this.txtFamBookNums.PlaceholderText = "ປ້ອນເລກສຳມະໂນຄົວ...";
             this.txtFamBookNums.SelectedText = "";
-            this.txtFamBookNums.Size = new System.Drawing.Size(498, 60);
+            this.txtFamBookNums.Size = new System.Drawing.Size(332, 39);
             this.txtFamBookNums.TabIndex = 6;
             this.txtFamBookNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFamBookNums_KeyPress);
             // 
@@ -941,9 +982,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label15.Location = new System.Drawing.Point(3, 0);
+            this.label15.Location = new System.Drawing.Point(2, 0);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 35);
+            this.label15.Size = new System.Drawing.Size(90, 23);
             this.label15.TabIndex = 8;
             this.label15.Text = "ເລກສຳມະໂນຄົວ";
             // 
@@ -953,9 +995,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label14.Location = new System.Drawing.Point(225, 1437);
+            this.label14.Location = new System.Drawing.Point(150, 934);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(203, 46);
+            this.label14.Size = new System.Drawing.Size(141, 31);
             this.label14.TabIndex = 15;
             this.label14.Text = "ຂໍ້ມູນຜູ້ສຳມະໂນຄົວ";
             // 
@@ -964,9 +1007,10 @@
             this.guna2Panel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel10.Controls.Add(this.txtJobs);
             this.guna2Panel10.Controls.Add(this.label12);
-            this.guna2Panel10.Location = new System.Drawing.Point(225, 1263);
+            this.guna2Panel10.Location = new System.Drawing.Point(150, 821);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel10.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel10.TabIndex = 14;
             // 
             // txtJobs
@@ -984,13 +1028,13 @@
             this.txtJobs.IconLeft = global::Xaysetha_System.Properties.Resources.work_svgrepo_com_1;
             this.txtJobs.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtJobs.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtJobs.Location = new System.Drawing.Point(3, 40);
-            this.txtJobs.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtJobs.Location = new System.Drawing.Point(2, 26);
+            this.txtJobs.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtJobs.Name = "txtJobs";
             this.txtJobs.PasswordChar = '\0';
             this.txtJobs.PlaceholderText = "ກະລຸນາປ້ອນອາຊີບຂອງທ່ານ..";
             this.txtJobs.SelectedText = "";
-            this.txtJobs.Size = new System.Drawing.Size(498, 60);
+            this.txtJobs.Size = new System.Drawing.Size(332, 39);
             this.txtJobs.TabIndex = 6;
             // 
             // label12
@@ -999,9 +1043,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Location = new System.Drawing.Point(2, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 35);
+            this.label12.Size = new System.Drawing.Size(42, 23);
             this.label12.TabIndex = 8;
             this.label12.Text = "ອາຊີບ";
             // 
@@ -1010,9 +1055,10 @@
             this.guna2Panel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel8.Controls.Add(this.txtNationality);
             this.guna2Panel8.Controls.Add(this.label11);
-            this.guna2Panel8.Location = new System.Drawing.Point(225, 906);
+            this.guna2Panel8.Location = new System.Drawing.Point(150, 589);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel8.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel8.TabIndex = 13;
             // 
             // txtNationality
@@ -1030,13 +1076,13 @@
             this.txtNationality.IconLeft = global::Xaysetha_System.Properties.Resources.globe_svgrepo_com_1;
             this.txtNationality.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtNationality.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtNationality.Location = new System.Drawing.Point(3, 40);
-            this.txtNationality.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtNationality.Location = new System.Drawing.Point(2, 26);
+            this.txtNationality.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNationality.Name = "txtNationality";
             this.txtNationality.PasswordChar = '\0';
             this.txtNationality.PlaceholderText = "ກະລຸນາປ້ອນສັນຊາດຂອງທ່ານ..";
             this.txtNationality.SelectedText = "";
-            this.txtNationality.Size = new System.Drawing.Size(498, 60);
+            this.txtNationality.Size = new System.Drawing.Size(332, 39);
             this.txtNationality.TabIndex = 6;
             // 
             // label11
@@ -1045,9 +1091,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Location = new System.Drawing.Point(2, 0);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 35);
+            this.label11.Size = new System.Drawing.Size(51, 23);
             this.label11.TabIndex = 8;
             this.label11.Text = "ສັນຊາດ";
             // 
@@ -1056,9 +1103,10 @@
             this.guna2Panel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel7.Controls.Add(this.txtPhoneNums);
             this.guna2Panel7.Controls.Add(this.label10);
-            this.guna2Panel7.Location = new System.Drawing.Point(225, 788);
+            this.guna2Panel7.Location = new System.Drawing.Point(150, 512);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel7.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel7.TabIndex = 12;
             // 
             // txtPhoneNums
@@ -1076,13 +1124,13 @@
             this.txtPhoneNums.IconLeft = global::Xaysetha_System.Properties.Resources.u_phone;
             this.txtPhoneNums.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPhoneNums.IconLeftSize = new System.Drawing.Size(24, 24);
-            this.txtPhoneNums.Location = new System.Drawing.Point(3, 40);
-            this.txtPhoneNums.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtPhoneNums.Location = new System.Drawing.Point(2, 26);
+            this.txtPhoneNums.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPhoneNums.Name = "txtPhoneNums";
             this.txtPhoneNums.PasswordChar = '\0';
             this.txtPhoneNums.PlaceholderText = "ກະລຸນາປ້ອນເບີໂທຂອງທ່ານ..";
             this.txtPhoneNums.SelectedText = "";
-            this.txtPhoneNums.Size = new System.Drawing.Size(498, 60);
+            this.txtPhoneNums.Size = new System.Drawing.Size(332, 39);
             this.txtPhoneNums.TabIndex = 6;
             this.txtPhoneNums.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNums_KeyPress);
             // 
@@ -1092,9 +1140,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Location = new System.Drawing.Point(2, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 35);
+            this.label10.Size = new System.Drawing.Size(37, 23);
             this.label10.TabIndex = 8;
             this.label10.Text = "ເບີໂທ";
             // 
@@ -1103,9 +1152,10 @@
             this.guna2Panel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel6.Controls.Add(this.datePickerBirthday);
             this.guna2Panel6.Controls.Add(this.label9);
-            this.guna2Panel6.Location = new System.Drawing.Point(225, 669);
+            this.guna2Panel6.Location = new System.Drawing.Point(150, 435);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(537, 105);
+            this.guna2Panel6.Size = new System.Drawing.Size(358, 68);
             this.guna2Panel6.TabIndex = 11;
             // 
             // datePickerBirthday
@@ -1116,11 +1166,12 @@
             this.datePickerBirthday.FillColor = System.Drawing.Color.White;
             this.datePickerBirthday.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F);
             this.datePickerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.datePickerBirthday.Location = new System.Drawing.Point(3, 38);
+            this.datePickerBirthday.Location = new System.Drawing.Point(2, 25);
+            this.datePickerBirthday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.datePickerBirthday.MaxDate = new System.DateTime(2024, 12, 31, 0, 0, 0, 0);
             this.datePickerBirthday.MinDate = new System.DateTime(1900, 2, 7, 0, 0, 0, 0);
             this.datePickerBirthday.Name = "datePickerBirthday";
-            this.datePickerBirthday.Size = new System.Drawing.Size(498, 60);
+            this.datePickerBirthday.Size = new System.Drawing.Size(332, 39);
             this.datePickerBirthday.TabIndex = 9;
             this.datePickerBirthday.UseTransparentBackground = true;
             this.datePickerBirthday.Value = new System.DateTime(2024, 5, 27, 14, 43, 22, 890);
@@ -1131,9 +1182,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Location = new System.Drawing.Point(2, 0);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(151, 35);
+            this.label9.Size = new System.Drawing.Size(103, 23);
             this.label9.TabIndex = 8;
             this.label9.Text = "ວັນ/ເດືອນ/ປີເກີດ ";
             // 
@@ -1143,9 +1195,10 @@
             this.guna2CustomGradientPanel1.BorderRadius = 20;
             this.guna2CustomGradientPanel1.Controls.Add(this.label13);
             this.guna2CustomGradientPanel1.Controls.Add(this.profilePictureBox);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(174, 34);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(116, 22);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(240, 385);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(160, 250);
             this.guna2CustomGradientPanel1.TabIndex = 14;
             // 
             // label13
@@ -1154,9 +1207,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label13.Location = new System.Drawing.Point(20, 12);
+            this.label13.Location = new System.Drawing.Point(13, 8);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(166, 39);
+            this.label13.Size = new System.Drawing.Size(110, 26);
             this.label13.TabIndex = 15;
             this.label13.Text = "ຮູບພາບໂປຣຟາຍ";
             // 
@@ -1164,9 +1218,10 @@
             // 
             this.profilePictureBox.Image = global::Xaysetha_System.Properties.Resources.Upload_Image;
             this.profilePictureBox.ImageRotate = 0F;
-            this.profilePictureBox.Location = new System.Drawing.Point(14, 105);
+            this.profilePictureBox.Location = new System.Drawing.Point(9, 68);
+            this.profilePictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.profilePictureBox.Name = "profilePictureBox";
-            this.profilePictureBox.Size = new System.Drawing.Size(214, 263);
+            this.profilePictureBox.Size = new System.Drawing.Size(143, 171);
             this.profilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePictureBox.TabIndex = 0;
             this.profilePictureBox.TabStop = false;
@@ -1176,9 +1231,10 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.Image = global::Xaysetha_System.Properties.Resources.u_angle_left_b;
-            this.btnBack.Location = new System.Drawing.Point(33, 34);
+            this.btnBack.Location = new System.Drawing.Point(22, 22);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(40, 45);
+            this.btnBack.Size = new System.Drawing.Size(27, 29);
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 0;
             this.btnBack.TabStop = false;
@@ -1191,9 +1247,10 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.labelHeader);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(78, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(52, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1521, 106);
+            this.guna2Panel1.Size = new System.Drawing.Size(1014, 69);
             this.guna2Panel1.TabIndex = 16;
             // 
             // linkLableBack
@@ -1201,9 +1258,10 @@
             this.linkLableBack.AutoSize = true;
             this.linkLableBack.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLableBack.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(125)))), ((int)(((byte)(201)))));
-            this.linkLableBack.Location = new System.Drawing.Point(27, 32);
+            this.linkLableBack.Location = new System.Drawing.Point(18, 21);
+            this.linkLableBack.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLableBack.Name = "linkLableBack";
-            this.linkLableBack.Size = new System.Drawing.Size(84, 35);
+            this.linkLableBack.Size = new System.Drawing.Size(57, 23);
             this.linkLableBack.TabIndex = 9;
             this.linkLableBack.TabStop = true;
             this.linkLableBack.Text = "ຜູ້ພັກເຊົ່າ";
@@ -1215,9 +1273,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label2.Location = new System.Drawing.Point(110, 32);
+            this.label2.Location = new System.Drawing.Point(73, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 35);
+            this.label2.Size = new System.Drawing.Size(18, 23);
             this.label2.TabIndex = 8;
             this.label2.Text = ">";
             // 
@@ -1226,9 +1285,10 @@
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Noto Sans Lao", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelHeader.Location = new System.Drawing.Point(141, 32);
+            this.labelHeader.Location = new System.Drawing.Point(94, 21);
+            this.labelHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(88, 35);
+            this.labelHeader.Size = new System.Drawing.Size(60, 23);
             this.labelHeader.TabIndex = 7;
             this.labelHeader.Text = "ເພີ່ມບັນຊີ";
             // 
@@ -1236,22 +1296,24 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(78, 1178);
+            this.panel1.Size = new System.Drawing.Size(52, 715);
             this.panel1.TabIndex = 14;
             // 
             // resident_add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1599, 1178);
+            this.ClientSize = new System.Drawing.Size(1066, 715);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.guna2Panel9);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1599, 1178);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1066, 670);
             this.Name = "resident_add";
             this.Text = "resident_add";
             this.guna2Panel2.ResumeLayout(false);

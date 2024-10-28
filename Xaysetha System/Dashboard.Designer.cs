@@ -77,9 +77,9 @@
             this.sideBar.Controls.Add(this.guna2Panel1);
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 0);
-            this.sideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sideBar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(478, 1280);
+            this.sideBar.Size = new System.Drawing.Size(319, 900);
             this.sideBar.TabIndex = 0;
             // 
             // btnDashboard
@@ -96,10 +96,10 @@
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnDashboard.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDashboard.Location = new System.Drawing.Point(0, 1109);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 722);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(478, 75);
+            this.btnDashboard.Size = new System.Drawing.Size(319, 49);
             this.btnDashboard.TabIndex = 3;
             this.btnDashboard.Text = "ລາຍງານ";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -120,10 +120,10 @@
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnLogout.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogout.Location = new System.Drawing.Point(0, 1205);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(0, 851);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(478, 75);
+            this.btnLogout.Size = new System.Drawing.Size(319, 49);
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "ອອກຈາກລະບົບ";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -144,10 +144,10 @@
             this.btnPrinting.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPrinting.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnPrinting.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPrinting.Location = new System.Drawing.Point(0, 1034);
-            this.btnPrinting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPrinting.Location = new System.Drawing.Point(0, 673);
+            this.btnPrinting.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnPrinting.Name = "btnPrinting";
-            this.btnPrinting.Size = new System.Drawing.Size(478, 75);
+            this.btnPrinting.Size = new System.Drawing.Size(319, 49);
             this.btnPrinting.TabIndex = 8;
             this.btnPrinting.Text = "ອອກປື້ມທະບຽນພັກເຊົາ";
             this.btnPrinting.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -168,10 +168,10 @@
             this.btnLeave.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLeave.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnLeave.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLeave.Location = new System.Drawing.Point(0, 959);
-            this.btnLeave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeave.Location = new System.Drawing.Point(0, 624);
+            this.btnLeave.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnLeave.Name = "btnLeave";
-            this.btnLeave.Size = new System.Drawing.Size(478, 75);
+            this.btnLeave.Size = new System.Drawing.Size(319, 49);
             this.btnLeave.TabIndex = 7;
             this.btnLeave.Text = "ຊຳລະຄ່າທຳນຽມ";
             this.btnLeave.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -194,10 +194,10 @@
             this.btnEntry.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEntry.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnEntry.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEntry.Location = new System.Drawing.Point(0, 884);
-            this.btnEntry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEntry.Location = new System.Drawing.Point(0, 575);
+            this.btnEntry.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnEntry.Name = "btnEntry";
-            this.btnEntry.Size = new System.Drawing.Size(478, 75);
+            this.btnEntry.Size = new System.Drawing.Size(319, 49);
             this.btnEntry.TabIndex = 6;
             this.btnEntry.Text = "ແຈ້ງ ເຂົ້າ-ອອກ ພັກເຊົາ";
             this.btnEntry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -215,10 +215,10 @@
             this.infoSubMenu.Controls.Add(this.btnVilManagement);
             this.infoSubMenu.Controls.Add(this.btnUserManagement);
             this.infoSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.infoSubMenu.Location = new System.Drawing.Point(0, 289);
-            this.infoSubMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.infoSubMenu.Location = new System.Drawing.Point(0, 188);
+            this.infoSubMenu.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.infoSubMenu.Name = "infoSubMenu";
-            this.infoSubMenu.Size = new System.Drawing.Size(478, 595);
+            this.infoSubMenu.Size = new System.Drawing.Size(319, 387);
             this.infoSubMenu.TabIndex = 5;
             // 
             // btnJobs
@@ -236,10 +236,10 @@
             this.btnJobs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnJobs.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnJobs.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnJobs.Location = new System.Drawing.Point(0, 375);
-            this.btnJobs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnJobs.Location = new System.Drawing.Point(0, 245);
+            this.btnJobs.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnJobs.Name = "btnJobs";
-            this.btnJobs.Size = new System.Drawing.Size(478, 75);
+            this.btnJobs.Size = new System.Drawing.Size(319, 49);
             this.btnJobs.TabIndex = 13;
             this.btnJobs.Text = "ຂໍ້ມູນອາຊີບ";
             this.btnJobs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -261,10 +261,10 @@
             this.feeManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.feeManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.feeManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.feeManagement.Location = new System.Drawing.Point(0, 520);
-            this.feeManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.feeManagement.Location = new System.Drawing.Point(0, 338);
+            this.feeManagement.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.feeManagement.Name = "feeManagement";
-            this.feeManagement.Size = new System.Drawing.Size(478, 75);
+            this.feeManagement.Size = new System.Drawing.Size(319, 49);
             this.feeManagement.TabIndex = 12;
             this.feeManagement.Text = "ຈັດການຄ່າທຳນຽມ";
             this.feeManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -285,10 +285,10 @@
             this.btnTenantManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTenantManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnTenantManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnTenantManagement.Location = new System.Drawing.Point(0, 454);
-            this.btnTenantManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTenantManagement.Location = new System.Drawing.Point(0, 295);
+            this.btnTenantManagement.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnTenantManagement.Name = "btnTenantManagement";
-            this.btnTenantManagement.Size = new System.Drawing.Size(478, 75);
+            this.btnTenantManagement.Size = new System.Drawing.Size(319, 49);
             this.btnTenantManagement.TabIndex = 8;
             this.btnTenantManagement.Text = "ຂໍ້ມູນເຈົ້າຂອງບ້ານ";
             this.btnTenantManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -310,10 +310,10 @@
             this.btnHomeManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHomeManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnHomeManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHomeManagement.Location = new System.Drawing.Point(0, 300);
-            this.btnHomeManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHomeManagement.Location = new System.Drawing.Point(0, 196);
+            this.btnHomeManagement.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHomeManagement.Name = "btnHomeManagement";
-            this.btnHomeManagement.Size = new System.Drawing.Size(478, 75);
+            this.btnHomeManagement.Size = new System.Drawing.Size(319, 49);
             this.btnHomeManagement.TabIndex = 9;
             this.btnHomeManagement.Text = "ຂໍ້ມູນສະຖານທີ່ພັກເຊົ່າ";
             this.btnHomeManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -335,10 +335,10 @@
             this.btnProvince.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProvince.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnProvince.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnProvince.Location = new System.Drawing.Point(0, 225);
-            this.btnProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProvince.Location = new System.Drawing.Point(0, 147);
+            this.btnProvince.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnProvince.Name = "btnProvince";
-            this.btnProvince.Size = new System.Drawing.Size(478, 75);
+            this.btnProvince.Size = new System.Drawing.Size(319, 49);
             this.btnProvince.TabIndex = 11;
             this.btnProvince.Text = "ຂໍ້ມູນແຂວງ";
             this.btnProvince.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -360,10 +360,10 @@
             this.btnCity.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCity.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnCity.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCity.Location = new System.Drawing.Point(0, 150);
-            this.btnCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCity.Location = new System.Drawing.Point(0, 98);
+            this.btnCity.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnCity.Name = "btnCity";
-            this.btnCity.Size = new System.Drawing.Size(478, 75);
+            this.btnCity.Size = new System.Drawing.Size(319, 49);
             this.btnCity.TabIndex = 10;
             this.btnCity.Text = "ຂໍ້ມູນເມືອງ";
             this.btnCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -385,10 +385,10 @@
             this.btnVilManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnVilManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnVilManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnVilManagement.Location = new System.Drawing.Point(0, 75);
-            this.btnVilManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVilManagement.Location = new System.Drawing.Point(0, 49);
+            this.btnVilManagement.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnVilManagement.Name = "btnVilManagement";
-            this.btnVilManagement.Size = new System.Drawing.Size(478, 75);
+            this.btnVilManagement.Size = new System.Drawing.Size(319, 49);
             this.btnVilManagement.TabIndex = 7;
             this.btnVilManagement.Text = "ຂໍ້ມູນບ້ານ";
             this.btnVilManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -411,9 +411,9 @@
             this.btnUserManagement.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnUserManagement.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUserManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnUserManagement.Name = "btnUserManagement";
-            this.btnUserManagement.Size = new System.Drawing.Size(478, 75);
+            this.btnUserManagement.Size = new System.Drawing.Size(319, 49);
             this.btnUserManagement.TabIndex = 6;
             this.btnUserManagement.Text = "ຜູ້ໃຊ້ງານລະບົບ";
             this.btnUserManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -438,10 +438,10 @@
             this.btnInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnInfo.ImageOffset = new System.Drawing.Point(20, 0);
             this.btnInfo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnInfo.Location = new System.Drawing.Point(0, 214);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInfo.Location = new System.Drawing.Point(0, 139);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(478, 75);
+            this.btnInfo.Size = new System.Drawing.Size(319, 49);
             this.btnInfo.TabIndex = 4;
             this.btnInfo.Text = "ຈັດການຂໍ້ມູນພື້ນຖານ";
             this.btnInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -466,10 +466,10 @@
             this.report.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.report.ImageOffset = new System.Drawing.Point(20, 0);
             this.report.ImageSize = new System.Drawing.Size(30, 30);
-            this.report.Location = new System.Drawing.Point(0, 139);
-            this.report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.report.Location = new System.Drawing.Point(0, 90);
+            this.report.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.report.Name = "report";
-            this.report.Size = new System.Drawing.Size(478, 75);
+            this.report.Size = new System.Drawing.Size(319, 49);
             this.report.TabIndex = 2;
             this.report.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.report.TextOffset = new System.Drawing.Point(32, 0);
@@ -481,9 +481,9 @@
             this.guna2Panel1.Controls.Add(this.logo);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(478, 139);
+            this.guna2Panel1.Size = new System.Drawing.Size(319, 90);
             this.guna2Panel1.TabIndex = 1;
             // 
             // label1
@@ -491,9 +491,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(122, 48);
+            this.label1.Location = new System.Drawing.Point(81, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 39);
+            this.label1.Size = new System.Drawing.Size(205, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "ລະບົບເກັບກຳຜູ້ພັກເມືອງໄຊເສດຖາ";
             // 
@@ -503,8 +504,8 @@
             this.logo.BorderRadius = 40;
             this.logo.Image = global::Xaysetha_System.Properties.Resources.Group_16751;
             this.logo.ImageRotate = 0F;
-            this.logo.Location = new System.Drawing.Point(14, 15);
-            this.logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logo.Location = new System.Drawing.Point(9, 10);
+            this.logo.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(80, 80);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -521,10 +522,10 @@
             this.panelName.Controls.Add(this.guna2PictureBox1);
             this.panelName.Controls.Add(this.labelHeader);
             this.panelName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelName.Location = new System.Drawing.Point(478, 0);
-            this.panelName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelName.Location = new System.Drawing.Point(319, 0);
+            this.panelName.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panelName.Name = "panelName";
-            this.panelName.Size = new System.Drawing.Size(1600, 134);
+            this.panelName.Size = new System.Drawing.Size(1281, 87);
             this.panelName.TabIndex = 1;
             // 
             // label_username
@@ -533,9 +534,10 @@
             this.label_username.AutoSize = true;
             this.label_username.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_username.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.label_username.Location = new System.Drawing.Point(1387, 45);
+            this.label_username.Location = new System.Drawing.Point(925, 29);
+            this.label_username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(109, 33);
+            this.label_username.Size = new System.Drawing.Size(70, 21);
             this.label_username.TabIndex = 7;
             this.label_username.Text = "username";
             // 
@@ -545,9 +547,10 @@
             this.labelRole.AutoSize = true;
             this.labelRole.Font = new System.Drawing.Font("Noto Sans Lao", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelRole.Location = new System.Drawing.Point(1387, 80);
+            this.labelRole.Location = new System.Drawing.Point(925, 52);
+            this.labelRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(144, 33);
+            this.labelRole.Size = new System.Drawing.Size(93, 21);
             this.labelRole.TabIndex = 6;
             this.labelRole.Text = "Administrator";
             this.labelRole.Click += new System.EventHandler(this.labelRole_Click);
@@ -558,9 +561,10 @@
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Noto Sans Lao", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.lbName.Location = new System.Drawing.Point(1386, 8);
+            this.lbName.Location = new System.Drawing.Point(924, 5);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(196, 39);
+            this.lbName.Size = new System.Drawing.Size(130, 26);
             this.lbName.TabIndex = 5;
             this.lbName.Text = "ນ. ແສງແກ້ວ ວົງມາລາ";
             // 
@@ -570,10 +574,10 @@
             this.guna2PictureBox1.BorderRadius = 4;
             this.guna2PictureBox1.Image = global::Xaysetha_System.Properties.Resources.Ellipse_1;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(1263, 15);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(842, 10);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(92, 102);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(61, 66);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 4;
             this.guna2PictureBox1.TabStop = false;
@@ -583,9 +587,10 @@
             this.labelHeader.AutoSize = true;
             this.labelHeader.Font = new System.Drawing.Font("Noto Sans Lao", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(71)))), ((int)(((byte)(61)))));
-            this.labelHeader.Location = new System.Drawing.Point(24, 28);
+            this.labelHeader.Location = new System.Drawing.Point(16, 18);
+            this.labelHeader.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(109, 46);
+            this.labelHeader.Size = new System.Drawing.Size(75, 31);
             this.labelHeader.TabIndex = 0;
             this.labelHeader.Text = "ສະບາຍດີ";
             // 
@@ -593,23 +598,23 @@
             // 
             this.panelContainer.AutoScroll = true;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(478, 134);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelContainer.Location = new System.Drawing.Point(319, 87);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1600, 1146);
+            this.panelContainer.Size = new System.Drawing.Size(1281, 813);
             this.panelContainer.TabIndex = 2;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2078, 1280);
+            this.ClientSize = new System.Drawing.Size(1600, 900);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelName);
             this.Controls.Add(this.sideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1620, 1280);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MinimumSize = new System.Drawing.Size(1080, 670);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";

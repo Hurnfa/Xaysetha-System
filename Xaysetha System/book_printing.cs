@@ -25,7 +25,7 @@ namespace Xaysetha_System
         ReportParameterCollection rp = new ReportParameterCollection();
 
         string gender;
-        public void loadDataToReport(BigInteger tenantID, string name, string place)
+        public void loadDataToReport(string tenantID, string name, string place)
         {
             if (name == null)
             {
@@ -34,7 +34,6 @@ namespace Xaysetha_System
                     join tb_book on tb_tenant.tenant_id = tb_book.tenant_id 
                     join tb_payment on tb_tenant.tenant_id = tb_payment.tenant_id 
                 where tb_tenant.tenant_id = @tenantID;", cn.conn);
-
 
                 try
                 {
@@ -144,7 +143,7 @@ namespace Xaysetha_System
                     MessageBox.Show("ຂໍອະໄພ, ລະບົບຂັດຂ້ອງ\n" + ex.Message, "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else if (tenantID == 0)
+            else if (tenantID == "")
             {
                 cmd = new NpgsqlCommand(@"select * from tb_tenant 
                     join tb_book on tb_tenant.tenant_id = tb_book.tenant_id 
