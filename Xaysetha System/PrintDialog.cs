@@ -100,7 +100,8 @@ namespace Xaysetha_System
 
                 MessageBox.Show("ບັນທຶກສຳເລັດ!", "ແຈ້ງເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                printing.loadDataToReport(txtTenantID.Text, null, comboboxPlace.Text);
+                //need to be fix
+                //printing.loadDataToReport(txtTenantID.Text, null, comboboxPlace.Text);
 
                 printing.Show();
 
